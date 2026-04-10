@@ -2,9 +2,667 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>FX Cockpit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FX Cockpit — azteca</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0a0f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0a0a0f;
+    --bg2:       #0f0f18;
+    --bg3:       #14141f;
+    --border:    #1e1e2e;
+    --border2:   #2a2a40;
+    --text:      #c8c8d8;
+    --muted:     #5a5a7a;
+    --gold:      #f0b429;
+    --gold-dim:  #7a5a10;
+    --silver:    #a8b8cc;
+    --silver-dim:#3a4a58;
+    --cyan:      #38c9c9;
+    --cyan-dim:  #0e4040;
+    --green:     #2ecc71;
+    --red:       #e74c3c;
+    --tab-h:     48px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* ─── SCAN LINE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,.08) 2px,
+      rgba(0,0,0,.08) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 44px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+    flex-shrink: 0;
+  }
+
+  .logo {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    letter-spacing: .12em;
+    color: var(--cyan);
+  }
+  .logo span { color: var(--muted); font-size: 11px; margin-left: 8px; letter-spacing: .08em; }
+
+  #clock {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: .06em;
+  }
+
+  /* ─── SESSION BAR ─── */
+  #session-bar {
+    display: flex;
+    gap: 6px;
+    padding: 6px 16px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .session-pill {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid var(--border2);
+    color: var(--muted);
+    letter-spacing: .06em;
+    transition: all .3s;
+  }
+  .session-pill.active {
+    color: var(--green);
+    border-color: var(--green);
+    background: rgba(46,204,113,.08);
+    box-shadow: 0 0 8px rgba(46,204,113,.2);
+  }
+  .session-pill .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .session-pill.active .dot {
+    animation: blink 1.4s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+
+  /* ─── TABS ─── */
+  .tab-bar {
+    display: flex;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .tab-btn {
+    flex: 1;
+    height: var(--tab-h);
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    color: var(--muted);
+    transition: color .2s, border-color .2s, background .2s;
+    text-transform: uppercase;
+  }
+  .tab-btn:hover { background: rgba(255,255,255,.02); color: var(--text); }
+
+  .tab-btn[data-tab="gold"].active   { color: var(--gold);   border-color: var(--gold);   }
+  .tab-btn[data-tab="usdjpy"].active { color: var(--cyan);   border-color: var(--cyan);   }
+  .tab-btn[data-tab="silver"].active { color: var(--silver); border-color: var(--silver); }
+
+  /* ─── TAB PANELS ─── */
+  .tab-panel { display: none; flex: 1; flex-direction: column; overflow-y: auto; padding: 14px 14px 24px; gap: 12px; }
+  .tab-panel.active { display: flex; }
+
+  /* ─── OHLC CARD ─── */
+  .ohlc-card {
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+
+  .ohlc-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: .12em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .ohlc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .ohlc-item { display: flex; flex-direction: column; gap: 3px; }
+  .ohlc-key {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: .1em;
+  }
+  .ohlc-val {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .ohlc-val.hi { color: var(--green); }
+  .ohlc-val.lo { color: var(--red); }
+
+  .ohlc-updated {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  /* ─── SECTION HEADING ─── */
+  .sec-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: .14em;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding: 2px 0 6px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2px;
+  }
+
+  /* ─── LINK GRID ─── */
+  .link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .link-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 12px;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 5px;
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .06em;
+    transition: background .15s, border-color .15s, color .15s;
+    cursor: pointer;
+  }
+  .link-btn:hover {
+    background: rgba(255,255,255,.04);
+    border-color: var(--border2);
+    color: #fff;
+  }
+
+  .link-btn .icon {
+    width: 20px; height: 20px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+
+  /* accent colors per tab */
+  [data-color="gold"] .link-btn:hover  { border-color: var(--gold-dim);   color: var(--gold); }
+  [data-color="cyan"] .link-btn:hover  { border-color: var(--cyan-dim);   color: var(--cyan); }
+  [data-color="silver"] .link-btn:hover{ border-color: var(--silver-dim); color: var(--silver); }
+
+  /* MT5 buttons */
+  .mt5-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .mt5-btn {
+    padding: 12px 10px;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 5px;
+    color: var(--text);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .15s;
+    text-align: center;
+  }
+
+  .mt5-btn:hover {
+    background: rgba(255,255,255,.05);
+    color: #fff;
+    border-color: #444;
+  }
+
+  .mt5-broker {
+    display: block;
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--muted);
+    margin-top: 3px;
+    letter-spacing: .08em;
+  }
+
+  /* VIX card */
+  .vix-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 5px;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background .15s;
+  }
+  .vix-card:hover { background: rgba(255,255,255,.03); }
+  .vix-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: .12em;
+    color: var(--muted);
+  }
+  .vix-desc {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .vix-arrow { color: var(--muted); font-size: 16px; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (min-width: 600px) {
+    .link-grid { grid-template-columns: repeat(3, 1fr); }
+    .mt5-grid  { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
 </head>
 <body>
-<h1>FX Cockpit</h1>
+
+<header>
+  <div class="logo">FX COCKPIT <span>by azteca</span></div>
+  <div id="clock">--:--:--</div>
+</header>
+
+<div id="session-bar">
+  <div class="session-pill" id="sess-tokyo">
+    <span class="dot"></span>TOKYO
+  </div>
+  <div class="session-pill" id="sess-london">
+    <span class="dot"></span>LONDON
+  </div>
+  <div class="session-pill" id="sess-ny">
+    <span class="dot"></span>NEW YORK
+  </div>
+  <div class="session-pill" id="sess-sydney">
+    <span class="dot"></span>SYDNEY
+  </div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="gold">GOLD</button>
+  <button class="tab-btn" data-tab="usdjpy">USD/JPY</button>
+  <button class="tab-btn" data-tab="silver">SILVER</button>
+</div>
+
+<!-- ═══ GOLD ═══ -->
+<div class="tab-panel active" id="panel-gold" data-color="gold">
+
+  <div class="ohlc-card">
+    <div class="ohlc-label">前日 OHLC — XAU/USD</div>
+    <div class="ohlc-grid">
+      <div class="ohlc-item">
+        <span class="ohlc-key">OPEN</span>
+        <span class="ohlc-val" id="gold-open">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">HIGH</span>
+        <span class="ohlc-val hi" id="gold-high">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">LOW</span>
+        <span class="ohlc-val lo" id="gold-low">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">CLOSE</span>
+        <span class="ohlc-val" id="gold-close">—</span>
+      </div>
+    </div>
+    <div class="ohlc-updated" id="gold-updated"></div>
+  </div>
+
+  <div class="sec-heading">チャート・分析</div>
+  <div class="link-grid">
+    <a class="link-btn" href="https://www.tradingview.com/chart/?symbol=XAUUSD" target="_blank" rel="noopener">
+      <span class="icon">📈</span>TradingView
+    </a>
+    <a class="link-btn" href="https://www.wsj.com/market-data/quotes/index/DXY" target="_blank" rel="noopener">
+      <span class="icon">💵</span>DXY指数
+    </a>
+    <a class="link-btn" href="https://twitter.com/search?q=XAUUSD+OR+%E9%87%91%E4%BE%A1&src=typed_query&f=live" target="_blank" rel="noopener">
+      <span class="icon">𝕏</span>X リアルタイム
+    </a>
+    <a class="link-btn" href="https://finance.yahoo.com/quote/GC%3DF" target="_blank" rel="noopener">
+      <span class="icon">🔗</span>Yahoo Finance
+    </a>
+  </div>
+
+  <div class="sec-heading">市場センチメント</div>
+  <a class="vix-card" href="https://finance.yahoo.com/quote/%5EVIX/" target="_blank" rel="noopener">
+    <div>
+      <div class="vix-label">VIX — 恐怖指数</div>
+      <div class="vix-desc">市場ボラティリティ参照 → Yahoo Finance</div>
+    </div>
+    <span class="vix-arrow">↗</span>
+  </a>
+
+  <div class="sec-heading">MT5 起動</div>
+  <div class="mt5-grid">
+    <button class="mt5-btn" onclick="openMT5('exness','XAUUSD')">
+      XAU/USD
+      <span class="mt5-broker">Exness</span>
+    </button>
+    <button class="mt5-btn" onclick="openMT5('xm','XAUUSD')">
+      XAU/USD
+      <span class="mt5-broker">XM</span>
+    </button>
+  </div>
+
+  <a class="link-btn" href="https://posi-kenmon.netlify.app" target="_blank" rel="noopener" style="margin-top:4px">
+    <span class="icon">🚦</span>ポジポジ検問所を開く
+  </a>
+
+</div>
+
+<!-- ═══ USD/JPY ═══ -->
+<div class="tab-panel" id="panel-usdjpy" data-color="cyan">
+
+  <div class="ohlc-card">
+    <div class="ohlc-label">前日 OHLC — USD/JPY</div>
+    <div class="ohlc-grid">
+      <div class="ohlc-item">
+        <span class="ohlc-key">OPEN</span>
+        <span class="ohlc-val" id="usdjpy-open">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">HIGH</span>
+        <span class="ohlc-val hi" id="usdjpy-high">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">LOW</span>
+        <span class="ohlc-val lo" id="usdjpy-low">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">CLOSE</span>
+        <span class="ohlc-val" id="usdjpy-close">—</span>
+      </div>
+    </div>
+    <div class="ohlc-updated" id="usdjpy-updated"></div>
+  </div>
+
+  <div class="sec-heading">チャート・分析</div>
+  <div class="link-grid">
+    <a class="link-btn" href="https://www.tradingview.com/chart/?symbol=USDJPY" target="_blank" rel="noopener">
+      <span class="icon">📈</span>TradingView
+    </a>
+    <a class="link-btn" href="https://www.wsj.com/market-data/quotes/index/DXY" target="_blank" rel="noopener">
+      <span class="icon">💵</span>DXY指数
+    </a>
+    <a class="link-btn" href="https://twitter.com/search?q=USDJPY+OR+%E3%83%89%E3%83%AB%E5%86%86&src=typed_query&f=live" target="_blank" rel="noopener">
+      <span class="icon">𝕏</span>X リアルタイム
+    </a>
+    <a class="link-btn" href="https://finance.yahoo.com/quote/JPY%3DX" target="_blank" rel="noopener">
+      <span class="icon">🔗</span>Yahoo Finance
+    </a>
+  </div>
+
+  <div class="sec-heading">市場センチメント</div>
+  <a class="vix-card" href="https://finance.yahoo.com/quote/%5EVIX/" target="_blank" rel="noopener">
+    <div>
+      <div class="vix-label">VIX — 恐怖指数</div>
+      <div class="vix-desc">市場ボラティリティ参照 → Yahoo Finance</div>
+    </div>
+    <span class="vix-arrow">↗</span>
+  </a>
+
+  <div class="sec-heading">MT5 起動</div>
+  <div class="mt5-grid">
+    <button class="mt5-btn" onclick="openMT5('exness','USDJPY')">
+      USD/JPY
+      <span class="mt5-broker">Exness</span>
+    </button>
+    <button class="mt5-btn" onclick="openMT5('xm','USDJPY')">
+      USD/JPY
+      <span class="mt5-broker">XM</span>
+    </button>
+  </div>
+
+  <a class="link-btn" href="https://posi-kenmon.netlify.app" target="_blank" rel="noopener" style="margin-top:4px">
+    <span class="icon">🚦</span>ポジポジ検問所を開く
+  </a>
+
+</div>
+
+<!-- ═══ SILVER ═══ -->
+<div class="tab-panel" id="panel-silver" data-color="silver">
+
+  <div class="ohlc-card">
+    <div class="ohlc-label">前日 OHLC — XAG/USD</div>
+    <div class="ohlc-grid">
+      <div class="ohlc-item">
+        <span class="ohlc-key">OPEN</span>
+        <span class="ohlc-val" id="silver-open">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">HIGH</span>
+        <span class="ohlc-val hi" id="silver-high">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">LOW</span>
+        <span class="ohlc-val lo" id="silver-low">—</span>
+      </div>
+      <div class="ohlc-item">
+        <span class="ohlc-key">CLOSE</span>
+        <span class="ohlc-val" id="silver-close">—</span>
+      </div>
+    </div>
+    <div class="ohlc-updated" id="silver-updated"></div>
+  </div>
+
+  <div class="sec-heading">チャート・分析</div>
+  <div class="link-grid">
+    <a class="link-btn" href="https://www.tradingview.com/chart/?symbol=XAGUSD" target="_blank" rel="noopener">
+      <span class="icon">📈</span>TradingView
+    </a>
+    <a class="link-btn" href="https://www.wsj.com/market-data/quotes/index/DXY" target="_blank" rel="noopener">
+      <span class="icon">💵</span>DXY指数
+    </a>
+    <a class="link-btn" href="https://twitter.com/search?q=XAGUSD+OR+%E9%8A%80%E7%9B%B8%E5%A0%B4&src=typed_query&f=live" target="_blank" rel="noopener">
+      <span class="icon">𝕏</span>X リアルタイム
+    </a>
+    <a class="link-btn" href="https://finance.yahoo.com/quote/SI%3DF" target="_blank" rel="noopener">
+      <span class="icon">🔗</span>Yahoo Finance
+    </a>
+  </div>
+
+  <div class="sec-heading">市場センチメント</div>
+  <a class="vix-card" href="https://finance.yahoo.com/quote/%5EVIX/" target="_blank" rel="noopener">
+    <div>
+      <div class="vix-label">VIX — 恐怖指数</div>
+      <div class="vix-desc">市場ボラティリティ参照 → Yahoo Finance</div>
+    </div>
+    <span class="vix-arrow">↗</span>
+  </a>
+
+  <div class="sec-heading">MT5 起動</div>
+  <div class="mt5-grid">
+    <button class="mt5-btn" onclick="openMT5('exness','XAGUSD')">
+      XAG/USD
+      <span class="mt5-broker">Exness</span>
+    </button>
+    <button class="mt5-btn" onclick="openMT5('xm','XAGUSD')">
+      XAG/USD
+      <span class="mt5-broker">XM</span>
+    </button>
+  </div>
+
+  <a class="link-btn" href="https://posi-kenmon.netlify.app" target="_blank" rel="noopener" style="margin-top:4px">
+    <span class="icon">🚦</span>ポジポジ検問所を開く
+  </a>
+
+</div>
+
+<script>
+// ─── CLOCK ───
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2,'0');
+  const m = String(now.getMinutes()).padStart(2,'0');
+  const s = String(now.getSeconds()).padStart(2,'0');
+  document.getElementById('clock').textContent = `${h}:${m}:${s} JST`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// ─── SESSIONS (JST基準) ───
+const SESSIONS = {
+  tokyo:  { start: 8,  end: 15 },   // JST
+  london: { start: 16, end: 24 },   // 夏時間 (BST+8h)
+  ny:     { start: 21, end: 30 },   // 夏時間 (EDT+13h) → 30=翌6:00
+  sydney: { start: 7,  end: 16 },
+};
+
+function updateSessions() {
+  const now = new Date();
+  const jstH = now.getHours() + now.getMinutes() / 60;
+
+  function isActive(start, end) {
+    if (end <= 24) return jstH >= start && jstH < end;
+    // overnight wrap
+    return jstH >= start || jstH < (end - 24);
+  }
+
+  const map = {
+    'sess-tokyo':  isActive(SESSIONS.tokyo.start,  SESSIONS.tokyo.end),
+    'sess-london': isActive(SESSIONS.london.start, SESSIONS.london.end),
+    'sess-ny':     isActive(SESSIONS.ny.start,     SESSIONS.ny.end),
+    'sess-sydney': isActive(SESSIONS.sydney.start, SESSIONS.sydney.end),
+  };
+  for (const [id, active] of Object.entries(map)) {
+    document.getElementById(id).classList.toggle('active', active);
+  }
+}
+setInterval(updateSessions, 10000);
+updateSessions();
+
+// ─── TABS ───
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(`panel-${tab}`).classList.add('active');
+  });
+});
+
+// ─── OHLC ───
+async function loadOHLC() {
+  try {
+    const res = await fetch(`public/data/ohlc.json?t=${Date.now()}`);
+    if (!res.ok) return;
+    const d = await res.json();
+
+    function set(prefix, sym, dp) {
+      const sym2 = sym.replace('/','');
+      const data = d[sym2] || d[sym] || null;
+      if (!data) return;
+      document.getElementById(`${prefix}-open`).textContent  = Number(data.open).toFixed(dp);
+      document.getElementById(`${prefix}-high`).textContent  = Number(data.high).toFixed(dp);
+      document.getElementById(`${prefix}-low`).textContent   = Number(data.low).toFixed(dp);
+      document.getElementById(`${prefix}-close`).textContent = Number(data.close).toFixed(dp);
+      if (d.updated) {
+        document.getElementById(`${prefix}-updated`).textContent = `更新: ${d.updated}`;
+      }
+    }
+
+    set('gold',   'XAUUSD', 2);
+    set('usdjpy', 'USDJPY', 3);
+    set('silver', 'XAGUSD', 3);
+  } catch(e) {
+    console.warn('OHLC load failed:', e);
+  }
+}
+loadOHLC();
+
+// ─── MT5 ───
+function openMT5(broker, symbol) {
+  const profiles = {
+    exness: { name: 'Exness', server: 'Exness-MT5Real13' },
+    xm:     { name: 'XM',     server: 'XMTrading-MT5 3' },
+  };
+  const p = profiles[broker];
+  if (!p) return;
+  // MT5カスタムURLスキームは環境依存のためフォールバックとして案内
+  const uri = `mt5://open?server=${encodeURIComponent(p.server)}&symbol=${symbol}`;
+  try {
+    window.location.href = uri;
+  } catch(e) {
+    alert(`MT5を起動してください\nブローカー: ${p.name}\nサーバー: ${p.server}\n銘柄: ${symbol}`);
+  }
+}
+</script>
 </body>
 </html>
