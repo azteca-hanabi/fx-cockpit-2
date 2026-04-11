@@ -231,10 +231,9 @@ header {
   transition: color .2s, border-color .2s;
 }
 .tab-btn:hover { color: var(--text); }
-.tab-btn[data-tab="gold"].active   { color: var(--gold);   border-color: var(--gold); }
-.tab-btn[data-tab="usd"].active    { color: var(--cyan);   border-color: var(--cyan); }
-.tab-btn[data-tab="jpy"].active    { color: var(--cyan);   border-color: var(--cyan); }
-.tab-btn[data-tab="silver"].active { color: var(--silver); border-color: var(--silver); }
+.tab-btn[data-tab="gold"].active    { color: var(--gold);   border-color: var(--gold); }
+.tab-btn[data-tab="usdjpy"].active  { color: var(--cyan);   border-color: var(--cyan); }
+.tab-btn[data-tab="silver"].active  { color: var(--silver); border-color: var(--silver); }
 
 /* ─── TAB PANELS ─── */
 .tab-panel {
@@ -430,8 +429,7 @@ header {
 
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="gold">GOLD</button>
-  <button class="tab-btn" data-tab="usd">USD</button>
-  <button class="tab-btn" data-tab="jpy">JPY</button>
+  <button class="tab-btn" data-tab="usdjpy">USD/JPY</button>
   <button class="tab-btn" data-tab="silver">SILVER</button>
 </div>
 
@@ -467,9 +465,9 @@ header {
       TradingView
     </a>
     <div class="chart-side">
-      <a class="side-btn" href="https://jp.investing.com/economic-calendar/" target="_blank" rel="noopener">経済指標</a>
-      <a class="side-btn" href="https://jp.investing.com/currencies/xau-usd" target="_blank" rel="noopener">Investing.com</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/TVC-VIX/" target="_blank" rel="noopener">VIX</a>
+      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">経済指標</a>
+      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールドニュース</a>
+      <a class="side-btn" href="https://jp.tradingview.com/chart/?symbol=TVC%3AVIX" target="_blank" rel="noopener">VIX</a>
     </div>
   </div>
 
@@ -487,27 +485,27 @@ header {
 
 </div>
 
-<!-- ═══ USD ═══ -->
-<div class="tab-panel" id="panel-usd">
+<!-- ═══ USD/JPY ═══ -->
+<div class="tab-panel" id="panel-usdjpy">
 
   <div class="ohlc-card">
-    <div class="ohlc-title" id="usd-title">前日 OHLC — USD/JPY</div>
+    <div class="ohlc-title" id="usdjpy-title">前日 OHLC — USD/JPY</div>
     <div class="ohlc-grid">
       <div class="ohlc-item">
         <span class="ohlc-key">始値</span>
-        <span class="ohlc-val" id="usd-open">—</span>
+        <span class="ohlc-val" id="usdjpy-open">—</span>
       </div>
       <div class="ohlc-item">
         <span class="ohlc-key">高値</span>
-        <span class="ohlc-val hi" id="usd-high">—</span>
+        <span class="ohlc-val hi" id="usdjpy-high">—</span>
       </div>
       <div class="ohlc-item">
         <span class="ohlc-key">安値</span>
-        <span class="ohlc-val lo" id="usd-low">—</span>
+        <span class="ohlc-val lo" id="usdjpy-low">—</span>
       </div>
       <div class="ohlc-item">
         <span class="ohlc-key">終値</span>
-        <span class="ohlc-val" id="usd-close">—</span>
+        <span class="ohlc-val" id="usdjpy-close">—</span>
       </div>
     </div>
   </div>
@@ -519,61 +517,9 @@ header {
       TradingView
     </a>
     <div class="chart-side">
-      <a class="side-btn" href="https://jp.investing.com/economic-calendar/" target="_blank" rel="noopener">経済指標</a>
-      <a class="side-btn" href="https://jp.investing.com/currencies/usd-jpy" target="_blank" rel="noopener">Investing.com</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/TVC-VIX/" target="_blank" rel="noopener">VIX</a>
-    </div>
-  </div>
-
-  <div class="sec-heading">アプリ起動</div>
-  <div class="app-grid">
-    <a class="app-btn" href="metatrader5://">
-      MT5
-      <span class="app-sub">MetaTrader 5</span>
-    </a>
-    <a class="app-btn" href="metatrader4://">
-      MT4
-      <span class="app-sub">MetaTrader 4</span>
-    </a>
-  </div>
-
-</div>
-
-<!-- ═══ JPY ═══ -->
-<div class="tab-panel" id="panel-jpy">
-
-  <div class="ohlc-card">
-    <div class="ohlc-title" id="jpy-title">前日 OHLC — USD/JPY</div>
-    <div class="ohlc-grid">
-      <div class="ohlc-item">
-        <span class="ohlc-key">始値</span>
-        <span class="ohlc-val" id="jpy-open">—</span>
-      </div>
-      <div class="ohlc-item">
-        <span class="ohlc-key">高値</span>
-        <span class="ohlc-val hi" id="jpy-high">—</span>
-      </div>
-      <div class="ohlc-item">
-        <span class="ohlc-key">安値</span>
-        <span class="ohlc-val lo" id="jpy-low">—</span>
-      </div>
-      <div class="ohlc-item">
-        <span class="ohlc-key">終値</span>
-        <span class="ohlc-val" id="jpy-close">—</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="sec-heading">チャート・分析</div>
-  <div class="chart-row">
-    <a class="tv-btn" href="https://jp.tradingview.com/chart/?symbol=USDJPY" target="_blank" rel="noopener">
-      <span class="tv-icon">📈</span>
-      TradingView
-    </a>
-    <div class="chart-side">
-      <a class="side-btn" href="https://jp.investing.com/economic-calendar/" target="_blank" rel="noopener">経済指標</a>
-      <a class="side-btn" href="https://jp.investing.com/currencies/usd-jpy" target="_blank" rel="noopener">Investing.com</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/TVC-VIX/" target="_blank" rel="noopener">VIX</a>
+      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">経済指標</a>
+      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールドニュース</a>
+      <a class="side-btn" href="https://jp.tradingview.com/chart/?symbol=TVC%3AVIX" target="_blank" rel="noopener">VIX</a>
     </div>
   </div>
 
@@ -623,9 +569,9 @@ header {
       TradingView
     </a>
     <div class="chart-side">
-      <a class="side-btn" href="https://jp.investing.com/economic-calendar/" target="_blank" rel="noopener">経済指標</a>
-      <a class="side-btn" href="https://jp.investing.com/currencies/xag-usd" target="_blank" rel="noopener">Investing.com</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/TVC-VIX/" target="_blank" rel="noopener">VIX</a>
+      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">経済指標</a>
+      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールドニュース</a>
+      <a class="side-btn" href="https://jp.tradingview.com/chart/?symbol=TVC%3AVIX" target="_blank" rel="noopener">VIX</a>
     </div>
   </div>
 
@@ -730,8 +676,7 @@ async function loadOHLC() {
     }
 
     set('gold',   'XAUUSD', 2, 'XAU/USD');
-    set('usd',    'USDJPY', 3, 'USD/JPY');
-    set('jpy',    'USDJPY', 3, 'USD/JPY');
+    set('usdjpy', 'USDJPY', 3, 'USD/JPY');
     set('silver', 'XAGUSD', 3, 'XAG/USD');
   } catch (e) {
     console.warn('OHLC load failed:', e);
