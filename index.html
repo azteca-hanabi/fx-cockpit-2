@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,38 +10,81 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:        #0a0a0f;
-    --bg2:       #0f0f18;
-    --bg3:       #14141f;
-    --border:    #1e1e2e;
-    --border2:   #2a2a40;
-    --text:      #c8c8d8;
-    --muted:     #5a5a7a;
-    --gold:      #f0b429;
-    --gold-dim:  #7a5a10;
-    --silver:    #a8b8cc;
-    --silver-dim:#3a4a58;
-    --cyan:      #38c9c9;
-    --cyan-dim:  #0e4040;
-    --green:     #2ecc71;
-    --red:       #e74c3c;
-    --tab-h:     48px;
+  /* ─── THEMES ─── */
+  :root,
+  [data-theme="dark"] {
+    --bg:         #0a0a0f;
+    --bg2:        #0f0f18;
+    --bg3:        #14141f;
+    --border:     #1e1e2e;
+    --border2:    #2a2a40;
+    --text:       #c8c8d8;
+    --muted:      #5a5a7a;
+    --gold:       #f0b429;
+    --gold-dim:   #7a5a10;
+    --silver:     #a8b8cc;
+    --silver-dim: #3a4a58;
+    --cyan:       #38c9c9;
+    --cyan-dim:   #0e4040;
+    --green:      #2ecc71;
+    --red:        #e74c3c;
+    --scanline:   1;
   }
 
+  [data-theme="dim"] {
+    --bg:         #181826;
+    --bg2:        #1e1e30;
+    --bg3:        #222238;
+    --border:     #2a2a48;
+    --border2:    #363660;
+    --text:       #d0d0e4;
+    --muted:      #6868a0;
+    --gold:       #f0b429;
+    --gold-dim:   #7a5a10;
+    --silver:     #a8b8cc;
+    --silver-dim: #3a4a58;
+    --cyan:       #38c9c9;
+    --cyan-dim:   #103a3a;
+    --green:      #2ecc71;
+    --red:        #e74c3c;
+    --scanline:   0.5;
+  }
+
+  [data-theme="light"] {
+    --bg:         #f0f0f8;
+    --bg2:        #e4e4f0;
+    --bg3:        #ffffff;
+    --border:     #d0d0e0;
+    --border2:    #b8b8cc;
+    --text:       #1a1a30;
+    --muted:      #7878a0;
+    --gold:       #a86e00;
+    --gold-dim:   #f5e8c0;
+    --silver:     #4a6070;
+    --silver-dim: #ccd8e4;
+    --cyan:       #006888;
+    --cyan-dim:   #c0e8f4;
+    --green:      #1a7a3a;
+    --red:        #c01818;
+    --scanline:   0;
+  }
+
+  /* ─── RESET ─── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    transition: background .2s, color .2s;
   }
 
   /* ─── SCAN LINE OVERLAY ─── */
@@ -52,11 +95,13 @@
       0deg,
       transparent,
       transparent 2px,
-      rgba(0,0,0,.08) 2px,
-      rgba(0,0,0,.08) 4px
+      rgba(0,0,0,.07) 2px,
+      rgba(0,0,0,.07) 4px
     );
     pointer-events: none;
     z-index: 9999;
+    opacity: var(--scanline);
+    transition: opacity .2s;
   }
 
   /* ─── HEADER ─── */
@@ -64,11 +109,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
-    height: 44px;
+    padding: 0 14px;
+    height: 50px;
     border-bottom: 1px solid var(--border);
     background: var(--bg2);
     flex-shrink: 0;
+    gap: 10px;
   }
 
   .logo {
@@ -76,34 +122,73 @@
     font-size: 15px;
     letter-spacing: .12em;
     color: var(--cyan);
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .logo span { color: var(--muted); font-size: 11px; margin-left: 8px; letter-spacing: .08em; }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ─── THEME SWITCHER ─── */
+  .theme-switcher {
+    display: flex;
+    gap: 3px;
+  }
+
+  .theme-btn {
+    padding: 5px 9px;
+    border-radius: 4px;
+    border: 1px solid var(--border2);
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .15s;
+    white-space: nowrap;
+  }
+  .theme-btn:hover {
+    color: var(--text);
+    border-color: var(--muted);
+  }
+  .theme-btn.active {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: rgba(56,201,201,.1);
+  }
 
   #clock {
     font-family: 'Share Tech Mono', monospace;
     font-size: 13px;
     color: var(--muted);
     letter-spacing: .06em;
+    white-space: nowrap;
   }
 
   /* ─── SESSION BAR ─── */
   #session-bar {
     display: flex;
     gap: 6px;
-    padding: 6px 16px;
+    padding: 7px 14px;
     background: var(--bg2);
     border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
   }
 
   .session-pill {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 11px;
-    padding: 3px 8px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
     border-radius: 3px;
     border: 1px solid var(--border2);
     color: var(--muted);
-    letter-spacing: .06em;
+    letter-spacing: .04em;
     transition: all .3s;
   }
   .session-pill.active {
@@ -135,15 +220,15 @@
 
   .tab-btn {
     flex: 1;
-    height: var(--tab-h);
+    height: 50px;
     background: none;
     border: none;
     border-bottom: 3px solid transparent;
     cursor: pointer;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: .14em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .1em;
     color: var(--muted);
     transition: color .2s, border-color .2s, background .2s;
     text-transform: uppercase;
@@ -155,7 +240,7 @@
   .tab-btn[data-tab="silver"].active { color: var(--silver); border-color: var(--silver); }
 
   /* ─── TAB PANELS ─── */
-  .tab-panel { display: none; flex: 1; flex-direction: column; overflow-y: auto; padding: 14px 14px 24px; gap: 12px; }
+  .tab-panel { display: none; flex: 1; flex-direction: column; overflow-y: auto; padding: 14px 14px 28px; gap: 12px; }
   .tab-panel.active { display: flex; }
 
   /* ─── OHLC CARD ─── */
@@ -164,15 +249,17 @@
     border: 1px solid var(--border2);
     border-radius: 6px;
     padding: 14px 16px;
+    transition: background .2s, border-color .2s;
   }
 
   .ohlc-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px;
-    letter-spacing: .12em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .08em;
     color: var(--muted);
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .ohlc-grid {
@@ -181,36 +268,39 @@
     gap: 8px;
   }
 
-  .ohlc-item { display: flex; flex-direction: column; gap: 3px; }
+  .ohlc-item { display: flex; flex-direction: column; gap: 4px; }
   .ohlc-key {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
     color: var(--muted);
-    letter-spacing: .1em;
+    letter-spacing: .08em;
+    text-transform: uppercase;
   }
   .ohlc-val {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 15px;
+    font-size: 17px;
     color: var(--text);
   }
   .ohlc-val.hi { color: var(--green); }
   .ohlc-val.lo { color: var(--red); }
 
   .ohlc-updated {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted);
-    margin-top: 8px;
+    margin-top: 10px;
     font-family: 'Share Tech Mono', monospace;
   }
 
   /* ─── SECTION HEADING ─── */
   .sec-heading {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px;
-    letter-spacing: .14em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
     color: var(--muted);
     text-transform: uppercase;
-    padding: 2px 0 6px;
+    padding: 2px 0 7px;
     border-bottom: 1px solid var(--border);
     margin-bottom: 2px;
   }
@@ -226,38 +316,36 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 11px 12px;
+    padding: 13px 14px;
     background: var(--bg3);
     border: 1px solid var(--border2);
     border-radius: 5px;
     color: var(--text);
     text-decoration: none;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: .06em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .02em;
     transition: background .15s, border-color .15s, color .15s;
     cursor: pointer;
   }
   .link-btn:hover {
-    background: rgba(255,255,255,.04);
-    border-color: var(--border2);
-    color: #fff;
+    background: rgba(128,128,200,.06);
+    color: var(--text);
   }
 
   .link-btn .icon {
-    width: 20px; height: 20px;
+    width: 22px; height: 22px;
     flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  /* accent colors per tab */
-  [data-color="gold"] .link-btn:hover  { border-color: var(--gold-dim);   color: var(--gold); }
-  [data-color="cyan"] .link-btn:hover  { border-color: var(--cyan-dim);   color: var(--cyan); }
-  [data-color="silver"] .link-btn:hover{ border-color: var(--silver-dim); color: var(--silver); }
+  [data-color="gold"]   .link-btn:hover { border-color: var(--gold-dim);   color: var(--gold); }
+  [data-color="cyan"]   .link-btn:hover { border-color: var(--cyan-dim);   color: var(--cyan); }
+  [data-color="silver"] .link-btn:hover { border-color: var(--silver-dim); color: var(--silver); }
 
-  /* MT5 buttons */
+  /* ─── MT5 ─── */
   .mt5-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -265,37 +353,36 @@
   }
 
   .mt5-btn {
-    padding: 12px 10px;
+    padding: 14px 10px;
     background: var(--bg3);
     border: 1px solid var(--border2);
     border-radius: 5px;
     color: var(--text);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .06em;
     text-transform: uppercase;
     cursor: pointer;
     transition: all .15s;
     text-align: center;
   }
-
   .mt5-btn:hover {
-    background: rgba(255,255,255,.05);
-    color: #fff;
-    border-color: #444;
+    background: rgba(128,128,200,.06);
+    color: var(--text);
+    border-color: var(--border2);
   }
 
   .mt5-broker {
     display: block;
-    font-size: 10px;
-    font-weight: 300;
+    font-size: 11px;
+    font-weight: 400;
     color: var(--muted);
     margin-top: 3px;
-    letter-spacing: .08em;
+    letter-spacing: .04em;
   }
 
-  /* VIX card */
+  /* ─── VIX ─── */
   .vix-card {
     display: flex;
     align-items: center;
@@ -303,29 +390,34 @@
     background: var(--bg3);
     border: 1px solid var(--border2);
     border-radius: 5px;
-    padding: 12px 14px;
+    padding: 13px 14px;
     text-decoration: none;
     color: var(--text);
     transition: background .15s;
   }
-  .vix-card:hover { background: rgba(255,255,255,.03); }
+  .vix-card:hover { background: rgba(128,128,200,.06); }
   .vix-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px;
-    letter-spacing: .12em;
-    color: var(--muted);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--text);
   }
   .vix-desc {
     font-size: 12px;
     color: var(--muted);
-    margin-top: 2px;
+    margin-top: 3px;
   }
-  .vix-arrow { color: var(--muted); font-size: 16px; }
+  .vix-arrow { color: var(--muted); font-size: 18px; }
 
   /* ─── RESPONSIVE ─── */
   @media (min-width: 600px) {
     .link-grid { grid-template-columns: repeat(3, 1fr); }
     .mt5-grid  { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 360px) {
+    .ohlc-val { font-size: 15px; }
+    #clock    { display: none; }
   }
 </style>
 </head>
@@ -333,22 +425,21 @@
 
 <header>
   <div class="logo">FX COCKPIT <span>by azteca</span></div>
-  <div id="clock">--:--:--</div>
+  <div class="header-right">
+    <div class="theme-switcher">
+      <button class="theme-btn active" data-theme="dark">Dark</button>
+      <button class="theme-btn"        data-theme="dim">Dim</button>
+      <button class="theme-btn"        data-theme="light">Light</button>
+    </div>
+    <div id="clock">--:--:--</div>
+  </div>
 </header>
 
 <div id="session-bar">
-  <div class="session-pill" id="sess-tokyo">
-    <span class="dot"></span>TOKYO
-  </div>
-  <div class="session-pill" id="sess-london">
-    <span class="dot"></span>LONDON
-  </div>
-  <div class="session-pill" id="sess-ny">
-    <span class="dot"></span>NEW YORK
-  </div>
-  <div class="session-pill" id="sess-sydney">
-    <span class="dot"></span>SYDNEY
-  </div>
+  <div class="session-pill" id="sess-tokyo"><span class="dot"></span>TOKYO</div>
+  <div class="session-pill" id="sess-london"><span class="dot"></span>LONDON</div>
+  <div class="session-pill" id="sess-ny"><span class="dot"></span>NEW YORK</div>
+  <div class="session-pill" id="sess-sydney"><span class="dot"></span>SYDNEY</div>
 </div>
 
 <div class="tab-bar">
@@ -565,6 +656,26 @@
 </div>
 
 <script>
+// ─── THEME ───
+(function () {
+  const saved = localStorage.getItem('fx-theme') || 'dark';
+  document.documentElement.dataset.theme = saved;
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.theme === saved);
+  });
+})();
+
+document.querySelectorAll('.theme-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const t = btn.dataset.theme;
+    document.documentElement.dataset.theme = t;
+    localStorage.setItem('fx-theme', t);
+    document.querySelectorAll('.theme-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.theme === t);
+    });
+  });
+});
+
 // ─── CLOCK ───
 function updateClock() {
   const now = new Date();
@@ -578,9 +689,9 @@ updateClock();
 
 // ─── SESSIONS (JST基準) ───
 const SESSIONS = {
-  tokyo:  { start: 8,  end: 15 },   // JST
-  london: { start: 16, end: 24 },   // 夏時間 (BST+8h)
-  ny:     { start: 21, end: 30 },   // 夏時間 (EDT+13h) → 30=翌6:00
+  tokyo:  { start: 8,  end: 15 },
+  london: { start: 16, end: 24 },
+  ny:     { start: 21, end: 30 },
   sydney: { start: 7,  end: 16 },
 };
 
@@ -590,7 +701,6 @@ function updateSessions() {
 
   function isActive(start, end) {
     if (end <= 24) return jstH >= start && jstH < end;
-    // overnight wrap
     return jstH >= start || jstH < (end - 24);
   }
 
@@ -655,7 +765,6 @@ function openMT5(broker, symbol) {
   };
   const p = profiles[broker];
   if (!p) return;
-  // MT5カスタムURLスキームは環境依存のためフォールバックとして案内
   const uri = `mt5://open?server=${encodeURIComponent(p.server)}&symbol=${symbol}`;
   try {
     window.location.href = uri;
