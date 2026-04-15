@@ -400,6 +400,43 @@ header {
   letter-spacing: .04em;
 }
 
+/* ─── NEWS SECTION ─── */
+.news-updated {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  letter-spacing: .03em;
+}
+
+#news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.news-item {
+  padding: 10px 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+}
+
+.news-source {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .03em;
+  margin-bottom: 4px;
+}
+
+.news-title {
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.45;
+  display: block;
+}
+.news-title:hover { color: var(--gold); }
+
 /* ─── SMALL SCREEN ADJUSTMENTS ─── */
 @media (max-width: 360px) {
   .ohlc-val { font-size: 15px; }
@@ -467,9 +504,13 @@ header {
     <div class="chart-side">
       <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">経済指標</a>
       <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールドニュース</a>
-      <a class="side-btn" href="https://jp.tradingview.com/chart/?symbol=TVC%3AVIX" target="_blank" rel="noopener">VIX</a>
+      <a class="side-btn" href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">恐怖&amp;強欲指数</a>
     </div>
   </div>
+
+  <div class="sec-heading">最新ニュース</div>
+  <div class="news-updated" id="news-updated"></div>
+  <div id="news-list"></div>
 
   <div class="sec-heading">アプリ起動</div>
   <div class="app-grid">
@@ -518,8 +559,8 @@ header {
     </a>
     <div class="chart-side">
       <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">経済指標</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールドニュース</a>
-      <a class="side-btn" href="https://jp.tradingview.com/chart/?symbol=TVC%3AVIX" target="_blank" rel="noopener">VIX</a>
+      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールド関連ニュース</a>
+      <a class="side-btn" href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">恐怖&amp;強欲指数</a>
     </div>
   </div>
 
@@ -570,8 +611,8 @@ header {
     </a>
     <div class="chart-side">
       <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">経済指標</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールドニュース</a>
-      <a class="side-btn" href="https://jp.tradingview.com/chart/?symbol=TVC%3AVIX" target="_blank" rel="noopener">VIX</a>
+      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールド関連ニュース</a>
+      <a class="side-btn" href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">恐怖&amp;強欲指数</a>
     </div>
   </div>
 
@@ -683,6 +724,48 @@ async function loadOHLC() {
   }
 }
 loadOHLC();
+
+// ─── NEWS ───
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadNews() {
+  try {
+    const res = await fetch(`public/data/news.json?t=${Date.now()}`);
+    if (!res.ok) return;
+    const d = await res.json();
+
+    const updEl = document.getElementById('news-updated');
+    if (updEl && d.updated) {
+      const dt = new Date(d.updated);
+      const dateStr = `${dt.getUTCFullYear()}/${dt.getUTCMonth()+1}/${dt.getUTCDate()} ${String(dt.getUTCHours()).padStart(2,'0')}:${String(dt.getUTCMinutes()).padStart(2,'0')} UTC`;
+      updEl.textContent = `更新: ${dateStr}`;
+    }
+
+    const listEl = document.getElementById('news-list');
+    if (!listEl) return;
+
+    if (!d.items || d.items.length === 0) {
+      listEl.innerHTML = '<p style="color:var(--muted);font-size:12px;padding:6px 0">ニュースはありません</p>';
+      return;
+    }
+
+    listEl.innerHTML = d.items.map(item =>
+      `<div class="news-item">` +
+        `<div class="news-source">${escHtml(item.source)}</div>` +
+        `<a class="news-title" href="${escHtml(item.link)}" target="_blank" rel="noopener">${escHtml(item.title)}</a>` +
+      `</div>`
+    ).join('');
+  } catch (e) {
+    console.warn('News load failed:', e);
+  }
+}
+loadNews();
 </script>
 </body>
 </html>

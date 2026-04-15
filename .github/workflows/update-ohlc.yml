@@ -20,7 +20,7 @@ jobs:
           FETCH_SCRIPT: |
             import yfinance as yf, json, os
             from datetime import date
-            SYMBOLS = {"XAUUSD": "GC=F", "USDJPY": "USDJPY=X", "XAGUSD": "SI=F"}
+            SYMBOLS = {"XAUUSD": "XAUUSD=X", "USDJPY": "JPY=X", "XAGUSD": "XAGUSD=X"}
             out = {"updated": str(date.today())}
             for key, sym in SYMBOLS.items():
                 hist = yf.Ticker(sym).history(period="5d", end=str(date.today()))

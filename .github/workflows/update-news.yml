@@ -1,0 +1,93 @@
+name: Update News
+
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 毎日 JST 07:00 (UTC 22:00前日)
+  workflow_dispatch:
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify RSS feed URLs
+        run: |
+          echo "=== RSS URL validation ==="
+          for url in \
+            "https://feeds.reuters.com/reuters/JPbusinessNews" \
+            "https://fx.minkabu.jp/news/rss" \
+            "https://jp.investing.com/rss/news.rss" \
+            "https://www.nikkei.com/news/category/markets/?bn=1"; do
+            status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$url" || echo "ERR")
+            echo "$status  $url"
+          done
+
+      - name: Fetch RSS and write news.json
+        env:
+          FETCH_SCRIPT: |
+            import feedparser, json, os
+            from datetime import datetime, timezone
+
+            SOURCES = [
+                ('Reuters Japan',   'https://feeds.reuters.com/reuters/JPbusinessNews'),
+                ('みんかぶFX',       'https://fx.minkabu.jp/news/rss'),
+                ('Investing.com JP', 'https://jp.investing.com/rss/news.rss'),
+                ('日経電子版',        'https://www.nikkei.com/news/category/markets/?bn=1'),
+            ]
+
+            # 「金」単体は含めない（誤ヒット防止）
+            KEYWORDS = [
+                'XAU', 'ゴールド', '金価格', '金相場',
+                'ドル円', 'USD/JPY', 'FRB', 'Fed',
+                '原油', 'WTI', 'VIX', '関税', 'インフレ',
+                '銀', 'XAGUSD',
+            ]
+
+            items = []
+            for source_name, url in SOURCES:
+                try:
+                    feed = feedparser.parse(url)
+                    entry_count = len(feed.entries)
+                    print(f'{source_name}: {entry_count} entries found at {url}')
+                    if entry_count == 0:
+                        print(f'  WARNING: no entries — feed may be unavailable')
+                    for entry in feed.entries[:100]:
+                        title   = entry.get('title',   '')
+                        summary = entry.get('summary', '')
+                        text    = title + ' ' + summary
+                        if any(kw in text for kw in KEYWORDS):
+                            items.append({
+                                'source':    source_name,
+                                'title':     title,
+                                'link':      entry.get('link',      ''),
+                                'published': entry.get('published', ''),
+                            })
+                except Exception as e:
+                    print(f'SKIP {source_name}: {e}')
+
+            items = items[:30]
+            out = {
+                'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                'items':   items,
+            }
+            os.makedirs('public/data', exist_ok=True)
+            with open('public/data/news.json', 'w', encoding='utf-8') as f:
+                json.dump(out, f, ensure_ascii=False, indent=2)
+            print(f'Saved {len(items)} items, updated {out["updated"]}')
+        run: |
+          pip install -q feedparser
+          python3 -c "$FETCH_SCRIPT"
+
+      - name: Commit and push news.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/news.json
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "chore: update news.json $(date -u +%Y-%m-%d)"
+          git push
