@@ -233,7 +233,6 @@ header {
 .tab-btn:hover { color: var(--text); }
 .tab-btn[data-tab="gold"].active    { color: var(--gold);   border-color: var(--gold); }
 .tab-btn[data-tab="usdjpy"].active  { color: var(--cyan);   border-color: var(--cyan); }
-.tab-btn[data-tab="silver"].active  { color: var(--silver); border-color: var(--silver); }
 
 /* ─── TAB PANELS ─── */
 .tab-panel {
@@ -467,7 +466,6 @@ header {
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="gold">GOLD</button>
   <button class="tab-btn" data-tab="usdjpy">USD/JPY</button>
-  <button class="tab-btn" data-tab="silver">SILVER</button>
 </div>
 
 <!-- ═══ GOLD ═══ -->
@@ -554,58 +552,6 @@ header {
   <div class="sec-heading">チャート・分析</div>
   <div class="chart-row">
     <a class="tv-btn" href="https://jp.tradingview.com/chart/?symbol=USDJPY" target="_blank" rel="noopener">
-      <span class="tv-icon">📈</span>
-      TradingView
-    </a>
-    <div class="chart-side">
-      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">経済指標</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールド関連ニュース</a>
-      <a class="side-btn" href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">恐怖&amp;強欲指数</a>
-    </div>
-  </div>
-
-  <div class="sec-heading">アプリ起動</div>
-  <div class="app-grid">
-    <a class="app-btn" href="metatrader5://">
-      MT5
-      <span class="app-sub">MetaTrader 5</span>
-    </a>
-    <a class="app-btn" href="metatrader4://">
-      MT4
-      <span class="app-sub">MetaTrader 4</span>
-    </a>
-  </div>
-
-</div>
-
-<!-- ═══ SILVER ═══ -->
-<div class="tab-panel" id="panel-silver">
-
-  <div class="ohlc-card">
-    <div class="ohlc-title" id="silver-title">前日 OHLC — XAG/USD</div>
-    <div class="ohlc-grid">
-      <div class="ohlc-item">
-        <span class="ohlc-key">始値</span>
-        <span class="ohlc-val" id="silver-open">—</span>
-      </div>
-      <div class="ohlc-item">
-        <span class="ohlc-key">高値</span>
-        <span class="ohlc-val hi" id="silver-high">—</span>
-      </div>
-      <div class="ohlc-item">
-        <span class="ohlc-key">安値</span>
-        <span class="ohlc-val lo" id="silver-low">—</span>
-      </div>
-      <div class="ohlc-item">
-        <span class="ohlc-key">終値</span>
-        <span class="ohlc-val" id="silver-close">—</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="sec-heading">チャート・分析</div>
-  <div class="chart-row">
-    <a class="tv-btn" href="https://jp.tradingview.com/chart/?symbol=XAGUSD" target="_blank" rel="noopener">
       <span class="tv-icon">📈</span>
       TradingView
     </a>
@@ -718,7 +664,6 @@ async function loadOHLC() {
 
     set('gold',   'XAUUSD', 2, 'XAU/USD');
     set('usdjpy', 'USDJPY', 3, 'USD/JPY');
-    set('silver', 'XAGUSD', 3, 'XAG/USD');
   } catch (e) {
     console.warn('OHLC load failed:', e);
   }

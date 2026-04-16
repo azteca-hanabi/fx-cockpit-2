@@ -17,26 +17,31 @@ jobs:
 
       - name: Fetch OHLC and write ohlc.json
         env:
+          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
           FETCH_SCRIPT: |
-            import yfinance as yf, json, os
+            import urllib.request, urllib.parse, json, os
             from datetime import date
-            # GC=F: Gold futures (CME, USD/oz) — closest to TradingView XAUUSD spot
-            # SIVR: Aberdeen Physical Silver ETF (1 share ≈ 0.9987 oz) — closest to TradingView XAGUSD spot
-            # JPY=X: USD/JPY spot rate
-            SYMBOLS = {"XAUUSD": "GC=F", "USDJPY": "JPY=X", "XAGUSD": "SIVR"}
+
+            API_KEY = os.environ["TWELVE_DATA_API_KEY"]
+            SYMBOLS = {"XAUUSD": "XAU/USD", "USDJPY": "USD/JPY"}
             out = {"updated": str(date.today())}
+
             for key, sym in SYMBOLS.items():
-                hist = yf.Ticker(sym).history(period="5d", end=str(date.today()))
-                if hist.empty:
-                    raise SystemExit(f"No data for {sym}")
-                row = hist.iloc[-1]
-                out[key] = {"open": float(row["Open"]), "high": float(row["High"]), "low": float(row["Low"]), "close": float(row["Close"])}
+                params = urllib.parse.urlencode({"symbol": sym, "interval": "1day", "outputsize": 2, "apikey": API_KEY})
+                url = f"https://api.twelvedata.com/time_series?{params}"
+                req = urllib.request.Request(url, headers={"User-Agent": "fx-cockpit/1.0"})
+                with urllib.request.urlopen(req) as r:
+                    data = json.loads(r.read())
+                if "values" not in data:
+                    raise SystemExit(f"Error for {sym}: {data}")
+                v = data["values"][0]
+                out[key] = {"open": float(v["open"]), "high": float(v["high"]), "low": float(v["low"]), "close": float(v["close"])}
                 print(f"{key}: {out[key]}")
+
             os.makedirs("public/data", exist_ok=True)
             open("public/data/ohlc.json", "w").write(json.dumps(out, indent=2))
             print("Done:", out["updated"])
         run: |
-          pip install -q yfinance
           python3 -c "$FETCH_SCRIPT"
 
       - name: Commit and push ohlc.json
