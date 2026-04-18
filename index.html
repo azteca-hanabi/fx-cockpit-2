@@ -510,9 +510,16 @@ document.querySelectorAll('[data-tv-symbol]').forEach(btn => {
     e.preventDefault();
     const webUrl = this.dataset.tvWeb;
     const symbol = this.dataset.tvSymbol;
-    let appOpened = false;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    // アプリが起動するとページが非表示になる
+    if (!isMobile) {
+      // PCはアプリ起動を試みない（window.location変更でページが破壊されるため）
+      window.open(webUrl, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
+    // モバイル: アプリ起動を試みて1500ms後にフォールバック
+    let appOpened = false;
     const onHide = () => {
       if (document.hidden) {
         appOpened = true;
@@ -522,15 +529,11 @@ document.querySelectorAll('[data-tv-symbol]').forEach(btn => {
     };
     document.addEventListener('visibilitychange', onHide);
 
-    // 1500ms後もページが表示中ならアプリ未インストール → WEB版へ
     const timer = setTimeout(() => {
       document.removeEventListener('visibilitychange', onHide);
-      if (!appOpened) {
-        window.open(webUrl, '_blank', 'noopener,noreferrer');
-      }
+      if (!appOpened) window.open(webUrl, '_blank', 'noopener,noreferrer');
     }, 1500);
 
-    // TradingViewアプリ起動を試みる
     window.location.href = `tradingview://chart?symbol=${symbol}`;
   });
 });
