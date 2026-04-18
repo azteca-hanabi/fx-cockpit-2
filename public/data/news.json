@@ -1,5 +1,252 @@
 {
-  "updated": "2026-04-18T00:00:00Z",
-  "gold_items": [],
-  "usdjpy_items": []
+  "updated": "2026-04-18T00:17:44Z",
+  "gold_items": [
+    {
+      "source": "Google News ゴールド",
+      "title": "金価格、ガツンと急落！FOMCで利下げ期待消えた今、どこまで下がる？（XAU/USD 週間見通し）2026/3/19 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5CbUF4dkswTzdnQ3ZLRXpqYkIwNEJVVEdUZDRZdi1BWW56c0ZWZkRWNTZwS1VDSTJROG12UlljQmQyX25YNC1wZkRDNlFJTUZwVC1LX3BILVdEMWhJZlliTll3UQ?oc=5",
+      "published": "Thu, 19 Mar 2026 07:00:00 GMT",
+      "isoDate": "2026-03-19T07:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "原油高の圧力下で金はいつ上昇するのか？ - TradingKey",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVmFmNVpJYWdQTE95ZjFITUU4REY3cTc3RjR2ci00YzlNMnhhOUpFbXh5VWhyc0FWbWhYTTRzbTdxbGtJMWNYazNCdEd2NHAwQWtERTVfY1dzakJYT3lJZVQ4c01BeTc1WmFraExuOEtDVGJjRHlldWVyRkVzSWNvbDJmbUZmZ3NQS19YSEVNeHAzazlreFlRU2Vn?oc=5",
+      "published": "Thu, 09 Apr 2026 16:54:00 GMT",
+      "isoDate": "2026-04-09T16:54:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金はジリ高…決戦は米CPIか？（XAU/USD 市況と週間見通し）2026/2/12 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ST2pFOHFsa0RTOExNZXIwcXl1UVhMdEZFNVhUdzdfUGNfTDBsQ3djcDdPc1JuVE5td01SaWkwXzdNM082b1oxQ29lRlJ5V3RXMFJQa3J4Sk9hVkNzLVhTS2t2cw?oc=5",
+      "published": "Thu, 12 Feb 2026 08:00:00 GMT",
+      "isoDate": "2026-02-12T08:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "原油対金：中東の混乱のなか、最強の「安全資産」はどちらか？ - TradingKey",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcGF5NUJDVE91YVNMLWJydm1fWGk0ZVNiY0JZMy1qbk10UUFxdFQtMGpxS1lBdmJBWHNLLTZodGxlVXpwRkNwU2lvN25KSm9RRHhJYzI0TTMySmdKWmw3cW93ZWlBYWs2VWNDYkhZdkFOa2I5NWFBMmIxMjlSaXdSZEh4Mm1qTGxBRFJUM3RNbm1BUURhMTd2VmlVOXRhNy1pYTdKdVpaajl1T0o1TnYzakxkNG56WXl4czEw?oc=5",
+      "published": "Thu, 05 Mar 2026 08:00:00 GMT",
+      "isoDate": "2026-03-05T08:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金（ゴールド）が動き出すのはFOMC後？教科書的には「上昇継続」（XAU/USD 市況と分析）2025/12/4 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1NX0gxX1Njd2NrUXdJOTRUQldqRmM5cFNwcnlXYlVUTm52UC1zdWI5X3BMQXR4d3M1OF80WFNWczFuZlJzVXh1N0hOYzZ1M2x6Y1NBUFV3UldtOHBQSFNzbEUxMA?oc=5",
+      "published": "Thu, 04 Dec 2025 08:00:00 GMT",
+      "isoDate": "2025-12-04T08:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "原油価格と金価格の関係：2026年3月の最新動向と現象を解説 - EBC Financial Group",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE85eDQzaDBTWVlFUHFUeks1dHVMaDYydE9YcTNHVDNTaVFfQTVMYTA2elhkQWIxRUUtc3h6QjRiQ2pGbmxhTC1rWmFVbEVFRENsd0E?oc=5",
+      "published": "Thu, 12 Mar 2026 07:00:00 GMT",
+      "isoDate": "2026-03-12T07:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金価格が6500ドル超へ＝原油市場が鍵 - BeInCrypto",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQ2NqTVJLVzc4djdTd19ZNm1hVEcxS2tnaUllNTZhdkt6T2dHWmFXcjFaYTRxMFVFcTVBd2Y5U09iUzNzd3REV3JnM0hoVks5R3FoaGFweEZzNmhMRmVNYXhVSW1NTUNxM1daNlZsT3lnWTlxUTQ3Z3czS3UzbEh4SkwxTQ?oc=5",
+      "published": "Thu, 05 Mar 2026 08:00:00 GMT",
+      "isoDate": "2026-03-05T08:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金価格の今後の予想（見通し）｜推移や変動要因を詳しく解説 - OANDA証券",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE82cVRyZWo2bUJZRjVGUFhLYV8wVU9TaER2T2hzLUI4b083STlmbGlRdEZMOEIzTksxWk9wY2ZQbnhXYU9KSGJXU0lMOTI2dXh4RjFhZFlqRERLRzVOOXJmU1pyYUZwZzBtRnNZRldSWmNKMHVVc09oWDYyVkZ6WW8?oc=5",
+      "published": "Fri, 01 Sep 2023 12:21:56 GMT",
+      "isoDate": "2023-09-01T12:21:56Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "CPIデータがまもなく市場を揺るがす！ホルムズ海峡の航行停止＋FRBのタカ派姿勢で、金価格はさらに上昇できるのか？ - Bitget",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9pejNJa3VSdGtOd0pLSFRfazVrWmlRNWV1eHdjWmJMZW8tczJxLVNwT1NIWDg1dmQwLU5DWWdXaWR4MGNRSFNldmc2cHEtQnFWQkFkVXJubF84TEhjMGlORUFR0gFnQVVfeXFMTUpNVzZIRnJvdVJ1N2YyZU54TnlNWFAyT29IU08zaTVaQ3JUR01kQ0dIZzlRNi01bmt2bzJYOW03VTNzOENVY2xPeWtPTm1fTzV6QkdYcGJ6bTFtM0VpYVlKUl9kZTE3dw?oc=5",
+      "published": "Thu, 09 Apr 2026 15:31:53 GMT",
+      "isoDate": "2026-04-09T15:31:53Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金（ゴールド）が『有事の金買い』に見えない理由｜上昇再加速は「ETFとスーパーウィーク」（XAU/USD 週間見通し）2026/3/12 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE81aGFLSGd2Mk54QWpqMTNGQTJMY0NxeVhDSzFtVnJLY1UweGVPd1QzQ3BldEg2UTFOekRHdk0wUXMyQTJsbm1mYllVY2tLa2NRelZTR2swU3dBNDl4VHBUOVBtVQ?oc=5",
+      "published": "Thu, 12 Mar 2026 07:00:00 GMT",
+      "isoDate": "2026-03-12T07:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金暴騰が止まらない…なぜここまで。投資家が今確認すべきリスクは（XAU/USD 市況とチャート分析）2026/1/29 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5XWWlkRmtZOWROMjZSeUVXc3lzWklvOVdTUjlncUdBQzBqODd0c2JWY19GSm1jbnpSYVA1V3ZySGk0ZXQwcnZzc294MEs3TXBHblFnOVhlakJ2dm5uZS05NjJ2aw?oc=5",
+      "published": "Thu, 29 Jan 2026 08:00:00 GMT",
+      "isoDate": "2026-01-29T08:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金（ゴールド）の価格は過去最高水準に！米金融緩和観測が押し上げたか（XAU/USD 市況と分析）2025/9/16 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ocVF5LVUzVUFyVld1bzBtaktYd3FxbGJvV0xmeWFPRllRVVd4MFQ4TkZUTzNrVUw4bVJMcTZROHNlWkVpUWFua05UZHZzT0xoM25xM3NkcUxxd1dCOUMwUEZSVQ?oc=5",
+      "published": "Tue, 16 Sep 2025 07:00:00 GMT",
+      "isoDate": "2025-09-16T07:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金(ゴールド)は緩やかに上昇。重要なインフレ指標の米CPIは大幅利下げにつながるか（XAU/USD 市況と分析）2024/9/11 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE56bXZYOXJFaTdMZkw3Uk9GbHZyMFZOQUhraE9FaWJWOVBzX3RMeXFiT2pPc2hZcTQ4SEJLWEp2cld5UEdvbUZ3U3lCNDZLdk5EYmYxSDNNZURrZV9oRWlpNW5Kcw?oc=5",
+      "published": "Wed, 11 Sep 2024 07:00:00 GMT",
+      "isoDate": "2024-09-11T07:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金(ゴールド)、ガツンと下落！短期の調整なのか、それとも…（XAU/USD 市況と分析）2024/11/1 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5SUzR0dlpKNzFKX3RHT1dnX1V4XzVKOGt5di1fZ3A3ck1IVnJ5VXpvUEh2T3Y0MzJRbEtzdWl5UndfQk9uS0U3NWFnZTF6b2wtSDlHaHZ6SHBfelpNUFQteERYcw?oc=5",
+      "published": "Fri, 01 Nov 2024 07:00:00 GMT",
+      "isoDate": "2024-11-01T07:00:00Z"
+    },
+    {
+      "source": "Google News ゴールド",
+      "title": "金(ゴールド)は祝日（メモリアルデー）のため休場（XAU/USD 市況と分析）2024/5/28 - 外為どっとコム",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5SRzlOMEJFc2NrLXVBUzljcVpiZUMzd2p5dUhTcFZRUm52Rm1icEFXTTR1LTAwdXkwdmN6UEZRTzJIbTMzZk9mbDM3b0h2TzUzTUpWdXdfb1Q4UnpmTnlXSzdIYw?oc=5",
+      "published": "Tue, 28 May 2024 07:00:00 GMT",
+      "isoDate": "2024-05-28T07:00:00Z"
+    }
+  ],
+  "usdjpy_items": [
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円 週間見通し(2/2週)：米ドル高予想、FRB議長人事の影響と雇用統計に注目 - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPV2t1bjE5czc1REVodm0zWkRaQmFmdUp0cVRIcUpKeEZtVThOUlFNR1RVelB0QXlULVJ4WG1aV0xockRPRW9ScERYUGprbTZpcFBvd2dZejk3dTFjQmN3NnJKcWc4RlQwSkFzOXZRM2RmYTFnMzgxeEpjNkRNZjduSG1GNlRydkZrMWF6b2hZTnNtckk0U1RNcmc2UQ?oc=5",
+      "published": "Sun, 01 Feb 2026 08:00:00 GMT",
+      "isoDate": "2026-02-01T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "協調介入の可能性 円安抑止力は倍以上 - 第一ライフ資産運用経済研究所",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwSjRQM09CVWlraFJ5OEZ0T3Vuay1MOGVHTl9LQU9pZG00TlZaczJ0cUM3dEpGNXVqTDczSFh4c1VFYXp5WGZFdjIzaUw2QmxoVWgtRkpnYXJ6b1U?oc=5",
+      "published": "Mon, 26 Jan 2026 08:00:00 GMT",
+      "isoDate": "2026-01-26T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "コラム：円安が抱える時限爆弾、突然のキャリートレード逆流リスク - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZnlvWmVHbmlMbXh2eGNGZGpBNzVsVjhlUmRNYTlqUDlxa1hkYmRRZUt3U0NRb1lLWFZoTlRnUUtnRElac0xwWmZqbXM0WWlhX256Z1hhem1BSHVNTkZXQ09oTGJFSlhtcVlwTFdnZ241RWhiUG9aeE9namNRYWtuSHFLM29Qbnl3?oc=5",
+      "published": "Thu, 04 Dec 2025 08:00:00 GMT",
+      "isoDate": "2025-12-04T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円、円高加速も FRBの利下げ見通し焦点 日銀は利上げに意欲 - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVDdNZW5USnpLY2VqRFBoOUdOb3lIdUZLWENUQ0JFQzNiM1h6T09JWHdUVmRxanh1bUNyM0dfZGV2VXh3bnBBU0tBMmlBY3J0SU5IRmdBNXUtdkFnNzg1ZmxjZGlITzV5X2YwaDZmenE4NThwN0lOWWZSb0I1bUlPQ0cwVzZaNHp6LWptVHZaMUVHUWZIczZKLUE2aG1EX1ZfcHFqTThRanZtWFZB?oc=5",
+      "published": "Thu, 04 Dec 2025 08:00:00 GMT",
+      "isoDate": "2025-12-04T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "「円安予想」を維持 FRB の利下げは想定ほど進まない可能性 - 第一ライフ資産運用経済研究所",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5fd1EyaU9PSTFkdUNLV0YxZVlCRC01aWtIQnAzQnhsa3g0YTNQZW5OcEhWZVhtRnRPT29ZeHg0NnNKRXVtY1pYOFZNZjBsbUxSZ2pSS01WNy0xUzQ?oc=5",
+      "published": "Fri, 22 Aug 2025 07:00:00 GMT",
+      "isoDate": "2025-08-22T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "USD/JPY為替レート：米金利の高止まりで上昇 - EBC Financial Group",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE00ZUVDdzZrWmF4WE5NNkZ4Y19Pb1BqaFNXOTlFdGNUOUg4Wmd0cngtVmdOREdrZWJMUlprdXRkWnVsdVlxUklMUEZ2S2NLb2duN1E?oc=5",
+      "published": "Tue, 11 Nov 2025 08:00:00 GMT",
+      "isoDate": "2025-11-11T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "BitgetのUSD/JPYについて知っておくべきこと - Bitget",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5aUUJCZlBUWDJkR3ljSmtxcnlBSGRpTnhkQ3pPdmo0ZXRUX3BpSHNFRUpoRDFSSVZvbEhfZk1iTlhuVEw3UnhMSl9rOHEyVUJnQ3hZeWZwLXNjY1o4T21FQ0VYTzhsMVNKd3dnWDNLVjdrMTjSAXhBVV95cUxPU2R3dTEzSWIweXAwbkRlWmJVSEctcDh6dmhQaUdHRmFhOEd6dDctRmQ2Si1kTXJzV3V4ZktyWmdyUEZiTWVaSG1xTzdmYW1xUlRzNUluUFE2U2RuT2lIQWlRLW5TVGgxYUM1LUhmMkNMRFljRFJVZW4?oc=5",
+      "published": "Thu, 25 Dec 2025 08:00:00 GMT",
+      "isoDate": "2025-12-25T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円見通し(10/31)：円安進行で8か月半ぶり154円台、日米金融政策に不透明感 - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcXQzUzhHaXl4dTlsVDZqNXItbEZKTlBGTFcxeThfQnVFSThueVIyNzZiVFJlbDdIeDJGUVdoUW1JbVJrNFV1Y0Rub0twd1c5RU5DS2psNkJaWGhxbzBVaVhDV0MyeS16bnJjR3puRFl1a2RTNGtfNnlDRTF4NmthaDcxaFljRVc1UjU5d0JqS2tBLTJQRGlR?oc=5",
+      "published": "Thu, 30 Oct 2025 07:00:00 GMT",
+      "isoDate": "2025-10-30T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "日銀は落ち着いた環境で利上げへ 12 月ＦＯＭＣは予想通り利下げ - 第一ライフ資産運用経済研究所",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB4ZExkenRXS3FaaGlmNVRNSWJNSHdEeGZEZ1ppUzRWNTR1M2RacHJ5Y3dwTGxhNlVpU0NwSDNVM3ZMeUhjOUhfTUNWNFZIeUZfZUgzSzl5bWxNRmM?oc=5",
+      "published": "Thu, 11 Dec 2025 08:00:00 GMT",
+      "isoDate": "2025-12-11T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円、日銀の利上げ意欲は？ 高市円安一服 春闘や米労働市場焦点 - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWHRZSjk3LXpNRzNGcXJVcko5U1pIVWlzNElMWTlkczFfd1UyUjVVWWRJaXVLcHNDSllncWU4Zklma3lhWFYzTXNqc3ZUMHlqYVVlNldzSnloanFoOU5zR3pzVW1yblN0b1JFZThnTGVyQWF4SDdNSTZsY2VIa3Y5MmxlWXVZSzl0eUFmcUN2UFVULVNzT3VIOUNteFAtcUdydmhPX2xGSThGS1I5Wlp1Sjg1TVo?oc=5",
+      "published": "Thu, 27 Nov 2025 08:00:00 GMT",
+      "isoDate": "2025-11-27T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円、円高頭打ち 次期FRB議長は中立要因か 衆院選で円安再び？ - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOU0hFTlVBV1hhd0pCLTc0bDZqb1hxOTFxRkc5cTExa0FGYkp0MkRYUjlrQ0o4Q0U2WlFOLWtrZ3kySWJjcU5IRUphNXhod1duLUxkd21nQnRoc0tFLVg4QXN3N1lEZVUxWnhBSFQzRTZtT1ZzTU1fZUZ0UzJPMnNKTWtaZE93SDJjcE0tOERCQ0x1Nko0ZV82V3VSaVo3YWt3NV9qcA?oc=5",
+      "published": "Thu, 29 Jan 2026 08:00:00 GMT",
+      "isoDate": "2026-01-29T08:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "・FRB は「予防的利下げ」に傾く？ ・日経平均株価は42,000 円へ - 第一ライフ資産運用経済研究所",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PWjNIS1hveDZTeEEza3Fydl9nS1NxbHZDQlIwT1FUbElrNTJwa1BacE9iNW90am1rcWpXXzVUcFh0QXh6a0lrd3JMV0F5TEdxMEJXdElqSEdjbmM?oc=5",
+      "published": "Tue, 24 Jun 2025 07:00:00 GMT",
+      "isoDate": "2025-06-24T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "円高圧力再燃 FRB議長の後任早期発表か PCE物価で加速の見通しも - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNY1FMdjhmcFhZSFpkQVNHT1c3V0hBd05WWkRNMXdNWDhWNHdTU3c2aWtGR3JCdE1rS3p4czI1Wnh0akZxQ0RNY0JjY1RUdnRodFktYUhKdmtqZ0V6QTUxMzk3UTFWbnFvelVXSDNxYWZKYTZITEtOZm9LWm1sN2JOOVhjb0NCNi0zeVgxZll5SnhKSExCSVJOUGp5SEgtcVc0WF9XY3JXYWp5N0F4UXF3cEE2YVc?oc=5",
+      "published": "Thu, 26 Jun 2025 07:00:00 GMT",
+      "isoDate": "2025-06-26T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円140 割れ予想は「一旦退却」 日本の赤字体質が円高を阻む | 藤代 宏一 | 第一ライフ資産運用経済研究所 - 第一ライフ資産運用経済研究所",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBOMUFKUDlIclJPWjZfY2VqWWQtcnlCYi05SVVSVGg4SlZIZ2s0UlFUWHdTTDk2MHdwM00xN05ydlVtOWRoSE1aMkZhU2QxdDBrX3NSMWRNcDhGczA?oc=5",
+      "published": "Wed, 17 Apr 2024 07:00:00 GMT",
+      "isoDate": "2024-04-17T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円155 円突破でも為替介入しない・できない理由 | 藤代 宏一 | 第一ライフ資産運用経済研究所 - 第一ライフ資産運用経済研究所",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBiS1VBSjRxOWV3ZkZrVUotcnhFOFhuYldwSkxYUVB3cmNtX3VTdlV3Z2VrVThnaTBkOGVGc3dsaFh2V0ZaQmxUR2pVblNYcVFzdFd1TUtucTZPMkU?oc=5",
+      "published": "Thu, 25 Apr 2024 07:00:00 GMT",
+      "isoDate": "2024-04-25T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "円高一時144円台 円に買われやすさ 日米金利差縮小見通しは継続か - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONlU0V2U3ZndHTUpSZXVxVXB6NDlHNGgwZjNlU2xhOFctUEU4Wk0xb3JOVEdkRG12UVpKNVFhVUJHaDEySUZ0SnJUcm5halYxMkJkTDdRam5NNjBQOTRDWnZ2c0dqdksycU45c2NwSF82N2xZb1lGWGl1c0dtVkd0MDNtOEw1RU1FbHFSRmVJVTFfRkpkM25RWHFTTHhXX1hYcDQwblJMTmRTWlpUMnc?oc=5",
+      "published": "Tue, 20 Aug 2024 07:00:00 GMT",
+      "isoDate": "2024-08-20T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "参院選と原油価格と円安と金融政策 排除できない７月利上げ - 第一ライフ資産運用経済研究所",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4teHgwcXc3bU5YM21SWXhtOTdGQVRkeEdpaHI5UHNDR0NOMkhkcC00VElNUUt4ZFItVVRIVXRDRkZxTElCcEEyelR5ckl4SmJrbUhkY2pMTGpTWk0?oc=5",
+      "published": "Mon, 23 Jun 2025 07:00:00 GMT",
+      "isoDate": "2025-06-23T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "ドル円予想 6/20：144.40－146.15レンジ、中東リスクで上振れ意識 - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZTNCbGctYlV1TTdESGxoYUpwWFgzZzF2SGFNbjJqUkpBQV9VSVBoc25oZ0sza01DUFp3NklXWFNjZWZDaHREWVFoRHBUeXd4ejJQZnJHZ0VfRVlNUXc1T0t4THVMN2cxbExhOWN5SDJQSzNUU09hWkE5cElac2pXNEZLOFh6N0w2ZzJRSFZRLTJCMkF4Z1JKV011YkZRdW1tUnc?oc=5",
+      "published": "Thu, 19 Jun 2025 07:00:00 GMT",
+      "isoDate": "2025-06-19T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "円高圧力強まるか FRBが利下げへ 日米金利差は縮小見通し - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOd0xrWlkzOFVUdXFSSnU0VFBocndZZkNjSnNSUk1QLXNWTTdtaURNb1d1ZHFVQkpiZkR2VlktUFl3UVFzbzR0SkJKN3BjOWVKUDRySWlIREczT2NEZG1tTmlqY1BsQ3hsNjNTSTNuelk5RU5WR2xaSzc5aWxmZUtRZWE5cERzVmdTeGNTUl9jV2dqMnZCSC1yNl85OXA4Q2toMXRiNFIyZWFfelJZZ1hVMGdTSUM?oc=5",
+      "published": "Tue, 17 Sep 2024 07:00:00 GMT",
+      "isoDate": "2024-09-17T07:00:00Z"
+    },
+    {
+      "source": "Google News ドル円",
+      "title": "豪ドルの上昇加速 109円台迫る FRBの利下げ見通しで拍車 - ig.com",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQWVabnlhZFg1ZWkyTzBFSEVpUTRrYzdaSVNNWTl4ZnBXYk5RS2hQU3FTdkU4dnY1Z0swUTctWmtkWTMyU2REM3RfQm84ai1EUEV5elQxRlNsVzNXR1VDdnQybHVfUG16YUI3SGJUUENIUEY0Z2dwLXRLUVJlajltV3UxX053NGNIVzlwS01faTV0ZVN5bWk1UmpRN1lRVVJiNFhIbGtUWEw?oc=5",
+      "published": "Sun, 07 Jul 2024 07:00:00 GMT",
+      "isoDate": "2024-07-07T07:00:00Z"
+    }
+  ]
 }
