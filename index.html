@@ -400,7 +400,16 @@ header {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border2);
-  zoom: 0.82;
+}
+.tradingview-widget-copyright {
+  padding: 2px 8px 4px;
+  background: var(--bg3);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.tradingview-widget-copyright .blue-text {
+  color: var(--muted) !important;
+  text-decoration: underline;
 }
 
 /* ─── SMALL SCREEN ADJUSTMENTS ─── */
@@ -515,7 +524,7 @@ header {
 function createTVWidget(wrapId, symbol) {
   const wrap = document.getElementById(wrapId);
   if (!wrap) return;
-  const theme = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
   // コンテナをリセットして新しいウィジェットを注入
   wrap.innerHTML = `
     <div class="tradingview-widget-container">
