@@ -22,29 +22,35 @@ jobs:
           import feedparser, json, os, calendar
           from datetime import datetime, timezone
 
-          # GOLD用ソース（pre_filtered=True: クエリで事前フィルタ済み）
+          # GOLD用ソース（pre_filtered=True: キーワードフィルタ不要）
           GOLD_SOURCES = [
-              ('Google News ゴールド', 'https://news.google.com/rss/search?q=金価格+ゴールド+XAU+gold+原油+インフレ&hl=ja&gl=JP&ceid=JP:ja', True),
-              ('みんかぶFX', 'https://fx.minkabu.jp/news/rss', False),
-              ('NHK経済', 'https://www.nhk.or.jp/rss/news/cat4.xml', False),
+              ('Investing.com 経済', 'https://jp.investing.com/rss/news_25.rss',  False),
+              ('Investing.com 一般', 'https://jp.investing.com/rss/news_1.rss',   False),
+              ('みんかぶFX',         'https://fx.minkabu.jp/news/rss',            False),
+              ('NHK経済',            'https://www.nhk.or.jp/rss/news/cat4.xml',   False),
           ]
 
           # USD/JPY用ソース
           USDJPY_SOURCES = [
-              ('Google News ドル円', 'https://news.google.com/rss/search?q=ドル円+USD+JPY+FRB+Fed+日銀+為替&hl=ja&gl=JP&ceid=JP:ja', True),
-              ('みんかぶFX', 'https://fx.minkabu.jp/news/rss', False),
-              ('NHK経済', 'https://www.nhk.or.jp/rss/news/cat4.xml', False),
+              ('Investing.com 外為', 'https://jp.investing.com/rss/news_285.rss', True),
+              ('Investing.com 一般', 'https://jp.investing.com/rss/news_1.rss',   False),
+              ('みんかぶFX',         'https://fx.minkabu.jp/news/rss',            False),
+              ('NHK経済',            'https://www.nhk.or.jp/rss/news/cat4.xml',   False),
           ]
 
           GOLD_KEYWORDS = [
               'XAU', 'ゴールド', '金価格', '金相場', '原油', 'WTI',
-              'インフレ', '貴金属', 'XAUUSD', 'コモディティ',
+              'インフレ', '貴金属', 'XAUUSD', 'コモディティ', '商品市場',
+              'gold', 'GOLD', '金融緩和', 'リスク回避',
           ]
 
           USDJPY_KEYWORDS = [
               'ドル円', 'USD/JPY', 'USDJPY', 'FRB', 'Fed', '日銀',
-              '為替', '利上げ', '利下げ', '金利', '円安', '円高', '為替介入',
+              '為替', '利上げ', '利下げ', '金利', '円安', '円高',
+              '為替介入', 'ドル', '円相場', '通貨',
           ]
+
+          LIMIT_72H = 72 * 3600
 
           def get_iso_date(entry):
               if hasattr(entry, 'published_parsed') and entry.published_parsed:
@@ -55,18 +61,25 @@ jobs:
           def fetch_items(sources, keywords):
               items = []
               seen = set()
+              now = datetime.now(timezone.utc).timestamp()
               for source_name, url, pre_filtered in sources:
                   try:
                       feed = feedparser.parse(url)
-                      entry_count = len(feed.entries)
-                      print(f'{source_name}: {entry_count} entries at {url}')
-                      if entry_count == 0:
-                          print(f'  WARNING: no entries — feed may be unavailable')
-                      for entry in feed.entries[:20]:
-                          title   = entry.get('title',   '')
-                          link    = entry.get('link',    '')
+                      count = len(feed.entries)
+                      print(f'{source_name}: {count} entries at {url}')
+                      if count == 0:
+                          print(f'  WARNING: no entries')
+                      for entry in feed.entries[:30]:
+                          title = entry.get('title', '')
+                          link  = entry.get('link',  '')
                           if not link or link in seen:
                               continue
+                          iso = get_iso_date(entry)
+                          # 72時間以内フィルタ（isoDate不明の場合は通過）
+                          if iso:
+                              age = now - datetime.fromisoformat(iso.replace('Z', '+00:00')).timestamp()
+                              if age > LIMIT_72H:
+                                  continue
                           text = title + ' ' + entry.get('summary', '')
                           if pre_filtered or any(kw in text for kw in keywords):
                               seen.add(link)
@@ -75,10 +88,12 @@ jobs:
                                   'title':     title,
                                   'link':      link,
                                   'published': entry.get('published', ''),
-                                  'isoDate':   get_iso_date(entry),
+                                  'isoDate':   iso,
                               })
                   except Exception as e:
                       print(f'SKIP {source_name}: {e}')
+              # 新しい順にソート
+              items.sort(key=lambda x: x['isoDate'] or '', reverse=True)
               return items[:30]
 
           gold_items   = fetch_items(GOLD_SOURCES,   GOLD_KEYWORDS)
