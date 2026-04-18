@@ -382,7 +382,6 @@ header {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border2);
-  background: var(--bg2);
 }
 .tradingview-widget-copyright {
   padding: 2px 8px 4px;
@@ -558,7 +557,7 @@ function createTVWidget(wrapId, symbol) {
   // async=false にしないと動的生成時に document.currentScript が null になり
   // TradingView が設定JSONを読めなくなる（Chrome既知の挙動）
   s.async = false;
-  s.innerHTML = JSON.stringify({ symbol, width: '100%', colorTheme: theme, isTransparent: true, locale: 'ja' });
+  s.innerHTML = JSON.stringify({ symbol, width: '100%', height: 110, colorTheme: theme, isTransparent: false, locale: 'ja' });
   wrap.querySelector('.tradingview-widget-container').appendChild(s);
 }
 
