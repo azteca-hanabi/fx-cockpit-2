@@ -38,16 +38,35 @@ jobs:
               ('NHK経済',            'https://www.nhk.or.jp/rss/news/cat4.xml',   False),
           ]
 
+          GOLD_EXCLUSIONS = ['ゴールドマン', 'ゴールデン', 'Goldman']
+
           GOLD_KEYWORDS = [
               'XAU', 'ゴールド', '金価格', '金相場', '原油', 'WTI',
               'インフレ', '貴金属', 'XAUUSD', 'コモディティ', '商品市場',
               'gold', 'GOLD', '金融緩和', 'リスク回避',
+              'トランプ', 'Trump', '関税', '地政学', '停戦', '紛争',
+              '安全資産', '避難通貨', 'リスクオフ', 'リスクオン', '貿易摩擦', 'FOMC',
           ]
 
           USDJPY_KEYWORDS = [
               'ドル円', 'USD/JPY', 'USDJPY', 'FRB', 'Fed', '日銀',
               '為替', '利上げ', '利下げ', '金利', '円安', '円高',
               '為替介入', 'ドル', '円相場', '通貨',
+              'トランプ', 'Trump', '関税', '地政学', '停戦', '紛争',
+              '安全資産', '避難通貨', 'リスクオフ', 'リスクオン', '貿易摩擦', 'FOMC',
+          ]
+
+          BTC_SOURCES = [
+              ('CoinDesk Japan',     'https://www.coindesk.com/arc/outboundfeeds/rss/', False),
+              ('CoinTelegraph JP',   'https://jp.cointelegraph.com/rss',                True),
+              ('Investing.com 一般', 'https://jp.investing.com/rss/news_1.rss',         False),
+          ]
+
+          BTC_KEYWORDS = [
+              'BTC', 'ビットコイン', '仮想通貨', '暗号資産', 'BTCUSD', '半減期',
+              '暗号通貨', 'Bitcoin', 'ビットコインETF', '暗号資産ETF',
+              'トランプ', 'Trump', '関税', '地政学', '停戦', '紛争',
+              '安全資産', '避難通貨', 'リスクオフ', 'リスクオン', '貿易摩擦', 'FOMC',
           ]
 
           LIMIT_72H = 72 * 3600
@@ -58,7 +77,7 @@ jobs:
                   return datetime.fromtimestamp(ts, timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
               return ''
 
-          def fetch_items(sources, keywords):
+          def fetch_items(sources, keywords, exclusions=None):
               items = []
               seen = set()
               now = datetime.now(timezone.utc).timestamp()
@@ -81,6 +100,9 @@ jobs:
                               if age > LIMIT_72H:
                                   continue
                           text = title + ' ' + entry.get('summary', '')
+                          # 除外ワードチェック
+                          if exclusions and any(excl in text for excl in exclusions):
+                              continue
                           if pre_filtered or any(kw in text for kw in keywords):
                               seen.add(link)
                               items.append({
@@ -96,13 +118,15 @@ jobs:
               items.sort(key=lambda x: x['isoDate'] or '', reverse=True)
               return items[:30]
 
-          gold_items   = fetch_items(GOLD_SOURCES,   GOLD_KEYWORDS)
+          gold_items   = fetch_items(GOLD_SOURCES,   GOLD_KEYWORDS,   GOLD_EXCLUSIONS)
           usdjpy_items = fetch_items(USDJPY_SOURCES, USDJPY_KEYWORDS)
+          btc_items    = fetch_items(BTC_SOURCES,    BTC_KEYWORDS)
 
           out = {
               'updated':      datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
               'gold_items':   gold_items,
               'usdjpy_items': usdjpy_items,
+              'btc_items':    btc_items,
           }
           os.makedirs('public/data', exist_ok=True)
           with open('public/data/news.json', 'w', encoding='utf-8') as f:

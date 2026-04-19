@@ -24,6 +24,8 @@
   --muted:      #5a5a7a;
   --gold:       #f0b429;
   --gold-dim:   #7a5a10;
+  --btc:        #f7931a;
+  --btc-dim:    #5a3800;
   --silver:     #a8b8cc;
   --silver-dim: #3a4a58;
   --cyan:       #38c9c9;
@@ -44,6 +46,8 @@
   --muted:      #7878a0;
   --gold:       #a86e00;
   --gold-dim:   #f5e8c0;
+  --btc:        #a05000;
+  --btc-dim:    #fde8c0;
   --silver:     #4a6070;
   --silver-dim: #ccd8e4;
   --cyan:       #006888;
@@ -215,6 +219,7 @@ header {
 .tab-btn:hover { color: var(--text); }
 .tab-btn[data-tab="gold"].active    { color: var(--gold);   border-color: var(--gold); }
 .tab-btn[data-tab="usdjpy"].active  { color: var(--cyan);   border-color: var(--cyan); }
+.tab-btn[data-tab="btc"].active     { color: var(--btc);    border-color: var(--btc); }
 
 /* ─── TAB PANELS ─── */
 .tab-panel {
@@ -348,7 +353,7 @@ header {
   letter-spacing: .03em;
 }
 
-#news-list, #usdjpy-news-list {
+#news-list, #usdjpy-news-list, #btc-news-list {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -423,6 +428,7 @@ header {
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="gold">GOLD</button>
   <button class="tab-btn" data-tab="usdjpy">USD/JPY</button>
+  <button class="tab-btn" data-tab="btc">BTC</button>
 </div>
 
 <!-- ═══ GOLD ═══ -->
@@ -500,6 +506,45 @@ header {
   <div class="sec-heading">最新ニュース</div>
   <div class="news-updated" id="usdjpy-news-updated"></div>
   <div id="usdjpy-news-list"></div>
+
+</div>
+
+<!-- ═══ BTC ═══ -->
+<div class="tab-panel" id="panel-btc">
+
+  <!-- ⚠️ TradingViewウィジェット: 帰属表示（ロゴ・リンク）をCSSで隠したり削除したりしないこと -->
+  <div class="tv-widget-wrap" id="tv-btc-wrap"></div>
+  <!-- ⚠️ TradingViewウィジェット終了: 上記帰属表示を削除・非表示にしないこと -->
+
+  <div class="sec-heading">チャート・分析</div>
+  <div class="chart-row">
+    <a class="tv-btn" href="https://jp.tradingview.com/chart/?symbol=BTCUSD" rel="noopener"
+       data-tv-symbol="BTCUSD" data-tv-web="https://jp.tradingview.com/chart/?symbol=BTCUSD">
+      <span class="tv-icon">📈</span>
+      TradingView
+    </a>
+    <div class="chart-side">
+      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">主な経済指標</a>
+      <a class="side-btn" href="https://jp.tradingview.com/symbols/BTCUSD/news/" target="_blank" rel="noopener">BTCニュース</a>
+      <a class="side-btn" href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank" rel="noopener">Crypto恐怖&amp;強欲指数</a>
+    </div>
+  </div>
+
+  <div class="sec-heading">アプリ起動</div>
+  <div class="app-grid">
+    <a class="app-btn" href="metatrader5://">
+      MT5
+      <span class="app-sub">MetaTrader 5</span>
+    </a>
+    <a class="app-btn" href="metatrader4://">
+      MT4
+      <span class="app-sub">MetaTrader 4</span>
+    </a>
+  </div>
+
+  <div class="sec-heading">最新ニュース</div>
+  <div class="news-updated" id="btc-news-updated"></div>
+  <div id="btc-news-list"></div>
 
 </div>
 
@@ -583,6 +628,7 @@ function createTVWidget(wrapId, oandaSymbol) {
 function initTVWidgets() {
   createTVWidget('tv-gold-wrap',   'OANDA:XAUUSD');
   createTVWidget('tv-usdjpy-wrap', 'OANDA:USDJPY');
+  createTVWidget('tv-btc-wrap',    'COINBASE:BTCUSD');
 }
 
 // ─── THEME ───
@@ -737,6 +783,11 @@ async function loadNews() {
     const usdjpyItems = filterItems(d.usdjpy_items || d.items || []);
     document.getElementById('usdjpy-news-updated').textContent = dateStr;
     document.getElementById('usdjpy-news-list').innerHTML = renderItems(usdjpyItems);
+
+    // BTC
+    const btcItems = filterItems(d.btc_items || []);
+    document.getElementById('btc-news-updated').textContent = dateStr;
+    document.getElementById('btc-news-list').innerHTML = renderItems(btcItems);
 
   } catch (e) {
     console.warn('News load failed:', e);

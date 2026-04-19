@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(gh repo:*)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/user/AppData/Local/Programs/**)",
+      "Read(//c/Users/user/**)",
+      "Bash(python3:*)"
+    ]
+  }
+}
