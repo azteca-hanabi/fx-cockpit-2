@@ -24,17 +24,16 @@ jobs:
 
           # GOLD用ソース（pre_filtered=True: キーワードフィルタ不要）
           GOLD_SOURCES = [
-              ('Investing.com 経済', 'https://jp.investing.com/rss/news_25.rss',  False),
-              ('Investing.com 一般', 'https://jp.investing.com/rss/news_1.rss',   False),
-              ('みんかぶFX',         'https://fx.minkabu.jp/news/rss',            False),
-              ('NHK経済',            'https://www.nhk.or.jp/rss/news/cat4.xml',   False),
+              ('Investing.com 商品先物', 'https://jp.investing.com/rss/news_11.rss', True),
+              ('Investing.com 経済全般', 'https://jp.investing.com/rss/news_14.rss', False),
+              ('Investing.com 一般',     'https://jp.investing.com/rss/news_1.rss',  False),
+              ('NHK経済',                'https://www.nhk.or.jp/rss/news/cat4.xml',  False),
           ]
 
           # USD/JPY用ソース
           USDJPY_SOURCES = [
               ('Investing.com 外為', 'https://jp.investing.com/rss/news_285.rss', True),
               ('Investing.com 一般', 'https://jp.investing.com/rss/news_1.rss',   False),
-              ('みんかぶFX',         'https://fx.minkabu.jp/news/rss',            False),
               ('NHK経済',            'https://www.nhk.or.jp/rss/news/cat4.xml',   False),
           ]
 
@@ -57,9 +56,9 @@ jobs:
           ]
 
           BTC_SOURCES = [
-              ('CoinDesk Japan',   'https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml', False),
-              ('CoinTelegraph JP', 'https://jp.cointelegraph.com/rss',                                 True),
-              ('Investing.com 一般', 'https://jp.investing.com/rss/news_1.rss',                      False),
+              ('Investing.com 暗号資産', 'https://jp.investing.com/rss/302.rss',                                False),
+              ('CoinDesk Japan',         'https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml', False),
+              ('Investing.com 一般',     'https://jp.investing.com/rss/news_1.rss',                        False),
           ]
 
           BTC_KEYWORDS = [
@@ -131,7 +130,7 @@ jobs:
           os.makedirs('public/data', exist_ok=True)
           with open('public/data/news.json', 'w', encoding='utf-8') as f:
               json.dump(out, f, ensure_ascii=False, indent=2)
-          print(f'Saved gold={len(gold_items)}, usdjpy={len(usdjpy_items)}, updated={out["updated"]}')
+          print(f'Saved gold={len(gold_items)}, usdjpy={len(usdjpy_items)}, btc={len(btc_items)}, updated={out["updated"]}')
           PYEOF
 
       - name: Commit and push news.json
