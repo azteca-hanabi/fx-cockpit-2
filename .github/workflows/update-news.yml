@@ -37,7 +37,6 @@ jobs:
 
           BTC_SOURCES = [
               ('Investing.com 暗号資産', 'https://jp.investing.com/rss/302.rss',                                   False),
-              ('CoinDesk Japan',         'https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml', False),
               ('Investing.com 一般',     'https://jp.investing.com/rss/news_1.rss',                        False),
           ]
 
