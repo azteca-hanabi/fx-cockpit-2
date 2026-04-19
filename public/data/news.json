@@ -1,70 +1,98 @@
 {
-  "updated": "2026-04-18T23:53:35Z",
+  "updated": "2026-04-19T14:56:59Z",
   "gold_items": [
     {
       "source": "Investing.com 一般",
-      "title": "ゴールドマン・サックス、財政・インフレ見通しを理由にEUR/HUF予想を引き下げ",
-      "link": "https://jp.investing.com/news/forex-news/article-93CH-1496150",
-      "published": "2026-04-18 10:13:02",
-      "isoDate": "2026-04-18T10:13:02Z"
+      "title": "中東紛争1カ月半のドル円【フィスコ・コラム】",
+      "link": "https://jp.investing.com/news/forex-news/article-1496169",
+      "published": "2026-04-19 00:15:03",
+      "isoDate": "2026-04-19T00:15:03Z"
     },
     {
-      "source": "Investing.com 経済",
-      "title": "ゴールドマン・サックス、世界的な上昇にもかかわらず英国株に「深い」バリュエーション割引を指摘",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1496081",
-      "published": "2026-04-18 00:09:03",
-      "isoDate": "2026-04-18T00:09:03Z"
+      "source": "Investing.com 一般",
+      "title": "豪ドル週間見通し：伸び悩みか、中東紛争の早期終結について懐疑的な見方も",
+      "link": "https://jp.investing.com/news/forex-news/article-1496122",
+      "published": "2026-04-18 05:15:03",
+      "isoDate": "2026-04-18T05:15:03Z"
     }
   ],
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "BCA:石油ショックがインフレに持続的影響を及ぼす可能性は低い",
-      "link": "https://jp.investing.com/news/economy-news/article-1496163",
-      "published": "2026-04-18 22:37:32",
-      "isoDate": "2026-04-18T22:37:32Z"
+      "title": "バンス副大統領がパキスタンで米国チームを率いる、トランプ大統領はイランに交渉決裂なら攻撃と警告",
+      "link": "https://jp.investing.com/news/economy-news/article-1496203",
+      "published": "2026-04-19 13:32:19",
+      "isoDate": "2026-04-19T13:32:19Z"
     },
     {
       "source": "Investing.com 外為",
-      "title": "豪州が日本のステルス・フリゲート艦取得で200億豪ドルの画期的契約を締結",
-      "link": "https://jp.investing.com/news/economy-news/article-1496149",
-      "published": "2026-04-18 09:56:24",
-      "isoDate": "2026-04-18T09:56:24Z"
+      "title": "AI関連の大型アナリスト判断5選：Google株に短期的に強気、テスラは格上げ",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1496197",
+      "published": "2026-04-19 09:00:03",
+      "isoDate": "2026-04-19T09:00:03Z"
     },
     {
       "source": "Investing.com 外為",
-      "title": "AIは労働市場にどのような影響を与えるのか",
-      "link": "https://jp.investing.com/news/economy-news/article-1496145",
-      "published": "2026-04-18 09:26:40",
-      "isoDate": "2026-04-18T09:26:40Z"
+      "title": "IEA事務局長、ホルムズ海峡閉鎖続く中でイラク・トルコパイプライン建設を要請",
+      "link": "https://jp.investing.com/news/commodities-news/article-1496195",
+      "published": "2026-04-19 08:36:31",
+      "isoDate": "2026-04-19T08:36:31Z"
     },
     {
       "source": "Investing.com 外為",
-      "title": "世界的エネルギー危機が需要を押し上げ、中国のクリーンテック輸出が急増",
-      "link": "https://jp.investing.com/news/economy-news/article-1496133",
-      "published": "2026-04-18 07:04:13",
-      "isoDate": "2026-04-18T07:04:13Z"
+      "title": "今週のウォール街アナリスト注目銘柄",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1496189",
+      "published": "2026-04-19 07:29:58",
+      "isoDate": "2026-04-19T07:29:58Z"
     },
     {
       "source": "Investing.com 外為",
-      "title": "来週の相場で注目すべき3つのポイント：中東情勢の行方、国内外決算発表本格化、全国CPI",
-      "link": "https://jp.investing.com/news/forex-news/article-1496131",
-      "published": "2026-04-18 07:00:05",
-      "isoDate": "2026-04-18T07:00:05Z"
+      "title": "薄れる「アメリカンドリーム」:中国のエリート人材が母国へ回帰",
+      "link": "https://jp.investing.com/news/economy-news/article-1496190",
+      "published": "2026-04-19 07:27:37",
+      "isoDate": "2026-04-19T07:27:37Z"
     },
     {
       "source": "Investing.com 外為",
-      "title": "国内株式市場見通し：中東情勢の改善期待先取りでやや過熱感も、国内外決算発表本格化が注目点に",
-      "link": "https://jp.investing.com/news/forex-news/article-1496128",
-      "published": "2026-04-18 06:00:04",
-      "isoDate": "2026-04-18T06:00:04Z"
+      "title": "バーンスタイン、AIがソフトウェア業界に与える5年超の影響を展望",
+      "link": "https://jp.investing.com/news/economy-news/article-1496188",
+      "published": "2026-04-19 06:38:01",
+      "isoDate": "2026-04-19T06:38:01Z"
     },
     {
       "source": "Investing.com 外為",
-      "title": "米国株式市場見通し：中東情勢改善への方向性高まるが、期待感先取りで過熱感も",
-      "link": "https://jp.investing.com/news/forex-news/article-1496126",
-      "published": "2026-04-18 06:00:03",
-      "isoDate": "2026-04-18T06:00:03Z"
+      "title": "記録的株価の裏に潜む一時的な利益要因への依存",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1496186",
+      "published": "2026-04-19 05:58:50",
+      "isoDate": "2026-04-19T05:58:50Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "予測市場は2030年までに1兆ドル市場になるとBernsteinが予測",
+      "link": "https://jp.investing.com/news/economy-news/article-1496184",
+      "published": "2026-04-19 05:29:48",
+      "isoDate": "2026-04-19T05:29:48Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "エヌビディアは米国PC OEM業界を変えようとしているのか",
+      "link": "https://jp.investing.com/news/company-news/article-1496177",
+      "published": "2026-04-19 02:45:18",
+      "isoDate": "2026-04-19T02:45:18Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "ロボットが北京のレースで人間ランナーを破り、製造業推進を示す",
+      "link": "https://jp.investing.com/news/economy-news/article-1496175",
+      "published": "2026-04-19 02:05:19",
+      "isoDate": "2026-04-19T02:05:19Z"
+    },
+    {
+      "source": "Investing.com 一般",
+      "title": "中東紛争1カ月半のドル円【フィスコ・コラム】",
+      "link": "https://jp.investing.com/news/forex-news/article-1496169",
+      "published": "2026-04-19 00:15:03",
+      "isoDate": "2026-04-19T00:15:03Z"
     },
     {
       "source": "Investing.com 一般",
@@ -74,32 +102,41 @@
       "isoDate": "2026-04-18T05:15:03Z"
     },
     {
-      "source": "Investing.com 外為",
-      "title": "トランプ大統領、水曜日までに合意なければイラン爆撃再開を警告",
-      "link": "https://jp.investing.com/news/economy-news/article-1496125",
-      "published": "2026-04-18 05:12:16",
-      "isoDate": "2026-04-18T05:12:16Z"
-    },
-    {
       "source": "Investing.com 一般",
       "title": "為替週間見通し：ドルは下げ渋りか、戦闘終結に向けた合意形成は保証されず",
       "link": "https://jp.investing.com/news/forex-news/article-1496120",
       "published": "2026-04-18 05:00:04",
       "isoDate": "2026-04-18T05:00:04Z"
+    }
+  ],
+  "btc_items": [
+    {
+      "source": "Investing.com 一般",
+      "title": "中東紛争1カ月半のドル円【フィスコ・コラム】",
+      "link": "https://jp.investing.com/news/forex-news/article-1496169",
+      "published": "2026-04-19 00:15:03",
+      "isoDate": "2026-04-19T00:15:03Z"
     },
     {
-      "source": "Investing.com 外為",
-      "title": "Anthropic CEO、新型AIモデルを巡る緊張緩和でトランプ政権高官と会談",
-      "link": "https://jp.investing.com/news/company-news/article-1496092",
-      "published": "2026-04-18 00:41:44",
-      "isoDate": "2026-04-18T00:41:44Z"
+      "source": "CoinDesk Japan",
+      "title": "Bitcoin 'plebs eat first' mining pool Parasite finds its second BTC block",
+      "link": "https://www.coindesk.com/tech/2026/04/18/bitcoin-plebs-eat-first-mining-pool-parasite-finds-its-second-btc-block",
+      "published": "Sat, 18 Apr 2026 13:21:26 +0000",
+      "isoDate": "2026-04-18T13:21:26Z"
     },
     {
-      "source": "Investing.com 外為",
-      "title": "17日の米国市場ダイジェスト：米国株式市場は続伸、早期の戦争終結期待",
-      "link": "https://jp.investing.com/news/forex-news/article-1496061",
-      "published": "2026-04-17 23:30:06",
-      "isoDate": "2026-04-17T23:30:06Z"
+      "source": "Investing.com 一般",
+      "title": "豪ドル週間見通し：伸び悩みか、中東紛争の早期終結について懐疑的な見方も",
+      "link": "https://jp.investing.com/news/forex-news/article-1496122",
+      "published": "2026-04-18 05:15:03",
+      "isoDate": "2026-04-18T05:15:03Z"
+    },
+    {
+      "source": "CoinDesk Japan",
+      "title": "Bitcoin falls back to $76,000 as Iran shuts Hormuz again",
+      "link": "https://www.coindesk.com/markets/2026/04/18/bearish-bets-lose-usd593-million-as-bitcoin-jumps-with-iran-fully-opening-hormuz",
+      "published": "Sat, 18 Apr 2026 05:04:12 +0000",
+      "isoDate": "2026-04-18T05:04:12Z"
     }
   ]
 }
