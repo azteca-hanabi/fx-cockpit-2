@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-20T05:42:52Z",
-  "last_checked": "2026-04-20T05:42:52Z",
+  "updated": "2026-04-20T05:58:38Z",
+  "last_checked": "2026-04-20T05:58:38Z",
   "gold_items": [
     {
       "source": "NHK経済",
@@ -22,6 +22,13 @@
       "link": "https://news.yahoo.co.jp/articles/e99094608162f4ee787dd599bd29244e678e3c14?source=rss",
       "published": "Mon, 20 Apr 2026 03:00:40 GMT",
       "isoDate": "2026-04-20T03:00:40Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "イラン緊張再燃で金価格下落、原油価格は急騰",
+      "link": "https://jp.investing.com/news/commodities-news/article-1496283",
+      "published": "2026-04-20 02:41:29",
+      "isoDate": "2026-04-20T02:41:29Z"
     },
     {
       "source": "THE GOLD ONLINE",
@@ -73,6 +80,13 @@
       "isoDate": "2026-04-20T00:00:39Z"
     },
     {
+      "source": "Investing.com 商品先物",
+      "title": "米国がイラン船舶を拿捕、ホルムズ海峡再び閉鎖で原油価格7%急騰",
+      "link": "https://jp.investing.com/news/commodities-news/article-1496236",
+      "published": "2026-04-19 23:26:03",
+      "isoDate": "2026-04-19T23:26:03Z"
+    },
+    {
       "source": "THE GOLD ONLINE",
       "title": "【米ドル円】4月第4週の為替相場にインパクトを与える「重要な経済指標」【解説：東京海上アセットマネジメント】(THE GOLD ONLINE（ゴールドオンライン）)",
       "link": "https://news.yahoo.co.jp/articles/6bdeb69bca6c60053b3aa2a96fe20f84c006aeeb?source=rss",
@@ -122,6 +136,13 @@
       "isoDate": "2026-04-19T09:00:39Z"
     },
     {
+      "source": "Investing.com 商品先物",
+      "title": "IEA事務局長、ホルムズ海峡閉鎖続く中でイラク・トルコパイプライン建設を要請",
+      "link": "https://jp.investing.com/news/commodities-news/article-1496195",
+      "published": "2026-04-19 08:36:31",
+      "isoDate": "2026-04-19T08:36:31Z"
+    },
+    {
       "source": "THE GOLD ONLINE",
       "title": "南北戦争からリーマンショックまで――幾度も危機を乗り越えてきた「最強国家アメリカ」の正体(THE GOLD ONLINE（ゴールドオンライン）)",
       "link": "https://news.yahoo.co.jp/articles/f86e1129aceb11635d0b7bdaa2dea92c02ca378b?source=rss",
@@ -141,6 +162,48 @@
       "link": "https://news.yahoo.co.jp/articles/7efa9c52bf71cabd46d458151d9bf44659a859f3?source=rss",
       "published": "Sun, 19 Apr 2026 01:00:49 GMT",
       "isoDate": "2026-04-19T01:00:49Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "ホルムズ海峡再開、専門家とアナリストの見解",
+      "link": "https://jp.investing.com/news/commodities-news/article-1495851",
+      "published": "2026-04-17 19:57:57",
+      "isoDate": "2026-04-17T19:57:57Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "米国の石油・ガス掘削リグ数が2週連続で減少",
+      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1495835",
+      "published": "2026-04-17 19:20:25",
+      "isoDate": "2026-04-17T19:20:25Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "ビットコイン対金、イラン情勢後も安全資産としての議論は決着せず",
+      "link": "https://jp.investing.com/news/commodities-news/article-1495617",
+      "published": "2026-04-17 14:27:09",
+      "isoDate": "2026-04-17T14:27:09Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "ホルムズ海峡の一時再開発表で欧州天然ガス価格が急落",
+      "link": "https://jp.investing.com/news/commodities-news/article-1495565",
+      "published": "2026-04-17 14:10:28",
+      "isoDate": "2026-04-17T14:10:28Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "銀と鉱山株が上昇、イラン合意期待で米ドル下落",
+      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1495495",
+      "published": "2026-04-17 13:44:34",
+      "isoDate": "2026-04-17T13:44:34Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "ハンガリーへのロシア産石油供給、来週再開の可能性と次期首相",
+      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1495227",
+      "published": "2026-04-17 11:27:23",
+      "isoDate": "2026-04-17T11:27:23Z"
     }
   ],
   "usdjpy_items": [
@@ -216,6 +279,90 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "ロシア、仮想通貨の無認可流通を刑事罰化へ　最高懲役7年",
+      "link": "https://coinpost.jp/?p=703237",
+      "published": "Mon, 20 Apr 2026 13:52:57 +0900",
+      "isoDate": "2026-04-20T04:52:57Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "イラン停戦期限迫る、原油とビットコインが綱引き",
+      "link": "https://coinpost.jp/?p=703195",
+      "published": "Mon, 20 Apr 2026 11:05:04 +0900",
+      "isoDate": "2026-04-20T02:05:04Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "ETHリステーキング「KelpDAO」攻撃で440億円以上が不正流出か　被害の原因は？",
+      "link": "https://coinpost.jp/?p=703146",
+      "published": "Mon, 20 Apr 2026 10:15:39 +0900",
+      "isoDate": "2026-04-20T01:15:39Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "クラウド基盤バーセルに不正アクセス、仮想通貨プロジェクトも警戒",
+      "link": "https://coinpost.jp/?p=703155",
+      "published": "Mon, 20 Apr 2026 09:57:09 +0900",
+      "isoDate": "2026-04-20T00:57:09Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米アルミ大手、休止中の製錬所をビットコインマイナーに売却へ",
+      "link": "https://coinpost.jp/?p=703139",
+      "published": "Mon, 20 Apr 2026 08:15:12 +0900",
+      "isoDate": "2026-04-19T23:15:12Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米国制裁アドレスに930億円超のビットコインが今も滞留",
+      "link": "https://coinpost.jp/?p=703135",
+      "published": "Mon, 20 Apr 2026 07:40:59 +0900",
+      "isoDate": "2026-04-19T22:40:59Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "ビットコイン和平交渉期待で底堅く、中東情勢と米金融政策が焦点に｜bitbankアナリスト寄稿",
+      "link": "https://coinpost.jp/?p=702961",
+      "published": "Sun, 19 Apr 2026 11:30:20 +0900",
+      "isoDate": "2026-04-19T02:30:20Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "今週の主要仮想通貨材料まとめ、小口ETH保有者の売り加速やXRPのETFに過去2番目の資金流入など",
+      "link": "https://coinpost.jp/?p=702813",
+      "published": "Sun, 19 Apr 2026 09:30:50 +0900",
+      "isoDate": "2026-04-19T00:30:50Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "週刊仮想通貨ニュース｜ビットコインの100万ドル超えの可能性分析や量子リスク対応計画に高い関心",
+      "link": "https://coinpost.jp/?p=702845",
+      "published": "Sun, 19 Apr 2026 09:25:12 +0900",
+      "isoDate": "2026-04-19T00:25:12Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "仮想通貨XRP、ソラナで『wXRP』として利用可能に",
+      "link": "https://coinpost.jp/?p=703026",
+      "published": "Sat, 18 Apr 2026 13:50:36 +0900",
+      "isoDate": "2026-04-18T04:50:36Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米ビッグス下院議員、3月にビットコイン現物ETFに最大4000万円投資",
+      "link": "https://coinpost.jp/?p=703088",
+      "published": "Sat, 18 Apr 2026 13:10:41 +0900",
+      "isoDate": "2026-04-18T04:10:41Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米シタデル、予測市場への参入を検討　地政学リスクのヘッジ手段として注目",
+      "link": "https://coinpost.jp/?p=703025",
+      "published": "Sat, 18 Apr 2026 11:10:20 +0900",
+      "isoDate": "2026-04-18T02:10:20Z"
+    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
