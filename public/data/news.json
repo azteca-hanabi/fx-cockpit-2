@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-20T05:37:49Z",
-  "last_checked": "2026-04-20T05:37:49Z",
+  "updated": "2026-04-20T05:42:52Z",
+  "last_checked": "2026-04-20T05:42:52Z",
   "gold_items": [
     {
       "source": "NHK経済",
@@ -146,6 +146,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は小動き、中東情勢にらみ",
+      "link": "https://jp.investing.com/news/forex-news/article-1496340",
+      "published": "2026-04-20 05:15:11",
+      "isoDate": "2026-04-20T05:15:11Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "東京為替：ドル・円は下げ渋り、原油相場にらみ",
       "link": "https://jp.investing.com/news/forex-news/article-1496329",
       "published": "2026-04-20 05:00:11",
@@ -192,13 +199,6 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1496283",
       "published": "2026-04-20 02:41:29",
       "isoDate": "2026-04-20T02:41:29Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "石油資源---大幅続落、先週末にかけての原油相場下落が手掛かり",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1496278",
-      "published": "2026-04-20 02:15:07",
-      "isoDate": "2026-04-20T02:15:07Z"
     },
     {
       "source": "Investing.com 外為",
