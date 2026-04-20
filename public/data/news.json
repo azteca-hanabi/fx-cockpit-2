@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-20T21:30:26Z",
-  "last_checked": "2026-04-20T21:30:26Z",
+  "updated": "2026-04-20T22:00:33Z",
+  "last_checked": "2026-04-20T22:00:33Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -41,6 +41,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "NY為替：米イラン再協議やウォーシュ次期FRB議長公聴会の行方にらむ、ドルは伸び悩み",
+      "link": "https://jp.investing.com/news/forex-news/article-1497716",
+      "published": "2026-04-20 21:30:04",
+      "isoDate": "2026-04-20T21:30:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "タイトル：　NY株式：NYダウは4.87ドル安、イラン和平合意への期待後退",
       "link": "https://jp.investing.com/news/forex-news/article-1497697",
       "published": "2026-04-20 21:15:04",
@@ -76,17 +83,17 @@
     },
     {
       "source": "Investing.com 外為",
+      "title": "4月20日のNY為替・原油概況",
+      "link": "https://jp.investing.com/news/forex-news/article-1497513",
+      "published": "2026-04-20 19:15:04",
+      "isoDate": "2026-04-20T19:15:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "4月に45%超の上昇、この上昇相場は本物であり、これらのAI銘柄は非常に注目に値する",
       "link": "https://jp.investing.com/news/stock-market-news/article-1497191",
       "published": "2026-04-20 13:42:47",
       "isoDate": "2026-04-20T13:42:47Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "米国・イラン間の緊張再燃でTSXは横ばい",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1497012",
-      "published": "2026-04-20 12:36:15",
-      "isoDate": "2026-04-20T12:36:15Z"
     },
     {
       "source": "Investing.com 外為",
@@ -97,13 +104,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "イラン戦争が続く中、鉱山株を保有すべきか バーンスタインが見解",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1496845",
-      "published": "2026-04-20 11:43:57",
-      "isoDate": "2026-04-20T11:43:57Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "フラッシュセール — InvestingProを2026年最安値で今すぐ手に入れよう",
       "link": "https://jp.investing.com/news/stock-market-news/article-1496554",
       "published": "2026-04-20 09:36:10",
@@ -111,83 +111,6 @@
     }
   ],
   "btc_items": [
-    {
-      "source": "CoinPost",
-      "title": "リップル、2028年までのXRPレジャー量子耐性移行を目指す　グーグルの分析受け",
-      "link": "https://coinpost.jp/?p=703449",
-      "published": "Tue, 21 Apr 2026 06:10:15 +0900",
-      "isoDate": "2026-04-20T21:10:15Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ストラテジーが1週間で3.4万BTC超ビットコインを取得、今年最大の週次購入に",
-      "link": "https://coinpost.jp/?p=703443",
-      "published": "Tue, 21 Apr 2026 05:00:06 +0900",
-      "isoDate": "2026-04-20T20:00:06Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ロシア、仮想通貨の無認可流通を刑事罰化へ　最高懲役7年",
-      "link": "https://coinpost.jp/?p=703237",
-      "published": "Mon, 20 Apr 2026 13:52:57 +0900",
-      "isoDate": "2026-04-20T04:52:57Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "イラン停戦期限迫る、原油とビットコインが綱引き",
-      "link": "https://coinpost.jp/?p=703195",
-      "published": "Mon, 20 Apr 2026 11:05:04 +0900",
-      "isoDate": "2026-04-20T02:05:04Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ETHリステーキング「KelpDAO」攻撃で440億円以上が不正流出か　被害の原因は？",
-      "link": "https://coinpost.jp/?p=703146",
-      "published": "Mon, 20 Apr 2026 10:15:39 +0900",
-      "isoDate": "2026-04-20T01:15:39Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "クラウド基盤バーセルに不正アクセス、仮想通貨プロジェクトも警戒",
-      "link": "https://coinpost.jp/?p=703155",
-      "published": "Mon, 20 Apr 2026 09:57:09 +0900",
-      "isoDate": "2026-04-20T00:57:09Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米アルミ大手、休止中の製錬所をビットコインマイナーに売却へ",
-      "link": "https://coinpost.jp/?p=703139",
-      "published": "Mon, 20 Apr 2026 08:15:12 +0900",
-      "isoDate": "2026-04-19T23:15:12Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米国制裁アドレスに930億円超のビットコインが今も滞留",
-      "link": "https://coinpost.jp/?p=703135",
-      "published": "Mon, 20 Apr 2026 07:40:59 +0900",
-      "isoDate": "2026-04-19T22:40:59Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ビットコイン和平交渉期待で底堅く、中東情勢と米金融政策が焦点に｜bitbankアナリスト寄稿",
-      "link": "https://coinpost.jp/?p=702961",
-      "published": "Sun, 19 Apr 2026 11:30:20 +0900",
-      "isoDate": "2026-04-19T02:30:20Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "今週の主要仮想通貨材料まとめ、小口ETH保有者の売り加速やXRPのETFに過去2番目の資金流入など",
-      "link": "https://coinpost.jp/?p=702813",
-      "published": "Sun, 19 Apr 2026 09:30:50 +0900",
-      "isoDate": "2026-04-19T00:30:50Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "週刊仮想通貨ニュース｜ビットコインの100万ドル超えの可能性分析や量子リスク対応計画に高い関心",
-      "link": "https://coinpost.jp/?p=702845",
-      "published": "Sun, 19 Apr 2026 09:25:12 +0900",
-      "isoDate": "2026-04-19T00:25:12Z"
-    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
