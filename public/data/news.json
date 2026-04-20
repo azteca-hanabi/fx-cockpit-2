@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-20T15:07:13Z",
-  "last_checked": "2026-04-20T15:07:13Z",
+  "updated": "2026-04-20T15:30:29Z",
+  "last_checked": "2026-04-20T15:30:29Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -55,6 +55,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "NY外為：ドル買い一服、米イラン再協議期待",
+      "link": "https://jp.investing.com/news/forex-news/article-1497292",
+      "published": "2026-04-20 14:30:04",
+      "isoDate": "2026-04-20T14:30:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "4月に45%超の上昇、この上昇相場は本物であり、これらのAI銘柄は非常に注目に値する",
       "link": "https://jp.investing.com/news/stock-market-news/article-1497191",
       "published": "2026-04-20 13:42:47",
@@ -66,13 +73,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1497173",
       "published": "2026-04-20 13:33:14",
       "isoDate": "2026-04-20T13:33:14Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "MetaとCBREがデータセンター技術者数千人の育成プログラムを開始",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1497081",
-      "published": "2026-04-20 13:02:23",
-      "isoDate": "2026-04-20T13:02:23Z"
     },
     {
       "source": "Investing.com 外為",
@@ -118,10 +118,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "GoogleとのAI向け新型チップ開発提携報道でマーベル株が急騰",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1496474",
-      "published": "2026-04-20 08:29:54",
-      "isoDate": "2026-04-20T08:29:54Z"
+      "title": "テスラとスペースXの統合は単なる憶測以上のものになりつつあるのか",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1496423",
+      "published": "2026-04-20 07:21:55",
+      "isoDate": "2026-04-20T07:21:55Z"
     }
   ],
   "btc_items": [
