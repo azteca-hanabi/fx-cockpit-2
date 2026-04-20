@@ -25,7 +25,6 @@ jobs:
           GOLD_SOURCES = [
               ('Investing.com 商品先物', 'https://jp.investing.com/rss/news_11.rss', True),
               ('NHK経済',                'https://www.nhk.or.jp/rss/news/cat4.xml',  False),
-              ('THE GOLD ONLINE',        'https://news.yahoo.co.jp/rss/media/gonline/all.xml', False),
           ]
 
           USDJPY_SOURCES = [
