@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-20T14:00:34Z",
-  "last_checked": "2026-04-20T14:00:34Z",
+  "updated": "2026-04-20T14:30:27Z",
+  "last_checked": "2026-04-20T14:30:27Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -50,23 +50,16 @@
       "link": "https://jp.investing.com/news/commodities-news/article-93CH-1495835",
       "published": "2026-04-17 19:20:25",
       "isoDate": "2026-04-17T19:20:25Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "ビットコイン対金、イラン情勢後も安全資産としての議論は決着せず",
-      "link": "https://jp.investing.com/news/commodities-news/article-1495617",
-      "published": "2026-04-17 14:27:09",
-      "isoDate": "2026-04-17T14:27:09Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "ホルムズ海峡の一時再開発表で欧州天然ガス価格が急落",
-      "link": "https://jp.investing.com/news/commodities-news/article-1495565",
-      "published": "2026-04-17 14:10:28",
-      "isoDate": "2026-04-17T14:10:28Z"
     }
   ],
   "usdjpy_items": [
+    {
+      "source": "Investing.com 外為",
+      "title": "4月に45%超の上昇、この上昇相場は本物であり、これらのAI銘柄は非常に注目に値する",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1497191",
+      "published": "2026-04-20 13:42:47",
+      "isoDate": "2026-04-20T13:42:47Z"
+    },
     {
       "source": "Investing.com 外為",
       "title": "アップルへのウォール街の懸念は「過度に悲観的」とゴールドマン・サックス",
@@ -129,13 +122,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1496474",
       "published": "2026-04-20 08:29:54",
       "isoDate": "2026-04-20T08:29:54Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "テスラとスペースXの統合は単なる憶測以上のものになりつつあるのか",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1496423",
-      "published": "2026-04-20 07:21:55",
-      "isoDate": "2026-04-20T07:21:55Z"
     }
   ],
   "btc_items": [
