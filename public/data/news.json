@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T06:00:30Z",
-  "last_checked": "2026-04-21T06:00:30Z",
+  "updated": "2026-04-21T06:30:26Z",
+  "last_checked": "2026-04-21T06:30:26Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -118,55 +118,6 @@
     }
   ],
   "btc_items": [
-    {
-      "source": "CoinPost",
-      "title": "マイナウォレットと三井住友カード、北九州でマイナカード活用の仮想通貨決済実験を実施",
-      "link": "https://coinpost.jp/?p=703679",
-      "published": "Tue, 21 Apr 2026 14:05:54 +0900",
-      "isoDate": "2026-04-21T05:05:54Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米SECアトキンス委員長就任1周年「ACT戦略」を推進　予測市場を注視",
-      "link": "https://coinpost.jp/?p=703581",
-      "published": "Tue, 21 Apr 2026 13:00:54 +0900",
-      "isoDate": "2026-04-21T04:00:54Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米クラリティー法案、ステーブルコイン報酬巡り難航か　採決は5月へ延期の兆し＝報道",
-      "link": "https://coinpost.jp/?p=703597",
-      "published": "Tue, 21 Apr 2026 11:45:04 +0900",
-      "isoDate": "2026-04-21T02:45:04Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米ビットコイン現物ETF、先週は約10億ドルが純流入　市場活況のカギは米利下げか",
-      "link": "https://coinpost.jp/?p=703517",
-      "published": "Tue, 21 Apr 2026 11:20:43 +0900",
-      "isoDate": "2026-04-21T02:20:43Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "クレディセゾンとコインチェックが業務提携、3300万人のカード会員に仮想通貨アクセスを提供",
-      "link": "https://coinpost.jp/?p=703527",
-      "published": "Tue, 21 Apr 2026 10:50:30 +0900",
-      "isoDate": "2026-04-21T01:50:30Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米NSA、アンソロピック製機密AIモデル「Mythos（ミトス）」を導入",
-      "link": "https://coinpost.jp/?p=703452",
-      "published": "Tue, 21 Apr 2026 08:20:39 +0900",
-      "isoDate": "2026-04-20T23:20:39Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "リップル、2028年までのXRPレジャー量子耐性移行を目指す　グーグルの分析受け",
-      "link": "https://coinpost.jp/?p=703449",
-      "published": "Tue, 21 Apr 2026 06:10:15 +0900",
-      "isoDate": "2026-04-20T21:10:15Z"
-    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
