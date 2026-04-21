@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T05:30:27Z",
-  "last_checked": "2026-04-21T05:30:27Z",
+  "updated": "2026-04-21T06:00:30Z",
+  "last_checked": "2026-04-21T06:00:30Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -48,6 +48,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は伸び悩み、節目を意識",
+      "link": "https://jp.investing.com/news/forex-news/article-1497903",
+      "published": "2026-04-21 05:15:15",
+      "isoDate": "2026-04-21T05:15:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "日経平均は720円高、ダウ平均先物底堅く安心感に",
       "link": "https://jp.investing.com/news/forex-news/article-1497895",
       "published": "2026-04-21 05:00:15",
@@ -80,13 +87,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1497875",
       "published": "2026-04-21 03:18:41",
       "isoDate": "2026-04-21T03:18:41Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "金価格は米イラン協議とFRB議長人事を注視し小幅下落",
-      "link": "https://jp.investing.com/news/commodities-news/article-1497868",
-      "published": "2026-04-21 02:38:32",
-      "isoDate": "2026-04-21T02:38:32Z"
     },
     {
       "source": "Investing.com 外為",
