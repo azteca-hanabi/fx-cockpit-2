@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T13:00:32Z",
-  "last_checked": "2026-04-21T13:00:32Z",
+  "updated": "2026-04-21T13:30:30Z",
+  "last_checked": "2026-04-21T13:30:30Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -55,6 +55,20 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "トランプ大統領、イランとの合意を予想、紛争は継続中",
+      "link": "https://jp.investing.com/news/economy-news/article-1498655",
+      "published": "2026-04-21 12:42:25",
+      "isoDate": "2026-04-21T12:42:25Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "ホルムズ海峡を通過した船舶はわずか3隻、航行停止が継続",
+      "link": "https://jp.investing.com/news/economy-news/article-1498636",
+      "published": "2026-04-21 12:38:36",
+      "isoDate": "2026-04-21T12:38:36Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "アマゾン、ユナイテッドヘルスが時間外取引で上昇、スリーエム・カンパニーは下落",
       "link": "https://jp.investing.com/news/stock-market-news/article-1498579",
       "published": "2026-04-21 12:21:02",
@@ -69,13 +83,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "ペイパル・ホールディングス、NFLの公式P2P決済パートナーに",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1498529",
-      "published": "2026-04-21 12:07:08",
-      "isoDate": "2026-04-21T12:07:08Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "ゴールドマン・サックス、米国株式市場は最高値更新を続けると予想",
       "link": "https://jp.investing.com/news/stock-market-news/article-1498466",
       "published": "2026-04-21 11:49:39",
@@ -87,13 +94,6 @@
       "link": "https://jp.investing.com/news/economic-indicators/article-1498416",
       "published": "2026-04-21 11:31:33",
       "isoDate": "2026-04-21T11:31:33Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "欧州為替：ドル・円は変わらず、様子見ムードで",
-      "link": "https://jp.investing.com/news/forex-news/article-1498371",
-      "published": "2026-04-21 11:15:10",
-      "isoDate": "2026-04-21T11:15:10Z"
     },
     {
       "source": "Investing.com 外為",
