@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T04:42:44Z",
-  "last_checked": "2026-04-21T04:42:44Z",
+  "updated": "2026-04-21T04:59:34Z",
+  "last_checked": "2026-04-21T04:59:34Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -48,10 +48,45 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "東京為替：米ドル・円は下げ渋り、この後の取引で159円台前半まで戻す可能性も",
-      "link": "https://jp.investing.com/news/forex-news/article-1497865",
-      "published": "2026-04-21 02:15:15",
-      "isoDate": "2026-04-21T02:15:15Z"
+      "title": "日経平均は大幅続伸、ソフトバンクGが1銘柄で約212円分押し上げ",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1497883",
+      "published": "2026-04-21 04:00:15",
+      "isoDate": "2026-04-21T04:00:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "CrowdStrike、日本とアジア太平洋地域でマネージドセキュリティプロバイダー戦略を拡大",
+      "link": "https://jp.investing.com/news/assorted/article-432SI-1497876",
+      "published": "2026-04-21 03:33:07",
+      "isoDate": "2026-04-21T03:33:07Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "イラン情勢の不透明感の中でアジア株は まちまち、KOSPIはAI相場で最高値更新",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1497875",
+      "published": "2026-04-21 03:18:41",
+      "isoDate": "2026-04-21T03:18:41Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は伸び悩み、原油相場の下落で",
+      "link": "https://jp.investing.com/news/forex-news/article-1497873",
+      "published": "2026-04-21 03:15:12",
+      "isoDate": "2026-04-21T03:15:12Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "買い先行後も上げ幅広げる展開",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1497872",
+      "published": "2026-04-21 03:15:12",
+      "isoDate": "2026-04-21T03:15:12Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "金価格は米イラン協議とFRB議長人事を注視し小幅下落",
+      "link": "https://jp.investing.com/news/commodities-news/article-1497868",
+      "published": "2026-04-21 02:38:32",
+      "isoDate": "2026-04-21T02:38:32Z"
     },
     {
       "source": "Investing.com 外為",
@@ -62,13 +97,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "停戦交渉を見極めたいとの思惑から全般は様子見姿勢の強い展開か",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1497789",
-      "published": "2026-04-20 23:30:06",
-      "isoDate": "2026-04-20T23:30:06Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "米国株式市場は小幅反落、イラン和平合意への期待後退",
       "link": "https://jp.investing.com/news/stock-market-news/article-1497783",
       "published": "2026-04-20 23:15:06",
@@ -76,38 +104,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "タイトル：　NY株式：NYダウは4.87ドル安、イラン和平合意への期待後退",
-      "link": "https://jp.investing.com/news/forex-news/article-1497697",
-      "published": "2026-04-20 21:15:04",
-      "isoDate": "2026-04-20T21:15:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "時間外取引の値動き:アマゾン、マーベル・テクノロジー・グループ、アップルなど",
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1497672",
       "published": "2026-04-20 21:02:02",
       "isoDate": "2026-04-20T21:02:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "ティム・クック氏がアップルCEOを退任、1,000%成長を実現 ジョン・ターナス氏が後継者に",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1497632",
-      "published": "2026-04-20 20:38:44",
-      "isoDate": "2026-04-20T20:38:44Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "4月に45%超の上昇、この上昇相場は本物であり、これらのAI銘柄は非常に注目に値する",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1497191",
-      "published": "2026-04-20 13:42:47",
-      "isoDate": "2026-04-20T13:42:47Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "モルガン・スタンレー、インテルの目標株価を引き上げるも他の半導体株を優先",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1496941",
-      "published": "2026-04-20 12:05:30",
-      "isoDate": "2026-04-20T12:05:30Z"
     },
     {
       "source": "Investing.com 外為",
