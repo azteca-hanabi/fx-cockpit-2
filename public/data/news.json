@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T04:00:28Z",
-  "last_checked": "2026-04-21T04:00:28Z",
+  "updated": "2026-04-21T04:29:05Z",
+  "last_checked": "2026-04-21T04:29:05Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -118,6 +118,13 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "米SECアトキンス委員長就任1周年「ACT戦略」を推進　予測市場を注視",
+      "link": "https://coinpost.jp/?p=703581",
+      "published": "Tue, 21 Apr 2026 13:00:54 +0900",
+      "isoDate": "2026-04-21T04:00:54Z"
+    },
     {
       "source": "CoinPost",
       "title": "米クラリティー法案、ステーブルコイン報酬巡り難航か　採決は5月へ延期の兆し＝報道",
