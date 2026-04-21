@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T10:30:26Z",
-  "last_checked": "2026-04-21T10:30:26Z",
+  "updated": "2026-04-21T11:00:32Z",
+  "last_checked": "2026-04-21T11:00:32Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -46,6 +46,13 @@
     }
   ],
   "usdjpy_items": [
+    {
+      "source": "Investing.com 外為",
+      "title": "ユナイテッドヘルス、第1四半期決算と通期見通しが予想を上回り急騰",
+      "link": "https://jp.investing.com/news/earnings/article-1498214",
+      "published": "2026-04-21 10:09:18",
+      "isoDate": "2026-04-21T10:09:18Z"
+    },
     {
       "source": "Investing.com 外為",
       "title": "NABTUとマイクロソフト、熟練技能労働者向けAI研修を拡大",
@@ -94,13 +101,6 @@
       "link": "https://jp.investing.com/news/forex-news/article-1497964",
       "published": "2026-04-21 06:45:12",
       "isoDate": "2026-04-21T06:45:12Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "ブラックベリー株、エヌビディアとのAI協業拡大で急騰",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1497812",
-      "published": "2026-04-21 00:14:18",
-      "isoDate": "2026-04-21T00:14:18Z"
     },
     {
       "source": "Investing.com 外為",
