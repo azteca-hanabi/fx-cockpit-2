@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T07:00:35Z",
-  "last_checked": "2026-04-21T07:00:35Z",
+  "updated": "2026-04-21T07:30:25Z",
+  "last_checked": "2026-04-21T07:30:25Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -48,10 +48,10 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "日経平均は572円高、米経済指標やFRB議長候補の公聴会などに関心",
-      "link": "https://jp.investing.com/news/forex-news/article-1497920",
-      "published": "2026-04-21 06:00:13",
-      "isoDate": "2026-04-21T06:00:13Z"
+      "title": "東京為替：ドル・円は小安い、原油相場は失速",
+      "link": "https://jp.investing.com/news/forex-news/article-1497964",
+      "published": "2026-04-21 06:45:12",
+      "isoDate": "2026-04-21T06:45:12Z"
     },
     {
       "source": "Investing.com 外為",
@@ -59,13 +59,6 @@
       "link": "https://jp.investing.com/news/forex-news/article-1497903",
       "published": "2026-04-21 05:15:15",
       "isoDate": "2026-04-21T05:15:15Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "日経平均は720円高、ダウ平均先物底堅く安心感に",
-      "link": "https://jp.investing.com/news/forex-news/article-1497895",
-      "published": "2026-04-21 05:00:15",
-      "isoDate": "2026-04-21T05:00:15Z"
     },
     {
       "source": "Investing.com 外為",
@@ -108,6 +101,13 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1497672",
       "published": "2026-04-20 21:02:02",
       "isoDate": "2026-04-20T21:02:02Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "4月に45%超の上昇、この上昇相場は本物であり、これらのAI銘柄は非常に注目に値する",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1497191",
+      "published": "2026-04-20 13:42:47",
+      "isoDate": "2026-04-20T13:42:47Z"
     },
     {
       "source": "Investing.com 外為",
