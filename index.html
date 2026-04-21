@@ -790,7 +790,7 @@ function createMiniWidget(wrapId, symbol) {
   s.innerHTML = JSON.stringify({
     symbol:      symbol,
     width:       '100%',
-    height:      90,
+    height:      150,
     locale:      'ja',
     colorTheme:  theme,
     trendLineColor: theme === 'dark' ? 'rgba(100,100,150,1)' : 'rgba(100,100,150,1)',
@@ -808,7 +808,7 @@ function initMiniWidgets() {
   createMiniWidget('mc-dxy',        'CAPITALCOM:DXY');
   createMiniWidget('mc-wti',        'TVC:USOIL');
   createMiniWidget('mc-dxy-usdjpy', 'CAPITALCOM:DXY');
-  createMiniWidget('mc-us02y',      'CAPITALCOM:US2');
+  createMiniWidget('mc-us02y',      'TVC:US02Y');
   createMiniWidget('mc-btcd',       'CRYPTOCAP:BTC.D');
   createMiniWidget('mc-eth',        'COINBASE:ETHUSD');
   createMiniWidget('mc-xrp',        'BITSTAMP:XRPUSD');
