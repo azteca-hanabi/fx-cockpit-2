@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-20T23:30:32Z",
-  "last_checked": "2026-04-20T23:30:32Z",
+  "updated": "2026-04-21T00:00:35Z",
+  "last_checked": "2026-04-21T00:00:35Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -41,6 +41,20 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "停戦交渉を見極めたいとの思惑から全般は様子見姿勢の強い展開か",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1497789",
+      "published": "2026-04-20 23:30:06",
+      "isoDate": "2026-04-20T23:30:06Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "米国株式市場は小幅反落、イラン和平合意への期待後退",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1497783",
+      "published": "2026-04-20 23:15:06",
+      "isoDate": "2026-04-20T23:15:06Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "NY原油：大幅反発で87.42ドル、米国とイランの再協議開催については予断を許さない状況",
       "link": "https://jp.investing.com/news/forex-news/article-1497778",
       "published": "2026-04-20 23:00:06",
@@ -59,13 +73,6 @@
       "link": "https://jp.investing.com/news/forex-news/article-1497729",
       "published": "2026-04-20 21:45:04",
       "isoDate": "2026-04-20T21:45:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY為替：米イラン再協議やウォーシュ次期FRB議長公聴会の行方にらむ、ドルは伸び悩み",
-      "link": "https://jp.investing.com/news/forex-news/article-1497716",
-      "published": "2026-04-20 21:30:04",
-      "isoDate": "2026-04-20T21:30:04Z"
     },
     {
       "source": "Investing.com 外為",
@@ -94,13 +101,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1497191",
       "published": "2026-04-20 13:42:47",
       "isoDate": "2026-04-20T13:42:47Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "モルガン・スタンレー、インテルの目標株価を引き上げるも他の半導体株を優先",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1496941",
-      "published": "2026-04-20 12:05:30",
-      "isoDate": "2026-04-20T12:05:30Z"
     },
     {
       "source": "Investing.com 外為",
