@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T09:30:24Z",
-  "last_checked": "2026-04-21T09:30:24Z",
+  "updated": "2026-04-21T10:00:30Z",
+  "last_checked": "2026-04-21T10:00:30Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -48,6 +48,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "米国・イラン和平協議の見通し不透明、停戦期限が迫る",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1498140",
+      "published": "2026-04-21 09:15:25",
+      "isoDate": "2026-04-21T09:15:25Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "JPモルガン、AI勢い再燃と地政学的緊張緩和でS&P500目標を引き上げ",
       "link": "https://jp.investing.com/news/stock-market-news/article-1498135",
       "published": "2026-04-21 09:10:11",
@@ -87,13 +94,6 @@
       "link": "https://jp.investing.com/news/forex-news/article-1497964",
       "published": "2026-04-21 06:45:12",
       "isoDate": "2026-04-21T06:45:12Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "アップルCEO交代計画でアジアサプライヤー株は明暗",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1497893",
-      "published": "2026-04-21 04:47:32",
-      "isoDate": "2026-04-21T04:47:32Z"
     },
     {
       "source": "Investing.com 外為",
