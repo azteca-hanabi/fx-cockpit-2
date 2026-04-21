@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-21T02:30:25Z",
-  "last_checked": "2026-04-21T02:30:25Z",
+  "updated": "2026-04-21T03:00:30Z",
+  "last_checked": "2026-04-21T03:00:30Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -41,6 +41,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "東京為替：米ドル・円は下げ渋り、この後の取引で159円台前半まで戻す可能性も",
+      "link": "https://jp.investing.com/news/forex-news/article-1497865",
+      "published": "2026-04-21 02:15:15",
+      "isoDate": "2026-04-21T02:15:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "ブラックベリー株、エヌビディアとのAI協業拡大で急騰",
       "link": "https://jp.investing.com/news/stock-market-news/article-1497812",
       "published": "2026-04-21 00:14:18",
@@ -59,13 +66,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1497783",
       "published": "2026-04-20 23:15:06",
       "isoDate": "2026-04-20T23:15:06Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "20日の米国市場ダイジェスト：米国株式市場は小幅反落、イラン和平合意への期待後退",
-      "link": "https://jp.investing.com/news/forex-news/article-1497729",
-      "published": "2026-04-20 21:45:04",
-      "isoDate": "2026-04-20T21:45:04Z"
     },
     {
       "source": "Investing.com 外為",
@@ -113,6 +113,13 @@
   "btc_items": [
     {
       "source": "CoinPost",
+      "title": "米クラリティー法案、ステーブルコイン報酬巡り難航か　採決は5月へ延期の兆し＝報道",
+      "link": "https://coinpost.jp/?p=703597",
+      "published": "Tue, 21 Apr 2026 11:45:04 +0900",
+      "isoDate": "2026-04-21T02:45:04Z"
+    },
+    {
+      "source": "CoinPost",
       "title": "米ビットコイン現物ETF、先週は約10億ドルが純流入　市場活況のカギは米利下げか",
       "link": "https://coinpost.jp/?p=703517",
       "published": "Tue, 21 Apr 2026 11:20:43 +0900",
@@ -145,13 +152,6 @@
       "link": "https://coinpost.jp/?p=703443",
       "published": "Tue, 21 Apr 2026 05:00:06 +0900",
       "isoDate": "2026-04-20T20:00:06Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ロシア、仮想通貨の無認可流通を刑事罰化へ　最高懲役7年",
-      "link": "https://coinpost.jp/?p=703237",
-      "published": "Mon, 20 Apr 2026 13:52:57 +0900",
-      "isoDate": "2026-04-20T04:52:57Z"
     },
     {
       "source": "Investing.com 暗号資産",
