@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-21T19:00:30Z",
-  "last_checked": "2026-04-21T19:00:30Z",
+  "updated": "2026-04-21T19:30:29Z",
+  "last_checked": "2026-04-21T19:30:29Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
-      "title": "イラン和平交渉の不透明感で欧州天然ガス価格が上昇",
+      "title": "米国の天然ガス価格、イラン和平協議を見極める中で小幅上昇",
       "link": "https://jp.investing.com/news/commodities-news/article-1498838",
       "published": "2026-04-21 13:41:00",
       "isoDate": "2026-04-21T13:41:00Z"
@@ -62,13 +62,6 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "[通貨オプション]R/R、円コール強まる",
-      "link": "https://jp.investing.com/news/forex-news/article-1499093",
-      "published": "2026-04-21 16:45:04",
-      "isoDate": "2026-04-21T16:45:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "ウォール街の見方:アマゾンのAnthropic提携はAI戦略の勝利か、それともコスト負担か",
       "link": "https://jp.investing.com/news/stock-market-news/article-1498782",
       "published": "2026-04-21 13:26:40",
@@ -101,6 +94,13 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1498567",
       "published": "2026-04-21 12:16:11",
       "isoDate": "2026-04-21T12:16:11Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "ゴールドマン・サックス、米国株式市場は最高値更新を続けると予想",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1498466",
+      "published": "2026-04-21 11:49:39",
+      "isoDate": "2026-04-21T11:49:39Z"
     },
     {
       "source": "Investing.com 外為",
