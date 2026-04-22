@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T17:30:27Z",
-  "last_checked": "2026-04-22T17:30:27Z",
+  "updated": "2026-04-22T18:00:29Z",
+  "last_checked": "2026-04-22T18:00:29Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,17 +76,17 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "量子コンピューティングが従来型AI基盤を置き換える可能性、ノースランド",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1500982",
+      "published": "2026-04-22 17:14:42",
+      "isoDate": "2026-04-22T17:14:42Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "NY外為：ドル一段高、指数再び200DMA試す、トランプ大統領は停戦期限設定せず",
       "link": "https://jp.investing.com/news/forex-news/article-1500851",
       "published": "2026-04-22 16:00:04",
       "isoDate": "2026-04-22T16:00:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY外為：ドル続伸、原油高、停戦延長も米はホルムズ海峡封鎖維持",
-      "link": "https://jp.investing.com/news/forex-news/article-1500533",
-      "published": "2026-04-22 13:30:05",
-      "isoDate": "2026-04-22T13:30:05Z"
     },
     {
       "source": "Investing.com 外為",
