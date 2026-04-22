@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T07:30:36Z",
-  "last_checked": "2026-04-22T07:30:36Z",
+  "updated": "2026-04-22T08:00:34Z",
+  "last_checked": "2026-04-22T08:00:34Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,20 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "日経平均は続伸、売り先行もソフトバンクGが指数を押し上げ",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499770",
+      "published": "2026-04-22 07:15:11",
+      "isoDate": "2026-04-22T07:15:11Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は安値圏、日本株は再浮上",
+      "link": "https://jp.investing.com/news/forex-news/article-1499761",
+      "published": "2026-04-22 07:00:12",
+      "isoDate": "2026-04-22T07:00:12Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "東京為替：ドル・円は軟化、原油相場の弱含みで",
       "link": "https://jp.investing.com/news/forex-news/article-1499729",
       "published": "2026-04-22 06:15:13",
@@ -87,13 +101,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499704",
       "published": "2026-04-22 05:21:20",
       "isoDate": "2026-04-22T05:21:20Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "アジア通貨は小動き、イラン停戦延長とウォーシュ氏発言でドル安定",
-      "link": "https://jp.investing.com/news/forex-news/article-1499698",
-      "published": "2026-04-22 05:05:05",
-      "isoDate": "2026-04-22T05:05:05Z"
     },
     {
       "source": "Investing.com 外為",
@@ -136,13 +143,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499566",
       "published": "2026-04-21 23:18:20",
       "isoDate": "2026-04-21T23:18:20Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY株式：NYダウは293.18ドル安、イラン戦争激化リスクや原油高を警戒",
-      "link": "https://jp.investing.com/news/forex-news/article-1499391",
-      "published": "2026-04-21 21:00:04",
-      "isoDate": "2026-04-21T21:00:04Z"
     }
   ],
   "btc_items": [
