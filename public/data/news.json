@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T03:30:30Z",
-  "last_checked": "2026-04-22T03:30:30Z",
+  "updated": "2026-04-22T03:56:21Z",
+  "last_checked": "2026-04-22T03:56:21Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,41 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "日経平均寄与度ランキング（前引け）～日経平均は3日続伸、ソフトバンクGが1銘柄で約385円分押し上げ",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499672",
+      "published": "2026-04-22 03:30:14",
+      "isoDate": "2026-04-22T03:30:14Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は伸び悩み、下値に堅さも",
+      "link": "https://jp.investing.com/news/forex-news/article-1499671",
+      "published": "2026-04-22 03:30:12",
+      "isoDate": "2026-04-22T03:30:12Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "売り先行もプラス圏に浮上",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499670",
+      "published": "2026-04-22 03:30:12",
+      "isoDate": "2026-04-22T03:30:12Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "日経平均は続伸、売り先行もプラス圏に浮上",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499663",
+      "published": "2026-04-22 03:15:14",
+      "isoDate": "2026-04-22T03:15:14Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "金価格、米イラン停戦延長で1週間ぶり安値から反発",
+      "link": "https://jp.investing.com/news/commodities-news/article-1499658",
+      "published": "2026-04-22 03:05:08",
+      "isoDate": "2026-04-22T03:05:08Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "トランプ大統領がイラン停戦延長、米国株先物が上昇",
       "link": "https://jp.investing.com/news/stock-market-news/article-1499610",
       "published": "2026-04-22 00:46:37",
@@ -83,24 +118,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "日経平均は245円安でスタート、IHIやKOKUSAIなどが下落",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499605",
-      "published": "2026-04-22 00:45:10",
-      "isoDate": "2026-04-22T00:45:10Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "サムスン、テスラへの月間DRAM供給量を4倍に増加=報道",
       "link": "https://jp.investing.com/news/stock-market-news/article-1499600",
       "published": "2026-04-22 00:26:41",
       "isoDate": "2026-04-22T00:26:41Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "強弱材料 4/22",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499573",
-      "published": "2026-04-21 23:30:07",
-      "isoDate": "2026-04-21T23:30:07Z"
     },
     {
       "source": "Investing.com 外為",
@@ -118,31 +139,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "米国株式市場は続落、イラン戦争激化リスクや原油高を警戒",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499551",
-      "published": "2026-04-21 23:00:06",
-      "isoDate": "2026-04-21T23:00:06Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY為替：米イラン戦況悪化想定の原油高で金利上昇、ドル反発",
-      "link": "https://jp.investing.com/news/forex-news/article-1499458",
-      "published": "2026-04-21 21:30:04",
-      "isoDate": "2026-04-21T21:30:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "NY株式：NYダウは293.18ドル安、イラン戦争激化リスクや原油高を警戒",
       "link": "https://jp.investing.com/news/forex-news/article-1499391",
       "published": "2026-04-21 21:00:04",
       "isoDate": "2026-04-21T21:00:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "アマゾン、ユナイテッドヘルスが時間外取引で上昇、スリーエム・カンパニーは下落",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1498579",
-      "published": "2026-04-21 12:21:02",
-      "isoDate": "2026-04-21T12:21:02Z"
     }
   ],
   "btc_items": [
