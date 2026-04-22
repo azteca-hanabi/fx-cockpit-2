@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T01:00:33Z",
-  "last_checked": "2026-04-22T01:00:33Z",
+  "updated": "2026-04-22T01:30:28Z",
+  "last_checked": "2026-04-22T01:30:28Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -69,6 +69,27 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "東京為替：米ドル・円は引き続き159円台前半で推移",
+      "link": "https://jp.investing.com/news/forex-news/article-1499619",
+      "published": "2026-04-22 01:00:10",
+      "isoDate": "2026-04-22T01:00:10Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "トランプ大統領がイラン停戦を延長、米国株先物が上昇",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499610",
+      "published": "2026-04-22 00:46:37",
+      "isoDate": "2026-04-22T00:46:37Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "日経平均は245円安でスタート、IHIやKOKUSAIなどが下落",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499605",
+      "published": "2026-04-22 00:45:10",
+      "isoDate": "2026-04-22T00:45:10Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "サムスン、テスラへの月間DRAM供給量を4倍に増加=報道",
       "link": "https://jp.investing.com/news/stock-market-news/article-1499600",
       "published": "2026-04-22 00:26:41",
@@ -76,22 +97,8 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "「株式」ADR日本株ランキング～全般売り優勢、シカゴは大阪日中比835円安の58505円",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499589",
-      "published": "2026-04-22 00:15:08",
-      "isoDate": "2026-04-22T00:15:08Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "強弱材料 4/22",
       "link": "https://jp.investing.com/news/stock-market-news/article-1499573",
-      "published": "2026-04-21 23:30:07",
-      "isoDate": "2026-04-21T23:30:07Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "中東情勢正常化期待後退で利食い売り先行へ",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499572",
       "published": "2026-04-21 23:30:07",
       "isoDate": "2026-04-21T23:30:07Z"
     },
@@ -118,13 +125,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "前日に動いた銘柄 part1リガク、アスタリスク、古河電気工業など",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499536",
-      "published": "2026-04-21 22:30:05",
-      "isoDate": "2026-04-21T22:30:05Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "NY為替：米イラン戦況悪化想定の原油高で金利上昇、ドル反発",
       "link": "https://jp.investing.com/news/forex-news/article-1499458",
       "published": "2026-04-21 21:30:04",
@@ -139,62 +139,6 @@
     }
   ],
   "btc_items": [
-    {
-      "source": "CoinPost",
-      "title": "イーサリアム関連団体エーテリアライズ、ETH長期価格目標を25万ドルと設定　大幅下方修正に",
-      "link": "https://coinpost.jp/?p=703923",
-      "published": "Wed, 22 Apr 2026 08:20:45 +0900",
-      "isoDate": "2026-04-21T23:20:45Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "予測市場大手ポリマーケットが仮想通貨永久先物市場に参入予告、カルシも追随",
-      "link": "https://coinpost.jp/?p=703925",
-      "published": "Wed, 22 Apr 2026 06:55:04 +0900",
-      "isoDate": "2026-04-21T21:55:04Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "次期米FRB議長候補ウォーシュ氏、「仮想通貨は金融界の一部」と発言",
-      "link": "https://coinpost.jp/?p=703926",
-      "published": "Wed, 22 Apr 2026 06:25:12 +0900",
-      "isoDate": "2026-04-21T21:25:12Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ストラテジー、ビットコインETF『IBIT』を抜きBTC保有首位に返り咲き",
-      "link": "https://coinpost.jp/?p=703927",
-      "published": "Wed, 22 Apr 2026 05:50:19 +0900",
-      "isoDate": "2026-04-21T20:50:19Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ホルムズ海峡の仮想通貨通航料請求は詐欺か、ギリシャ海事会社が警告＝報道",
-      "link": "https://coinpost.jp/?p=703886",
-      "published": "Wed, 22 Apr 2026 05:00:24 +0900",
-      "isoDate": "2026-04-21T20:00:24Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "マイナウォレットと三井住友カード、北九州でマイナカード活用の仮想通貨決済実験を実施",
-      "link": "https://coinpost.jp/?p=703679",
-      "published": "Tue, 21 Apr 2026 14:05:54 +0900",
-      "isoDate": "2026-04-21T05:05:54Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米SECアトキンス委員長就任1周年「ACT戦略」を推進　予測市場を注視",
-      "link": "https://coinpost.jp/?p=703581",
-      "published": "Tue, 21 Apr 2026 13:00:54 +0900",
-      "isoDate": "2026-04-21T04:00:54Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米クラリティー法案、ステーブルコイン報酬巡り難航か　採決は5月へ延期の兆し＝報道",
-      "link": "https://coinpost.jp/?p=703597",
-      "published": "Tue, 21 Apr 2026 11:45:04 +0900",
-      "isoDate": "2026-04-21T02:45:04Z"
-    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
