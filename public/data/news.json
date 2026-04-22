@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T18:00:29Z",
-  "last_checked": "2026-04-22T18:00:29Z",
+  "updated": "2026-04-22T18:30:27Z",
+  "last_checked": "2026-04-22T18:30:27Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,20 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "ArmのCEOがソフトバンクの新役職に就任、強固なパートナーシップを示す",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501041",
+      "published": "2026-04-22 17:51:04",
+      "isoDate": "2026-04-22T17:51:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "NY外為：ドル高止まり、原油価格は上昇、イランのガリバフ国会議長は停戦違反で米を非難",
+      "link": "https://jp.investing.com/news/forex-news/article-1501005",
+      "published": "2026-04-22 17:30:04",
+      "isoDate": "2026-04-22T17:30:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "量子コンピューティングが従来型AI基盤を置き換える可能性、ノースランド",
       "link": "https://jp.investing.com/news/stock-market-news/article-1500982",
       "published": "2026-04-22 17:14:42",
@@ -94,13 +108,6 @@
       "link": "https://jp.investing.com/news/assorted/article-432SI-1500439",
       "published": "2026-04-22 13:03:22",
       "isoDate": "2026-04-22T13:03:22Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "アルファベット株、新型AIチップとパートナーシップ発表で1.7%上昇",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1500301",
-      "published": "2026-04-22 12:22:09",
-      "isoDate": "2026-04-22T12:22:09Z"
     },
     {
       "source": "Investing.com 外為",
@@ -136,13 +143,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499675",
       "published": "2026-04-22 03:39:29",
       "isoDate": "2026-04-22T03:39:29Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "SpaceX、Cursorと協業し600億ドルでAIスタートアップ買収のオプション保有",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499566",
-      "published": "2026-04-21 23:18:20",
-      "isoDate": "2026-04-21T23:18:20Z"
     }
   ],
   "btc_items": [
