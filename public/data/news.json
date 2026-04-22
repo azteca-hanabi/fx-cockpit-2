@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T04:00:33Z",
-  "last_checked": "2026-04-22T04:00:33Z",
+  "updated": "2026-04-22T04:04:26Z",
+  "last_checked": "2026-04-22T04:04:26Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "エヌビディア、韓国の電力企業とデータセンター基盤で協議か=報道",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499675",
+      "published": "2026-04-22 03:39:29",
+      "isoDate": "2026-04-22T03:39:29Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "日経平均寄与度ランキング（前引け）～日経平均は3日続伸、ソフトバンクGが1銘柄で約385円分押し上げ",
       "link": "https://jp.investing.com/news/stock-market-news/article-1499672",
       "published": "2026-04-22 03:30:14",
@@ -115,13 +122,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499610",
       "published": "2026-04-22 00:46:37",
       "isoDate": "2026-04-22T00:46:37Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "サムスン、テスラへの月間DRAM供給量を4倍に増加=報道",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499600",
-      "published": "2026-04-22 00:26:41",
-      "isoDate": "2026-04-22T00:26:41Z"
     },
     {
       "source": "Investing.com 外為",
