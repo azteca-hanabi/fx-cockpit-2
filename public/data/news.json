@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T20:00:34Z",
-  "last_checked": "2026-04-22T20:00:34Z",
+  "updated": "2026-04-22T20:30:27Z",
+  "last_checked": "2026-04-22T20:30:27Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -104,13 +104,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "NY外為：ドル一段高、指数再び200DMA試す、トランプ大統領は停戦期限設定せず",
-      "link": "https://jp.investing.com/news/forex-news/article-1500851",
-      "published": "2026-04-22 16:00:04",
-      "isoDate": "2026-04-22T16:00:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "ブロードコム、ネットワーク監視サービスでグーグルクラウドとの提携を拡大",
       "link": "https://jp.investing.com/news/assorted/article-432SI-1500439",
       "published": "2026-04-22 13:03:22",
@@ -143,9 +136,23 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499675",
       "published": "2026-04-22 03:39:29",
       "isoDate": "2026-04-22T03:39:29Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "SpaceX、Cursorと協業し600億ドルでAIスタートアップ買収のオプション保有",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499566",
+      "published": "2026-04-21 23:18:20",
+      "isoDate": "2026-04-21T23:18:20Z"
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "ロシアが仮想通貨規制法案を審議入り、国内決済禁止・対外取引容認",
+      "link": "https://coinpost.jp/?p=704288",
+      "published": "Thu, 23 Apr 2026 05:00:57 +0900",
+      "isoDate": "2026-04-22T20:00:57Z"
+    },
     {
       "source": "CoinPost",
       "title": "バイビットが仮想通貨ウォレット狙うmacOSマルウェア攻撃を公表　Claude Code検索が標的",
