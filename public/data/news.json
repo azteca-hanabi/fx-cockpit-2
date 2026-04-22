@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T09:00:33Z",
-  "last_checked": "2026-04-22T09:00:33Z",
+  "updated": "2026-04-22T09:30:27Z",
+  "last_checked": "2026-04-22T09:30:27Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,13 +76,6 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "欧米為替見通し:ドル・円は伸び悩みか、ドル買い継続も節目の水準を意識",
-      "link": "https://jp.investing.com/news/forex-news/article-1499879",
-      "published": "2026-04-22 08:30:11",
-      "isoDate": "2026-04-22T08:30:11Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "トランプ大統領がイラン停戦を延長、ユナイテッド航空の利益率は圧迫される",
       "link": "https://jp.investing.com/news/economy-news/article-1499865",
       "published": "2026-04-22 08:20:09",
@@ -143,9 +136,23 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499566",
       "published": "2026-04-21 23:18:20",
       "isoDate": "2026-04-21T23:18:20Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "NY株式：NYダウは293.18ドル安、イラン戦争激化リスクや原油高を警戒",
+      "link": "https://jp.investing.com/news/forex-news/article-1499391",
+      "published": "2026-04-21 21:00:04",
+      "isoDate": "2026-04-21T21:00:04Z"
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "バイビットが仮想通貨ウォレット狙うmacOSマルウェア攻撃を公表　Claude Code検索が標的",
+      "link": "https://coinpost.jp/?p=704248",
+      "published": "Wed, 22 Apr 2026 18:19:58 +0900",
+      "isoDate": "2026-04-22T09:19:58Z"
+    },
     {
       "source": "CoinPost",
       "title": "申告分離課税の対象銘柄は「限定的になる可能性」　税理士・国会議員が語る制度の課題とステーブルコイン課税の論点｜BCCC Collaborative Day",
