@@ -1,7 +1,21 @@
 {
-  "updated": "2026-04-22T01:30:28Z",
-  "last_checked": "2026-04-22T01:30:28Z",
+  "updated": "2026-04-22T02:00:31Z",
+  "last_checked": "2026-04-22T02:00:31Z",
   "gold_items": [
+    {
+      "source": "Investing.com 商品先物",
+      "title": "トランプ大統領、国内石油輸送に関する適用免除の延長を検討中=Axios",
+      "link": "https://jp.investing.com/news/commodities-news/article-1499634",
+      "published": "2026-04-22 01:29:39",
+      "isoDate": "2026-04-22T01:29:39Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "トランプ大統領がイラン停戦を延長、原油価格は変動の激しい取引で下落",
+      "link": "https://jp.investing.com/news/commodities-news/article-1499626",
+      "published": "2026-04-22 01:16:40",
+      "isoDate": "2026-04-22T01:16:40Z"
+    },
     {
       "source": "Investing.com 商品先物",
       "title": "BHP、第3四半期の鉄鉱石生産が3%増加、年間見通しは維持",
@@ -57,13 +71,6 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1496236",
       "published": "2026-04-19 23:26:03",
       "isoDate": "2026-04-19T23:26:03Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "IEA事務局長、ホルムズ海峡閉鎖続く中でイラク・トルコパイプライン建設を要請",
-      "link": "https://jp.investing.com/news/commodities-news/article-1496195",
-      "published": "2026-04-19 08:36:31",
-      "isoDate": "2026-04-19T08:36:31Z"
     }
   ],
   "usdjpy_items": [
@@ -139,6 +146,62 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "量子コンピュータ、ビットコインよりPoS銘柄に「追加リスク」か　コインベース諮問委員会が提言",
+      "link": "https://coinpost.jp/?p=703989",
+      "published": "Wed, 22 Apr 2026 10:40:56 +0900",
+      "isoDate": "2026-04-22T01:40:56Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "イーサリアム関連団体エーテリアライズ、ETH長期価格目標を25万ドルと設定　大幅下方修正に",
+      "link": "https://coinpost.jp/?p=703923",
+      "published": "Wed, 22 Apr 2026 08:20:45 +0900",
+      "isoDate": "2026-04-21T23:20:45Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "予測市場大手ポリマーケットが仮想通貨永久先物市場に参入予告、カルシも追随",
+      "link": "https://coinpost.jp/?p=703925",
+      "published": "Wed, 22 Apr 2026 06:55:04 +0900",
+      "isoDate": "2026-04-21T21:55:04Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "次期米FRB議長候補ウォーシュ氏、「仮想通貨は金融界の一部」と発言",
+      "link": "https://coinpost.jp/?p=703926",
+      "published": "Wed, 22 Apr 2026 06:25:12 +0900",
+      "isoDate": "2026-04-21T21:25:12Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "ストラテジー、ビットコインETF『IBIT』を抜きBTC保有首位に返り咲き",
+      "link": "https://coinpost.jp/?p=703927",
+      "published": "Wed, 22 Apr 2026 05:50:19 +0900",
+      "isoDate": "2026-04-21T20:50:19Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "ホルムズ海峡の仮想通貨通航料請求は詐欺か、ギリシャ海事会社が警告＝報道",
+      "link": "https://coinpost.jp/?p=703886",
+      "published": "Wed, 22 Apr 2026 05:00:24 +0900",
+      "isoDate": "2026-04-21T20:00:24Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "マイナウォレットと三井住友カード、北九州でマイナカード活用の仮想通貨決済実験を実施",
+      "link": "https://coinpost.jp/?p=703679",
+      "published": "Tue, 21 Apr 2026 14:05:54 +0900",
+      "isoDate": "2026-04-21T05:05:54Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米SECアトキンス委員長就任1周年「ACT戦略」を推進　予測市場を注視",
+      "link": "https://coinpost.jp/?p=703581",
+      "published": "Tue, 21 Apr 2026 13:00:54 +0900",
+      "isoDate": "2026-04-21T04:00:54Z"
+    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
