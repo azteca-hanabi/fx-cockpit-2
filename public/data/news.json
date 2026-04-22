@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T16:00:41Z",
-  "last_checked": "2026-04-22T16:00:41Z",
+  "updated": "2026-04-22T16:30:26Z",
+  "last_checked": "2026-04-22T16:30:26Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -90,13 +90,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "セール終了前に月額7ドル未満でInvestingProを入手",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1500417",
-      "published": "2026-04-22 12:57:38",
-      "isoDate": "2026-04-22T12:57:38Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "アルファベット株、新型AIチップとパートナーシップ発表で1.7%上昇",
       "link": "https://jp.investing.com/news/stock-market-news/article-1500301",
       "published": "2026-04-22 12:22:09",
@@ -122,6 +115,13 @@
       "link": "https://jp.investing.com/news/assorted/article-432SI-1500231",
       "published": "2026-04-22 12:01:21",
       "isoDate": "2026-04-22T12:01:21Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "バークレイズが決算発表前に半導体銘柄のレーティングを変更",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1500161",
+      "published": "2026-04-22 11:26:39",
+      "isoDate": "2026-04-22T11:26:39Z"
     },
     {
       "source": "Investing.com 外為",
