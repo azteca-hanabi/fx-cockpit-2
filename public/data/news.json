@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T11:30:26Z",
-  "last_checked": "2026-04-22T11:30:26Z",
+  "updated": "2026-04-22T12:00:34Z",
+  "last_checked": "2026-04-22T12:00:34Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,34 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "ボーイング、航空機納入増で予想上回る決算、株価急騰",
+      "link": "https://jp.investing.com/news/earnings/article-1500198",
+      "published": "2026-04-22 11:43:28",
+      "isoDate": "2026-04-22T11:43:28Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "FCCがAST SpaceMobileの衛星システムを承認、直接携帯電話サービス提供へ",
+      "link": "https://jp.investing.com/news/assorted/article-432SI-1500175",
+      "published": "2026-04-22 11:33:15",
+      "isoDate": "2026-04-22T11:33:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "バークレイズが決算発表前に半導体銘柄のレーティングを変更",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1500161",
+      "published": "2026-04-22 11:26:39",
+      "isoDate": "2026-04-22T11:26:39Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "欧州為替：ドル・円はやや失速、原油相場は軟化",
+      "link": "https://jp.investing.com/news/forex-news/article-1500132",
+      "published": "2026-04-22 11:15:09",
+      "isoDate": "2026-04-22T11:15:09Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "米農務省、Palantirと3億ドルの農業サービス契約を締結",
       "link": "https://jp.investing.com/news/assorted/article-432SI-1500083",
       "published": "2026-04-22 11:01:19",
@@ -97,24 +125,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "Joby Aviation、航空機OEM部門社長が7月に辞任へ",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1500025",
-      "published": "2026-04-22 10:26:07",
-      "isoDate": "2026-04-22T10:26:07Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "出遅れる米国株、それでも最良の選択肢か バークレイズが見解",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499998",
-      "published": "2026-04-22 09:57:57",
-      "isoDate": "2026-04-22T09:57:57Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "日経平均テクニカル：3日続伸、赤三兵で史上最高値更新",
-      "link": "https://jp.investing.com/news/forex-news/article-1499954",
-      "published": "2026-04-22 09:30:10",
-      "isoDate": "2026-04-22T09:30:10Z"
+      "title": "Vertiv株、第1四半期予想上回るも5%超下落",
+      "link": "https://jp.investing.com/news/earnings/article-93CH-1500005",
+      "published": "2026-04-22 10:15:17",
+      "isoDate": "2026-04-22T10:15:17Z"
     },
     {
       "source": "Investing.com 外為",
@@ -129,20 +143,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499675",
       "published": "2026-04-22 03:39:29",
       "isoDate": "2026-04-22T03:39:29Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "トランプ大統領がイラン停戦延長、米国株先物が上昇",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499610",
-      "published": "2026-04-22 00:46:37",
-      "isoDate": "2026-04-22T00:46:37Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "SpaceX、Cursorと協業し600億ドルでAIスタートアップ買収のオプション保有",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499566",
-      "published": "2026-04-21 23:18:20",
-      "isoDate": "2026-04-21T23:18:20Z"
     }
   ],
   "btc_items": [
