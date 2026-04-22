@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T22:30:49Z",
-  "last_checked": "2026-04-22T22:30:49Z",
+  "updated": "2026-04-22T23:00:37Z",
+  "last_checked": "2026-04-22T23:00:37Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "前日に動いた銘柄 part1オービック、ソフトバンクグループ、レゾナックなど",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501418",
+      "published": "2026-04-22 22:30:06",
+      "isoDate": "2026-04-22T22:30:06Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "NY株式：NYダウは340.65ドル高、イラン停戦延長を好感",
       "link": "https://jp.investing.com/news/forex-news/article-1501296",
       "published": "2026-04-22 21:00:04",
@@ -101,13 +108,6 @@
       "link": "https://jp.investing.com/news/earnings/article-1501208",
       "published": "2026-04-22 20:16:22",
       "isoDate": "2026-04-22T20:16:22Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "ServiceNowとGoogle Cloud、AIエージェントで提携を拡大",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1501184",
-      "published": "2026-04-22 20:11:07",
-      "isoDate": "2026-04-22T20:11:07Z"
     },
     {
       "source": "Investing.com 外為",
@@ -146,6 +146,13 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "イーロン・マスク率いるテスラ、1444億円相当ビットコイン保有継続　1Q決算を発表",
+      "link": "https://coinpost.jp/?p=704299",
+      "published": "Thu, 23 Apr 2026 07:40:53 +0900",
+      "isoDate": "2026-04-22T22:40:53Z"
+    },
     {
       "source": "CoinPost",
       "title": "GSR、米国初のアクティブ型仮想通貨ETF「BESO」を上場",
@@ -208,13 +215,6 @@
       "link": "https://coinpost.jp/?p=703923",
       "published": "Wed, 22 Apr 2026 08:20:45 +0900",
       "isoDate": "2026-04-21T23:20:45Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "予測市場大手ポリマーケットが仮想通貨永久先物市場に参入予告、カルシも追随",
-      "link": "https://coinpost.jp/?p=703925",
-      "published": "Wed, 22 Apr 2026 06:55:04 +0900",
-      "isoDate": "2026-04-21T21:55:04Z"
     },
     {
       "source": "Investing.com 暗号資産",
