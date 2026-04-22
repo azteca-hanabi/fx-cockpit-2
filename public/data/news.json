@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T20:30:27Z",
-  "last_checked": "2026-04-22T20:30:27Z",
+  "updated": "2026-04-22T21:00:51Z",
+  "last_checked": "2026-04-22T21:00:51Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,34 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "時間外取引の値動き：TSLA、TXN、IBM、LRCX、LULU、NOW",
+      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1501274",
+      "published": "2026-04-22 20:43:02",
+      "isoDate": "2026-04-22T20:43:02Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "サービスナウが14%下落、通期売上高ガイダンスの弱さで",
+      "link": "https://jp.investing.com/news/earnings/article-1501222",
+      "published": "2026-04-22 20:25:02",
+      "isoDate": "2026-04-22T20:25:02Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "テスラ、四半期利益と売上高が予想を上回り、時間外取引で株価4%近く上昇",
+      "link": "https://jp.investing.com/news/earnings/article-1501208",
+      "published": "2026-04-22 20:16:22",
+      "isoDate": "2026-04-22T20:16:22Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "ServiceNowとGoogle Cloud、AIエージェントで提携を拡大",
+      "link": "https://jp.investing.com/news/assorted/article-432SI-1501184",
+      "published": "2026-04-22 20:11:07",
+      "isoDate": "2026-04-22T20:11:07Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "TSMCの延期がエーエスエムエルの最先端EUV展開に打撃、株価3%下落",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501108",
       "published": "2026-04-22 19:11:41",
@@ -90,13 +118,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "NY外為：ドル高止まり、原油価格は上昇、イランのガリバフ国会議長は停戦違反で米を非難",
-      "link": "https://jp.investing.com/news/forex-news/article-1501005",
-      "published": "2026-04-22 17:30:04",
-      "isoDate": "2026-04-22T17:30:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "量子コンピューティングが従来型AI基盤を置き換える可能性、ノースランド",
       "link": "https://jp.investing.com/news/stock-market-news/article-1500982",
       "published": "2026-04-22 17:14:42",
@@ -104,24 +125,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "ブロードコム、ネットワーク監視サービスでグーグルクラウドとの提携を拡大",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1500439",
-      "published": "2026-04-22 13:03:22",
-      "isoDate": "2026-04-22T13:03:22Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "トランプ大統領がイラン停戦延長を発表、TSXが上昇",
       "link": "https://jp.investing.com/news/economy-news/article-1500295",
       "published": "2026-04-22 12:18:13",
       "isoDate": "2026-04-22T12:18:13Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "グーグル・クラウド、シンキング・マシーンズ・ラボとのAIインフラ契約を拡大",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1500280",
-      "published": "2026-04-22 12:09:10",
-      "isoDate": "2026-04-22T12:09:10Z"
     },
     {
       "source": "Investing.com 外為",
@@ -136,16 +143,16 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1499675",
       "published": "2026-04-22 03:39:29",
       "isoDate": "2026-04-22T03:39:29Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "SpaceX、Cursorと協業し600億ドルでAIスタートアップ買収のオプション保有",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499566",
-      "published": "2026-04-21 23:18:20",
-      "isoDate": "2026-04-21T23:18:20Z"
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "米クラリティー法案、上院採決が5月以降にずれ込む見通し＝報道",
+      "link": "https://coinpost.jp/?p=704302",
+      "published": "Thu, 23 Apr 2026 05:45:23 +0900",
+      "isoDate": "2026-04-22T20:45:23Z"
+    },
     {
       "source": "CoinPost",
       "title": "ロシアが仮想通貨規制法案を審議入り、国内決済禁止・対外取引容認",
