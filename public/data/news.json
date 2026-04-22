@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T05:30:31Z",
-  "last_checked": "2026-04-22T05:30:31Z",
+  "updated": "2026-04-22T06:00:40Z",
+  "last_checked": "2026-04-22T06:00:40Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,34 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "SK Hynix、AI能力強化に向け新チップ工場に130億ドル投資へ",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1499704",
+      "published": "2026-04-22 05:21:20",
+      "isoDate": "2026-04-22T05:21:20Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は変わらず、日本株はマイナスに",
+      "link": "https://jp.investing.com/news/forex-news/article-1499701",
+      "published": "2026-04-22 05:15:14",
+      "isoDate": "2026-04-22T05:15:14Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "アジア通貨は小動き、イラン停戦延長とウォーシュ氏発言でドル安定",
+      "link": "https://jp.investing.com/news/forex-news/article-1499698",
+      "published": "2026-04-22 05:05:05",
+      "isoDate": "2026-04-22T05:05:05Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "米国株見通し：伸び悩みか、原油高止まりを意識",
+      "link": "https://jp.investing.com/news/forex-news/article-1499688",
+      "published": "2026-04-22 05:00:14",
+      "isoDate": "2026-04-22T05:00:14Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "後場に注目すべき3つのポイント～売り先行もプラス圏に浮上",
       "link": "https://jp.investing.com/news/forex-news/article-1499681",
       "published": "2026-04-22 04:30:14",
@@ -97,20 +125,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "日経平均寄与度ランキング（前引け）～日経平均は3日続伸、ソフトバンクGが1銘柄で約385円分押し上げ",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499672",
-      "published": "2026-04-22 03:30:14",
-      "isoDate": "2026-04-22T03:30:14Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "売り先行もプラス圏に浮上",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499670",
-      "published": "2026-04-22 03:30:12",
-      "isoDate": "2026-04-22T03:30:12Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "日経平均は続伸、売り先行もプラス圏に浮上",
       "link": "https://jp.investing.com/news/stock-market-news/article-1499663",
       "published": "2026-04-22 03:15:14",
@@ -125,24 +139,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "トランプ大統領がイラン停戦延長、米国株先物が上昇",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1499610",
-      "published": "2026-04-22 00:46:37",
-      "isoDate": "2026-04-22T00:46:37Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "SpaceX、Cursorと協業し600億ドルでAIスタートアップ買収のオプション保有",
       "link": "https://jp.investing.com/news/stock-market-news/article-1499566",
       "published": "2026-04-21 23:18:20",
       "isoDate": "2026-04-21T23:18:20Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY株式：NYダウは293.18ドル安、イラン戦争激化リスクや原油高を警戒",
-      "link": "https://jp.investing.com/news/forex-news/article-1499391",
-      "published": "2026-04-21 21:00:04",
-      "isoDate": "2026-04-21T21:00:04Z"
     }
   ],
   "btc_items": [
