@@ -1,7 +1,14 @@
 {
-  "updated": "2026-04-22T03:00:34Z",
-  "last_checked": "2026-04-22T03:00:34Z",
+  "updated": "2026-04-22T03:30:30Z",
+  "last_checked": "2026-04-22T03:30:30Z",
   "gold_items": [
+    {
+      "source": "Investing.com 商品先物",
+      "title": "金価格、米イラン停戦延長で1週間ぶり安値から反発",
+      "link": "https://jp.investing.com/news/commodities-news/article-1499658",
+      "published": "2026-04-22 03:05:08",
+      "isoDate": "2026-04-22T03:05:08Z"
+    },
     {
       "source": "Investing.com 商品先物",
       "title": "トランプ大統領、国内石油輸送に関する適用免除の延長を検討中=Axios",
@@ -64,23 +71,9 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1496283",
       "published": "2026-04-20 02:41:29",
       "isoDate": "2026-04-20T02:41:29Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "米国がイラン船舶を拿捕、ホルムズ海峡再び閉鎖で原油価格7%急騰",
-      "link": "https://jp.investing.com/news/commodities-news/article-1496236",
-      "published": "2026-04-19 23:26:03",
-      "isoDate": "2026-04-19T23:26:03Z"
     }
   ],
   "usdjpy_items": [
-    {
-      "source": "Investing.com 外為",
-      "title": "東京為替：米ドル・円は引き続き159円台前半で推移",
-      "link": "https://jp.investing.com/news/forex-news/article-1499619",
-      "published": "2026-04-22 01:00:10",
-      "isoDate": "2026-04-22T01:00:10Z"
-    },
     {
       "source": "Investing.com 外為",
       "title": "トランプ大統領がイラン停戦延長、米国株先物が上昇",
@@ -143,6 +136,13 @@
       "link": "https://jp.investing.com/news/forex-news/article-1499391",
       "published": "2026-04-21 21:00:04",
       "isoDate": "2026-04-21T21:00:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "アマゾン、ユナイテッドヘルスが時間外取引で上昇、スリーエム・カンパニーは下落",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1498579",
+      "published": "2026-04-21 12:21:02",
+      "isoDate": "2026-04-21T12:21:02Z"
     }
   ],
   "btc_items": [
