@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T16:30:26Z",
-  "last_checked": "2026-04-22T16:30:26Z",
+  "updated": "2026-04-22T17:00:34Z",
+  "last_checked": "2026-04-22T17:00:34Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "NY外為：ドル一段高、指数再び200DMA試す、トランプ大統領は停戦期限設定せず",
+      "link": "https://jp.investing.com/news/forex-news/article-1500851",
+      "published": "2026-04-22 16:00:04",
+      "isoDate": "2026-04-22T16:00:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "NY外為：ドル続伸、原油高、停戦延長も米はホルムズ海峡封鎖維持",
       "link": "https://jp.investing.com/news/forex-news/article-1500533",
       "published": "2026-04-22 13:30:05",
@@ -97,7 +104,7 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "トランプ大統領がイラン停戦延長を発表、TSX先物が上昇",
+      "title": "トランプ大統領がイラン停戦延長を発表、TSXが上昇",
       "link": "https://jp.investing.com/news/economy-news/article-1500295",
       "published": "2026-04-22 12:18:13",
       "isoDate": "2026-04-22T12:18:13Z"
@@ -115,13 +122,6 @@
       "link": "https://jp.investing.com/news/assorted/article-432SI-1500231",
       "published": "2026-04-22 12:01:21",
       "isoDate": "2026-04-22T12:01:21Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "バークレイズが決算発表前に半導体銘柄のレーティングを変更",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1500161",
-      "published": "2026-04-22 11:26:39",
-      "isoDate": "2026-04-22T11:26:39Z"
     },
     {
       "source": "Investing.com 外為",
