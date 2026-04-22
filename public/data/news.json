@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-22T13:00:34Z",
-  "last_checked": "2026-04-22T13:00:34Z",
+  "updated": "2026-04-22T13:30:32Z",
+  "last_checked": "2026-04-22T13:30:32Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -111,13 +111,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "NetAppとGoogle Cloud、統合ストレージサービスでパートナーシップを拡大",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1500233",
-      "published": "2026-04-22 12:02:36",
-      "isoDate": "2026-04-22T12:02:36Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "SalesforceとGoogle Cloud、AIエージェント統合パートナーシップを拡大",
       "link": "https://jp.investing.com/news/assorted/article-432SI-1500231",
       "published": "2026-04-22 12:01:21",
@@ -136,6 +129,13 @@
       "link": "https://jp.investing.com/news/assorted/article-432SI-1500083",
       "published": "2026-04-22 11:01:19",
       "isoDate": "2026-04-22T11:01:19Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "Vertiv株、第1四半期予想上回るも5%超下落",
+      "link": "https://jp.investing.com/news/earnings/article-93CH-1500005",
+      "published": "2026-04-22 10:15:17",
+      "isoDate": "2026-04-22T10:15:17Z"
     },
     {
       "source": "Investing.com 外為",
