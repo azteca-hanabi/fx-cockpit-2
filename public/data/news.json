@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T05:00:36Z",
-  "last_checked": "2026-04-23T05:00:36Z",
+  "updated": "2026-04-23T05:30:32Z",
+  "last_checked": "2026-04-23T05:30:32Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,24 +76,17 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "EU自動車販売、3月は11%増 テスラとBYDが大幅増を記録-ACEA",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501565",
+      "published": "2026-04-23 04:26:13",
+      "isoDate": "2026-04-23T04:26:13Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "日経平均は大幅に4日ぶり反落、ファーストリテが1銘柄で約177円分押し下げ",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501557",
       "published": "2026-04-23 03:45:17",
       "isoDate": "2026-04-23T03:45:17Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "後場に注目すべき3つのポイント～初めて6万円台到達も伸び悩む",
-      "link": "https://jp.investing.com/news/forex-news/article-1501556",
-      "published": "2026-04-23 03:45:15",
-      "isoDate": "2026-04-23T03:45:15Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "マイクロソフト、豪州でのAI拡大に180億ドルを投資",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1501554",
-      "published": "2026-04-23 03:36:20",
-      "isoDate": "2026-04-23T03:36:20Z"
     },
     {
       "source": "Investing.com 外為",
@@ -143,6 +136,13 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1501274",
       "published": "2026-04-22 20:43:02",
       "isoDate": "2026-04-22T20:43:02Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "テスラ、四半期利益と売上高が予想を上回り、時間外取引で株価4%近く上昇",
+      "link": "https://jp.investing.com/news/earnings/article-1501208",
+      "published": "2026-04-22 20:16:22",
+      "isoDate": "2026-04-22T20:16:22Z"
     }
   ],
   "btc_items": [
