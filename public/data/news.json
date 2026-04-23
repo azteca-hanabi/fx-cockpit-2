@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T13:30:27Z",
-  "last_checked": "2026-04-23T13:30:27Z",
+  "updated": "2026-04-23T14:00:32Z",
+  "last_checked": "2026-04-23T14:00:32Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,20 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "クラウドストライク、AIが発見した脆弱性に対処するプロジェクト・キルトワークスを開始",
+      "link": "https://jp.investing.com/news/assorted/article-432SI-1502480",
+      "published": "2026-04-23 13:18:08",
+      "isoDate": "2026-04-23T13:18:08Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "【市場反応】米新規失業保険申請件数は予想以上に増加、ドル軟調",
+      "link": "https://jp.investing.com/news/forex-news/article-1502466",
+      "published": "2026-04-23 13:15:04",
+      "isoDate": "2026-04-23T13:15:04Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "あと2時間のみ:InvestingProを55%オフで購入できる最後のチャンス",
       "link": "https://jp.investing.com/news/stock-market-news/article-1502398",
       "published": "2026-04-23 12:50:03",
@@ -118,13 +132,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "ServiceNowとIBMの決算がAI懸念を再燃させ、ソフトウェア株が下落",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1502138",
-      "published": "2026-04-23 11:18:47",
-      "isoDate": "2026-04-23T11:18:47Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "【最終チャンス】本日終了！2026年最安値でInvestingProを手に入れる",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501874",
       "published": "2026-04-23 09:15:50",
@@ -136,13 +143,6 @@
       "link": "https://jp.investing.com/news/economy-news/article-1501749",
       "published": "2026-04-23 08:14:07",
       "isoDate": "2026-04-23T08:14:07Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "米国株見通し：底堅いか、中東の不透明感も回復に期待",
-      "link": "https://jp.investing.com/news/forex-news/article-1501573",
-      "published": "2026-04-23 05:00:14",
-      "isoDate": "2026-04-23T05:00:14Z"
     }
   ],
   "btc_items": [
