@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T22:00:32Z",
-  "last_checked": "2026-04-23T22:00:32Z",
+  "updated": "2026-04-23T22:30:25Z",
+  "last_checked": "2026-04-23T22:30:25Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,10 +76,17 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "HSBC、Oklo Incに買い推奨で新規カバレッジ開始",
-      "link": "https://jp.investing.com/news/analyst-ratings/article-1503392",
-      "published": "2026-04-23 21:21:36",
-      "isoDate": "2026-04-23T21:21:36Z"
+      "title": "23日の米国市場ダイジェスト：米国株式市場は反落、イラン和平合意への期待後退",
+      "link": "https://jp.investing.com/news/forex-news/article-1503432",
+      "published": "2026-04-23 22:00:05",
+      "isoDate": "2026-04-23T22:00:05Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "NY株式：NYダウは179.71ドル安、イラン和平合意への期待後退",
+      "link": "https://jp.investing.com/news/forex-news/article-1503415",
+      "published": "2026-04-23 21:45:05",
+      "isoDate": "2026-04-23T21:45:05Z"
     },
     {
       "source": "Investing.com 外為",
@@ -111,13 +118,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "あと2時間のみ:InvestingProを55%オフで購入できる最後のチャンス",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1502398",
-      "published": "2026-04-23 12:50:03",
-      "isoDate": "2026-04-23T12:50:03Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "Oklo、エヌビディアおよびロスアラモス研究所と核燃料研究で提携",
       "link": "https://jp.investing.com/news/assorted/article-432SI-1502229",
       "published": "2026-04-23 12:03:19",
@@ -146,6 +146,20 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "テザー社、米当局による550億円規模のUSDT凍結に協力　過去最大額の可能性",
+      "link": "https://coinpost.jp/?p=704679",
+      "published": "Fri, 24 Apr 2026 07:10:35 +0900",
+      "isoDate": "2026-04-23T22:10:35Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "「8万ドル復帰が次の方向性を決める」、ETF投資家と短期クジラの売り圧が焦点に＝アナリスト分析",
+      "link": "https://coinpost.jp/?p=704670",
+      "published": "Fri, 24 Apr 2026 07:00:30 +0900",
+      "isoDate": "2026-04-23T22:00:30Z"
+    },
     {
       "source": "CoinPost",
       "title": "ビットコイン現物ETF、全指標が数ヶ月ぶりプラス転換　過去最高の流入額回復へ",
@@ -194,13 +208,6 @@
       "link": "https://coinpost.jp/?p=704323",
       "published": "Thu, 23 Apr 2026 10:05:02 +0900",
       "isoDate": "2026-04-23T01:05:02Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "イーロン・マスク率いるテスラ、1444億円相当ビットコイン保有継続　1Q決算を発表",
-      "link": "https://coinpost.jp/?p=704299",
-      "published": "Thu, 23 Apr 2026 07:40:53 +0900",
-      "isoDate": "2026-04-22T22:40:53Z"
     },
     {
       "source": "Investing.com 暗号資産",
