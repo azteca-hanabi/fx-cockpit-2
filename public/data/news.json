@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T23:00:30Z",
-  "last_checked": "2026-04-23T23:00:30Z",
+  "updated": "2026-04-23T23:30:23Z",
+  "last_checked": "2026-04-23T23:30:23Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -97,13 +97,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "NY為替：米イラン協議難航、原油高でドル続伸",
-      "link": "https://jp.investing.com/news/forex-news/article-1503376",
-      "published": "2026-04-23 21:15:05",
-      "isoDate": "2026-04-23T21:15:05Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "時間外取引の値動き:INTC、AMD、ARM、MXL、NEM、APPF、FIX、EW",
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
       "published": "2026-04-23 20:33:02",
@@ -143,6 +136,13 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1501874",
       "published": "2026-04-23 09:15:50",
       "isoDate": "2026-04-23T09:15:50Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "米国・イラン協議は不透明、原油は100ドル超え、テスラが決算発表――市場を動かす要因",
+      "link": "https://jp.investing.com/news/economy-news/article-1501749",
+      "published": "2026-04-23 08:14:07",
+      "isoDate": "2026-04-23T08:14:07Z"
     }
   ],
   "btc_items": [
