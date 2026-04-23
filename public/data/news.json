@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T20:00:37Z",
-  "last_checked": "2026-04-23T20:00:37Z",
+  "updated": "2026-04-23T20:30:26Z",
+  "last_checked": "2026-04-23T20:30:26Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -83,13 +83,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "【市場反応】米新規失業保険申請件数は予想以上に増加、ドル軟調",
-      "link": "https://jp.investing.com/news/forex-news/article-1502466",
-      "published": "2026-04-23 13:15:04",
-      "isoDate": "2026-04-23T13:15:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "あと2時間のみ:InvestingProを55%オフで購入できる最後のチャンス",
       "link": "https://jp.investing.com/news/stock-market-news/article-1502398",
       "published": "2026-04-23 12:50:03",
@@ -143,6 +136,13 @@
       "link": "https://jp.investing.com/news/forex-news/article-1501573",
       "published": "2026-04-23 05:00:14",
       "isoDate": "2026-04-23T05:00:14Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "時間外取引の値動き：TSLA、TXN、IBM、LRCX、LULU、NOW",
+      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1501274",
+      "published": "2026-04-22 20:43:02",
+      "isoDate": "2026-04-22T20:43:02Z"
     }
   ],
   "btc_items": [
