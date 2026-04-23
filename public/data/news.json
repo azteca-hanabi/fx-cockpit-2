@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T15:30:27Z",
-  "last_checked": "2026-04-23T15:30:27Z",
+  "updated": "2026-04-23T17:00:34Z",
+  "last_checked": "2026-04-23T17:00:34Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,13 +76,6 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "4月の米企業活動は回復も、イラン紛争が物価上昇を加速",
-      "link": "https://jp.investing.com/news/economy-news/article-1502695",
-      "published": "2026-04-23 14:10:42",
-      "isoDate": "2026-04-23T14:10:42Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "【市場反応】米新規失業保険申請件数は予想以上に増加、ドル軟調",
       "link": "https://jp.investing.com/news/forex-news/article-1502466",
       "published": "2026-04-23 13:15:04",
@@ -97,7 +90,7 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "TSX先物は中東緊張と決算ラッシュを受けて下落",
+      "title": "TSX小幅上昇、中東情勢と決算ラッシュに注目",
       "link": "https://jp.investing.com/news/stock-market-news/article-1502331",
       "published": "2026-04-23 12:34:15",
       "isoDate": "2026-04-23T12:34:15Z"
@@ -122,6 +115,13 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1502178",
       "published": "2026-04-23 11:31:28",
       "isoDate": "2026-04-23T11:31:28Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "ServiceNowとIBMの決算がAI懸念を再燃させ、ソフトウェア株が下落",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1502138",
+      "published": "2026-04-23 11:18:47",
+      "isoDate": "2026-04-23T11:18:47Z"
     },
     {
       "source": "Investing.com 外為",
