@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T14:37:23Z",
-  "last_checked": "2026-04-23T14:37:23Z",
+  "updated": "2026-04-23T15:00:44Z",
+  "last_checked": "2026-04-23T15:00:44Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "4月の米企業活動は回復も、イラン紛争が物価上昇を加速",
+      "link": "https://jp.investing.com/news/economy-news/article-1502695",
+      "published": "2026-04-23 14:10:42",
+      "isoDate": "2026-04-23T14:10:42Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "クラウドストライク、AIが発見した脆弱性に対処するプロジェクト・キルトワークスを開始",
       "link": "https://jp.investing.com/news/assorted/article-432SI-1502480",
       "published": "2026-04-23 13:18:08",
@@ -94,13 +101,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1502398",
       "published": "2026-04-23 12:50:03",
       "isoDate": "2026-04-23T12:50:03Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "アナリスト、テスラの設備投資とAI展開の遅れを主要リスクとして指摘",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1502348",
-      "published": "2026-04-23 12:39:32",
-      "isoDate": "2026-04-23T12:39:32Z"
     },
     {
       "source": "Investing.com 外為",
