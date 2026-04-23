@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T03:01:01Z",
-  "last_checked": "2026-04-23T03:01:01Z",
+  "updated": "2026-04-23T03:30:38Z",
+  "last_checked": "2026-04-23T03:30:38Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -148,6 +148,13 @@
   "btc_items": [
     {
       "source": "CoinPost",
+      "title": "金融庁、仮想通貨の金商法移行を説明　ステーブルコイン活用の決済高度化プロジェクト3件も進行中｜BCCC Collaborative Day",
+      "link": "https://coinpost.jp/?p=704010",
+      "published": "Thu, 23 Apr 2026 12:21:14 +0900",
+      "isoDate": "2026-04-23T03:21:14Z"
+    },
+    {
+      "source": "CoinPost",
       "title": "トランプ氏一族関連のアメリカン・ビットコイン、カナダ拠点で1.1万台のBTC採掘機器を稼働開始",
       "link": "https://coinpost.jp/?p=704413",
       "published": "Thu, 23 Apr 2026 11:34:07 +0900",
@@ -215,13 +222,6 @@
       "link": "https://coinpost.jp/?p=703997",
       "published": "Wed, 22 Apr 2026 11:30:50 +0900",
       "isoDate": "2026-04-22T02:30:50Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "量子コンピュータ、ビットコインよりPoS銘柄に「追加リスク」か　コインベース諮問委員会が提言",
-      "link": "https://coinpost.jp/?p=703989",
-      "published": "Wed, 22 Apr 2026 10:40:56 +0900",
-      "isoDate": "2026-04-22T01:40:56Z"
     },
     {
       "source": "Investing.com 暗号資産",
