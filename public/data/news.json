@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T11:30:23Z",
-  "last_checked": "2026-04-23T11:30:23Z",
+  "updated": "2026-04-23T12:00:31Z",
+  "last_checked": "2026-04-23T12:00:31Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,20 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "Super Micro、Oracle Financial Softwareとの14億ドル契約喪失報道で10%急落",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1502178",
+      "published": "2026-04-23 11:31:28",
+      "isoDate": "2026-04-23T11:31:28Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "ServiceNowとIBMの決算がAI懸念を再燃させ、ソフトウェア株が下落",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1502138",
+      "published": "2026-04-23 11:18:47",
+      "isoDate": "2026-04-23T11:18:47Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "欧州為替：ドル・円は上値が重い、160円を意識",
       "link": "https://jp.investing.com/news/forex-news/article-1502128",
       "published": "2026-04-23 11:15:09",
@@ -125,24 +139,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "米国とイランの緊張が停戦延長にもかかわらず続き、ウォール街先物が下落",
+      "title": "米イラン緊張が停戦延長にもかかわらず続き、ウォール街先物が下落",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501504",
       "published": "2026-04-23 00:49:44",
       "isoDate": "2026-04-23T00:49:44Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "テスラCEOマスク氏、テラファブがインテルの14Aチップ製造プロセスを使用すると発言",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1501486",
-      "published": "2026-04-23 00:15:02",
-      "isoDate": "2026-04-23T00:15:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "時間外取引の値動き：TSLA、TXN、IBM、LRCX、LULU、NOW",
-      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1501274",
-      "published": "2026-04-22 20:43:02",
-      "isoDate": "2026-04-22T20:43:02Z"
     }
   ],
   "btc_items": [
