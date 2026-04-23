@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T01:00:50Z",
-  "last_checked": "2026-04-23T01:00:50Z",
+  "updated": "2026-04-23T01:30:30Z",
+  "last_checked": "2026-04-23T01:30:30Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "米国とイランの緊張が停戦延長にもかかわらず続き、ウォール街先物が下落",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501504",
+      "published": "2026-04-23 00:49:44",
+      "isoDate": "2026-04-23T00:49:44Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "テスラCEOマスク氏、テラファブがインテルの14Aチップ製造プロセスを使用すると発言",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501486",
       "published": "2026-04-23 00:15:02",
@@ -111,13 +118,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "NY株式：NYダウは340.65ドル高、イラン停戦延長を好感",
-      "link": "https://jp.investing.com/news/forex-news/article-1501296",
-      "published": "2026-04-22 21:00:04",
-      "isoDate": "2026-04-22T21:00:04Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "時間外取引の値動き：TSLA、TXN、IBM、LRCX、LULU、NOW",
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1501274",
       "published": "2026-04-22 20:43:02",
@@ -146,69 +146,6 @@
     }
   ],
   "btc_items": [
-    {
-      "source": "CoinPost",
-      "title": "イーロン・マスク率いるテスラ、1444億円相当ビットコイン保有継続　1Q決算を発表",
-      "link": "https://coinpost.jp/?p=704299",
-      "published": "Thu, 23 Apr 2026 07:40:53 +0900",
-      "isoDate": "2026-04-22T22:40:53Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "GSR、米国初のアクティブ型仮想通貨ETF「BESO」を上場",
-      "link": "https://coinpost.jp/?p=704303",
-      "published": "Thu, 23 Apr 2026 06:00:32 +0900",
-      "isoDate": "2026-04-22T21:00:32Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "米クラリティー法案、上院採決が5月以降にずれ込む見通し＝報道",
-      "link": "https://coinpost.jp/?p=704302",
-      "published": "Thu, 23 Apr 2026 05:45:23 +0900",
-      "isoDate": "2026-04-22T20:45:23Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "ロシアが仮想通貨規制法案を審議入り、国内決済禁止・対外取引容認",
-      "link": "https://coinpost.jp/?p=704288",
-      "published": "Thu, 23 Apr 2026 05:00:57 +0900",
-      "isoDate": "2026-04-22T20:00:57Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "バイビットが仮想通貨ウォレット狙うmacOSマルウェア攻撃を公表　Claude Code検索が標的",
-      "link": "https://coinpost.jp/?p=704248",
-      "published": "Wed, 22 Apr 2026 18:19:58 +0900",
-      "isoDate": "2026-04-22T09:19:58Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "申告分離課税の対象銘柄は「限定的になる可能性」　税理士・国会議員が語る制度の課題とステーブルコイン課税の論点｜BCCC Collaborative Day",
-      "link": "https://coinpost.jp/?p=703773",
-      "published": "Wed, 22 Apr 2026 17:19:03 +0900",
-      "isoDate": "2026-04-22T08:19:03Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "新作ドキュメンタリー映画「サトシを探して」、21世紀最大の金融ミステリーの真相は？",
-      "link": "https://coinpost.jp/?p=704068",
-      "published": "Wed, 22 Apr 2026 13:45:02 +0900",
-      "isoDate": "2026-04-22T04:45:02Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "コア・サイエンティフィック、社債発行で5300億円調達計画　ビットコイン依存脱却へ",
-      "link": "https://coinpost.jp/?p=703997",
-      "published": "Wed, 22 Apr 2026 11:30:50 +0900",
-      "isoDate": "2026-04-22T02:30:50Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "量子コンピュータ、ビットコインよりPoS銘柄に「追加リスク」か　コインベース諮問委員会が提言",
-      "link": "https://coinpost.jp/?p=703989",
-      "published": "Wed, 22 Apr 2026 10:40:56 +0900",
-      "isoDate": "2026-04-22T01:40:56Z"
-    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
