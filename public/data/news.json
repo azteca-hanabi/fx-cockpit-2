@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T20:30:26Z",
-  "last_checked": "2026-04-23T20:30:26Z",
+  "updated": "2026-04-23T21:00:45Z",
+  "last_checked": "2026-04-23T21:00:45Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,27 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "時間外取引の値動き:INTC、AMD、ARM、MXL、NEM、APPF、FIX、EW",
+      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
+      "published": "2026-04-23 20:33:02",
+      "isoDate": "2026-04-23T20:33:02Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "ニューモント、記録的キャッシュフローで自社株買いを増額し第1四半期予想を上回る",
+      "link": "https://jp.investing.com/news/earnings/article-1503221",
+      "published": "2026-04-23 20:12:48",
+      "isoDate": "2026-04-23T20:12:48Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "インテル第1四半期決算、AI・データセンター事業好調でウォール街予想を上回る",
+      "link": "https://jp.investing.com/news/earnings/article-1503201",
+      "published": "2026-04-23 20:08:35",
+      "isoDate": "2026-04-23T20:08:35Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "OpenAI、コーディングと研究機能を改善したGPT-5.5をリリース",
       "link": "https://jp.investing.com/news/economy-news/article-1503118",
       "published": "2026-04-23 18:12:53",
@@ -94,13 +115,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1502331",
       "published": "2026-04-23 12:34:15",
       "isoDate": "2026-04-23T12:34:15Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "テスラ、ハネウェルが時間外取引で下落、コムキャストとアメリカン航空グループは上昇",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1502289",
-      "published": "2026-04-23 12:19:33",
-      "isoDate": "2026-04-23T12:19:33Z"
     },
     {
       "source": "Investing.com 外為",
@@ -129,20 +143,6 @@
       "link": "https://jp.investing.com/news/economy-news/article-1501749",
       "published": "2026-04-23 08:14:07",
       "isoDate": "2026-04-23T08:14:07Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "米国株見通し：底堅いか、中東の不透明感も回復に期待",
-      "link": "https://jp.investing.com/news/forex-news/article-1501573",
-      "published": "2026-04-23 05:00:14",
-      "isoDate": "2026-04-23T05:00:14Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "時間外取引の値動き：TSLA、TXN、IBM、LRCX、LULU、NOW",
-      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1501274",
-      "published": "2026-04-22 20:43:02",
-      "isoDate": "2026-04-22T20:43:02Z"
     }
   ],
   "btc_items": [
@@ -194,13 +194,6 @@
       "link": "https://coinpost.jp/?p=704299",
       "published": "Thu, 23 Apr 2026 07:40:53 +0900",
       "isoDate": "2026-04-22T22:40:53Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "GSR、米国初のアクティブ型仮想通貨ETF「BESO」を上場",
-      "link": "https://coinpost.jp/?p=704303",
-      "published": "Thu, 23 Apr 2026 06:00:32 +0900",
-      "isoDate": "2026-04-22T21:00:32Z"
     },
     {
       "source": "Investing.com 暗号資産",
