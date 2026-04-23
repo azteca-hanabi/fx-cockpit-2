@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T00:00:29Z",
-  "last_checked": "2026-04-23T00:00:29Z",
+  "updated": "2026-04-23T00:30:35Z",
+  "last_checked": "2026-04-23T00:30:35Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,27 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "SKハイニックス第1四半期利益が400%超急増、好調なAI需要で予想上回る",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501467",
+      "published": "2026-04-22 23:52:08",
+      "isoDate": "2026-04-22T23:52:08Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "強弱材料 4/23",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501465",
+      "published": "2026-04-22 23:45:09",
+      "isoDate": "2026-04-22T23:45:09Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "半導体やAI関連株に集中",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501463",
+      "published": "2026-04-22 23:45:08",
+      "isoDate": "2026-04-22T23:45:08Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "米ハイテク株の上昇を受けて買い先行か",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501454",
       "published": "2026-04-22 23:30:06",
@@ -87,27 +108,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1501440",
       "published": "2026-04-22 23:00:07",
       "isoDate": "2026-04-22T23:00:07Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY金：やや反発で4753.00ドル、押し目買いが入る",
-      "link": "https://jp.investing.com/news/forex-news/article-1501433",
-      "published": "2026-04-22 22:45:06",
-      "isoDate": "2026-04-22T22:45:06Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "前日に動いた銘柄 part1オービック、ソフトバンクグループ、レゾナックなど",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1501418",
-      "published": "2026-04-22 22:30:06",
-      "isoDate": "2026-04-22T22:30:06Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY為替：米イラン停戦延長もホルムズ海峡封鎖継続、原油高でドル続伸",
-      "link": "https://jp.investing.com/news/forex-news/article-1501417",
-      "published": "2026-04-22 22:30:05",
-      "isoDate": "2026-04-22T22:30:05Z"
     },
     {
       "source": "Investing.com 外為",
@@ -146,6 +146,69 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "イーロン・マスク率いるテスラ、1444億円相当ビットコイン保有継続　1Q決算を発表",
+      "link": "https://coinpost.jp/?p=704299",
+      "published": "Thu, 23 Apr 2026 07:40:53 +0900",
+      "isoDate": "2026-04-22T22:40:53Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "GSR、米国初のアクティブ型仮想通貨ETF「BESO」を上場",
+      "link": "https://coinpost.jp/?p=704303",
+      "published": "Thu, 23 Apr 2026 06:00:32 +0900",
+      "isoDate": "2026-04-22T21:00:32Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米クラリティー法案、上院採決が5月以降にずれ込む見通し＝報道",
+      "link": "https://coinpost.jp/?p=704302",
+      "published": "Thu, 23 Apr 2026 05:45:23 +0900",
+      "isoDate": "2026-04-22T20:45:23Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "ロシアが仮想通貨規制法案を審議入り、国内決済禁止・対外取引容認",
+      "link": "https://coinpost.jp/?p=704288",
+      "published": "Thu, 23 Apr 2026 05:00:57 +0900",
+      "isoDate": "2026-04-22T20:00:57Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "バイビットが仮想通貨ウォレット狙うmacOSマルウェア攻撃を公表　Claude Code検索が標的",
+      "link": "https://coinpost.jp/?p=704248",
+      "published": "Wed, 22 Apr 2026 18:19:58 +0900",
+      "isoDate": "2026-04-22T09:19:58Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "申告分離課税の対象銘柄は「限定的になる可能性」　税理士・国会議員が語る制度の課題とステーブルコイン課税の論点｜BCCC Collaborative Day",
+      "link": "https://coinpost.jp/?p=703773",
+      "published": "Wed, 22 Apr 2026 17:19:03 +0900",
+      "isoDate": "2026-04-22T08:19:03Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "新作ドキュメンタリー映画「サトシを探して」、21世紀最大の金融ミステリーの真相は？",
+      "link": "https://coinpost.jp/?p=704068",
+      "published": "Wed, 22 Apr 2026 13:45:02 +0900",
+      "isoDate": "2026-04-22T04:45:02Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "コア・サイエンティフィック、社債発行で5300億円調達計画　ビットコイン依存脱却へ",
+      "link": "https://coinpost.jp/?p=703997",
+      "published": "Wed, 22 Apr 2026 11:30:50 +0900",
+      "isoDate": "2026-04-22T02:30:50Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "量子コンピュータ、ビットコインよりPoS銘柄に「追加リスク」か　コインベース諮問委員会が提言",
+      "link": "https://coinpost.jp/?p=703989",
+      "published": "Wed, 22 Apr 2026 10:40:56 +0900",
+      "isoDate": "2026-04-22T01:40:56Z"
+    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
