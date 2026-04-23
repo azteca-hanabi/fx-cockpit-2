@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T04:30:36Z",
-  "last_checked": "2026-04-23T04:30:36Z",
+  "updated": "2026-04-23T05:00:36Z",
+  "last_checked": "2026-04-23T05:00:36Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -83,6 +83,13 @@
     },
     {
       "source": "Investing.com 外為",
+      "title": "後場に注目すべき3つのポイント～初めて6万円台到達も伸び悩む",
+      "link": "https://jp.investing.com/news/forex-news/article-1501556",
+      "published": "2026-04-23 03:45:15",
+      "isoDate": "2026-04-23T03:45:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "マイクロソフト、豪州でのAI拡大に180億ドルを投資",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501554",
       "published": "2026-04-23 03:36:20",
@@ -94,13 +101,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1501550",
       "published": "2026-04-23 03:17:53",
       "isoDate": "2026-04-23T03:17:53Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "東京為替：ドル・円はもみ合い、原油高を警戒",
-      "link": "https://jp.investing.com/news/forex-news/article-1501545",
-      "published": "2026-04-23 03:15:13",
-      "isoDate": "2026-04-23T03:15:13Z"
     },
     {
       "source": "Investing.com 外為",
@@ -215,13 +215,6 @@
       "link": "https://coinpost.jp/?p=704248",
       "published": "Wed, 22 Apr 2026 18:19:58 +0900",
       "isoDate": "2026-04-22T09:19:58Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "申告分離課税の対象銘柄は「限定的になる可能性」　税理士・国会議員が語る制度の課題とステーブルコイン課税の論点｜BCCC Collaborative Day",
-      "link": "https://coinpost.jp/?p=703773",
-      "published": "Wed, 22 Apr 2026 17:19:03 +0900",
-      "isoDate": "2026-04-22T08:19:03Z"
     },
     {
       "source": "Investing.com 暗号資産",
