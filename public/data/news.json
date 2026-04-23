@@ -1,7 +1,14 @@
 {
-  "updated": "2026-04-23T03:30:38Z",
-  "last_checked": "2026-04-23T03:30:38Z",
+  "updated": "2026-04-23T04:00:50Z",
+  "last_checked": "2026-04-23T04:00:50Z",
   "gold_items": [
+    {
+      "source": "Investing.com 商品先物",
+      "title": "イラン交渉と米金利の不透明感でドル上昇、金価格はさらに下落",
+      "link": "https://jp.investing.com/news/commodities-news/article-1501548",
+      "published": "2026-04-23 03:14:46",
+      "isoDate": "2026-04-23T03:14:46Z"
+    },
     {
       "source": "Investing.com 商品先物",
       "title": "イラン協議が停滞、ホルムズ海峡の混乱が続く中、原油上昇でブレントが102ドル超え",
@@ -64,22 +71,43 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1499585",
       "published": "2026-04-22 00:04:58",
       "isoDate": "2026-04-22T00:04:58Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "米国の天然ガス価格、イラン和平協議を見極める中で小幅上昇",
-      "link": "https://jp.investing.com/news/commodities-news/article-1498838",
-      "published": "2026-04-21 13:41:00",
-      "isoDate": "2026-04-21T13:41:00Z"
     }
   ],
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "東京為替：米ドル・円は159円台前半で下げ渋る状況",
-      "link": "https://jp.investing.com/news/forex-news/article-1501537",
-      "published": "2026-04-23 02:15:12",
-      "isoDate": "2026-04-23T02:15:12Z"
+      "title": "マイクロソフト、豪州でのAI拡大に180億ドルを投資",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501554",
+      "published": "2026-04-23 03:36:20",
+      "isoDate": "2026-04-23T03:36:20Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "イラン緊張続き、アジア株下落―日経平均とKOSPIは最高値から後退",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501550",
+      "published": "2026-04-23 03:17:53",
+      "isoDate": "2026-04-23T03:17:53Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円はもみ合い、原油高を警戒",
+      "link": "https://jp.investing.com/news/forex-news/article-1501545",
+      "published": "2026-04-23 03:15:13",
+      "isoDate": "2026-04-23T03:15:13Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "日経平均は反落、初めて6万円台到達も伸び悩む",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1501544",
+      "published": "2026-04-23 03:15:13",
+      "isoDate": "2026-04-23T03:15:13Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "イラン交渉と米金利の不透明感でドル上昇、金価格はさらに下落",
+      "link": "https://jp.investing.com/news/commodities-news/article-1501548",
+      "published": "2026-04-23 03:14:46",
+      "isoDate": "2026-04-23T03:14:46Z"
     },
     {
       "source": "Investing.com 外為",
@@ -111,38 +139,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "米ハイテク株の上昇を受けて買い先行か",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1501454",
-      "published": "2026-04-22 23:30:06",
-      "isoDate": "2026-04-22T23:30:06Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "米国株式市場は反発、イラン停戦延長を好感",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1501440",
-      "published": "2026-04-22 23:00:07",
-      "isoDate": "2026-04-22T23:00:07Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "時間外取引の値動き：TSLA、TXN、IBM、LRCX、LULU、NOW",
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1501274",
       "published": "2026-04-22 20:43:02",
       "isoDate": "2026-04-22T20:43:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "テスラ、四半期利益と売上高が予想を上回り、時間外取引で株価4%近く上昇",
-      "link": "https://jp.investing.com/news/earnings/article-1501208",
-      "published": "2026-04-22 20:16:22",
-      "isoDate": "2026-04-22T20:16:22Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "トランプ大統領がイラン停戦延長を発表、TSXが上昇",
-      "link": "https://jp.investing.com/news/economy-news/article-1500295",
-      "published": "2026-04-22 12:18:13",
-      "isoDate": "2026-04-22T12:18:13Z"
     }
   ],
   "btc_items": [
