@@ -1,7 +1,14 @@
 {
-  "updated": "2026-04-23T21:00:45Z",
-  "last_checked": "2026-04-23T21:00:45Z",
+  "updated": "2026-04-23T21:30:24Z",
+  "last_checked": "2026-04-23T21:30:24Z",
   "gold_items": [
+    {
+      "source": "Investing.com 商品先物",
+      "title": "デューク・エナジーのロビンソン原子力発電所、2050年まで運転許可",
+      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1503326",
+      "published": "2026-04-23 20:46:27",
+      "isoDate": "2026-04-23T20:46:27Z"
+    },
     {
       "source": "Investing.com 商品先物",
       "title": "中東協議の不透明感が続き欧州天然ガス価格が上昇",
@@ -64,13 +71,6 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1499658",
       "published": "2026-04-22 03:05:08",
       "isoDate": "2026-04-22T03:05:08Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "トランプ大統領、国内石油輸送に関する適用免除の延長を検討中=Axios",
-      "link": "https://jp.investing.com/news/commodities-news/article-1499634",
-      "published": "2026-04-22 01:29:39",
-      "isoDate": "2026-04-22T01:29:39Z"
     }
   ],
   "usdjpy_items": [
@@ -80,13 +80,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
       "published": "2026-04-23 20:33:02",
       "isoDate": "2026-04-23T20:33:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "ニューモント、記録的キャッシュフローで自社株買いを増額し第1四半期予想を上回る",
-      "link": "https://jp.investing.com/news/earnings/article-1503221",
-      "published": "2026-04-23 20:12:48",
-      "isoDate": "2026-04-23T20:12:48Z"
     },
     {
       "source": "Investing.com 外為",
@@ -143,6 +136,13 @@
       "link": "https://jp.investing.com/news/economy-news/article-1501749",
       "published": "2026-04-23 08:14:07",
       "isoDate": "2026-04-23T08:14:07Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "米国株見通し：底堅いか、中東の不透明感も回復に期待",
+      "link": "https://jp.investing.com/news/forex-news/article-1501573",
+      "published": "2026-04-23 05:00:14",
+      "isoDate": "2026-04-23T05:00:14Z"
     }
   ],
   "btc_items": [
