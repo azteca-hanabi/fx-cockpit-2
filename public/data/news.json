@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-23T02:30:34Z",
-  "last_checked": "2026-04-23T02:30:34Z",
+  "updated": "2026-04-23T03:01:01Z",
+  "last_checked": "2026-04-23T03:01:01Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "東京為替：米ドル・円は159円台前半で下げ渋る状況",
+      "link": "https://jp.investing.com/news/forex-news/article-1501537",
+      "published": "2026-04-23 02:15:12",
+      "isoDate": "2026-04-23T02:15:12Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "ＩＮＰＥＸ---大幅反発、エネルギー輸送停滞長期化懸念で原油相場が上昇",
       "link": "https://jp.investing.com/news/stock-market-news/article-1501530",
       "published": "2026-04-23 01:45:12",
@@ -125,13 +132,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "サービスナウが12%下落、通期購読収益ガイダンスが失望を招く",
-      "link": "https://jp.investing.com/news/earnings/article-1501222",
-      "published": "2026-04-22 20:25:02",
-      "isoDate": "2026-04-22T20:25:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "テスラ、四半期利益と売上高が予想を上回り、時間外取引で株価4%近く上昇",
       "link": "https://jp.investing.com/news/earnings/article-1501208",
       "published": "2026-04-22 20:16:22",
@@ -146,6 +146,13 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "トランプ氏一族関連のアメリカン・ビットコイン、カナダ拠点で1.1万台のBTC採掘機器を稼働開始",
+      "link": "https://coinpost.jp/?p=704413",
+      "published": "Thu, 23 Apr 2026 11:34:07 +0900",
+      "isoDate": "2026-04-23T02:34:07Z"
+    },
     {
       "source": "CoinPost",
       "title": "ANAP、4月で3度目のビットコイン購入　保有量で世界35位入り目指す",
