@@ -1,7 +1,14 @@
 {
-  "updated": "2026-04-24T06:30:31Z",
-  "last_checked": "2026-04-24T06:30:31Z",
+  "updated": "2026-04-24T07:00:52Z",
+  "last_checked": "2026-04-24T07:00:52Z",
   "gold_items": [
+    {
+      "source": "Investing.com 商品先物",
+      "title": "金価格が下落、米イラン情勢の不透明感でドル高進み週間で大幅安",
+      "link": "https://jp.investing.com/news/commodities-news/article-1503671",
+      "published": "2026-04-24 06:44:55",
+      "isoDate": "2026-04-24T06:44:55Z"
+    },
     {
       "source": "Investing.com 商品先物",
       "title": "トランプ大統領がイラン戦争の早期終結を急がない姿勢、原油価格は1%超上昇でブレント106ドル突破",
@@ -64,22 +71,22 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1500500",
       "published": "2026-04-22 13:18:09",
       "isoDate": "2026-04-22T13:18:09Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "EU、ロシア産ガス離脱計画の方針を維持とエネルギー担当委員が表明",
-      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1499996",
-      "published": "2026-04-22 10:12:32",
-      "isoDate": "2026-04-22T10:12:32Z"
     }
   ],
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "米国株見通し：下げ渋りか、ハイテク買戻しなら相場を下支え",
-      "link": "https://jp.investing.com/news/forex-news/article-1503584",
-      "published": "2026-04-24 04:45:13",
-      "isoDate": "2026-04-24T04:45:13Z"
+      "title": "日経平均は568円高、引き続き内外企業の決算などに関心",
+      "link": "https://jp.investing.com/news/forex-news/article-1503621",
+      "published": "2026-04-24 06:00:14",
+      "isoDate": "2026-04-24T06:00:14Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は変わらず、原油相場はやや失速",
+      "link": "https://jp.investing.com/news/forex-news/article-1503620",
+      "published": "2026-04-24 06:00:13",
+      "isoDate": "2026-04-24T06:00:13Z"
     },
     {
       "source": "Investing.com 外為",
@@ -90,13 +97,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "アジア株下落、ハイテク株安と原油高が重し、日本CPIに注目",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1503568",
-      "published": "2026-04-24 03:20:47",
-      "isoDate": "2026-04-24T03:20:47Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "イビデン---大幅反発、インテルがガイダンス好感で時間外大幅高",
       "link": "https://jp.investing.com/news/stock-market-news/article-1503548",
       "published": "2026-04-24 02:00:12",
@@ -104,7 +104,7 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "トランプ大統領がイスラエル・レバノン停戦延長を発表、ウォール街先物が上昇",
+      "title": "イスラエル・レバノン停戦延長も米株先物は方向感なく推移",
       "link": "https://jp.investing.com/news/stock-market-news/article-1503522",
       "published": "2026-04-24 00:49:31",
       "isoDate": "2026-04-24T00:49:31Z"
@@ -146,6 +146,13 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "「ビットコインとJPYCは表裏一体」メタプラネットCEO×JPYC代表が語る日本発ビットコイン経済圏の全貌",
+      "link": "https://coinpost.jp/?p=701879",
+      "published": "Fri, 24 Apr 2026 15:44:36 +0900",
+      "isoDate": "2026-04-24T06:44:36Z"
+    },
     {
       "source": "CoinPost",
       "title": "ビットコインの価格下落も「確信型買い手」の保有量が69%急増＝アークインベストQ1報告",
