@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T04:30:26Z",
-  "last_checked": "2026-04-24T04:30:26Z",
+  "updated": "2026-04-24T05:00:29Z",
+  "last_checked": "2026-04-24T05:00:29Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "後場の日経平均は176円高でスタート、日東紡やヤクルト本社などが上昇",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1503578",
+      "published": "2026-04-24 04:15:13",
+      "isoDate": "2026-04-24T04:15:13Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "後場に注目すべき3つのポイント～プラス圏で推移も上値の重い展開",
       "link": "https://jp.investing.com/news/forex-news/article-1503573",
       "published": "2026-04-24 03:45:12",
@@ -101,13 +108,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1503522",
       "published": "2026-04-24 00:49:31",
       "isoDate": "2026-04-24T00:49:31Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "強弱材料 4/24",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1503512",
-      "published": "2026-04-24 00:15:08",
-      "isoDate": "2026-04-24T00:15:08Z"
     },
     {
       "source": "Investing.com 外為",
@@ -146,6 +146,13 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "メタプラネットが80億円社債を発行、調達資金は全額ビットコイン購入に充当",
+      "link": "https://coinpost.jp/?p=704910",
+      "published": "Fri, 24 Apr 2026 13:30:25 +0900",
+      "isoDate": "2026-04-24T04:30:25Z"
+    },
     {
       "source": "CoinPost",
       "title": "リミックスポイント、前日に続き2.5億円相当ビットコインを追加購入　BTC保有量でANAPを逆転",
