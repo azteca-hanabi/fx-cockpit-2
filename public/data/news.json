@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T13:00:30Z",
-  "last_checked": "2026-04-24T13:00:30Z",
+  "updated": "2026-04-24T13:30:26Z",
+  "last_checked": "2026-04-24T13:30:26Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -32,7 +32,7 @@
     },
     {
       "source": "Investing.com 商品先物",
-      "title": "中東協議の不透明感が続き欧州天然ガス価格が上昇",
+      "title": "豊富な在庫水準が圧迫し米天然ガス価格が下落",
       "link": "https://jp.investing.com/news/commodities-news/article-1502434",
       "published": "2026-04-23 13:03:52",
       "isoDate": "2026-04-23T13:03:52Z"
@@ -69,10 +69,38 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "Meta、AI業務向けにAWS Gravitonプロセッサー導入で契約締結",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1504156",
-      "published": "2026-04-24 12:11:08",
-      "isoDate": "2026-04-24T12:11:08Z"
+      "title": "DAデビッドソンがAMDの格付けを引き上げ、CPU需要が「前例のない」局面に入ると指摘",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1504301",
+      "published": "2026-04-24 13:04:53",
+      "isoDate": "2026-04-24T13:04:53Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "Antalpha、2900万ドル相当の金トークンを新たなXAUEプロトコルにコミット",
+      "link": "https://jp.investing.com/news/assorted/article-432SI-1504272",
+      "published": "2026-04-24 13:01:15",
+      "isoDate": "2026-04-24T13:01:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "マレーシアとマイクロソフト、教育者と中小企業向けAI研修を拡大",
+      "link": "https://jp.investing.com/news/assorted/article-432SI-1504250",
+      "published": "2026-04-24 12:54:08",
+      "isoDate": "2026-04-24T12:54:08Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "原油への懸念対AIへの強欲、バークレイズが株式上昇の上限として原油高を指摘",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1504247",
+      "published": "2026-04-24 12:47:35",
+      "isoDate": "2026-04-24T12:47:35Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "米国株式市場の上昇相場は勢いを失うのか、ヤーデニが見解示す",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1504212",
+      "published": "2026-04-24 12:32:01",
+      "isoDate": "2026-04-24T12:32:01Z"
     },
     {
       "source": "Investing.com 外為",
@@ -101,34 +129,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504071",
       "published": "2026-04-24 11:25:45",
       "isoDate": "2026-04-24T11:25:45Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "欧州為替：ドル・円は失速、ドル買い後退",
-      "link": "https://jp.investing.com/news/forex-news/article-1504052",
-      "published": "2026-04-24 11:15:08",
-      "isoDate": "2026-04-24T11:15:08Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "P&G、堅調な売上高成長で予想を上回る",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1504047",
-      "published": "2026-04-24 11:11:52",
-      "isoDate": "2026-04-24T11:11:52Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "トランプ氏がイスラエル・レバノン停戦延長を発表、インテルが急騰 - 市場を動かす要因",
-      "link": "https://jp.investing.com/news/economy-news/article-1503778",
-      "published": "2026-04-24 08:21:02",
-      "isoDate": "2026-04-24T08:21:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "米テック株高を背景に値がさハイテク株が買われ最高値更新【クロージング】",
-      "link": "https://jp.investing.com/news/forex-news/article-1503767",
-      "published": "2026-04-24 08:15:15",
-      "isoDate": "2026-04-24T08:15:15Z"
     },
     {
       "source": "Investing.com 外為",
