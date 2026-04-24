@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T17:00:34Z",
-  "last_checked": "2026-04-24T17:00:34Z",
+  "updated": "2026-04-24T17:30:23Z",
+  "last_checked": "2026-04-24T17:30:23Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -69,13 +69,6 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "米国・イラン緊張継続の中、TSXは横ばい",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1504687",
-      "published": "2026-04-24 16:16:07",
-      "isoDate": "2026-04-24T16:16:07Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "NY外為：ドル安値更新、米イラン第2回目協議報道受け",
       "link": "https://jp.investing.com/news/forex-news/article-1504683",
       "published": "2026-04-24 16:15:05",
@@ -136,6 +129,13 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504071",
       "published": "2026-04-24 11:25:45",
       "isoDate": "2026-04-24T11:25:45Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "時間外取引の値動き:INTC、AMD、ARM、MXL、NEM、APPF、FIX、EW",
+      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
+      "published": "2026-04-23 20:33:02",
+      "isoDate": "2026-04-23T20:33:02Z"
     }
   ],
   "btc_items": [
