@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T10:00:49Z",
-  "last_checked": "2026-04-24T10:00:49Z",
+  "updated": "2026-04-24T10:30:24Z",
+  "last_checked": "2026-04-24T10:30:24Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,20 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "24日の香港市場概況：香港市場は反発、半導体が上げ主導",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1503925",
+      "published": "2026-04-24 10:00:11",
+      "isoDate": "2026-04-24T10:00:11Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "中国、Meta取引を受けハイテク企業への米国投資を規制へ―ブルームバーグ",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1503922",
+      "published": "2026-04-24 09:57:09",
+      "isoDate": "2026-04-24T09:57:09Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "日経平均テクニカル： 反発、週足は2週連続「赤三兵」示現",
       "link": "https://jp.investing.com/news/forex-news/article-1503890",
       "published": "2026-04-24 09:30:11",
@@ -85,13 +99,6 @@
       "source": "Investing.com 外為",
       "title": "東京為替：ドル・円は反落、上値の重さを意識",
       "link": "https://jp.investing.com/news/forex-news/article-1503788",
-      "published": "2026-04-24 08:30:15",
-      "isoDate": "2026-04-24T08:30:15Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "欧米為替見通し: ドル・円は伸び悩みか、中東にらみドル買い継続も160円台の介入を意識",
-      "link": "https://jp.investing.com/news/forex-news/article-1503789",
       "published": "2026-04-24 08:30:15",
       "isoDate": "2026-04-24T08:30:15Z"
     },
@@ -136,13 +143,6 @@
       "link": "https://jp.investing.com/news/earnings/article-1503201",
       "published": "2026-04-23 20:08:35",
       "isoDate": "2026-04-23T20:08:35Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "【最終チャンス】本日終了！2026年最安値でInvestingProを手に入れる",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1501874",
-      "published": "2026-04-23 09:15:50",
-      "isoDate": "2026-04-23T09:15:50Z"
     }
   ],
   "btc_items": [
