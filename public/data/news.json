@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T16:30:25Z",
-  "last_checked": "2026-04-24T16:30:25Z",
+  "updated": "2026-04-24T17:00:34Z",
+  "last_checked": "2026-04-24T17:00:34Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -69,6 +69,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "米国・イラン緊張継続の中、TSXは横ばい",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1504687",
+      "published": "2026-04-24 16:16:07",
+      "isoDate": "2026-04-24T16:16:07Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "NY外為：ドル安値更新、米イラン第2回目協議報道受け",
       "link": "https://jp.investing.com/news/forex-news/article-1504683",
       "published": "2026-04-24 16:15:05",
@@ -101,13 +108,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504301",
       "published": "2026-04-24 13:04:53",
       "isoDate": "2026-04-24T13:04:53Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "原油への懸念対AIへの強欲、バークレイズが株式上昇の上限として原油高を指摘",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1504247",
-      "published": "2026-04-24 12:47:35",
-      "isoDate": "2026-04-24T12:47:35Z"
     },
     {
       "source": "Investing.com 外為",
