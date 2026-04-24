@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T01:00:54Z",
-  "last_checked": "2026-04-24T01:00:54Z",
+  "updated": "2026-04-24T01:30:35Z",
+  "last_checked": "2026-04-24T01:30:35Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "トランプ大統領がイスラエル・レバノン停戦延長を発表、ウォール街先物が上昇",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1503522",
+      "published": "2026-04-24 00:49:31",
+      "isoDate": "2026-04-24T00:49:31Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "強弱材料 4/24",
       "link": "https://jp.investing.com/news/stock-market-news/article-1503512",
       "published": "2026-04-24 00:15:08",
@@ -101,13 +108,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1503499",
       "published": "2026-04-23 23:30:08",
       "isoDate": "2026-04-23T23:30:08Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "23日のNY市場は反落",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1503497",
-      "published": "2026-04-23 23:30:07",
-      "isoDate": "2026-04-23T23:30:07Z"
     },
     {
       "source": "Investing.com 外為",
