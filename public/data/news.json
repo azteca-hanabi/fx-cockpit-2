@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T20:30:25Z",
-  "last_checked": "2026-04-24T20:30:25Z",
+  "updated": "2026-04-24T21:00:43Z",
+  "last_checked": "2026-04-24T21:00:43Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -25,7 +25,7 @@
     },
     {
       "source": "Investing.com 商品先物",
-      "title": "中東の緊張が供給に影響、欧州天然ガス価格が上昇",
+      "title": "天然ガス価格が需要低迷で貯蔵量急増を受け急落",
       "link": "https://jp.investing.com/news/commodities-news/article-1504067",
       "published": "2026-04-24 11:24:45",
       "isoDate": "2026-04-24T11:24:45Z"
@@ -67,6 +67,20 @@
     }
   ],
   "usdjpy_items": [
+    {
+      "source": "Investing.com 外為",
+      "title": "[通貨オプション]OP売り、週末要因やリスク警戒感が後退",
+      "link": "https://jp.investing.com/news/forex-news/article-1504828",
+      "published": "2026-04-24 20:00:05",
+      "isoDate": "2026-04-24T20:00:05Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "4月24日のNY為替概況",
+      "link": "https://jp.investing.com/news/forex-news/article-1504803",
+      "published": "2026-04-24 19:30:05",
+      "isoDate": "2026-04-24T19:30:05Z"
+    },
     {
       "source": "Investing.com 外為",
       "title": "今週の注目銘柄",
@@ -111,13 +125,6 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "UBS、米国株に「魅力的」な見方を維持、強気相場の推進力は健在と判断",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1504181",
-      "published": "2026-04-24 12:09:19",
-      "isoDate": "2026-04-24T12:09:19Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "AMDとArm株が急騰、CPUとGPUの比率変化がAI市場を再構築",
       "link": "https://jp.investing.com/news/stock-market-news/article-1504079",
       "published": "2026-04-24 11:28:19",
@@ -129,13 +136,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504071",
       "published": "2026-04-24 11:25:45",
       "isoDate": "2026-04-24T11:25:45Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "時間外取引の値動き:INTC、AMD、ARM、MXL、NEM、APPF、FIX、EW",
-      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
-      "published": "2026-04-23 20:33:02",
-      "isoDate": "2026-04-23T20:33:02Z"
     }
   ],
   "btc_items": [
