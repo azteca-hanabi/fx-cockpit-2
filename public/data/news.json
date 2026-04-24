@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T06:00:47Z",
-  "last_checked": "2026-04-24T06:00:47Z",
+  "updated": "2026-04-24T06:30:31Z",
+  "last_checked": "2026-04-24T06:30:31Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,10 +76,10 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "東京為替：ドル・円は小動き、様子見ムードで",
-      "link": "https://jp.investing.com/news/forex-news/article-1503601",
-      "published": "2026-04-24 05:15:12",
-      "isoDate": "2026-04-24T05:15:12Z"
+      "title": "米国株見通し：下げ渋りか、ハイテク買戻しなら相場を下支え",
+      "link": "https://jp.investing.com/news/forex-news/article-1503584",
+      "published": "2026-04-24 04:45:13",
+      "isoDate": "2026-04-24T04:45:13Z"
     },
     {
       "source": "Investing.com 外為",
@@ -146,6 +146,13 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "ビットコインの価格下落も「確信型買い手」の保有量が69%急増＝アークインベストQ1報告",
+      "link": "https://coinpost.jp/?p=704947",
+      "published": "Fri, 24 Apr 2026 15:06:05 +0900",
+      "isoDate": "2026-04-24T06:06:05Z"
+    },
     {
       "source": "CoinPost",
       "title": "米司法省、東南アジアの仮想通貨詐欺拠点を一斉摘発　約1120億円相当を拘束",
