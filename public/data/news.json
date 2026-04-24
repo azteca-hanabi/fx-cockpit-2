@@ -1,7 +1,14 @@
 {
-  "updated": "2026-04-24T15:00:29Z",
-  "last_checked": "2026-04-24T15:00:29Z",
+  "updated": "2026-04-24T15:30:24Z",
+  "last_checked": "2026-04-24T15:30:24Z",
   "gold_items": [
+    {
+      "source": "Investing.com 商品先物",
+      "title": "米国とEUが重要鉱物に関する協定に署名、供給源の多様化を目指す",
+      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1504608",
+      "published": "2026-04-24 15:14:17",
+      "isoDate": "2026-04-24T15:14:17Z"
+    },
     {
       "source": "Investing.com 商品先物",
       "title": "Revolut、一部欧州市場でコモディティ商品の提供を終了",
@@ -57,16 +64,16 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1502434",
       "published": "2026-04-23 13:03:52",
       "isoDate": "2026-04-23T13:03:52Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "欧州ガス価格、寒波とイラン緊張で上昇",
-      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1501801",
-      "published": "2026-04-23 08:40:37",
-      "isoDate": "2026-04-23T08:40:37Z"
     }
   ],
   "usdjpy_items": [
+    {
+      "source": "Investing.com 外為",
+      "title": "【市場反応】米4月ミシガン大消費者信頼感指数は予想外に上方修正も過去最低、ドル軟調",
+      "link": "https://jp.investing.com/news/forex-news/article-1504573",
+      "published": "2026-04-24 15:00:04",
+      "isoDate": "2026-04-24T15:00:04Z"
+    },
     {
       "source": "Investing.com 外為",
       "title": "司法省、パウエルFRB議長への刑事捜査を終結へ",
@@ -76,24 +83,10 @@
     },
     {
       "source": "Investing.com 外為",
-      "title": "Amazonのエージェント型AI向けCPUが注目、MetaがGravitonを採用",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1504408",
-      "published": "2026-04-24 13:43:32",
-      "isoDate": "2026-04-24T13:43:32Z"
-    },
-    {
-      "source": "Investing.com 外為",
       "title": "DAデビッドソンがAMDの格付けを引き上げ、CPU需要が「前例のない」局面に入ると指摘",
       "link": "https://jp.investing.com/news/stock-market-news/article-1504301",
       "published": "2026-04-24 13:04:53",
       "isoDate": "2026-04-24T13:04:53Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "オーレリオンが新イールドプロトコルに4800万ドル相当のゴールドトークンをコミット",
-      "link": "https://jp.investing.com/news/assorted/article-432SI-1504281",
-      "published": "2026-04-24 13:02:08",
-      "isoDate": "2026-04-24T13:02:08Z"
     },
     {
       "source": "Investing.com 外為",
@@ -136,6 +129,13 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504071",
       "published": "2026-04-24 11:25:45",
       "isoDate": "2026-04-24T11:25:45Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "時間外取引の値動き:INTC、AMD、ARM、MXL、NEM、APPF、FIX、EW",
+      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
+      "published": "2026-04-23 20:33:02",
+      "isoDate": "2026-04-23T20:33:02Z"
     }
   ],
   "btc_items": [
