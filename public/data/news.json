@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T08:30:29Z",
-  "last_checked": "2026-04-24T08:30:29Z",
+  "updated": "2026-04-24T09:00:42Z",
+  "last_checked": "2026-04-24T09:00:42Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,24 +76,38 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は反落、上値の重さを意識",
+      "link": "https://jp.investing.com/news/forex-news/article-1503788",
+      "published": "2026-04-24 08:30:15",
+      "isoDate": "2026-04-24T08:30:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "欧米為替見通し: ドル・円は伸び悩みか、中東にらみドル買い継続も160円台の介入を意識",
+      "link": "https://jp.investing.com/news/forex-news/article-1503789",
+      "published": "2026-04-24 08:30:15",
+      "isoDate": "2026-04-24T08:30:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "トランプ氏がイスラエル・レバノン停戦延長を発表、インテルが急騰 - 市場を動かす要因",
+      "link": "https://jp.investing.com/news/economy-news/article-1503778",
+      "published": "2026-04-24 08:21:02",
+      "isoDate": "2026-04-24T08:21:02Z"
+    },
+    {
+      "source": "Investing.com 外為",
+      "title": "米テック株高を背景に値がさハイテク株が買われ最高値更新【クロージング】",
+      "link": "https://jp.investing.com/news/forex-news/article-1503767",
+      "published": "2026-04-24 08:15:15",
+      "isoDate": "2026-04-24T08:15:15Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "日経VI：上昇、週末のイラン情勢など警戒",
       "link": "https://jp.investing.com/news/forex-news/article-1503743",
       "published": "2026-04-24 07:45:17",
       "isoDate": "2026-04-24T07:45:17Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "日経平均寄与度ランキング（大引け）～日経平均は反発、アドバンテストやソフトバンクGが2銘柄で約473円分押し上げ",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1503731",
-      "published": "2026-04-24 07:30:15",
-      "isoDate": "2026-04-24T07:30:15Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "富士紡HD、NEC、ヤクルトなど",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1503711",
-      "published": "2026-04-24 07:15:13",
-      "isoDate": "2026-04-24T07:15:13Z"
     },
     {
       "source": "Investing.com 外為",
@@ -122,20 +136,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
       "published": "2026-04-23 20:33:02",
       "isoDate": "2026-04-23T20:33:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "インテル第1四半期決算、AI・データセンター事業好調でウォール街予想を上回る",
-      "link": "https://jp.investing.com/news/earnings/article-1503201",
-      "published": "2026-04-23 20:08:35",
-      "isoDate": "2026-04-23T20:08:35Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "Super Micro、Oracle Financial Softwareとの14億ドル契約喪失報道で10%急落",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1502178",
-      "published": "2026-04-23 11:31:28",
-      "isoDate": "2026-04-23T11:31:28Z"
     },
     {
       "source": "Investing.com 外為",
