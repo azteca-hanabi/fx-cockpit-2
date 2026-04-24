@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T15:30:24Z",
-  "last_checked": "2026-04-24T15:30:24Z",
+  "updated": "2026-04-24T16:00:31Z",
+  "last_checked": "2026-04-24T16:00:31Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -15,20 +15,6 @@
       "link": "https://jp.investing.com/news/commodities-news/article-93CH-1504427",
       "published": "2026-04-24 13:52:26",
       "isoDate": "2026-04-24T13:52:26Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "カナダが40億ドルのパイプライン拡張を承認、エンブリッジ株が上昇",
-      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1504415",
-      "published": "2026-04-24 13:47:57",
-      "isoDate": "2026-04-24T13:47:57Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "エニ、中東危機の石油生産への影響は限定的と見解、債務削減を計画",
-      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1504340",
-      "published": "2026-04-24 13:25:23",
-      "isoDate": "2026-04-24T13:25:23Z"
     },
     {
       "source": "Investing.com 商品先物",
@@ -64,9 +50,30 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1502434",
       "published": "2026-04-23 13:03:52",
       "isoDate": "2026-04-23T13:03:52Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "欧州ガス価格、寒波とイラン緊張で上昇",
+      "link": "https://jp.investing.com/news/commodities-news/article-93CH-1501801",
+      "published": "2026-04-23 08:40:37",
+      "isoDate": "2026-04-23T08:40:37Z"
+    },
+    {
+      "source": "Investing.com 商品先物",
+      "title": "イラン交渉と米金利の不透明感でドル上昇、金価格はさらに下落",
+      "link": "https://jp.investing.com/news/commodities-news/article-1501548",
+      "published": "2026-04-23 03:14:46",
+      "isoDate": "2026-04-23T03:14:46Z"
     }
   ],
   "usdjpy_items": [
+    {
+      "source": "Investing.com 外為",
+      "title": "大規模なレイオフ発表はより大きな何かの兆候か",
+      "link": "https://jp.investing.com/news/stock-market-news/article-1504601",
+      "published": "2026-04-24 15:09:36",
+      "isoDate": "2026-04-24T15:09:36Z"
+    },
     {
       "source": "Investing.com 外為",
       "title": "【市場反応】米4月ミシガン大消費者信頼感指数は予想外に上方修正も過去最低、ドル軟調",
@@ -129,13 +136,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504071",
       "published": "2026-04-24 11:25:45",
       "isoDate": "2026-04-24T11:25:45Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "時間外取引の値動き:INTC、AMD、ARM、MXL、NEM、APPF、FIX、EW",
-      "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
-      "published": "2026-04-23 20:33:02",
-      "isoDate": "2026-04-23T20:33:02Z"
     }
   ],
   "btc_items": [
