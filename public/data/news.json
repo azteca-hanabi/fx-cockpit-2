@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T07:00:52Z",
-  "last_checked": "2026-04-24T07:00:52Z",
+  "updated": "2026-04-24T07:30:40Z",
+  "last_checked": "2026-04-24T07:30:40Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,10 +76,10 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
-      "title": "日経平均は568円高、引き続き内外企業の決算などに関心",
-      "link": "https://jp.investing.com/news/forex-news/article-1503621",
-      "published": "2026-04-24 06:00:14",
-      "isoDate": "2026-04-24T06:00:14Z"
+      "title": "金価格が下落、米イラン情勢の不透明感でドル高進み週間で大幅安",
+      "link": "https://jp.investing.com/news/commodities-news/article-1503671",
+      "published": "2026-04-24 06:44:55",
+      "isoDate": "2026-04-24T06:44:55Z"
     },
     {
       "source": "Investing.com 外為",
