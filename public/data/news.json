@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T09:30:25Z",
-  "last_checked": "2026-04-24T09:30:25Z",
+  "updated": "2026-04-24T10:00:49Z",
+  "last_checked": "2026-04-24T10:00:49Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,6 +76,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "日経平均テクニカル： 反発、週足は2週連続「赤三兵」示現",
+      "link": "https://jp.investing.com/news/forex-news/article-1503890",
+      "published": "2026-04-24 09:30:11",
+      "isoDate": "2026-04-24T09:30:11Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "東京為替：ドル・円は反落、上値の重さを意識",
       "link": "https://jp.investing.com/news/forex-news/article-1503788",
       "published": "2026-04-24 08:30:15",
@@ -101,13 +108,6 @@
       "link": "https://jp.investing.com/news/forex-news/article-1503767",
       "published": "2026-04-24 08:15:15",
       "isoDate": "2026-04-24T08:15:15Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "日経VI：上昇、週末のイラン情勢など警戒",
-      "link": "https://jp.investing.com/news/forex-news/article-1503743",
-      "published": "2026-04-24 07:45:17",
-      "isoDate": "2026-04-24T07:45:17Z"
     },
     {
       "source": "Investing.com 外為",
