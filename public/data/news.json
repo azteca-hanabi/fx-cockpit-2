@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T10:30:24Z",
-  "last_checked": "2026-04-24T10:30:24Z",
+  "updated": "2026-04-24T11:00:32Z",
+  "last_checked": "2026-04-24T11:00:32Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -64,16 +64,16 @@
       "link": "https://jp.investing.com/news/commodities-news/article-1500553",
       "published": "2026-04-22 13:34:18",
       "isoDate": "2026-04-22T13:34:18Z"
-    },
-    {
-      "source": "Investing.com 商品先物",
-      "title": "停戦でも安堵なし：石油供給混乱が続く、バークレイズが警告",
-      "link": "https://jp.investing.com/news/commodities-news/article-1500500",
-      "published": "2026-04-22 13:18:09",
-      "isoDate": "2026-04-22T13:18:09Z"
     }
   ],
   "usdjpy_items": [
+    {
+      "source": "Investing.com 外為",
+      "title": "湾岸諸国の原油生産、戦前水準から57%減少とゴールドマン",
+      "link": "https://jp.investing.com/news/commodities-news/article-1503970",
+      "published": "2026-04-24 10:34:21",
+      "isoDate": "2026-04-24T10:34:21Z"
+    },
     {
       "source": "Investing.com 外為",
       "title": "24日の香港市場概況：香港市場は反発、半導体が上げ主導",
@@ -136,13 +136,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-432SI-1503296",
       "published": "2026-04-23 20:33:02",
       "isoDate": "2026-04-23T20:33:02Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "インテル第1四半期決算、AI・データセンター事業好調でウォール街予想を上回る",
-      "link": "https://jp.investing.com/news/earnings/article-1503201",
-      "published": "2026-04-23 20:08:35",
-      "isoDate": "2026-04-23T20:08:35Z"
     }
   ],
   "btc_items": [
