@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-24T05:30:26Z",
-  "last_checked": "2026-04-24T05:30:26Z",
+  "updated": "2026-04-24T06:00:47Z",
+  "last_checked": "2026-04-24T06:00:47Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -76,17 +76,17 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "東京為替：ドル・円は小動き、様子見ムードで",
+      "link": "https://jp.investing.com/news/forex-news/article-1503601",
+      "published": "2026-04-24 05:15:12",
+      "isoDate": "2026-04-24T05:15:12Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "東京為替：ドル・円は小高い、ドル買い継続",
       "link": "https://jp.investing.com/news/forex-news/article-1503582",
       "published": "2026-04-24 04:30:14",
       "isoDate": "2026-04-24T04:30:14Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "後場に注目すべき3つのポイント～プラス圏で推移も上値の重い展開",
-      "link": "https://jp.investing.com/news/forex-news/article-1503573",
-      "published": "2026-04-24 03:45:12",
-      "isoDate": "2026-04-24T03:45:12Z"
     },
     {
       "source": "Investing.com 外為",
