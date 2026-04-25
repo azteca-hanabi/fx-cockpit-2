@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-25T00:30:23Z",
-  "last_checked": "2026-04-25T00:30:23Z",
+  "updated": "2026-04-25T01:00:35Z",
+  "last_checked": "2026-04-25T01:00:35Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -141,6 +141,13 @@
   "btc_items": [
     {
       "source": "CoinPost",
+      "title": "米司法省、パウエル議長への捜査を終結　次期議長候補ウォーシュ氏の承認へ道",
+      "link": "https://coinpost.jp/?p=705097",
+      "published": "Sat, 25 Apr 2026 09:25:41 +0900",
+      "isoDate": "2026-04-25T00:25:41Z"
+    },
+    {
+      "source": "CoinPost",
       "title": "量子コンピューターで15ビットの暗号解読に成功、研究者が1BTCの報酬獲得",
       "link": "https://coinpost.jp/?p=705114",
       "published": "Sat, 25 Apr 2026 08:20:36 +0900",
@@ -201,13 +208,6 @@
       "link": "https://coinpost.jp/?p=704910",
       "published": "Fri, 24 Apr 2026 13:30:25 +0900",
       "isoDate": "2026-04-24T04:30:25Z"
-    },
-    {
-      "source": "CoinPost",
-      "title": "リミックスポイント、前日に続き2.5億円相当ビットコインを追加購入　BTC保有量でANAPを逆転",
-      "link": "https://coinpost.jp/?p=704909",
-      "published": "Fri, 24 Apr 2026 13:10:20 +0900",
-      "isoDate": "2026-04-24T04:10:20Z"
     },
     {
       "source": "Investing.com 暗号資産",
