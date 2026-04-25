@@ -2,772 +2,264 @@
 <html lang="ja" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FX COCKPIT — azteca</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>FX COCKPIT 2 CRYPTO</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0a0a0f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C53LS0E9DX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-C53LS0E9DX');
-</script>
+<script>(function(){var t=localStorage.getItem('fx-theme')||'dark';document.documentElement.dataset.theme=t;})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
 <style>
 /* ─── THEMES ─── */
-:root,
-[data-theme="dark"] {
-  --bg:         #0a0a0f;
-  --bg2:        #0f0f18;
-  --bg3:        #14141f;
-  --border:     #1e1e2e;
-  --border2:    #2a2a40;
-  --text:       #c8c8d8;
-  --muted:      #5a5a7a;
-  --gold:       #f0b429;
-  --gold-dim:   #7a5a10;
-  --btc:        #f7931a;
-  --btc-dim:    #5a3800;
-  --silver:     #a8b8cc;
-  --silver-dim: #3a4a58;
-  --cyan:       #38c9c9;
-  --cyan-dim:   #0e4040;
-  --green:      #2ecc71;
-  --red:        #e74c3c;
-  --scanline:   1;
+:root,[data-theme="dark"]{
+  --bg:#0a0a0f;--bg2:#0f0f18;--bg3:#1a1a2e;
+  --border:#1e1e2e;--border2:#3a3a58;
+  --text:#c8c8d8;--muted:#5a5a7a;
+  --cyan:#38c9c9;--cyan-dim:#0e4040;
+  --green:#2ecc71;--red:#e74c3c;
+  --gold:#f0b429;--btc:#f7931a;
+  --scanline:1;
 }
-
-
-[data-theme="light"] {
-  --bg:         #f0f0f8;
-  --bg2:        #e4e4f0;
-  --bg3:        #ffffff;
-  --border:     #d0d0e0;
-  --border2:    #b8b8cc;
-  --text:       #1a1a30;
-  --muted:      #7878a0;
-  --gold:       #a86e00;
-  --gold-dim:   #f5e8c0;
-  --btc:        #a05000;
-  --btc-dim:    #fde8c0;
-  --silver:     #4a6070;
-  --silver-dim: #ccd8e4;
-  --cyan:       #006888;
-  --cyan-dim:   #c0e8f4;
-  --green:      #1a7a3a;
-  --red:        #c01818;
-  --scanline:   0;
+[data-theme="light"]{
+  --bg:#f0f0f8;--bg2:#e4e4f0;--bg3:#ffffff;
+  --border:#d0d0e0;--border2:#b8b8cc;
+  --text:#1a1a30;--muted:#7878a0;
+  --cyan:#006888;--cyan-dim:#c0e8f4;
+  --green:#1a7a3a;--red:#c01818;
+  --gold:#a86e00;--btc:#a05000;
+  --scanline:0;
 }
 
 /* ─── RESET ─── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 16px;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-  transition: background .2s, color .2s;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Noto Sans JP',sans-serif;font-size:16px;
+  min-height:100dvh;display:flex;flex-direction:column;
+  overflow-x:hidden;transition:background .2s,color .2s;
 }
-
-/* scanline */
-body::before {
-  content: '';
-  position: fixed; inset: 0;
-  background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.07) 2px,rgba(0,0,0,.07) 4px);
-  pointer-events: none;
-  z-index: 9999;
-  opacity: var(--scanline);
-  transition: opacity .2s;
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.07) 2px,rgba(0,0,0,.07) 4px);
+  opacity:var(--scanline);transition:opacity .2s;
 }
+a{color:inherit;text-decoration:none;}
+button{font-family:'Noto Sans JP',sans-serif;}
 
 /* ─── HEADER ─── */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 12px;
-  height: 52px;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg2);
-  flex-shrink: 0;
-  gap: 8px;
-  min-width: 0;
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 12px;height:52px;
+  border-bottom:1px solid var(--border);background:var(--bg2);
+  flex-shrink:0;gap:8px;min-width:0;
 }
-
-.logo {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  color: var(--cyan);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
+.logo{font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--cyan);white-space:nowrap;}
+.logo span{color:var(--muted);font-size:11px;font-weight:400;margin-left:6px;}
+.header-right{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+#clock{font-size:13px;font-weight:500;color:var(--muted);white-space:nowrap;letter-spacing:.03em;}
+.theme-switcher{display:flex;gap:3px;}
+.theme-btn{
+  padding:5px 8px;border-radius:4px;border:1px solid var(--border2);
+  background:transparent;color:var(--muted);font-size:12px;font-weight:700;
+  cursor:pointer;transition:all .15s;line-height:1;
 }
-.logo span {
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 400;
-  margin-left: 6px;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-shrink: 0;
-}
-
-#clock {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--muted);
-  white-space: nowrap;
-  letter-spacing: .03em;
-}
-
-/* ─── THEME SWITCHER ─── */
-.theme-switcher {
-  display: flex;
-  gap: 3px;
-}
-
-.theme-btn {
-  padding: 5px 8px;
-  border-radius: 4px;
-  border: 1px solid var(--border2);
-  background: transparent;
-  color: var(--muted);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all .15s;
-  white-space: nowrap;
-  line-height: 1;
-}
-.theme-btn:hover { color: var(--text); border-color: var(--muted); }
-.theme-btn.active {
-  border-color: var(--cyan);
-  color: var(--cyan);
-  background: rgba(56,201,201,.1);
-}
+.theme-btn:hover{color:var(--text);border-color:var(--muted);}
+.theme-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(56,201,201,.1);}
 
 /* ─── SESSION BAR ─── */
-#session-bar {
-  display: flex;
-  gap: 6px;
-  padding: 8px 12px;
-  background: var(--bg2);
-  border-bottom: 1px solid var(--border);
-  flex-wrap: nowrap;
+#session-bar{
+  display:flex;gap:6px;padding:8px 12px;
+  background:var(--bg2);border-bottom:1px solid var(--border);
 }
+.session-pill{
+  font-size:12px;font-weight:500;padding:4px 10px;border-radius:3px;
+  border:1px solid var(--border2);color:var(--muted);letter-spacing:.04em;
+  transition:all .3s;white-space:nowrap;
+}
+.session-pill.active{color:var(--green);border-color:var(--green);background:rgba(46,204,113,.08);box-shadow:0 0 8px rgba(46,204,113,.2);}
+.session-pill .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:5px;vertical-align:middle;}
+.session-pill.active .dot{animation:blink 1.4s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
-.session-pill {
-  font-size: 12px;
-  font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 3px;
-  border: 1px solid var(--border2);
-  color: var(--muted);
-  letter-spacing: .04em;
-  transition: all .3s;
-  white-space: nowrap;
+/* ─── PAGE CONTENT ─── */
+.page-content{
+  flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:12px 12px 48px;display:flex;flex-direction:column;gap:14px;
 }
-.session-pill.active {
-  color: var(--green);
-  border-color: var(--green);
-  background: rgba(46,204,113,.08);
-  box-shadow: 0 0 8px rgba(46,204,113,.2);
-}
-.session-pill .dot {
-  display: inline-block;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: currentColor;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-.session-pill.active .dot { animation: blink 1.4s ease-in-out infinite; }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
-
-/* ─── TABS ─── */
-.tab-bar {
-  display: flex;
-  background: var(--bg2);
-  border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-}
-
-.tab-btn {
-  flex: 1;
-  height: 48px;
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
-  cursor: pointer;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  color: var(--muted);
-  transition: color .2s, border-color .2s;
-}
-.tab-btn:hover { color: var(--text); }
-.tab-btn[data-tab="gold"].active    { color: var(--gold);   border-color: var(--gold); }
-.tab-btn[data-tab="usdjpy"].active  { color: var(--cyan);   border-color: var(--cyan); }
-.tab-btn[data-tab="btc"].active     { color: var(--btc);    border-color: var(--btc); }
-
-/* ─── TAB PANELS ─── */
-.tab-panel {
-  display: none;
-  flex: 1;
-  flex-direction: column;
-  overflow-y: auto;
-  padding: 14px 12px 32px;
-  gap: 14px;
-}
-.tab-panel.active { display: flex; }
 
 /* ─── SECTION HEADING ─── */
-.sec-heading {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  color: var(--muted);
-  text-transform: uppercase;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--border);
+.sec-heading{
+  font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);
+  text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--border);
 }
-
-/* ─── CHART ROW ─── */
-.chart-row {
-  display: flex;
-  gap: 8px;
-  align-items: stretch;
-}
-
-.tv-btn {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px 12px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  border-radius: 8px;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .04em;
-  transition: background .15s, border-color .15s, color .15s;
-  min-height: 110px;
-  text-align: center;
-}
-.tv-btn:hover {
-  background: rgba(56,201,201,.06);
-  border-color: var(--cyan-dim);
-  color: var(--cyan);
-}
-.tv-icon { font-size: 30px; }
-
-.chart-side {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 36%;
-  flex-shrink: 0;
-}
-
-.side-btn {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 6px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  border-radius: 6px;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: .02em;
-  transition: background .15s, color .15s;
-  line-height: 1.3;
-}
-.side-btn:hover {
-  background: rgba(128,128,200,.06);
-  color: var(--text);
-}
-
-/* ─── APP LAUNCH ─── */
-.app-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.app-btn {
-  display: block;
-  padding: 18px 10px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  border-radius: 8px;
-  color: var(--text);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  cursor: pointer;
-  transition: all .15s;
-  text-align: center;
-  text-decoration: none;
-}
-.app-btn:hover {
-  background: rgba(56,201,201,.06);
-  border-color: var(--cyan-dim);
-  color: var(--cyan);
-}
-.app-sub {
-  display: block;
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--muted);
-  margin-top: 5px;
-  letter-spacing: .04em;
-}
-
-/* ─── NEWS SECTION ─── */
-.news-updated {
-  font-size: 11px;
-  color: var(--muted);
-  margin-bottom: 8px;
-  letter-spacing: .03em;
-}
-
-#news-list, #usdjpy-news-list, #btc-news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.news-item {
-  padding: 10px 12px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  border-radius: 6px;
-}
-
-.news-source {
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: .03em;
-  margin-bottom: 4px;
-}
-
-.news-title {
-  font-size: 13px;
-  color: var(--text);
-  text-decoration: none;
-  line-height: 1.45;
-  display: block;
-}
-.news-title:hover { color: var(--gold); }
 
 /* ─── TRADINGVIEW WIDGET ─── */
-.tv-widget-wrap {
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border2);
-}
-.tradingview-widget-copyright {
-  padding: 2px 8px 4px;
-  background: transparent;
-  font-size: 11px;
-  line-height: 1.4;
-  text-align: right;
-}
-.tradingview-widget-copyright .blue-text {
-  color: var(--muted) !important;
-  text-decoration: underline;
-}
+.tv-widget-wrap{border-radius:8px;overflow:hidden;border:1px solid var(--border2);}
+.tradingview-widget-copyright{padding:2px 8px 4px;background:transparent;font-size:11px;line-height:1.4;text-align:right;}
+.tradingview-widget-copyright .blue-text{color:var(--muted)!important;text-decoration:underline;}
 
+/* ─── CHART GRID ─── */
+.chart-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.chart-slot{
+  background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
+  padding:12px;min-height:80px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;cursor:pointer;
+  transition:all .15s;text-align:center;user-select:none;
+}
+.chart-slot.empty{border-style:dashed;border-color:var(--border2);}
+.chart-slot.empty:active,.chart-slot.filled:active{opacity:.7;}
+.slot-symbol{font-size:13px;font-weight:700;color:var(--text);}
+.slot-price{font-size:13px;font-weight:700;color:var(--cyan);margin-top:4px;}
+.slot-change{font-size:11px;margin-top:2px;}
+.slot-change.positive{color:var(--green);}
+.slot-change.negative{color:var(--red);}
+.slot-change.neutral{color:var(--muted);}
+.slot-add-icon{font-size:22px;color:var(--muted);}
+.slot-add-label{font-size:10px;color:var(--muted);margin-top:4px;}
 
-/* ─── CARD EMPHASIS（C案: ボーダー明るく + 背景明るく） ─── */
-[data-theme="dark"] {
-  --bg3:     #1a1a2e;
-  --border2: #3a3a58;
+/* ─── APP GRID ─── */
+.app-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.app-slot{
+  background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
+  padding:14px 10px;min-height:60px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;cursor:pointer;
+  transition:all .15s;text-align:center;user-select:none;
 }
+.app-slot.empty{border-style:dashed;}
+.app-slot.empty:active,.app-slot.filled:active{opacity:.7;}
+.app-name{font-size:13px;font-weight:700;color:var(--text);}
 
-/* ─── MINI CHARTS ─── */
-.mini-chart-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* ─── FEAR & GREED ─── */
+.fng-wrap{
+  background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
+  padding:16px;display:flex;align-items:center;gap:16px;
 }
+.fng-value{font-size:40px;font-weight:700;line-height:1;min-width:56px;text-align:center;}
+.fng-info{display:flex;flex-direction:column;gap:2px;}
+.fng-label{font-size:15px;font-weight:700;}
+.fng-updated{font-size:11px;color:var(--muted);margin-top:4px;}
+.fng-meter{
+  flex:1;height:8px;background:var(--border2);border-radius:4px;overflow:hidden;margin-top:6px;
+}
+.fng-meter-bar{height:100%;border-radius:4px;transition:width .5s;}
 
-.mini-chart-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 12px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  border-radius: 8px;
-  gap: 8px;
+/* ─── NEWS LINKS ─── */
+.news-links{display:flex;flex-direction:column;gap:6px;}
+.news-link-btn{
+  display:block;padding:12px 14px;background:var(--bg3);
+  border:1px solid var(--border2);border-radius:6px;
+  color:var(--text);font-size:13px;font-weight:700;
+  transition:border-color .15s,color .15s;
 }
-
-.mini-chart-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 80px;
-}
-
-.mini-chart-symbol {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: .04em;
-}
-
-.mini-chart-name {
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: .02em;
-}
-
-.mini-chart-widget {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-/* ─── CUSTOM ITEMS ─── */
-.custom-items-section {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.custom-items-section:empty { display: none; }
-
-.custom-items-heading {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  color: var(--muted);
-  text-transform: uppercase;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--border);
-}
-
-.custom-items-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.custom-item {
-  padding: 10px 12px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: grab;
-  touch-action: none;
-  user-select: none;
-}
-.custom-item:active { cursor: grabbing; }
-
-.custom-item-label {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-}
-.custom-item-label span {
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--muted);
-  margin-left: 8px;
-}
-
-.custom-item-link {
-  font-size: 12px;
-  color: var(--cyan);
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  margin-left: 8px;
-}
-.custom-item-link:hover { text-decoration: underline; }
-
-.sortable-ghost {
-  opacity: 0.4;
-  background: var(--bg2);
-}
-
-/* ─── FAB ─── */
-.fab-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 16px;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--cyan);
-  color: #fff;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,.4);
-  transition: transform .15s, box-shadow .15s;
-}
-.fab-btn:active { transform: scale(.92); }
+.news-link-btn:hover{border-color:var(--cyan-dim);color:var(--cyan);}
 
 /* ─── MODAL OVERLAY ─── */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.6);
-  z-index: 1001;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s ease;
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;
+  display:flex;align-items:flex-end;
 }
-.modal-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
+.modal-overlay.hidden{display:none;}
+
+/* ─── MODAL SHEET ─── */
+.modal-sheet{
+  width:100%;max-height:85vh;background:var(--bg2);
+  border-radius:12px 12px 0 0;border-top:1px solid var(--border2);
+  padding:16px 14px 24px;overflow-y:auto;-webkit-overflow-scrolling:touch;
+}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.modal-title{font-size:14px;font-weight:700;color:var(--text);}
+.modal-close{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;padding:4px 8px;line-height:1;}
+.modal-close:hover{color:var(--text);}
+
+/* search input */
+.modal-search-wrap{margin-bottom:12px;}
+.modal-search-input{
+  width:100%;background:var(--bg3);border:1px solid var(--border2);
+  border-radius:6px;padding:10px 12px;color:var(--text);
+  font-size:14px;font-family:'Noto Sans JP',sans-serif;
+  outline:none;transition:border-color .15s;-webkit-appearance:none;
+}
+.modal-search-input:focus{border-color:var(--cyan);}
+.modal-search-input::placeholder{color:var(--muted);}
+.modal-search-input::-webkit-search-cancel-button{display:none;}
+
+/* section label */
+.modal-section-label{
+  font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.06em;
+  text-transform:uppercase;margin:12px 0 6px;
 }
 
-/* ─── MODAL PANEL ─── */
-.modal-panel {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  background: var(--bg2);
-  border-radius: 12px 12px 0 0;
-  z-index: 1002;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(100%);
-  transition: transform .25s ease;
+/* result items */
+.result-item{
+  padding:10px 12px;background:var(--bg3);border:1px solid var(--border2);
+  border-radius:6px;margin-bottom:4px;cursor:pointer;
+  display:flex;gap:10px;align-items:center;transition:border-color .15s;
 }
-.modal-panel.open {
-  transform: translateY(0);
-}
+.result-item:hover{border-color:var(--cyan-dim);}
+.result-item:active{opacity:.7;}
+.result-symbol{font-size:13px;font-weight:700;color:var(--text);min-width:52px;}
+.result-name{font-size:12px;color:var(--muted);}
+.results-empty{padding:24px 0;text-align:center;color:var(--muted);font-size:13px;}
 
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 16px 12px;
-  border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
+/* app catalog */
+.app-catalog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:4px;}
+.catalog-item{
+  padding:11px 8px;background:var(--bg3);border:1px solid var(--border2);
+  border-radius:6px;cursor:pointer;text-align:center;
+  font-size:13px;font-weight:700;color:var(--text);
+  transition:border-color .15s;
 }
+.catalog-item:hover{border-color:var(--cyan-dim);color:var(--cyan);}
+.catalog-item:active{opacity:.7;}
 
-.modal-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: .04em;
+/* manual input */
+.manual-input{
+  width:100%;background:var(--bg3);border:1px solid var(--border2);
+  border-radius:6px;padding:10px 12px;color:var(--text);
+  font-size:14px;font-family:'Noto Sans JP',sans-serif;
+  outline:none;transition:border-color .15s;margin-top:6px;
+  -webkit-appearance:none;
 }
+.manual-input:focus{border-color:var(--cyan);}
+.manual-input::placeholder{color:var(--muted);}
+#app-manual-add{
+  width:100%;margin-top:10px;padding:12px;
+  background:var(--cyan);color:#fff;border:none;border-radius:6px;
+  font-size:14px;font-weight:700;cursor:pointer;transition:opacity .15s;
+}
+#app-manual-add:active{opacity:.8;}
 
-.modal-close {
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-size: 18px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: color .15s;
-  line-height: 1;
+/* ─── LONGPRESS MENU ─── */
+#overlay-lp .modal-sheet{padding:16px 14px 32px;}
+.longpress-menu{display:flex;flex-direction:column;gap:8px;}
+.longpress-menu button{
+  padding:14px;border-radius:8px;border:1px solid var(--border2);
+  background:var(--bg3);color:var(--text);font-size:14px;font-weight:700;cursor:pointer;
+  transition:opacity .15s;
 }
-.modal-close:hover { color: var(--text); }
+.longpress-menu button:active{opacity:.7;}
+#lp-delete{color:var(--red);border-color:var(--red);}
+#lp-cancel{color:var(--muted);}
 
-.modal-search-wrap {
-  padding: 10px 16px;
-  flex-shrink: 0;
-}
-
-.modal-search-input {
-  width: 100%;
-  padding: 10px 12px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  border-radius: 6px;
-  color: var(--text);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color .15s;
-  -webkit-appearance: none;
-}
-.modal-search-input::placeholder { color: var(--muted); }
-.modal-search-input:focus { border-color: var(--cyan); }
-.modal-search-input::-webkit-search-cancel-button { display: none; }
-
-.modal-results {
-  flex: 1;
-  overflow-y: auto;
-  padding: 0 16px 8px;
-}
-
-.modal-results-empty {
-  padding: 32px 0;
-  text-align: center;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.result-category-heading {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  color: var(--muted);
-  text-transform: uppercase;
-  padding: 12px 0 6px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 6px;
-}
-
-.result-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 0;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  transition: opacity .15s;
-}
-.result-item:last-child { border-bottom: none; }
-.result-item.disabled {
-  opacity: .38;
-  pointer-events: none;
-}
-
-.result-checkbox {
-  width: 18px;
-  height: 18px;
-  border-radius: 3px;
-  border: 1.5px solid var(--border2);
-  background: transparent;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background .15s, border-color .15s;
-}
-.result-item.checked .result-checkbox {
-  background: var(--cyan);
-  border-color: var(--cyan);
-}
-.result-checkbox::after {
-  content: '';
-  display: none;
-  width: 5px;
-  height: 9px;
-  border: 2px solid #fff;
-  border-top: none;
-  border-left: none;
-  transform: rotate(45deg) translateY(-1px);
-}
-.result-item.checked .result-checkbox::after { display: block; }
-
-.result-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.result-name {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.result-sub {
-  font-size: 11px;
-  color: var(--muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 1px;
-}
-
-.result-badge {
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 3px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  color: var(--muted);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* ─── MODAL FOOTER ─── */
-.modal-footer {
-  padding: 12px 16px;
-  border-top: 1px solid var(--border);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-counter {
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-/* ─── SMALL SCREEN ADJUSTMENTS ─── */
-@media (max-width: 360px) {
-  #clock { font-size: 11px; }
-  .fab-btn { bottom: 16px; right: 12px; }
+/* ─── RESPONSIVE ─── */
+@media(max-width:375px){
+  #clock{font-size:11px;}
+  .slot-price{font-size:12px;}
+  .slot-symbol{font-size:12px;}
 }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">FX COCKPIT <span>by azteca</span></div>
+  <div class="logo">FX COCKPIT 2 <span>CRYPTO by azteca</span></div>
   <div class="header-right">
     <div id="clock">--:--:--</div>
     <div class="theme-switcher">
-      <button class="theme-btn active" data-theme="dark">D</button>
+      <button class="theme-btn" data-theme="dark">D</button>
       <button class="theme-btn" data-theme="light">L</button>
     </div>
   </div>
@@ -779,959 +271,623 @@ header {
   <div class="session-pill" id="sess-ny"><span class="dot"></span>ニューヨーク</div>
 </div>
 
-<div class="tab-bar">
-  <button class="tab-btn active" data-tab="gold">GOLD</button>
-  <button class="tab-btn" data-tab="usdjpy">USD/JPY</button>
-  <button class="tab-btn" data-tab="btc">BTC</button>
-</div>
-
-<!-- ═══ GOLD ═══ -->
-<div class="tab-panel active" id="panel-gold">
-
-  <!-- ⚠️ TradingViewウィジェット: 帰属表示（ロゴ・リンク）をCSSで隠したり削除したりしないこと -->
-  <div class="tv-widget-wrap" id="tv-gold-wrap"></div>
-  <!-- ⚠️ TradingViewウィジェット終了: 上記帰属表示を削除・非表示にしないこと -->
-
-  <div class="custom-items-section" id="custom-items-gold"></div>
-
-  <div class="sec-heading">関連チャート</div>
-  <div class="mini-chart-list">
-    <div class="mini-chart-card">
-      <div class="mini-chart-info">
-        <span class="mini-chart-symbol">DXY</span>
-        <span class="mini-chart-name">ドルインデックス</span>
-      </div>
-      <div class="mini-chart-widget" id="mc-dxy"></div>
-    </div>
-    <div class="mini-chart-card">
-      <div class="mini-chart-info">
-        <span class="mini-chart-symbol">WTI</span>
-        <span class="mini-chart-name">原油</span>
-      </div>
-      <div class="mini-chart-widget" id="mc-wti"></div>
-    </div>
-  </div>
-
-  <div class="sec-heading">チャート・分析</div>
-  <div class="chart-row">
-    <a class="tv-btn" href="https://jp.tradingview.com/chart/?symbol=XAUUSD" rel="noopener"
-       data-tv-symbol="XAUUSD" data-tv-web="https://jp.tradingview.com/chart/?symbol=XAUUSD">
-      <span class="tv-icon">📈</span>
-      TradingView
-    </a>
-    <div class="chart-side">
-      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">主な経済指標</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/XAUUSD/news/" target="_blank" rel="noopener">ゴールドニュース</a>
-      <a class="side-btn" href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">恐怖&amp;強欲指数</a>
-    </div>
-  </div>
-
-  <div class="sec-heading">アプリ起動</div>
-  <div class="app-grid">
-    <a class="app-btn" href="metatrader5://">
-      MT5
-      <span class="app-sub">MetaTrader 5</span>
-    </a>
-    <a class="app-btn" href="metatrader4://">
-      MT4
-      <span class="app-sub">MetaTrader 4</span>
-    </a>
-  </div>
-
-  <div class="sec-heading">最新ニュース</div>
-  <div class="news-updated" id="news-updated"></div>
-  <div id="news-list"></div>
-
-</div>
-
-<!-- ═══ USD/JPY ═══ -->
-<div class="tab-panel" id="panel-usdjpy">
-
-  <!-- ⚠️ TradingViewウィジェット: 帰属表示（ロゴ・リンク）をCSSで隠したり削除したりしないこと -->
-  <div class="tv-widget-wrap" id="tv-usdjpy-wrap"></div>
-  <!-- ⚠️ TradingViewウィジェット終了: 上記帰属表示を削除・非表示にしないこと -->
-
-  <div class="custom-items-section" id="custom-items-usdjpy"></div>
-
-  <div class="sec-heading">関連チャート</div>
-  <div class="mini-chart-list">
-    <div class="mini-chart-card">
-      <div class="mini-chart-info">
-        <span class="mini-chart-symbol">DXY</span>
-        <span class="mini-chart-name">ドルインデックス</span>
-      </div>
-      <div class="mini-chart-widget" id="mc-dxy-usdjpy"></div>
-    </div>
-    <div class="mini-chart-card">
-      <div class="mini-chart-info">
-        <span class="mini-chart-symbol">US02Y</span>
-        <span class="mini-chart-name">米2年債利回り</span>
-      </div>
-      <div class="mini-chart-widget" id="mc-us02y"></div>
-    </div>
-  </div>
-
-  <div class="sec-heading">チャート・分析</div>
-  <div class="chart-row">
-    <a class="tv-btn" href="https://jp.tradingview.com/chart/?symbol=USDJPY" rel="noopener"
-       data-tv-symbol="USDJPY" data-tv-web="https://jp.tradingview.com/chart/?symbol=USDJPY">
-      <span class="tv-icon">📈</span>
-      TradingView
-    </a>
-    <div class="chart-side">
-      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">主な経済指標</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/USDJPY/news/" target="_blank" rel="noopener">ドル円関連ニュース</a>
-      <a class="side-btn" href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener">恐怖&amp;強欲指数</a>
-    </div>
-  </div>
-
-  <div class="sec-heading">アプリ起動</div>
-  <div class="app-grid">
-    <a class="app-btn" href="metatrader5://">
-      MT5
-      <span class="app-sub">MetaTrader 5</span>
-    </a>
-    <a class="app-btn" href="metatrader4://">
-      MT4
-      <span class="app-sub">MetaTrader 4</span>
-    </a>
-  </div>
-
-  <div class="sec-heading">最新ニュース</div>
-  <div class="news-updated" id="usdjpy-news-updated"></div>
-  <div id="usdjpy-news-list"></div>
-
-</div>
-
-<!-- ═══ BTC ═══ -->
-<div class="tab-panel" id="panel-btc">
+<div class="page-content">
 
   <!-- ⚠️ TradingViewウィジェット: 帰属表示（ロゴ・リンク）をCSSで隠したり削除したりしないこと -->
   <div class="tv-widget-wrap" id="tv-btc-wrap"></div>
   <!-- ⚠️ TradingViewウィジェット終了: 上記帰属表示を削除・非表示にしないこと -->
 
-  <div class="custom-items-section" id="custom-items-btc"></div>
+  <div class="sec-heading">マイチャート</div>
+  <div class="chart-grid" id="chart-grid"></div>
 
-  <div class="sec-heading">関連チャート</div>
-  <div class="mini-chart-list">
-    <div class="mini-chart-card">
-      <div class="mini-chart-info">
-        <span class="mini-chart-symbol">BTC.D</span>
-        <span class="mini-chart-name">BTCドミナンス</span>
-      </div>
-      <div class="mini-chart-widget" id="mc-btcd"></div>
-    </div>
-    <div class="mini-chart-card">
-      <div class="mini-chart-info">
-        <span class="mini-chart-symbol">ETH</span>
-        <span class="mini-chart-name">イーサリアム</span>
-      </div>
-      <div class="mini-chart-widget" id="mc-eth"></div>
-    </div>
-    <div class="mini-chart-card">
-      <div class="mini-chart-info">
-        <span class="mini-chart-symbol">XRP</span>
-        <span class="mini-chart-name">リップル</span>
-      </div>
-      <div class="mini-chart-widget" id="mc-xrp"></div>
+  <div class="sec-heading">マイアプリ・リンク</div>
+  <div class="app-grid" id="app-grid"></div>
+
+  <div class="sec-heading">恐怖強欲指数</div>
+  <div class="fng-wrap">
+    <div class="fng-value" id="fng-value">--</div>
+    <div class="fng-info">
+      <div class="fng-label" id="fng-label">--</div>
+      <div class="fng-meter"><div class="fng-meter-bar" id="fng-bar" style="width:0%"></div></div>
+      <div class="fng-updated" id="fng-updated"></div>
     </div>
   </div>
 
-  <div class="sec-heading">チャート・分析</div>
-  <div class="chart-row">
-    <a class="tv-btn" href="https://jp.tradingview.com/chart/?symbol=BTCUSD" rel="noopener"
-       data-tv-symbol="BTCUSD" data-tv-web="https://jp.tradingview.com/chart/?symbol=BTCUSD">
-      <span class="tv-icon">📈</span>
-      TradingView
-    </a>
-    <div class="chart-side">
-      <a class="side-btn" href="https://fx.minkabu.jp/indicators" target="_blank" rel="noopener">主な経済指標</a>
-      <a class="side-btn" href="https://jp.tradingview.com/symbols/BTCUSD/news/" target="_blank" rel="noopener">BTCニュース</a>
-      <a class="side-btn" href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank" rel="noopener">Crypto恐怖&amp;強欲指数</a>
-    </div>
+  <div class="sec-heading">クリプトニュース</div>
+  <div class="news-links">
+    <a class="news-link-btn" href="https://coinpost.jp" target="_blank" rel="noopener">CoinPost</a>
+    <a class="news-link-btn" href="https://jp.cointelegraph.com" target="_blank" rel="noopener">Cointelegraph JP</a>
+    <a class="news-link-btn" href="https://www.coindeskjapan.com" target="_blank" rel="noopener">CoinDesk Japan</a>
+    <a class="news-link-btn" href="https://cryptonews.com/jp/" target="_blank" rel="noopener">CryptoNews Japan</a>
+    <a class="news-link-btn" href="https://www.neweconomy.jp" target="_blank" rel="noopener">新しい経済</a>
   </div>
-
-  <div class="sec-heading">アプリ起動</div>
-  <div class="app-grid">
-    <a class="app-btn" href="metatrader5://">
-      MT5
-      <span class="app-sub">MetaTrader 5</span>
-    </a>
-    <a class="app-btn" href="metatrader4://">
-      MT4
-      <span class="app-sub">MetaTrader 4</span>
-    </a>
-  </div>
-
-  <div class="sec-heading">最新ニュース</div>
-  <div class="news-updated" id="btc-news-updated"></div>
-  <div id="btc-news-list"></div>
 
 </div>
 
-<!-- ─── FAB ─── -->
-<button id="fab-customize" class="fab-btn" aria-label="カスタマイズ">＋</button>
+<!-- ─── CHART SEARCH MODAL ─── -->
+<div id="overlay-chart" class="modal-overlay hidden">
+  <div class="modal-sheet" id="modal-chart">
+    <div class="modal-header">
+      <span class="modal-title">銘柄を追加</span>
+      <button class="modal-close" id="close-chart">✕</button>
+    </div>
+    <div class="modal-search-wrap">
+      <input id="chart-search" class="modal-search-input" type="search"
+             placeholder="BTC / ビットコイン / bitcoin..." autocomplete="off" spellcheck="false">
+    </div>
+    <div id="chart-results"></div>
+  </div>
+</div>
 
-<!-- ─── MODAL ─── -->
-<div id="modal-overlay" class="modal-overlay"></div>
-<div id="modal-panel" class="modal-panel" role="dialog" aria-modal="true" aria-label="カスタマイズ">
-  <div class="modal-header">
-    <span class="modal-title">マイリスト編集</span>
-    <button id="modal-close" class="modal-close" aria-label="閉じる">✕</button>
+<!-- ─── APP CATALOG MODAL ─── -->
+<div id="overlay-app" class="modal-overlay hidden">
+  <div class="modal-sheet" id="modal-app">
+    <div class="modal-header">
+      <span class="modal-title">アプリ・リンクを追加</span>
+      <button class="modal-close" id="close-app">✕</button>
+    </div>
+
+    <div class="modal-section-label">取引所（国内）</div>
+    <div class="app-catalog-grid">
+      <div class="catalog-item" data-name="coincheck"    data-url="https://coincheck.com/ja/">coincheck</div>
+      <div class="catalog-item" data-name="bitFlyer"     data-url="https://bitflyer.com/ja-jp/">bitFlyer</div>
+      <div class="catalog-item" data-name="GMOコイン"    data-url="https://coin.z.com/jp/">GMOコイン</div>
+      <div class="catalog-item" data-name="bitbank"      data-url="https://bitbank.cc/">bitbank</div>
+      <div class="catalog-item" data-name="SBI VC Trade" data-url="https://vctrade.sbisec.co.jp/">SBI VC Trade</div>
+      <div class="catalog-item" data-name="楽天ウォレット" data-url="https://wallet.rakuten.co.jp/">楽天ウォレット</div>
+      <div class="catalog-item" data-name="BITPOINT"     data-url="https://www.bitpoint.co.jp/">BITPOINT</div>
+      <div class="catalog-item" data-name="DMM Bitcoin"  data-url="https://bitcoin.dmm.com/">DMM Bitcoin</div>
+      <div class="catalog-item" data-name="BitTrade"     data-url="https://bittrade.co.jp/">BitTrade</div>
+    </div>
+
+    <div class="modal-section-label">取引所（海外）</div>
+    <div class="app-catalog-grid">
+      <div class="catalog-item" data-name="Binance"      data-url="https://www.binance.com/ja">Binance</div>
+      <div class="catalog-item" data-name="Bybit"        data-url="https://www.bybit.com/ja-JP/">Bybit</div>
+      <div class="catalog-item" data-name="Bitget"       data-url="https://www.bitget.com/ja/">Bitget</div>
+      <div class="catalog-item" data-name="OKX"          data-url="https://www.okx.com/ja">OKX</div>
+      <div class="catalog-item" data-name="Kraken"       data-url="https://www.kraken.com/ja-jp">Kraken</div>
+      <div class="catalog-item" data-name="MEXC"         data-url="https://www.mexc.com/ja-JP">MEXC</div>
+      <div class="catalog-item" data-name="BingX"        data-url="https://bingx.com/ja-jp/">BingX</div>
+      <div class="catalog-item" data-name="CoinW"        data-url="https://www.coinw.com/">CoinW</div>
+      <div class="catalog-item" data-name="KuCoin"       data-url="https://www.kucoin.com/ja">KuCoin</div>
+      <div class="catalog-item" data-name="Gate.io"      data-url="https://www.gate.io/ja">Gate.io</div>
+      <div class="catalog-item" data-name="Hyperliquid"  data-url="https://app.hyperliquid.xyz/">Hyperliquid</div>
+    </div>
+
+    <div class="modal-section-label">ウォレット</div>
+    <div class="app-catalog-grid">
+      <div class="catalog-item" data-name="MetaMask"     data-url="https://metamask.io/">MetaMask</div>
+      <div class="catalog-item" data-name="Trust Wallet" data-url="https://trustwallet.com/ja">Trust Wallet</div>
+      <div class="catalog-item" data-name="Phantom"      data-url="https://phantom.app/">Phantom</div>
+      <div class="catalog-item" data-name="Rabby Wallet" data-url="https://rabby.io/">Rabby Wallet</div>
+      <div class="catalog-item" data-name="Backpack"     data-url="https://backpack.app/">Backpack</div>
+      <div class="catalog-item" data-name="Ledger"       data-url="https://www.ledger.com/ja">Ledger</div>
+      <div class="catalog-item" data-name="Trezor"       data-url="https://trezor.io/">Trezor</div>
+      <div class="catalog-item" data-name="Exodus"       data-url="https://www.exodus.com/">Exodus</div>
+    </div>
+
+    <div class="modal-section-label">直接入力</div>
+    <input id="app-name-input" class="manual-input" type="text" placeholder="名前（例: MyApp）" autocomplete="off">
+    <input id="app-url-input"  class="manual-input" type="url"  placeholder="URL（例: https://example.com）" autocomplete="off">
+    <button id="app-manual-add">追加</button>
   </div>
-  <div class="modal-search-wrap">
-    <input id="modal-search" class="modal-search-input" type="search"
-           placeholder="銘柄名・サイト名・カテゴリで検索..." autocomplete="off" spellcheck="false">
-  </div>
-  <div id="modal-results" class="modal-results">
-    <div class="modal-results-empty">検索ワードを入力してください</div>
-  </div>
-  <div class="modal-footer">
-    <span id="modal-counter" class="modal-counter">登録済み 0 / 8件</span>
+</div>
+
+<!-- ─── LONGPRESS MENU ─── -->
+<div id="overlay-lp" class="modal-overlay hidden">
+  <div class="modal-sheet">
+    <div class="longpress-menu">
+      <button id="lp-change">変更</button>
+      <button id="lp-delete">削除</button>
+      <button id="lp-cancel">キャンセル</button>
+    </div>
   </div>
 </div>
 
 <script>
-// ─── TRADINGVIEW APP LAUNCH WITH WEB FALLBACK ───
-document.querySelectorAll('[data-tv-symbol]').forEach(btn => {
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    const webUrl = this.dataset.tvWeb;
-    const symbol = this.dataset.tvSymbol;
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// ─── CONSTANTS ───────────────────────────────────────
+const STORAGE_KEY   = 'fxc2-crypto-data';
+const MAX_CHARTS    = 10;
+const MAX_APPS      = 4;
+const PRICE_INTERVAL = 30000;
 
-    if (!isMobile) {
-      window.open(webUrl, '_blank', 'noopener,noreferrer');
-      return;
-    }
+const CRYPTO_ALIAS = {
+  'ビットコイン':'BTC','bitcoin':'BTC',
+  'イーサリアム':'ETH','ethereum':'ETH',
+  'リップル':'XRP',
+  'ソラナ':'SOL',
+  'ドージ':'DOGE','dogecoin':'DOGE',
+};
 
-    let appOpened = false;
-    const onHide = () => {
-      if (document.hidden) {
-        appOpened = true;
-        clearTimeout(timer);
-        document.removeEventListener('visibilitychange', onHide);
+// ─── STATE ───────────────────────────────────────────
+let _data = {
+  charts: Array(MAX_CHARTS).fill(null),
+  apps: [{ slot:0, name:'Bitget', url:'https://www.bitget.com/ja/' }, null, null, null],
+};
+let _coins       = [];
+let _prices      = {};
+let _pendingSlot = null; // { type:'chart'|'app', index }
+let _searchTimer = null;
+
+// ─── STORAGE ─────────────────────────────────────────
+function loadData() {
+  try {
+    const s = localStorage.getItem(STORAGE_KEY);
+    if (s) {
+      const p = JSON.parse(s);
+      if (Array.isArray(p.charts)) {
+        _data.charts = p.charts;
+        while (_data.charts.length < MAX_CHARTS) _data.charts.push(null);
+        _data.charts = _data.charts.slice(0, MAX_CHARTS);
       }
-    };
-    document.addEventListener('visibilitychange', onHide);
+      if (Array.isArray(p.apps)) {
+        _data.apps = p.apps;
+        while (_data.apps.length < MAX_APPS) _data.apps.push(null);
+        _data.apps = _data.apps.slice(0, MAX_APPS);
+      }
+    } else {
+      saveData();
+    }
+  } catch(e) { saveData(); }
+}
 
-    const timer = setTimeout(() => {
-      document.removeEventListener('visibilitychange', onHide);
-      if (!appOpened) window.open(webUrl, '_blank', 'noopener,noreferrer');
-    }, 1500);
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(_data));
+}
 
-    window.location.href = `tradingview://chart?symbol=${symbol}`;
+// ─── COINS ───────────────────────────────────────────
+async function loadCoins() {
+  try {
+    const res = await fetch('public/data/coins.json');
+    const d   = await res.json();
+    _coins = Array.isArray(d.coins) ? d.coins : [];
+  } catch(e) { console.warn('coins.json load failed:', e); }
+}
+
+function searchCoins(raw) {
+  const q    = raw.trim();
+  if (!q) return [];
+  const qLow = q.toLowerCase();
+  const mapped = (CRYPTO_ALIAS[q] || CRYPTO_ALIAS[qLow] || '').toLowerCase();
+
+  function score(c) {
+    const sym  = (c.symbol || '').toLowerCase();
+    const name = (c.name   || '').toLowerCase();
+    if (mapped && sym === mapped)       return 100;
+    if (sym === qLow)                   return 95;
+    if (sym.startsWith(qLow))          return 88;
+    if (name === qLow)                  return 80;
+    if (name.startsWith(qLow))         return 72;
+    if (name.includes(qLow))           return 60;
+    if (mapped && name.includes(mapped))return 50;
+    return 0;
+  }
+
+  return _coins
+    .map(c => ({ c, s: score(c) }))
+    .filter(x => x.s > 0)
+    .sort((a, b) => b.s - a.s)
+    .slice(0, 15)
+    .map(x => x.c);
+}
+
+// ─── FORMAT ──────────────────────────────────────────
+function fmtPrice(v) {
+  if (v == null) return '--';
+  if (v >= 10000) return '$' + Math.round(v).toLocaleString('en-US');
+  if (v >= 100)   return '$' + v.toLocaleString('en-US', { maximumFractionDigits: 2 });
+  if (v >= 1)     return '$' + v.toFixed(2);
+  if (v >= 0.01)  return '$' + v.toFixed(4);
+  return '$' + v.toFixed(6);
+}
+
+function fmtChange(v) {
+  if (v == null) return '--';
+  return (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ─── RENDER CHART SLOTS ──────────────────────────────
+function renderChartSlots() {
+  const grid = document.getElementById('chart-grid');
+  grid.innerHTML = '';
+  _data.charts.forEach((coin, i) => {
+    const el = document.createElement('div');
+    if (coin) {
+      const p   = _prices[coin.id];
+      const px  = p ? fmtPrice(p.usd) : '--';
+      const ch  = p ? p.usd_24h_change : null;
+      const cls = ch == null ? 'neutral' : ch >= 0 ? 'positive' : 'negative';
+      el.className = 'chart-slot filled';
+      el.innerHTML =
+        `<div class="slot-symbol">${escHtml(coin.symbol)}</div>` +
+        `<div class="slot-price">${escHtml(px)}</div>` +
+        `<div class="slot-change ${cls}">${escHtml(fmtChange(ch))}</div>`;
+      el.dataset.coinId = coin.id;
+    } else {
+      el.className = 'chart-slot empty';
+      el.innerHTML = '<div class="slot-add-icon">＋</div><div class="slot-add-label">銘柄を追加</div>';
+    }
+    el.dataset.slot = i;
+    attachSlotHandlers(el, 'chart', i);
+    grid.appendChild(el);
   });
+}
+
+// ─── RENDER APP SLOTS ────────────────────────────────
+function renderAppSlots() {
+  const grid = document.getElementById('app-grid');
+  grid.innerHTML = '';
+  _data.apps.forEach((app, i) => {
+    const el = document.createElement('div');
+    if (app) {
+      el.className = 'app-slot filled';
+      el.innerHTML = `<div class="app-name">${escHtml(app.name)}</div>`;
+    } else {
+      el.className = 'app-slot empty';
+      el.innerHTML = '<div class="slot-add-icon">＋</div><div class="slot-add-label">アプリ・リンクを追加</div>';
+    }
+    el.dataset.slot = i;
+    attachSlotHandlers(el, 'app', i);
+    grid.appendChild(el);
+  });
+}
+
+// ─── SLOT HANDLERS (TAP + LONG PRESS) ────────────────
+function attachSlotHandlers(el, type, index) {
+  let lpTimer = null;
+  let lpFired = false;
+  let startX  = 0;
+  let startY  = 0;
+
+  el.addEventListener('touchstart', e => {
+    lpFired = false;
+    startX  = e.touches[0].clientX;
+    startY  = e.touches[0].clientY;
+    lpTimer = setTimeout(() => {
+      lpFired = true;
+      showLpMenu(type, index);
+    }, 600);
+  }, { passive: true });
+
+  el.addEventListener('touchmove', e => {
+    if (!lpTimer) return;
+    const dx = Math.abs(e.touches[0].clientX - startX);
+    const dy = Math.abs(e.touches[0].clientY - startY);
+    if (dx > 10 || dy > 10) { clearTimeout(lpTimer); lpTimer = null; }
+  }, { passive: true });
+
+  el.addEventListener('touchend', () => { clearTimeout(lpTimer); lpTimer = null; });
+  el.addEventListener('touchcancel', () => { clearTimeout(lpTimer); lpTimer = null; });
+  el.addEventListener('contextmenu', e => e.preventDefault());
+
+  el.addEventListener('click', () => {
+    if (lpFired) { lpFired = false; return; }
+    onSlotTap(type, index);
+  });
+}
+
+function onSlotTap(type, index) {
+  if (type === 'chart') {
+    const coin = _data.charts[index];
+    if (coin) {
+      window.open(`https://jp.tradingview.com/chart/?symbol=${coin.symbol}USDT`, '_blank', 'noopener');
+    } else {
+      openChartModal(index);
+    }
+  } else {
+    const app = _data.apps[index];
+    if (app) {
+      window.open(app.url, '_blank', 'noopener');
+    } else {
+      openAppModal(index);
+    }
+  }
+}
+
+// ─── LONG PRESS MENU ─────────────────────────────────
+function showLpMenu(type, index) {
+  _pendingSlot = { type, index };
+  document.getElementById('overlay-lp').classList.remove('hidden');
+}
+
+function hideLpMenu() {
+  document.getElementById('overlay-lp').classList.add('hidden');
+}
+
+document.getElementById('lp-change').addEventListener('click', () => {
+  hideLpMenu();
+  if (!_pendingSlot) return;
+  if (_pendingSlot.type === 'chart') openChartModal(_pendingSlot.index);
+  else openAppModal(_pendingSlot.index);
 });
 
-// ─── TRADINGVIEW WIDGETS ───
-function createTVWidget(wrapId, oandaSymbol) {
-  const wrap = document.getElementById(wrapId);
+document.getElementById('lp-delete').addEventListener('click', () => {
+  if (!_pendingSlot) return;
+  if (_pendingSlot.type === 'chart') {
+    _data.charts[_pendingSlot.index] = null;
+    saveData();
+    renderChartSlots();
+  } else {
+    _data.apps[_pendingSlot.index] = null;
+    saveData();
+    renderAppSlots();
+  }
+  hideLpMenu();
+});
+
+document.getElementById('lp-cancel').addEventListener('click', hideLpMenu);
+document.getElementById('overlay-lp').addEventListener('click', e => {
+  if (e.target === document.getElementById('overlay-lp')) hideLpMenu();
+});
+
+// ─── CHART MODAL ─────────────────────────────────────
+function openChartModal(index) {
+  _pendingSlot = { type: 'chart', index };
+  document.getElementById('chart-search').value = '';
+  document.getElementById('chart-results').innerHTML = '';
+  document.getElementById('overlay-chart').classList.remove('hidden');
+  setTimeout(() => document.getElementById('chart-search').focus(), 280);
+}
+
+function closeChartModal() {
+  document.getElementById('overlay-chart').classList.add('hidden');
+}
+
+document.getElementById('close-chart').addEventListener('click', closeChartModal);
+document.getElementById('overlay-chart').addEventListener('click', e => {
+  if (e.target === document.getElementById('overlay-chart')) closeChartModal();
+});
+
+document.getElementById('chart-search').addEventListener('input', e => {
+  clearTimeout(_searchTimer);
+  const q = e.target.value;
+  _searchTimer = setTimeout(() => {
+    const results = searchCoins(q);
+    const container = document.getElementById('chart-results');
+    if (!q.trim()) { container.innerHTML = ''; return; }
+    if (!results.length) {
+      container.innerHTML = '<div class="results-empty">該当なし</div>';
+      return;
+    }
+    container.innerHTML = results.map(c =>
+      `<div class="result-item" data-id="${escHtml(c.id)}" data-symbol="${escHtml((c.symbol||'').toUpperCase())}" data-name="${escHtml(c.name||'')}">` +
+        `<span class="result-symbol">${escHtml((c.symbol||'').toUpperCase())}</span>` +
+        `<span class="result-name">${escHtml(c.name||'')}</span>` +
+      `</div>`
+    ).join('');
+  }, 200);
+});
+
+document.getElementById('chart-results').addEventListener('click', e => {
+  const item = e.target.closest('.result-item');
+  if (!item || !_pendingSlot) return;
+  const idx = _pendingSlot.index;
+  _data.charts[idx] = {
+    slot:   idx,
+    id:     item.dataset.id,
+    symbol: item.dataset.symbol,
+    name:   item.dataset.name,
+  };
+  saveData();
+  closeChartModal();
+  renderChartSlots();
+  fetchPricesNow();
+});
+
+// ─── APP MODAL ───────────────────────────────────────
+function openAppModal(index) {
+  _pendingSlot = { type: 'app', index };
+  document.getElementById('app-name-input').value = '';
+  document.getElementById('app-url-input').value  = '';
+  document.getElementById('overlay-app').classList.remove('hidden');
+}
+
+function closeAppModal() {
+  document.getElementById('overlay-app').classList.add('hidden');
+}
+
+document.getElementById('close-app').addEventListener('click', closeAppModal);
+document.getElementById('overlay-app').addEventListener('click', e => {
+  if (e.target === document.getElementById('overlay-app')) closeAppModal();
+});
+
+document.getElementById('modal-app').addEventListener('click', e => {
+  const item = e.target.closest('.catalog-item');
+  if (!item || !_pendingSlot) return;
+  addApp(item.dataset.name, item.dataset.url);
+});
+
+document.getElementById('app-manual-add').addEventListener('click', () => {
+  const name = document.getElementById('app-name-input').value.trim();
+  let   url  = document.getElementById('app-url-input').value.trim();
+  if (!name || !url) return;
+  if (!url.startsWith('http://') && !url.startsWith('https://')) url = 'https://' + url;
+  addApp(name, url);
+});
+
+function addApp(name, url) {
+  if (!_pendingSlot) return;
+  const idx = _pendingSlot.index;
+  _data.apps[idx] = { slot: idx, name, url };
+  saveData();
+  closeAppModal();
+  renderAppSlots();
+}
+
+// ─── PRICES ──────────────────────────────────────────
+function getRegisteredIds() {
+  return _data.charts.filter(Boolean).map(c => c.id);
+}
+
+async function updatePrices() {
+  const ids = getRegisteredIds();
+  if (!ids.length) return;
+  try {
+    const url = `https://api.coingecko.com/api/v3/simple/price?ids=${encodeURIComponent(ids.join(','))}&vs_currencies=usd&include_24hr_change=true`;
+    const res = await fetch(url);
+    if (!res.ok) return;
+    const data = await res.json();
+    for (const [id, vals] of Object.entries(data)) {
+      _prices[id] = { usd: vals.usd, usd_24h_change: vals.usd_24h_change };
+    }
+    refreshPriceDisplay();
+  } catch(e) { console.warn('Price update failed:', e); }
+}
+
+function fetchPricesNow() { updatePrices(); }
+
+function refreshPriceDisplay() {
+  document.querySelectorAll('.chart-slot.filled').forEach(el => {
+    const id = el.dataset.coinId;
+    const p  = _prices[id];
+    if (!p) return;
+    const px  = el.querySelector('.slot-price');
+    const ch  = el.querySelector('.slot-change');
+    if (px) px.textContent = fmtPrice(p.usd);
+    if (ch) {
+      ch.textContent = fmtChange(p.usd_24h_change);
+      ch.className = 'slot-change ' + (p.usd_24h_change >= 0 ? 'positive' : 'negative');
+    }
+  });
+}
+
+// ─── FEAR & GREED ─────────────────────────────────────
+async function loadFng() {
+  try {
+    const res = await fetch('https://api.alternative.me/fng/');
+    if (!res.ok) return;
+    const d    = await res.json();
+    const item = d.data && d.data[0];
+    if (!item) return;
+    const val   = parseInt(item.value, 10);
+    const label = item.value_classification || '';
+    const ts    = new Date(parseInt(item.timestamp, 10) * 1000);
+    const mm    = String(ts.getMonth() + 1).padStart(2, '0');
+    const dd    = String(ts.getDate()).padStart(2, '0');
+    const color = val <= 25 ? 'var(--red)'
+                : val <= 46 ? '#e67e22'
+                : val <= 54 ? 'var(--muted)'
+                : val <= 75 ? 'var(--green)'
+                :             '#27ae60';
+    const vEl = document.getElementById('fng-value');
+    const lEl = document.getElementById('fng-label');
+    const uEl = document.getElementById('fng-updated');
+    const bEl = document.getElementById('fng-bar');
+    if (vEl) { vEl.textContent = val; vEl.style.color = color; }
+    if (lEl) { lEl.textContent = label; lEl.style.color = color; }
+    if (uEl)   uEl.textContent = `更新: ${mm}/${dd}`;
+    if (bEl) { bEl.style.width = val + '%'; bEl.style.background = color; }
+  } catch(e) { console.warn('FnG load failed:', e); }
+}
+
+// ─── TRADINGVIEW WIDGET ───────────────────────────────
+function initTVWidget() {
+  const wrap  = document.getElementById('tv-btc-wrap');
   if (!wrap) return;
   const theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
-  wrap.innerHTML = `
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <div class="tradingview-widget-copyright">
-        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-          <span class="blue-text">Track all markets on TradingView</span>
-        </a>
-      </div>
-    </div>`;
+  wrap.innerHTML =
+    `<div class="tradingview-widget-container">` +
+      `<div class="tradingview-widget-container__widget"></div>` +
+      `<div class="tradingview-widget-copyright">` +
+        `<a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">` +
+          `<span class="blue-text">Track all markets on TradingView</span>` +
+        `</a>` +
+      `</div>` +
+    `</div>`;
   const s = document.createElement('script');
   s.type = 'text/javascript';
-  s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+  s.src  = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
   s.async = true;
   s.innerHTML = JSON.stringify({
-    symbols:         [[`${oandaSymbol}|1D`]],
-    chartOnly:       false,
-    width:           '100%',
-    height:          195,
-    locale:          'ja',
-    colorTheme:      theme,
-    autosize:        false,
-    showVolume:      false,
-    showMA:          false,
-    hideDateRanges:  true,
-    hideMarketStatus:false,
-    scalePosition:   'right',
-    scaleMode:       'Normal',
-    fontFamily:      '-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif',
-    fontSize:        '10',
-    noTimeScale:     true,
-    valuesTracking:  '1',
-    changeMode:      'price-and-percent',
-    chartType:       'line',
+    symbols:          [['COINBASE:BTCUSD|1D']],
+    chartOnly:        false,
+    width:            '100%',
+    height:           195,
+    locale:           'ja',
+    colorTheme:       theme,
+    autosize:         false,
+    showVolume:       false,
+    showMA:           false,
+    hideDateRanges:   true,
+    hideMarketStatus: false,
+    scalePosition:    'right',
+    scaleMode:        'Normal',
+    fontFamily:       '-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif',
+    fontSize:         '10',
+    noTimeScale:      true,
+    valuesTracking:   '1',
+    changeMode:       'price-and-percent',
+    chartType:        'line',
   });
   wrap.querySelector('.tradingview-widget-container').appendChild(s);
 }
 
-function initTVWidgets() {
-  createTVWidget('tv-gold-wrap',   'OANDA:XAUUSD');
-  createTVWidget('tv-usdjpy-wrap', 'OANDA:USDJPY');
-  createTVWidget('tv-btc-wrap',    'COINBASE:BTCUSD');
-}
-
-// ─── THEME ───
-(function () {
-  const saved = localStorage.getItem('fx-theme') || 'dark';
-  document.documentElement.dataset.theme = saved;
-  document.querySelectorAll('.theme-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.theme === saved);
-  });
-})();
-
+// ─── THEME ────────────────────────────────────────────
 document.querySelectorAll('.theme-btn').forEach(btn => {
+  btn.classList.toggle('active', btn.dataset.theme === (localStorage.getItem('fx-theme') || 'dark'));
   btn.addEventListener('click', () => {
     const t = btn.dataset.theme;
     document.documentElement.dataset.theme = t;
     localStorage.setItem('fx-theme', t);
-    document.querySelectorAll('.theme-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.theme === t);
-    });
-    initTVWidgets();
-    initMiniWidgets();
+    document.querySelectorAll('.theme-btn').forEach(b => b.classList.toggle('active', b.dataset.theme === t));
+    initTVWidget();
   });
 });
 
-initTVWidgets();
-
-// ─── MINI CHART WIDGETS ───
-function createMiniWidget(wrapId, symbol) {
-  const wrap = document.getElementById(wrapId);
-  if (!wrap) return;
-  const theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
-  wrap.innerHTML = '';
-  const container = document.createElement('div');
-  container.className = 'tradingview-widget-container';
-  const widget = document.createElement('div');
-  widget.className = 'tradingview-widget-container__widget';
-  container.appendChild(widget);
-  wrap.appendChild(container);
-  const s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
-  s.async = true;
-  s.innerHTML = JSON.stringify({
-    symbol:      symbol,
-    width:       '100%',
-    height:      150,
-    locale:      'ja',
-    colorTheme:  theme,
-    trendLineColor: theme === 'dark' ? 'rgba(100,100,150,1)' : 'rgba(100,100,150,1)',
-    underLineColor: theme === 'dark' ? 'rgba(100,100,150,0.15)' : 'rgba(100,100,150,0.1)',
-    underLineBottomColor: 'rgba(0,0,0,0)',
-    isTransparent: true,
-    autosize:    false,
-    largeChartUrl: '',
-    noTimeScale:   true,
-  });
-  container.appendChild(s);
-}
-
-function initMiniWidgets() {
-  createMiniWidget('mc-dxy',        'CAPITALCOM:DXY');
-  createMiniWidget('mc-wti',        'TVC:USOIL');
-  createMiniWidget('mc-dxy-usdjpy', 'CAPITALCOM:DXY');
-  createMiniWidget('mc-us02y',      'PYTH:US02Y');
-  createMiniWidget('mc-btcd',       'CRYPTOCAP:BTC.D');
-  createMiniWidget('mc-eth',        'COINBASE:ETHUSD');
-  createMiniWidget('mc-xrp',        'BITSTAMP:XRPUSD');
-}
-
-initMiniWidgets();
-
-// bfcache（戻るボタン等）から復帰した場合も再初期化
-window.addEventListener('pageshow', event => {
-  if (event.persisted) { initTVWidgets(); initMiniWidgets(); }
-});
-
-// ─── CLOCK ───
+// ─── CLOCK ────────────────────────────────────────────
 function updateClock() {
   const now = new Date();
-  const h = String(now.getHours()).padStart(2, '0');
-  const m = String(now.getMinutes()).padStart(2, '0');
-  const s = String(now.getSeconds()).padStart(2, '0');
-  document.getElementById('clock').textContent = `${h}:${m}:${s} JST`;
+  document.getElementById('clock').textContent =
+    String(now.getHours()).padStart(2,'0') + ':' +
+    String(now.getMinutes()).padStart(2,'0') + ':' +
+    String(now.getSeconds()).padStart(2,'0') + ' JST';
 }
 setInterval(updateClock, 1000);
 updateClock();
 
-// ─── SESSIONS (JST基準) ───
+// ─── SESSIONS ────────────────────────────────────────
 function updateSessions() {
   const now = new Date();
-  const h = now.getHours() + now.getMinutes() / 60;
-
-  function active(start, end) {
-    if (end <= 24) return h >= start && h < end;
-    return h >= start || h < (end - 24);
-  }
-
-  document.getElementById('sess-tokyo').classList.toggle('active',  active(8, 15));
+  const h   = now.getHours() + now.getMinutes() / 60;
+  function active(s, e) { return e <= 24 ? h >= s && h < e : h >= s || h < (e - 24); }
+  document.getElementById('sess-tokyo').classList.toggle('active',  active(8,  15));
   document.getElementById('sess-london').classList.toggle('active', active(16, 25));
   document.getElementById('sess-ny').classList.toggle('active',     active(21, 30));
 }
 setInterval(updateSessions, 10000);
 updateSessions();
 
-// ─── TABS ───
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const tab = btn.dataset.tab;
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(`panel-${tab}`).classList.add('active');
-  });
-});
-
-// OHLC表示は将来復活予定（Self-hosted Runner + MT5連携）
-async function loadOHLC() {
-  try {
-    const res = await fetch(`public/data/ohlc.json?t=${Date.now()}`);
-    if (!res.ok) return;
-    // 表示処理は削除済み（将来復活予定）
-  } catch (e) {
-    console.warn('OHLC load failed:', e);
-  }
-}
-loadOHLC();
-
-// ─── NEWS ───
-function escHtml(s) {
-  return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-async function loadNews() {
-  try {
-    const res = await fetch(`public/data/news.json?t=${Date.now()}`);
-    if (!res.ok) return;
-    const d = await res.json();
-
-    let dateStr = '';
-    if (d.updated) {
-      const dt = new Date(d.updated);
-      const jst = new Date(dt.getTime() + 9 * 60 * 60 * 1000);
-      const mm = String(jst.getUTCMonth() + 1).padStart(2, '0');
-      const dd = String(jst.getUTCDate()).padStart(2, '0');
-      const hh = String(jst.getUTCHours()).padStart(2, '0');
-      const mi = String(jst.getUTCMinutes()).padStart(2, '0');
-      dateStr = `更新: ${mm}/${dd} ${hh}:${mi} JST`;
-    }
-
-    const now = Date.now();
-    const limit72h = 72 * 60 * 60 * 1000;
-
-    function filterItems(items) {
-      if (!items || items.length === 0) return [];
-      return items
-        .filter(item => {
-          if (!item.isoDate) return true;
-          return (now - new Date(item.isoDate).getTime()) <= limit72h;
-        })
-        .slice(0, 10);
-    }
-
-    function fmtJST(iso) {
-      if (!iso) return '';
-      const jst = new Date(new Date(iso).getTime() + 9 * 60 * 60 * 1000);
-      const mm = String(jst.getUTCMonth() + 1).padStart(2, '0');
-      const dd = String(jst.getUTCDate()).padStart(2, '0');
-      const hh = String(jst.getUTCHours()).padStart(2, '0');
-      const mi = String(jst.getUTCMinutes()).padStart(2, '0');
-      return `${mm}/${dd} ${hh}:${mi}`;
-    }
-
-    function renderItems(items) {
-      if (items.length === 0) {
-        return '<p style="color:var(--muted);font-size:12px;padding:6px 0">ニュースはありません</p>';
-      }
-      return items.map(item => {
-        const t = fmtJST(item.isoDate);
-        const meta = escHtml(item.source) + (t ? ` · ${t}` : '');
-        return `<div class="news-item">` +
-          `<div class="news-source">${meta}</div>` +
-          `<a class="news-title" href="${escHtml(item.link)}" target="_blank" rel="noopener">${escHtml(item.title)}</a>` +
-        `</div>`;
-      }).join('');
-    }
-
-    const goldItems = filterItems(d.gold_items || d.items || []);
-    document.getElementById('news-updated').textContent = dateStr;
-    document.getElementById('news-list').innerHTML = renderItems(goldItems);
-
-    const usdjpyItems = filterItems(d.usdjpy_items || d.items || []);
-    document.getElementById('usdjpy-news-updated').textContent = dateStr;
-    document.getElementById('usdjpy-news-list').innerHTML = renderItems(usdjpyItems);
-
-    const btcItems = filterItems(d.btc_items || []);
-    document.getElementById('btc-news-updated').textContent = dateStr;
-    document.getElementById('btc-news-list').innerHTML = renderItems(btcItems);
-
-  } catch (e) {
-    console.warn('News load failed:', e);
-  }
-}
-loadNews();
-
-// ─── SWIPE でタブ切替 ───
-(function () {
-  const THRESHOLD = 50;
-  const tabs = ['gold', 'usdjpy', 'btc'];
-  let startX = 0, startY = 0;
-
-  document.addEventListener('touchstart', e => {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-  }, { passive: true });
-
-  document.addEventListener('touchend', e => {
-    // モーダルが開いている間はスワイプタブ切替を無効化
-    if (document.getElementById('modal-panel').classList.contains('open')) return;
-
-    const dx = e.changedTouches[0].clientX - startX;
-    const dy = e.changedTouches[0].clientY - startY;
-    if (Math.abs(dx) < THRESHOLD || Math.abs(dx) < Math.abs(dy) * 1.5) return;
-
-    const active = document.querySelector('.tab-btn.active');
-    if (!active) return;
-    const cur = tabs.indexOf(active.dataset.tab);
-    const next = dx < 0 ? Math.min(cur + 1, tabs.length - 1) : Math.max(cur - 1, 0);
-    if (next === cur) return;
-
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    const btn = document.querySelector(`.tab-btn[data-tab="${tabs[next]}"]`);
-    btn.classList.add('active');
-    document.getElementById(`panel-${tabs[next]}`).classList.add('active');
-  }, { passive: true });
-})();
-
-// ─── SERVICE WORKER ───
+// ─── SERVICE WORKER ───────────────────────────────────
 if ('serviceWorker' in navigator) {
-  let swRefreshing = false;
+  let refreshing = false;
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (!swRefreshing) {
-      swRefreshing = true;
-      window.location.reload();
-    }
+    if (!refreshing) { refreshing = true; window.location.reload(); }
   });
-
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .catch(err => console.warn('SW registration failed:', err));
+    navigator.serviceWorker.register('./sw.js').catch(e => console.warn('SW:', e));
   });
 }
 
-// ═══════════════════════════════════════════════════
-// ─── CUSTOMIZE ─────────────────────────────────────
-// ═══════════════════════════════════════════════════
+window.addEventListener('pageshow', e => { if (e.persisted) initTVWidget(); });
 
-const CUSTOM_KEY = 'fx-cockpit-custom';
-const MAX_ITEMS  = 8;
-
-const ALIAS_MAP = {
-  'ゴールド': 'XAUUSD', '金': 'XAUUSD', 'GOLD': 'XAUUSD', 'gold': 'XAUUSD',
-  'ドル円': 'USDJPY', 'ドル/円': 'USDJPY',
-  'ビットコイン': 'BTC', 'bitcoin': 'BTC',
-  '日経': 'NI225', '日経225': 'NI225',
-  'ダウ': 'US30', 'NYダウ': 'US30',
-  'ナスダック': 'NAS100',
-};
-
-let _customData    = { items: [] };
-let _fxData        = [];
-let _sitesData     = [];
-let _appsData      = [];
-let _coinsData     = [];
-let _sortables     = {};
-let _debounceTimer = null;
-
-// ── storage ──
-function loadCustomData() {
-  try {
-    const s = localStorage.getItem(CUSTOM_KEY);
-    if (s) _customData = JSON.parse(s);
-  } catch(e) { _customData = { items: [] }; }
-  if (!Array.isArray(_customData.items)) _customData.items = [];
+// ─── INIT ────────────────────────────────────────────
+function init() {
+  loadData();
+  renderChartSlots();
+  renderAppSlots();
+  initTVWidget();
+  loadCoins();
+  updatePrices();
+  setInterval(updatePrices, PRICE_INTERVAL);
+  loadFng();
 }
 
-function saveCustomData() {
-  localStorage.setItem(CUSTOM_KEY, JSON.stringify(_customData));
-}
-
-// ── data loading ──
-async function loadStaticData() {
-  try {
-    const [fx, sites, apps] = await Promise.all([
-      fetch('public/data/fx.json').then(r => r.json()),
-      fetch('public/data/sites.json').then(r => r.json()),
-      fetch('public/data/apps.json').then(r => r.json()),
-    ]);
-    _fxData    = Array.isArray(fx)    ? fx    : [];
-    _sitesData = Array.isArray(sites) ? sites : [];
-    _appsData  = Array.isArray(apps)  ? apps  : [];
-  } catch(e) {
-    console.warn('Static data load failed:', e);
-  }
-
-  try {
-    const res = await fetch('public/data/coins.json');
-    const d   = await res.json();
-    _coinsData = Array.isArray(d.coins) ? d.coins : [];
-  } catch(e) {
-    console.warn('coins.json load failed:', e);
-  }
-}
-
-// ── search ──
-function searchItems(rawQuery) {
-  const q = rawQuery.trim();
-  if (!q) return { charts: [], sites: [], apps: [] };
-
-  const qLow   = q.toLowerCase();
-  // resolve alias (e.g. "ゴールド" → "XAUUSD")
-  const mapped = (ALIAS_MAP[q] || ALIAS_MAP[q.toUpperCase()] || '').toLowerCase();
-
-  function scoreChart(item) {
-    const sym     = (item.symbol   || '').toLowerCase();
-    const ja      = (item.ja       || '').toLowerCase();
-    const name    = (item.name     || '').toLowerCase();
-    const aliases = (item.aliases  || []).map(a => a.toLowerCase());
-    const cat     = (item.category || '').toLowerCase();
-
-    if (mapped && sym === mapped)                                  return 100;
-    if (sym === qLow)                                              return 95;
-    if (sym.startsWith(qLow))                                     return 90;
-    if (ja && (ja === qLow || ja.startsWith(qLow)))               return 85;
-    if (ja && ja.includes(qLow))                                  return 78;
-    if (name.includes(qLow))                                      return 70;
-    if (aliases.some(a => a === qLow || a.startsWith(qLow)))      return 65;
-    if (aliases.some(a => a.includes(qLow)))                      return 58;
-    if (cat.includes(qLow))                                       return 50;
-    if (mapped && (sym.includes(mapped) || name.includes(mapped))) return 42;
-    return 0;
-  }
-
-  function scoreSite(item) {
-    const name    = (item.name     || '').toLowerCase();
-    const ja      = (item.ja       || '').toLowerCase();
-    const aliases = (item.aliases  || []).map(a => a.toLowerCase());
-    const cat     = (item.category || '').toLowerCase();
-
-    if (name === qLow)                                         return 100;
-    if (name.startsWith(qLow))                                return 88;
-    if (name.includes(qLow))                                  return 78;
-    if (ja.includes(qLow))                                    return 72;
-    if (aliases.some(a => a === qLow || a.startsWith(qLow))) return 65;
-    if (aliases.some(a => a.includes(qLow)))                  return 58;
-    if (cat.includes(qLow))                                   return 50;
-    return 0;
-  }
-
-  function scoreApp(item) {
-    const name    = (item.name    || '').toLowerCase();
-    const desc    = (item.desc    || '').toLowerCase();
-    const aliases = (item.aliases || []).map(a => a.toLowerCase());
-
-    if (name === qLow)                                          return 100;
-    if (name.includes(qLow))                                   return 85;
-    if (desc.includes(qLow))                                   return 70;
-    if (aliases.some(a => a.toLowerCase().includes(qLow)))     return 60;
-    return 0;
-  }
-
-  const fxCharts = _fxData
-    .map(item => ({ item: { ...item, _src: 'fx' }, score: scoreChart(item) }))
-    .filter(x => x.score > 0);
-
-  const coinCharts = _coinsData
-    .map(item => ({ item: { ...item, _src: 'coin' }, score: scoreChart(item) }))
-    .filter(x => x.score > 0);
-
-  const charts = [...fxCharts, ...coinCharts]
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 10)
-    .map(x => x.item);
-
-  const sites = _sitesData
-    .map(item => ({ item, score: scoreSite(item) }))
-    .filter(x => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 10)
-    .map(x => x.item);
-
-  const apps = _appsData
-    .map(item => ({ item, score: scoreApp(item) }))
-    .filter(x => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 10)
-    .map(x => x.item);
-
-  return { charts, sites, apps };
-}
-
-// ── id helpers ──
-function getItemId(item, type) {
-  if (type === 'chart') return item.symbol + (item._src === 'coin' ? '_coin' : '');
-  if (type === 'site')  return item.id || item.name;
-  if (type === 'app')   return item.id || item.name;
-  return '';
-}
-
-function isSelected(id) {
-  return _customData.items.some(i => i.id === id);
-}
-
-// ── toggle ──
-function toggleItem(itemData) {
-  const idx = _customData.items.findIndex(i => i.id === itemData.id);
-  if (idx !== -1) {
-    _customData.items.splice(idx, 1);
-  } else {
-    if (_customData.items.length >= MAX_ITEMS) return;
-    _customData.items.push(itemData);
-  }
-  saveCustomData();
-  updateCounter();
-  renderCustomItems();
-  // 検索結果のチェック状態を更新
-  const q = document.getElementById('modal-search').value;
-  if (q.trim()) renderSearchResults(searchItems(q));
-}
-
-// ── counter ──
-function updateCounter() {
-  const n = _customData.items.length;
-  document.getElementById('modal-counter').textContent = `登録済み ${n} / ${MAX_ITEMS}件`;
-}
-
-// ── render search results ──
-function renderSearchResults(results) {
-  const container = document.getElementById('modal-results');
-  const { charts, sites, apps } = results;
-  const atLimit = _customData.items.length >= MAX_ITEMS;
-
-  if (!charts.length && !sites.length && !apps.length) {
-    container.innerHTML = '<div class="modal-results-empty">該当なし</div>';
-    return;
-  }
-
-  let html = '';
-
-  function renderSection(heading, items, type) {
-    if (!items.length) return '';
-    let s = `<div class="result-category-heading">${heading}</div>`;
-    items.forEach(item => {
-      const id  = getItemId(item, type);
-      const sel = isSelected(id);
-      const dis = atLimit && !sel;
-
-      let name, sub, badge;
-      if (type === 'chart') {
-        name  = item.symbol || '';
-        sub   = item.ja || item.name || '';
-        badge = item.category || (item._src === 'coin' ? 'Crypto' : '');
-      } else if (type === 'site') {
-        name  = item.name || '';
-        sub   = item.ja || '';
-        badge = item.category || '';
-      } else {
-        name  = item.name || '';
-        sub   = item.desc || '';
-        badge = '';
-      }
-
-      s += `<div class="result-item${sel ? ' checked' : ''}${dis ? ' disabled' : ''}" data-id="${escHtml(id)}" data-type="${type}">` +
-             `<div class="result-checkbox"></div>` +
-             `<div class="result-info">` +
-               `<div class="result-name">${escHtml(name)}</div>` +
-               (sub ? `<div class="result-sub">${escHtml(sub)}</div>` : '') +
-             `</div>` +
-             (badge ? `<div class="result-badge">${escHtml(badge)}</div>` : '') +
-           `</div>`;
-    });
-    return s;
-  }
-
-  html += renderSection('チャート', charts, 'chart');
-  html += renderSection('Webサイト', sites, 'site');
-  html += renderSection('アプリ', apps, 'app');
-
-  container.innerHTML = html;
-
-  // click to toggle
-  container.querySelectorAll('.result-item:not(.disabled)').forEach(el => {
-    el.addEventListener('click', () => {
-      const id   = el.dataset.id;
-      const type = el.dataset.type;
-      let itemData;
-
-      if (type === 'chart') {
-        const isCoin = id.endsWith('_coin');
-        const sym    = isCoin ? id.slice(0, -5) : id;
-        if (isCoin) {
-          const raw = _coinsData.find(c => c.symbol === sym);
-          if (!raw) return;
-          itemData = { id, type: 'chart', source: 'coin', symbol: raw.symbol, name: raw.name };
-        } else {
-          const raw = _fxData.find(c => c.symbol === sym);
-          if (!raw) return;
-          itemData = { id, type: 'chart', source: 'fx', symbol: raw.symbol, ja: raw.ja || '', name: raw.name };
-        }
-      } else if (type === 'site') {
-        const raw = _sitesData.find(s => (s.id || s.name) === id);
-        if (!raw) return;
-        itemData = { id, type: 'site', name: raw.name, url: raw.url, ja: raw.ja || '' };
-      } else {
-        const raw = _appsData.find(a => (a.id || a.name) === id);
-        if (!raw) return;
-        itemData = { id, type: 'app', name: raw.name, desc: raw.desc || '', scheme: raw.scheme || '', fallback: raw.fallback || '' };
-      }
-
-      toggleItem(itemData);
-    });
-  });
-}
-
-// ── render dashboard items ──
-function createCustomItemEl(item) {
-  const el     = document.createElement('div');
-  el.className = 'custom-item';
-  el.dataset.id = item.id;
-
-  let label, sublabel, href, linkText, newTab;
-
-  if (item.type === 'chart') {
-    label    = item.symbol;
-    sublabel = item.ja || item.name || '';
-    href     = item.source === 'coin'
-      ? `https://jp.tradingview.com/chart/?symbol=${item.symbol}USD`
-      : `https://jp.tradingview.com/chart/?symbol=${item.symbol}`;
-    linkText = 'TradingViewで開く →';
-    newTab   = true;
-  } else if (item.type === 'site') {
-    label    = item.name;
-    sublabel = item.ja || '';
-    href     = item.url;
-    linkText = '開く →';
-    newTab   = true;
-  } else {
-    label    = item.name;
-    sublabel = item.desc || '';
-    href     = item.scheme || item.fallback || '#';
-    linkText = '起動 →';
-    newTab   = false;
-  }
-
-  el.innerHTML =
-    `<div class="custom-item-label">${escHtml(label)}<span>${escHtml(sublabel)}</span></div>` +
-    `<a class="custom-item-link" href="${escHtml(href)}"${newTab ? ' target="_blank" rel="noopener"' : ''}>${linkText}</a>`;
-
-  return el;
-}
-
-function destroySortable(key) {
-  if (_sortables[key]) {
-    try { _sortables[key].destroy(); } catch(e) {}
-    delete _sortables[key];
-  }
-}
-
-function renderCustomItems() {
-  ['gold', 'usdjpy', 'btc'].forEach(tab => {
-    const section = document.getElementById(`custom-items-${tab}`);
-    if (!section) return;
-
-    destroySortable(`custom-items-${tab}`);
-    section.innerHTML = '';
-
-    if (!_customData.items.length) return;
-
-    const heading  = document.createElement('div');
-    heading.className   = 'custom-items-heading';
-    heading.textContent = 'マイリスト';
-    section.appendChild(heading);
-
-    const list = document.createElement('div');
-    list.className = 'custom-items-list';
-    list.id        = `custom-list-${tab}`;
-    _customData.items.forEach(item => list.appendChild(createCustomItemEl(item)));
-    section.appendChild(list);
-
-    _sortables[`custom-items-${tab}`] = Sortable.create(list, {
-      animation:        150,
-      delay:            200,
-      delayOnTouchOnly: true,
-      ghostClass:       'sortable-ghost',
-      onEnd: () => {
-        const newOrder = [...list.querySelectorAll('[data-id]')].map(el => el.dataset.id);
-        _customData.items = newOrder
-          .map(id => _customData.items.find(i => i.id === id))
-          .filter(Boolean);
-        saveCustomData();
-        // sync other panels (DOM only)
-        ['gold', 'usdjpy', 'btc'].filter(t => t !== tab).forEach(t => {
-          const otherList = document.getElementById(`custom-list-${t}`);
-          if (!otherList) return;
-          otherList.innerHTML = '';
-          _customData.items.forEach(item => otherList.appendChild(createCustomItemEl(item)));
-        });
-      }
-    });
-  });
-}
-
-// ── modal ──
-function openModal() {
-  document.getElementById('modal-overlay').classList.add('open');
-  document.getElementById('modal-panel').classList.add('open');
-  document.getElementById('modal-search').value = '';
-  document.getElementById('modal-results').innerHTML =
-    '<div class="modal-results-empty">検索ワードを入力してください</div>';
-  updateCounter();
-  setTimeout(() => document.getElementById('modal-search').focus(), 300);
-}
-
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.getElementById('modal-panel').classList.remove('open');
-}
-
-// ── event listeners ──
-document.getElementById('fab-customize').addEventListener('click', openModal);
-document.getElementById('modal-close').addEventListener('click', closeModal);
-document.getElementById('modal-overlay').addEventListener('click', closeModal);
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
-});
-
-document.getElementById('modal-search').addEventListener('input', e => {
-  clearTimeout(_debounceTimer);
-  const q = e.target.value;
-  _debounceTimer = setTimeout(() => {
-    if (!q.trim()) {
-      document.getElementById('modal-results').innerHTML =
-        '<div class="modal-results-empty">検索ワードを入力してください</div>';
-      return;
-    }
-    renderSearchResults(searchItems(q));
-  }, 200);
-});
-
-// ── init ──
-async function initCustomize() {
-  loadCustomData();
-  await loadStaticData();
-  renderCustomItems();
-}
-
-initCustomize();
+init();
 </script>
 </body>
 </html>
