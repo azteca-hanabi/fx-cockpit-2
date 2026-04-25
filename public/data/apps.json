@@ -1,0 +1,6 @@
+[
+  {"id":"mt5","name":"MT5","desc":"MetaTrader 5","scheme":"metatrader5://","fallback":"https://www.metatrader5.com","aliases":["MT5","メタトレーダー5","metatrader5"]},
+  {"id":"mt4","name":"MT4","desc":"MetaTrader 4","scheme":"metatrader4://","fallback":"https://www.metatrader4.com","aliases":["MT4","メタトレーダー4","metatrader4"]},
+  {"id":"tradingview-app","name":"TradingView","desc":"チャートアプリ","scheme":"tradingview://","fallback":"https://jp.tradingview.com","aliases":["tradingview","トレーディングビュー","TV"]},
+  {"id":"x-app","name":"X","desc":"旧Twitter","scheme":"twitter://","fallback":"https://x.com","aliases":["X","Twitter","ツイッター","エックス"]}
+]
