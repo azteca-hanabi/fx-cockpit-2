@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-25T03:00:29Z",
-  "last_checked": "2026-04-25T03:00:29Z",
+  "updated": "2026-04-25T03:30:25Z",
+  "last_checked": "2026-04-25T03:30:25Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -69,6 +69,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "AIチップ急増で台湾と韓国が英国を抜き世界市場ランキングで躍進",
+      "link": "https://jp.investing.com/news/economy-news/article-1505037",
+      "published": "2026-04-25 02:48:19",
+      "isoDate": "2026-04-25T02:48:19Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "ホルムズ海峡紛争が続く中、米国のエネルギー輸出が過去最高を記録",
       "link": "https://jp.investing.com/news/commodities-news/article-1505033",
       "published": "2026-04-25 02:04:14",
@@ -122,13 +129,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504601",
       "published": "2026-04-24 15:09:36",
       "isoDate": "2026-04-24T15:09:36Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "DAデビッドソンがAMDの格付けを引き上げ、CPU需要が「前例のない」局面に入ると指摘",
-      "link": "https://jp.investing.com/news/stock-market-news/article-1504301",
-      "published": "2026-04-24 13:04:53",
-      "isoDate": "2026-04-24T13:04:53Z"
     },
     {
       "source": "Investing.com 外為",
