@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
 <style>
 /* ─── THEMES ─── */
 :root,
@@ -460,9 +461,302 @@ header {
   border-radius: 4px;
 }
 
+/* ─── CUSTOM ITEMS ─── */
+.custom-items-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.custom-items-section:empty { display: none; }
+
+.custom-items-heading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.custom-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.custom-item {
+  padding: 10px 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.custom-item:active { cursor: grabbing; }
+
+.custom-item-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+.custom-item-label span {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.custom-item-link {
+  font-size: 12px;
+  color: var(--cyan);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+.custom-item-link:hover { text-decoration: underline; }
+
+.sortable-ghost {
+  opacity: 0.4;
+  background: var(--bg2);
+}
+
+/* ─── FAB ─── */
+.fab-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--cyan);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.4);
+  transition: transform .15s, box-shadow .15s;
+}
+.fab-btn:active { transform: scale(.92); }
+
+/* ─── MODAL OVERLAY ─── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 1001;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ─── MODAL PANEL ─── */
+.modal-panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--bg2);
+  border-radius: 12px 12px 0 0;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform .25s ease;
+}
+.modal-panel.open {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: .04em;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color .15s;
+  line-height: 1;
+}
+.modal-close:hover { color: var(--text); }
+
+.modal-search-wrap {
+  padding: 10px 16px;
+  flex-shrink: 0;
+}
+
+.modal-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .15s;
+  -webkit-appearance: none;
+}
+.modal-search-input::placeholder { color: var(--muted); }
+.modal-search-input:focus { border-color: var(--cyan); }
+.modal-search-input::-webkit-search-cancel-button { display: none; }
+
+.modal-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px 8px;
+}
+
+.modal-results-empty {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.result-category-heading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding: 12px 0 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 6px;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.result-item:last-child { border-bottom: none; }
+.result-item.disabled {
+  opacity: .38;
+  pointer-events: none;
+}
+
+.result-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1.5px solid var(--border2);
+  background: transparent;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s, border-color .15s;
+}
+.result-item.checked .result-checkbox {
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+.result-checkbox::after {
+  content: '';
+  display: none;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+}
+.result-item.checked .result-checkbox::after { display: block; }
+
+.result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-sub {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+.result-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ─── MODAL FOOTER ─── */
+.modal-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-counter {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
 /* ─── SMALL SCREEN ADJUSTMENTS ─── */
 @media (max-width: 360px) {
   #clock { font-size: 11px; }
+  .fab-btn { bottom: 16px; right: 12px; }
 }
 </style>
 </head>
@@ -498,6 +792,7 @@ header {
   <div class="tv-widget-wrap" id="tv-gold-wrap"></div>
   <!-- ⚠️ TradingViewウィジェット終了: 上記帰属表示を削除・非表示にしないこと -->
 
+  <div class="custom-items-section" id="custom-items-gold"></div>
 
   <div class="sec-heading">関連チャート</div>
   <div class="mini-chart-list">
@@ -556,6 +851,7 @@ header {
   <div class="tv-widget-wrap" id="tv-usdjpy-wrap"></div>
   <!-- ⚠️ TradingViewウィジェット終了: 上記帰属表示を削除・非表示にしないこと -->
 
+  <div class="custom-items-section" id="custom-items-usdjpy"></div>
 
   <div class="sec-heading">関連チャート</div>
   <div class="mini-chart-list">
@@ -614,6 +910,7 @@ header {
   <div class="tv-widget-wrap" id="tv-btc-wrap"></div>
   <!-- ⚠️ TradingViewウィジェット終了: 上記帰属表示を削除・非表示にしないこと -->
 
+  <div class="custom-items-section" id="custom-items-btc"></div>
 
   <div class="sec-heading">関連チャート</div>
   <div class="mini-chart-list">
@@ -672,6 +969,28 @@ header {
 
 </div>
 
+<!-- ─── FAB ─── -->
+<button id="fab-customize" class="fab-btn" aria-label="カスタマイズ">＋</button>
+
+<!-- ─── MODAL ─── -->
+<div id="modal-overlay" class="modal-overlay"></div>
+<div id="modal-panel" class="modal-panel" role="dialog" aria-modal="true" aria-label="カスタマイズ">
+  <div class="modal-header">
+    <span class="modal-title">マイリスト編集</span>
+    <button id="modal-close" class="modal-close" aria-label="閉じる">✕</button>
+  </div>
+  <div class="modal-search-wrap">
+    <input id="modal-search" class="modal-search-input" type="search"
+           placeholder="銘柄名・サイト名・カテゴリで検索..." autocomplete="off" spellcheck="false">
+  </div>
+  <div id="modal-results" class="modal-results">
+    <div class="modal-results-empty">検索ワードを入力してください</div>
+  </div>
+  <div class="modal-footer">
+    <span id="modal-counter" class="modal-counter">登録済み 0 / 8件</span>
+  </div>
+</div>
+
 <script>
 // ─── TRADINGVIEW APP LAUNCH WITH WEB FALLBACK ───
 document.querySelectorAll('[data-tv-symbol]').forEach(btn => {
@@ -682,12 +1001,10 @@ document.querySelectorAll('[data-tv-symbol]').forEach(btn => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (!isMobile) {
-      // PCはアプリ起動を試みない（window.location変更でページが破壊されるため）
       window.open(webUrl, '_blank', 'noopener,noreferrer');
       return;
     }
 
-    // モバイル: アプリ起動を試みて1500ms後にフォールバック
     let appOpened = false;
     const onHide = () => {
       if (document.hidden) {
@@ -822,7 +1139,6 @@ function initMiniWidgets() {
   createMiniWidget('mc-xrp',        'BITSTAMP:XRPUSD');
 }
 
-
 initMiniWidgets();
 
 // bfcache（戻るボタン等）から復帰した場合も再初期化
@@ -896,7 +1212,6 @@ async function loadNews() {
     if (!res.ok) return;
     const d = await res.json();
 
-    // 更新時刻をJST表示
     let dateStr = '';
     if (d.updated) {
       const dt = new Date(d.updated);
@@ -945,17 +1260,14 @@ async function loadNews() {
       }).join('');
     }
 
-    // GOLD（gold_items優先、旧形式items fallback）
     const goldItems = filterItems(d.gold_items || d.items || []);
     document.getElementById('news-updated').textContent = dateStr;
     document.getElementById('news-list').innerHTML = renderItems(goldItems);
 
-    // USD/JPY（usdjpy_items優先、旧形式items fallback）
     const usdjpyItems = filterItems(d.usdjpy_items || d.items || []);
     document.getElementById('usdjpy-news-updated').textContent = dateStr;
     document.getElementById('usdjpy-news-list').innerHTML = renderItems(usdjpyItems);
 
-    // BTC
     const btcItems = filterItems(d.btc_items || []);
     document.getElementById('btc-news-updated').textContent = dateStr;
     document.getElementById('btc-news-list').innerHTML = renderItems(btcItems);
@@ -965,7 +1277,6 @@ async function loadNews() {
   }
 }
 loadNews();
-
 
 // ─── SWIPE でタブ切替 ───
 (function () {
@@ -979,6 +1290,9 @@ loadNews();
   }, { passive: true });
 
   document.addEventListener('touchend', e => {
+    // モーダルが開いている間はスワイプタブ切替を無効化
+    if (document.getElementById('modal-panel').classList.contains('open')) return;
+
     const dx = e.changedTouches[0].clientX - startX;
     const dy = e.changedTouches[0].clientY - startY;
     if (Math.abs(dx) < THRESHOLD || Math.abs(dx) < Math.abs(dy) * 1.5) return;
@@ -999,7 +1313,6 @@ loadNews();
 
 // ─── SERVICE WORKER ───
 if ('serviceWorker' in navigator) {
-  // controllerchangeはiOSを含む全環境で最も確実なSW切替検知
   let swRefreshing = false;
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (!swRefreshing) {
@@ -1013,7 +1326,412 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.warn('SW registration failed:', err));
   });
 }
+
+// ═══════════════════════════════════════════════════
+// ─── CUSTOMIZE ─────────────────────────────────────
+// ═══════════════════════════════════════════════════
+
+const CUSTOM_KEY = 'fx-cockpit-custom';
+const MAX_ITEMS  = 8;
+
+const ALIAS_MAP = {
+  'ゴールド': 'XAUUSD', '金': 'XAUUSD', 'GOLD': 'XAUUSD', 'gold': 'XAUUSD',
+  'ドル円': 'USDJPY', 'ドル/円': 'USDJPY',
+  'ビットコイン': 'BTC', 'bitcoin': 'BTC',
+  '日経': 'NI225', '日経225': 'NI225',
+  'ダウ': 'US30', 'NYダウ': 'US30',
+  'ナスダック': 'NAS100',
+};
+
+let _customData    = { items: [] };
+let _fxData        = [];
+let _sitesData     = [];
+let _appsData      = [];
+let _coinsData     = [];
+let _sortables     = {};
+let _debounceTimer = null;
+
+// ── storage ──
+function loadCustomData() {
+  try {
+    const s = localStorage.getItem(CUSTOM_KEY);
+    if (s) _customData = JSON.parse(s);
+  } catch(e) { _customData = { items: [] }; }
+  if (!Array.isArray(_customData.items)) _customData.items = [];
+}
+
+function saveCustomData() {
+  localStorage.setItem(CUSTOM_KEY, JSON.stringify(_customData));
+}
+
+// ── data loading ──
+async function loadStaticData() {
+  try {
+    const [fx, sites, apps] = await Promise.all([
+      fetch('public/data/fx.json').then(r => r.json()),
+      fetch('public/data/sites.json').then(r => r.json()),
+      fetch('public/data/apps.json').then(r => r.json()),
+    ]);
+    _fxData    = Array.isArray(fx)    ? fx    : [];
+    _sitesData = Array.isArray(sites) ? sites : [];
+    _appsData  = Array.isArray(apps)  ? apps  : [];
+  } catch(e) {
+    console.warn('Static data load failed:', e);
+  }
+
+  try {
+    const res = await fetch('public/data/coins.json');
+    const d   = await res.json();
+    _coinsData = Array.isArray(d.coins) ? d.coins : [];
+  } catch(e) {
+    console.warn('coins.json load failed:', e);
+  }
+}
+
+// ── search ──
+function searchItems(rawQuery) {
+  const q = rawQuery.trim();
+  if (!q) return { charts: [], sites: [], apps: [] };
+
+  const qLow   = q.toLowerCase();
+  // resolve alias (e.g. "ゴールド" → "XAUUSD")
+  const mapped = (ALIAS_MAP[q] || ALIAS_MAP[q.toUpperCase()] || '').toLowerCase();
+
+  function scoreChart(item) {
+    const sym     = (item.symbol   || '').toLowerCase();
+    const ja      = (item.ja       || '').toLowerCase();
+    const name    = (item.name     || '').toLowerCase();
+    const aliases = (item.aliases  || []).map(a => a.toLowerCase());
+    const cat     = (item.category || '').toLowerCase();
+
+    if (mapped && sym === mapped)                                  return 100;
+    if (sym === qLow)                                              return 95;
+    if (sym.startsWith(qLow))                                     return 90;
+    if (ja && (ja === qLow || ja.startsWith(qLow)))               return 85;
+    if (ja && ja.includes(qLow))                                  return 78;
+    if (name.includes(qLow))                                      return 70;
+    if (aliases.some(a => a === qLow || a.startsWith(qLow)))      return 65;
+    if (aliases.some(a => a.includes(qLow)))                      return 58;
+    if (cat.includes(qLow))                                       return 50;
+    if (mapped && (sym.includes(mapped) || name.includes(mapped))) return 42;
+    return 0;
+  }
+
+  function scoreSite(item) {
+    const name    = (item.name     || '').toLowerCase();
+    const ja      = (item.ja       || '').toLowerCase();
+    const aliases = (item.aliases  || []).map(a => a.toLowerCase());
+    const cat     = (item.category || '').toLowerCase();
+
+    if (name === qLow)                                         return 100;
+    if (name.startsWith(qLow))                                return 88;
+    if (name.includes(qLow))                                  return 78;
+    if (ja.includes(qLow))                                    return 72;
+    if (aliases.some(a => a === qLow || a.startsWith(qLow))) return 65;
+    if (aliases.some(a => a.includes(qLow)))                  return 58;
+    if (cat.includes(qLow))                                   return 50;
+    return 0;
+  }
+
+  function scoreApp(item) {
+    const name    = (item.name    || '').toLowerCase();
+    const desc    = (item.desc    || '').toLowerCase();
+    const aliases = (item.aliases || []).map(a => a.toLowerCase());
+
+    if (name === qLow)                                          return 100;
+    if (name.includes(qLow))                                   return 85;
+    if (desc.includes(qLow))                                   return 70;
+    if (aliases.some(a => a.toLowerCase().includes(qLow)))     return 60;
+    return 0;
+  }
+
+  const fxCharts = _fxData
+    .map(item => ({ item: { ...item, _src: 'fx' }, score: scoreChart(item) }))
+    .filter(x => x.score > 0);
+
+  const coinCharts = _coinsData
+    .map(item => ({ item: { ...item, _src: 'coin' }, score: scoreChart(item) }))
+    .filter(x => x.score > 0);
+
+  const charts = [...fxCharts, ...coinCharts]
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10)
+    .map(x => x.item);
+
+  const sites = _sitesData
+    .map(item => ({ item, score: scoreSite(item) }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10)
+    .map(x => x.item);
+
+  const apps = _appsData
+    .map(item => ({ item, score: scoreApp(item) }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10)
+    .map(x => x.item);
+
+  return { charts, sites, apps };
+}
+
+// ── id helpers ──
+function getItemId(item, type) {
+  if (type === 'chart') return item.symbol + (item._src === 'coin' ? '_coin' : '');
+  if (type === 'site')  return item.id || item.name;
+  if (type === 'app')   return item.id || item.name;
+  return '';
+}
+
+function isSelected(id) {
+  return _customData.items.some(i => i.id === id);
+}
+
+// ── toggle ──
+function toggleItem(itemData) {
+  const idx = _customData.items.findIndex(i => i.id === itemData.id);
+  if (idx !== -1) {
+    _customData.items.splice(idx, 1);
+  } else {
+    if (_customData.items.length >= MAX_ITEMS) return;
+    _customData.items.push(itemData);
+  }
+  saveCustomData();
+  updateCounter();
+  renderCustomItems();
+  // 検索結果のチェック状態を更新
+  const q = document.getElementById('modal-search').value;
+  if (q.trim()) renderSearchResults(searchItems(q));
+}
+
+// ── counter ──
+function updateCounter() {
+  const n = _customData.items.length;
+  document.getElementById('modal-counter').textContent = `登録済み ${n} / ${MAX_ITEMS}件`;
+}
+
+// ── render search results ──
+function renderSearchResults(results) {
+  const container = document.getElementById('modal-results');
+  const { charts, sites, apps } = results;
+  const atLimit = _customData.items.length >= MAX_ITEMS;
+
+  if (!charts.length && !sites.length && !apps.length) {
+    container.innerHTML = '<div class="modal-results-empty">該当なし</div>';
+    return;
+  }
+
+  let html = '';
+
+  function renderSection(heading, items, type) {
+    if (!items.length) return '';
+    let s = `<div class="result-category-heading">${heading}</div>`;
+    items.forEach(item => {
+      const id  = getItemId(item, type);
+      const sel = isSelected(id);
+      const dis = atLimit && !sel;
+
+      let name, sub, badge;
+      if (type === 'chart') {
+        name  = item.symbol || '';
+        sub   = item.ja || item.name || '';
+        badge = item.category || (item._src === 'coin' ? 'Crypto' : '');
+      } else if (type === 'site') {
+        name  = item.name || '';
+        sub   = item.ja || '';
+        badge = item.category || '';
+      } else {
+        name  = item.name || '';
+        sub   = item.desc || '';
+        badge = '';
+      }
+
+      s += `<div class="result-item${sel ? ' checked' : ''}${dis ? ' disabled' : ''}" data-id="${escHtml(id)}" data-type="${type}">` +
+             `<div class="result-checkbox"></div>` +
+             `<div class="result-info">` +
+               `<div class="result-name">${escHtml(name)}</div>` +
+               (sub ? `<div class="result-sub">${escHtml(sub)}</div>` : '') +
+             `</div>` +
+             (badge ? `<div class="result-badge">${escHtml(badge)}</div>` : '') +
+           `</div>`;
+    });
+    return s;
+  }
+
+  html += renderSection('チャート', charts, 'chart');
+  html += renderSection('Webサイト', sites, 'site');
+  html += renderSection('アプリ', apps, 'app');
+
+  container.innerHTML = html;
+
+  // click to toggle
+  container.querySelectorAll('.result-item:not(.disabled)').forEach(el => {
+    el.addEventListener('click', () => {
+      const id   = el.dataset.id;
+      const type = el.dataset.type;
+      let itemData;
+
+      if (type === 'chart') {
+        const isCoin = id.endsWith('_coin');
+        const sym    = isCoin ? id.slice(0, -5) : id;
+        if (isCoin) {
+          const raw = _coinsData.find(c => c.symbol === sym);
+          if (!raw) return;
+          itemData = { id, type: 'chart', source: 'coin', symbol: raw.symbol, name: raw.name };
+        } else {
+          const raw = _fxData.find(c => c.symbol === sym);
+          if (!raw) return;
+          itemData = { id, type: 'chart', source: 'fx', symbol: raw.symbol, ja: raw.ja || '', name: raw.name };
+        }
+      } else if (type === 'site') {
+        const raw = _sitesData.find(s => (s.id || s.name) === id);
+        if (!raw) return;
+        itemData = { id, type: 'site', name: raw.name, url: raw.url, ja: raw.ja || '' };
+      } else {
+        const raw = _appsData.find(a => (a.id || a.name) === id);
+        if (!raw) return;
+        itemData = { id, type: 'app', name: raw.name, desc: raw.desc || '', scheme: raw.scheme || '', fallback: raw.fallback || '' };
+      }
+
+      toggleItem(itemData);
+    });
+  });
+}
+
+// ── render dashboard items ──
+function createCustomItemEl(item) {
+  const el     = document.createElement('div');
+  el.className = 'custom-item';
+  el.dataset.id = item.id;
+
+  let label, sublabel, href, linkText, newTab;
+
+  if (item.type === 'chart') {
+    label    = item.symbol;
+    sublabel = item.ja || item.name || '';
+    href     = item.source === 'coin'
+      ? `https://jp.tradingview.com/chart/?symbol=${item.symbol}USD`
+      : `https://jp.tradingview.com/chart/?symbol=${item.symbol}`;
+    linkText = 'TradingViewで開く →';
+    newTab   = true;
+  } else if (item.type === 'site') {
+    label    = item.name;
+    sublabel = item.ja || '';
+    href     = item.url;
+    linkText = '開く →';
+    newTab   = true;
+  } else {
+    label    = item.name;
+    sublabel = item.desc || '';
+    href     = item.scheme || item.fallback || '#';
+    linkText = '起動 →';
+    newTab   = false;
+  }
+
+  el.innerHTML =
+    `<div class="custom-item-label">${escHtml(label)}<span>${escHtml(sublabel)}</span></div>` +
+    `<a class="custom-item-link" href="${escHtml(href)}"${newTab ? ' target="_blank" rel="noopener"' : ''}>${linkText}</a>`;
+
+  return el;
+}
+
+function destroySortable(key) {
+  if (_sortables[key]) {
+    try { _sortables[key].destroy(); } catch(e) {}
+    delete _sortables[key];
+  }
+}
+
+function renderCustomItems() {
+  ['gold', 'usdjpy', 'btc'].forEach(tab => {
+    const section = document.getElementById(`custom-items-${tab}`);
+    if (!section) return;
+
+    destroySortable(`custom-items-${tab}`);
+    section.innerHTML = '';
+
+    if (!_customData.items.length) return;
+
+    const heading  = document.createElement('div');
+    heading.className   = 'custom-items-heading';
+    heading.textContent = 'マイリスト';
+    section.appendChild(heading);
+
+    const list = document.createElement('div');
+    list.className = 'custom-items-list';
+    list.id        = `custom-list-${tab}`;
+    _customData.items.forEach(item => list.appendChild(createCustomItemEl(item)));
+    section.appendChild(list);
+
+    _sortables[`custom-items-${tab}`] = Sortable.create(list, {
+      animation:        150,
+      delay:            200,
+      delayOnTouchOnly: true,
+      ghostClass:       'sortable-ghost',
+      onEnd: () => {
+        const newOrder = [...list.querySelectorAll('[data-id]')].map(el => el.dataset.id);
+        _customData.items = newOrder
+          .map(id => _customData.items.find(i => i.id === id))
+          .filter(Boolean);
+        saveCustomData();
+        // sync other panels (DOM only)
+        ['gold', 'usdjpy', 'btc'].filter(t => t !== tab).forEach(t => {
+          const otherList = document.getElementById(`custom-list-${t}`);
+          if (!otherList) return;
+          otherList.innerHTML = '';
+          _customData.items.forEach(item => otherList.appendChild(createCustomItemEl(item)));
+        });
+      }
+    });
+  });
+}
+
+// ── modal ──
+function openModal() {
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal-panel').classList.add('open');
+  document.getElementById('modal-search').value = '';
+  document.getElementById('modal-results').innerHTML =
+    '<div class="modal-results-empty">検索ワードを入力してください</div>';
+  updateCounter();
+  setTimeout(() => document.getElementById('modal-search').focus(), 300);
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('modal-panel').classList.remove('open');
+}
+
+// ── event listeners ──
+document.getElementById('fab-customize').addEventListener('click', openModal);
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', closeModal);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+document.getElementById('modal-search').addEventListener('input', e => {
+  clearTimeout(_debounceTimer);
+  const q = e.target.value;
+  _debounceTimer = setTimeout(() => {
+    if (!q.trim()) {
+      document.getElementById('modal-results').innerHTML =
+        '<div class="modal-results-empty">検索ワードを入力してください</div>';
+      return;
+    }
+    renderSearchResults(searchItems(q));
+  }, 200);
+});
+
+// ── init ──
+async function initCustomize() {
+  loadCustomData();
+  await loadStaticData();
+  renderCustomItems();
+}
+
+initCustomize();
 </script>
 </body>
 </html>
-
