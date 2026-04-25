@@ -1,6 +1,6 @@
 {
-  "updated": "2026-04-25T00:00:29Z",
-  "last_checked": "2026-04-25T00:00:29Z",
+  "updated": "2026-04-25T00:30:23Z",
+  "last_checked": "2026-04-25T00:30:23Z",
   "gold_items": [
     {
       "source": "Investing.com 商品先物",
@@ -69,6 +69,13 @@
   "usdjpy_items": [
     {
       "source": "Investing.com 外為",
+      "title": "米国務省、中国AI企業による「蒸留」技術の取り締まりを示唆",
+      "link": "https://jp.investing.com/news/economy-news/article-1505008",
+      "published": "2026-04-25 00:01:25",
+      "isoDate": "2026-04-25T00:01:25Z"
+    },
+    {
+      "source": "Investing.com 外為",
       "title": "原油100ドル時代、テスラセミの魅力はどれほど高まるか",
       "link": "https://jp.investing.com/news/company-news/article-1504996",
       "published": "2026-04-24 23:17:41",
@@ -87,13 +94,6 @@
       "link": "https://jp.investing.com/news/stock-market-news/article-1504987",
       "published": "2026-04-24 23:00:06",
       "isoDate": "2026-04-24T23:00:06Z"
-    },
-    {
-      "source": "Investing.com 外為",
-      "title": "NY債券：米長期債相場は下げ渋り、原油先物の値下がりを意識",
-      "link": "https://jp.investing.com/news/forex-news/article-1504964",
-      "published": "2026-04-24 22:00:04",
-      "isoDate": "2026-04-24T22:00:04Z"
     },
     {
       "source": "Investing.com 外為",
@@ -139,6 +139,76 @@
     }
   ],
   "btc_items": [
+    {
+      "source": "CoinPost",
+      "title": "量子コンピューターで15ビットの暗号解読に成功、研究者が1BTCの報酬獲得",
+      "link": "https://coinpost.jp/?p=705114",
+      "published": "Sat, 25 Apr 2026 08:20:36 +0900",
+      "isoDate": "2026-04-24T23:20:36Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "トランプ大統領、25日にTRUMPコイン保有者向け昼食会で講演予定",
+      "link": "https://coinpost.jp/?p=705098",
+      "published": "Sat, 25 Apr 2026 07:35:58 +0900",
+      "isoDate": "2026-04-24T22:35:58Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米財務省、イラン関連の仮想通貨ウォレットを制裁",
+      "link": "https://coinpost.jp/?p=705101",
+      "published": "Sat, 25 Apr 2026 05:55:27 +0900",
+      "isoDate": "2026-04-24T20:55:27Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米ビットコイン現物ETF、5営業日で約1万9000BTC取得　新規供給量の9倍＝ビットウィーズ",
+      "link": "https://coinpost.jp/?p=705015",
+      "published": "Fri, 24 Apr 2026 16:57:28 +0900",
+      "isoDate": "2026-04-24T07:57:28Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "「ビットコインとJPYCは表裏一体」メタプラネットCEO×JPYC代表が語る日本発ビットコイン経済圏の全貌",
+      "link": "https://coinpost.jp/?p=701879",
+      "published": "Fri, 24 Apr 2026 15:44:36 +0900",
+      "isoDate": "2026-04-24T06:44:36Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "ビットコインの価格下落も「確信型買い手」の保有量が69%急増＝アークインベストQ1報告",
+      "link": "https://coinpost.jp/?p=704947",
+      "published": "Fri, 24 Apr 2026 15:06:05 +0900",
+      "isoDate": "2026-04-24T06:06:05Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米司法省、東南アジアの仮想通貨詐欺拠点を一斉摘発　約1120億円相当を拘束",
+      "link": "https://coinpost.jp/?p=704932",
+      "published": "Fri, 24 Apr 2026 14:16:24 +0900",
+      "isoDate": "2026-04-24T05:16:24Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "米財務省、カンボジア上院議員に制裁　仮想通貨詐欺拠点にインフラ提供か",
+      "link": "https://coinpost.jp/?p=704763",
+      "published": "Fri, 24 Apr 2026 14:00:44 +0900",
+      "isoDate": "2026-04-24T05:00:44Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "メタプラネットが80億円社債を発行、調達資金は全額ビットコイン購入に充当",
+      "link": "https://coinpost.jp/?p=704910",
+      "published": "Fri, 24 Apr 2026 13:30:25 +0900",
+      "isoDate": "2026-04-24T04:30:25Z"
+    },
+    {
+      "source": "CoinPost",
+      "title": "リミックスポイント、前日に続き2.5億円相当ビットコインを追加購入　BTC保有量でANAPを逆転",
+      "link": "https://coinpost.jp/?p=704909",
+      "published": "Fri, 24 Apr 2026 13:10:20 +0900",
+      "isoDate": "2026-04-24T04:10:20Z"
+    },
     {
       "source": "Investing.com 暗号資産",
       "title": "Robinhoodが暗号資産ウォレットを展開：暗号資産と株式に対する代替先となるか",
