@@ -529,7 +529,7 @@ function renderAppSlots() {
       el.innerHTML = `<div class="app-name">${escHtml(app.name)}</div>`;
     } else {
       el.className = 'app-slot empty';
-      el.innerHTML = '<div class="slot-add-icon">＋</div><div class="slot-add-label">アプリ・リンクを追加</div>';
+      el.innerHTML = '<div class="slot-add-icon">＋</div><div class="slot-add-label">マイ取引所・アプリ・リンクを追加</div>';
     }
     el.dataset.slot = i;
     attachSlotHandlers(el, 'app', i);
@@ -582,7 +582,7 @@ function onSlotTap(type, index) {
   } else {
     const app = _data.apps[index];
     if (app) {
-      window.open(app.url, '_blank', 'noopener');
+      openApp(app.url);
     } else {
       openAppModal(index);
     }
@@ -624,6 +624,24 @@ document.getElementById('lp-cancel').addEventListener('click', hideLpMenu);
 document.getElementById('overlay-lp').addEventListener('click', e => {
   if (e.target === document.getElementById('overlay-lp')) hideLpMenu();
 });
+
+// ─── APP LAUNCH ──────────────────────────────────────
+function openApp(url) {
+  // window.openを使うことでiOSのUniversal Linksが発火しアプリが起動する
+  // window.location.hrefだとPWAコンテナ内での遷移とみなされアプリが起動しない
+  try {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  } catch(e) {
+    // フォールバック: ダミーアンカーで再試行
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+}
 
 // ─── CHART MODAL ─────────────────────────────────────
 function openChartModal(index) {
