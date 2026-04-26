@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>取引所アプリ起動テスト</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --bg: #0a0a0f;
+            --text: #c8c8d8;
+            --card: #1a1a2e;
+            --border: #3a3a58;
+            --success: #2ecc71;
+            --fail: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            padding: 20px 16px;
+            min-height: 100dvh;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            color: #8a8a9e;
+            font-size: 15px;
+        }
+        
+        .exchange {
+            background: var(--card);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+            padding: 20px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .exchange.success {
+            border-color: var(--success);
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+        }
+        
+        .exchange.fail {
+            border-color: var(--fail);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+        }
+        
+        .exchange-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .exchange-name {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        button, a.button {
+            background: #24243d;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        button:hover, a.button:hover {
+            background: #2f2f4f;
+            transform: translateY(-1px);
+        }
+        
+        .scheme-btn {
+            background: #1e1e2f;
+        }
+        
+        .result-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .result-btn {
+            flex: 1;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        
+        .success-btn {
+            background: rgba(46, 204, 113, 0.15);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+        
+        .fail-btn {
+            background: rgba(231, 76, 60, 0.15);
+            color: var(--fail);
+            border: 1px solid var(--fail);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        #copyBtn {
+            background: #2ecc71;
+            color: #0a0a0f;
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 9999px;
+            border: none;
+            font-size: 17px;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+        
+        .status {
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>取引所アプリ起動テスト</h1>
+        <p class="subtitle">iPhone Safari PWA環境でネイティブアプリが起動するか確認してください</p>
+        <p class="subtitle" style="margin-top: 8px; font-size: 13px;">PWA standaloneモードでテスト中 • 結果は自動保存されます</p>
+    </header>
+
+    <div id="exchanges"></div>
+
+    <div class="footer">
+        <button id="copyBtn">📋 全テスト結果をコピー</button>
+        <p style="margin-top: 24px; font-size: 13px; color: #666;">テスト後、結果をクリップボードにコピーして開発者に共有してください</p>
+    </div>
+
+    <script>
+        // 取引所データ
+        const exchanges = [
+            {
+                name: "Binance",
+                slug: "binance",
+                schemes: [
+                    { label: "bnc://app.binance.com", value: "bnc://app.binance.com" },
+                    { label: "binance://", value: "binance://" }
+                ],
+                uls: [
+                    { label: "UL: https://www.binance.com/ja", url: "https://www.binance.com/ja" }
+                ],
+                opens: [
+                    { label: "window.open", url: "https://www.binance.com/ja" }
+                ]
+            },
+            {
+                name: "Bybit",
+                slug: "bybit",
+                schemes: [{ label: "bybit://", value: "bybit://" }],
+                uls: [
+                    { label: "UL: https://www.bybit.com/ja-JP/", url: "https://www.bybit.com/ja-JP/" },
+                    { label: "UL: https://www.bybit.com/inapp/", url: "https://www.bybit.com/inapp/" }
+                ],
+                opens: [{ label: "window.open", url: "https://www.bybit.com/ja-JP/" }]
+            },
+            {
+                name: "Bitget",
+                slug: "bitget",
+                schemes: [
+                    { label: "bitget://", value: "bitget://" },
+                    { label: "bitkeep://", value: "bitkeep://" }
+                ],
+                uls: [{ label: "UL: https://www.bitget.com/ja/", url: "https://www.bitget.com/ja/" }],
+                opens: [{ label: "window.open", url: "https://www.bitget.com/ja/" }]
+            },
+            {
+                name: "OKX",
+                slug: "okx",
+                schemes: [{ label: "okx://", value: "okx://" }],
+                uls: [
+                    { label: "UL: https://www.okx.com/universallink/trade", url: "https://www.okx.com/universallink/trade" },
+                    { label: "UL: https://www.okx.com/ja", url: "https://www.okx.com/ja" }
+                ],
+                opens: [{ label: "window.open", url: "https://www.okx.com/ja" }]
+            },
+            {
+                name: "MEXC",
+                slug: "mexc",
+                schemes: [{ label: "mexc://", value: "mexc://" }],
+                uls: [{ label: "UL: https://www.mexc.com/ja-JP", url: "https://www.mexc.com/ja-JP" }],
+                opens: [{ label: "window.open", url: "https://www.mexc.com/ja-JP" }]
+            },
+            {
+                name: "KuCoin",
+                slug: "kucoin",
+                schemes: [{ label: "kucoin://", value: "kucoin://" }],
+                uls: [{ label: "UL: https://www.kucoin.com/ja", url: "https://www.kucoin.com/ja" }],
+                opens: [{ label: "window.open", url: "https://www.kucoin.com/ja" }]
+            },
+            {
+                name: "Kraken",
+                slug: "kraken",
+                schemes: [{ label: "kraken://", value: "kraken://" }],
+                uls: [{ label: "UL: https://www.kraken.com/ja-jp", url: "https://www.kraken.com/ja-jp" }],
+                opens: [{ label: "window.open", url: "https://www.kraken.com/ja-jp" }]
+            },
+            {
+                name: "coincheck",
+                slug: "coincheck",
+                schemes: [{ label: "coincheck://", value: "coincheck://" }],
+                uls: [
+                    { label: "UL: https://coincheck.com/deeplink", url: "https://coincheck.com/deeplink" },
+                    { label: "UL: https://coincheck.com/ja/", url: "https://coincheck.com/ja/" }
+                ],
+                opens: [{ label: "window.open", url: "https://coincheck.com/ja/" }]
+            },
+            {
+                name: "bitFlyer",
+                slug: "bitflyer",
+                schemes: [{ label: "bitflyer://", value: "bitflyer://" }],
+                uls: [{ label: "UL: https://bitflyer.com/ja-jp/", url: "https://bitflyer.com/ja-jp/" }],
+                opens: [{ label: "window.open", url: "https://bitflyer.com/ja-jp/" }]
+            },
+            {
+                name: "GMOコイン",
+                slug: "gmocoin",
+                schemes: [{ label: "gmocoin://", value: "gmocoin://" }],
+                uls: [{ label: "UL: https://coin.z.com/jp/", url: "https://coin.z.com/jp/" }],
+                opens: [{ label: "window.open", url: "https://coin.z.com/jp/" }]
+            },
+            {
+                name: "bitbank",
+                slug: "bitbank",
+                schemes: [{ label: "bitbank://", value: "bitbank://" }],
+                uls: [{ label: "UL: https://bitbank.cc/", url: "https://bitbank.cc/" }],
+                opens: [{ label: "window.open", url: "https://bitbank.cc/" }]
+            },
+            {
+                name: "SBI VC Trade",
+                slug: "sbivc",
+                schemes: [{ label: "sbivc://", value: "sbivc://" }],
+                uls: [{ label: "UL: https://vctrade.sbisec.co.jp/", url: "https://vctrade.sbisec.co.jp/" }],
+                opens: [{ label: "window.open", url: "https://vctrade.sbisec.co.jp/" }]
+            },
+            {
+                name: "楽天ウォレット",
+                slug: "rakutenwallet",
+                schemes: [{ label: "rakutenwallet://", value: "rakutenwallet://" }],
+                uls: [{ label: "UL: https://wallet.rakuten.co.jp/", url: "https://wallet.rakuten.co.jp/" }],
+                opens: [{ label: "window.open", url: "https://wallet.rakuten.co.jp/" }]
+            },
+            {
+                name: "BITPOINT",
+                slug: "bitpoint",
+                schemes: [{ label: "bitpoint://", value: "bitpoint://" }],
+                uls: [{ label: "UL: https://www.bitpoint.co.jp/", url: "https://www.bitpoint.co.jp/" }],
+                opens: [{ label: "window.open", url: "https://www.bitpoint.co.jp/" }]
+            },
+            {
+                name: "DMM Bitcoin",
+                slug: "dmmbitcoin",
+                schemes: [{ label: "dmmbitcoin://", value: "dmmbitcoin://" }],
+                uls: [{ label: "UL: https://bitcoin.dmm.com/", url: "https://bitcoin.dmm.com/" }],
+                opens: [{ label: "window.open", url: "https://bitcoin.dmm.com/" }]
+            },
+            {
+                name: "BingX",
+                slug: "bingx",
+                schemes: [{ label: "bingx://", value: "bingx://" }],
+                uls: [{ label: "UL: https://bingx.com/ja-jp/", url: "https://bingx.com/ja-jp/" }],
+                opens: [{ label: "window.open", url: "https://bingx.com/ja-jp/" }]
+            },
+            {
+                name: "CoinW",
+                slug: "coinw",
+                schemes: [{ label: "coinw://", value: "coinw://" }],
+                uls: [{ label: "UL: https://www.coinw.com/", url: "https://www.coinw.com/" }],
+                opens: [{ label: "window.open", url: "https://www.coinw.com/" }]
+            },
+            {
+                name: "Gate.io",
+                slug: "gateio",
+                schemes: [{ label: "gateio://", value: "gateio://" }],
+                uls: [{ label: "UL: https://www.gate.io/ja", url: "https://www.gate.io/ja" }],
+                opens: [{ label: "window.open", url: "https://www.gate.io/ja" }]
+            },
+            {
+                name: "MetaMask",
+                slug: "metamask",
+                schemes: [{ label: "metamask://", value: "metamask://" }],
+                uls: [{ label: "UL: https://metamask.io/", url: "https://metamask.io/" }],
+                opens: [{ label: "window.open", url: "https://metamask.io/" }]
+            },
+            {
+                name: "Trust Wallet",
+                slug: "trustwallet",
+                schemes: [{ label: "trust://", value: "trust://" }],
+                uls: [{ label: "UL: https://trustwallet.com/ja", url: "https://trustwallet.com/ja" }],
+                opens: [{ label: "window.open", url: "https://trustwallet.com/ja" }]
+            },
+            {
+                name: "Phantom",
+                slug: "phantom",
+                schemes: [{ label: "phantom://", value: "phantom://" }],
+                uls: [{ label: "UL: https://phantom.app/", url: "https://phantom.app/" }],
+                opens: [{ label: "window.open", url: "https://phantom.app/" }]
+            }
+        ];
+
+        // 関数定義
+        function tryScheme(scheme, exchange) {
+            console.log(`[TEST] Scheme: ${scheme} for ${exchange}`);
+            window.location.href = scheme;
+            
+            // フォールバック（500ms後に戻って来たら失敗扱い）
+            setTimeout(() => {
+                if (document.visibilityState === 'visible') {
+                    alert(`${exchange} スキーム "${scheme}" は動作しませんでした。`);
+                }
+            }, 500);
+        }
+
+        function tryWindowOpen(url, exchange) {
+            console.log(`[TEST] window.open: ${url} for ${exchange}`);
+            window.open(url, '_blank', 'noopener,noreferrer');
+            
+            setTimeout(() => {
+                if (document.visibilityState === 'visible') {
+                    alert(`${exchange} window.open がSafari内で開きました（アプリ起動せず）。`);
+                }
+            }, 1200);
+        }
+
+        function tryAnchor(url, exchange) {
+            console.log(`[TEST] Anchor: ${url} for ${exchange}`);
+            const a = document.createElement('a');
+            a.href = url;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            setTimeout(() => {
+                if (document.visibilityState === 'visible') {
+                    alert(`${exchange} アンカー方式でSafari内で開きました。`);
+                }
+            }, 1200);
+        }
+
+        // 結果保存
+        function saveResult(slug, status) {
+            localStorage.setItem(`test_${slug}`, status);
+            renderExchange(slug);
+        }
+
+        // 1つの取引所をレンダリング
+        function createExchangeHTML(ex) {
+            let html = `
+                <div class="exchange" id="ex-${ex.slug}" data-slug="${ex.slug}">
+                    <div class="exchange-header">
+                        <div class="exchange-name">${ex.name}</div>
+                        <div class="status" id="status-${ex.slug}">未テスト</div>
+                    </div>
+                    <div class="buttons">
+            `;
+
+            // カスタムスキーム
+            if (ex.schemes && ex.schemes.length) {
+                ex.schemes.forEach(s => {
+                    html += `
+                        <button class="scheme-btn" onclick="tryScheme('${s.value}', '${ex.name}')">
+                            スキーム<br>${s.label}
+                        </button>
+                    `;
+                });
+            }
+
+            // Universal Links (aタグ)
+            if (ex.uls && ex.uls.length) {
+                ex.uls.forEach(u => {
+                    html += `
+                        <a href="${u.url}" target="_blank" rel="noopener noreferrer" class="button">
+                            UL<br>${u.label}
+                        </a>
+                    `;
+                });
+            }
+
+            // window.open
+            if (ex.opens && ex.opens.length) {
+                ex.opens.forEach(o => {
+                    html += `
+                        <button onclick="tryWindowOpen('${o.url}', '${ex.name}')">
+                            window.open<br>${o.label}
+                        </button>
+                    `;
+                });
+            }
+
+            // ダミーアンカー
+            if (ex.opens && ex.opens.length) {
+                ex.opens.forEach(o => {
+                    html += `
+                        <button onclick="tryAnchor('${o.url}', '${ex.name}')">
+                            ダミーアンカー<br>${o.label}
+                        </button>
+                    `;
+                });
+            }
+
+            html += `</div>`;
+            
+            // 結果ボタン
+            html += `
+                <div class="result-buttons">
+                    <button class="result-btn success-btn" onclick="saveResult('${ex.slug}', 'success')">✅ 成功（アプリ起動した）</button>
+                    <button class="result-btn fail-btn" onclick="saveResult('${ex.slug}', 'fail')">❌ 失敗（Webページが開いた）</button>
+                </div>
+            </div>`;
+            
+            return html;
+        }
+
+        // 1取引所だけ再描画
+        function renderExchange(slug) {
+            const container = document.getElementById(`ex-${slug}`);
+            if (!container) return;
+            
+            const status = localStorage.getItem(`test_${slug}`);
+            const statusEl = document.getElementById(`status-${slug}`);
+            
+            container.classList.remove('success', 'fail');
+            
+            if (status === 'success') {
+                container.classList.add('success');
+                statusEl.textContent = '✅ 成功';
+                statusEl.style.background = 'rgba(46, 204, 113, 0.2)';
+                statusEl.style.color = '#2ecc71';
+            } else if (status === 'fail') {
+                container.classList.add('fail');
+                statusEl.textContent = '❌ 失敗';
+                statusEl.style.background = 'rgba(231, 76, 60, 0.2)';
+                statusEl.style.color = '#e74c3c';
+            } else {
+                statusEl.textContent = '未テスト';
+                statusEl.style.background = 'transparent';
+                statusEl.style.color = '#8a8a9e';
+            }
+        }
+
+        // 全取引所レンダリング
+        function renderAll() {
+            const container = document.getElementById('exchanges');
+            let html = '';
+            exchanges.forEach(ex => {
+                html += createExchangeHTML(ex);
+            });
+            container.innerHTML = html;
+            
+            // 既存結果を反映
+            exchanges.forEach(ex => {
+                renderExchange(ex.slug);
+            });
+        }
+
+        // 結果コピー
+        function copyResults() {
+            let text = '=== 取引所アプリ起動テスト結果 ===\n\n';
+            let hasAny = false;
+            
+            exchanges.forEach(ex => {
+                const result = localStorage.getItem(`test_${ex.slug}`);
+                if (result) {
+                    hasAny = true;
+                    const status = result === 'success' ? '✅ 成功' : '❌ 失敗';
+                    text += `${ex.name}: ${status}\n`;
+                }
+            });
+            
+            if (!hasAny) {
+                text += 'まだテスト結果がありません。';
+            }
+            
+            text += `\n\nテスト日時: ${new Date().toLocaleString('ja-JP')}\nPWA standaloneモード`;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const original = btn.textContent;
+                btn.textContent = '✅ コピー完了！';
+                setTimeout(() => {
+                    btn.textContent = original;
+                }, 2000);
+            });
+        }
+
+        // 初期化
+        window.onload = function() {
+            renderAll();
+            
+            // コピーボタン
+            document.getElementById('copyBtn').addEventListener('click', copyResults);
+            
+            console.log('%c取引所アプリ起動テストHTML 初期化完了', 'color:#2ecc71; font-weight:bold;');
+        };
+    </script>
+</body>
+</html>
