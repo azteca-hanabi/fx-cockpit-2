@@ -3,7 +3,7 @@
   "short_name": "FX COCKPIT",
   "description": "FXトレーダー向けコックピット by azteca",
   "start_url": "./",
-  "display": "minimal-ui",
+  "display": "browser",
   "background_color": "#0a0a0f",
   "theme_color": "#0a0a0f",
   "icons": []
