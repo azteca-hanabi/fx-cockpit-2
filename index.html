@@ -205,7 +205,7 @@ header{
 .result-item:active{opacity:.7;}
 .result-symbol{font-size:13px;font-weight:700;color:var(--text);min-width:52px;}
 .result-name{font-size:12px;color:var(--muted);}
-.result-rank{font-size:11px;color:var(--cyan);margin-left:auto;flex-shrink:0;}
+.result-rank{font-size:11px;color:var(--cyan);flex-shrink:0;min-width:36px;}
 .results-empty{padding:24px 0;text-align:center;color:var(--muted);font-size:13px;}
 
 /* ─── LONGPRESS MENU ─── */
@@ -564,9 +564,9 @@ document.getElementById('chart-search').addEventListener('input', e => {
     }
     container.innerHTML = results.map(c =>
       `<div class="result-item" data-id="${escHtml(c.id)}" data-symbol="${escHtml((c.symbol||'').toUpperCase())}" data-name="${escHtml(c.name||'')}">` +
+        (c.rank && c.rank < 9999 ? `<span class="result-rank">#${c.rank}</span>` : '<span class="result-rank"></span>') +
         `<span class="result-symbol">${escHtml((c.symbol||'').toUpperCase())}</span>` +
         `<span class="result-name">${escHtml(c.name||'')}</span>` +
-        (c.rank && c.rank < 9999 ? `<span class="result-rank">#${c.rank}</span>` : '') +
       `</div>`
     ).join('');
   }, 200);
