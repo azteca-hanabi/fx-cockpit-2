@@ -16,8 +16,8 @@
 /* ─── THEMES ─── */
 :root,[data-theme="dark"]{
   --bg:#0a0a0f;--bg2:#0f0f18;--bg3:#1a1a2e;
-  --border:#1e1e2e;--border2:#3a3a58;
-  --text:#c8c8d8;--muted:#5a5a7a;
+  --border:#1e1e2e;--border2:#5a5a7a;
+  --text:#e8e8f8;--muted:#9a9aba;
   --cyan:#38c9c9;--cyan-dim:#0e4040;
   --green:#2ecc71;--red:#e74c3c;
   --gold:#f0b429;--btc:#f7931a;
@@ -62,7 +62,7 @@ header{
 #clock{font-size:13px;font-weight:500;color:var(--muted);white-space:nowrap;letter-spacing:.03em;}
 .theme-switcher{display:flex;gap:3px;}
 .theme-btn{
-  padding:5px 8px;border-radius:4px;border:1px solid var(--border2);
+  padding:5px 8px;border-radius:4px;border:1.5px solid var(--border2);
   background:transparent;color:var(--muted);font-size:12px;font-weight:700;
   cursor:pointer;transition:all .15s;line-height:1;
 }
@@ -76,13 +76,21 @@ header{
 }
 .session-pill{
   font-size:12px;font-weight:500;padding:4px 10px;border-radius:3px;
-  border:1px solid var(--border2);color:var(--muted);letter-spacing:.04em;
+  border:1.5px solid var(--border2);color:var(--muted);letter-spacing:.04em;
   transition:all .3s;white-space:nowrap;
 }
 .session-pill.active{color:var(--green);border-color:var(--green);background:rgba(46,204,113,.08);box-shadow:0 0 8px rgba(46,204,113,.2);}
 .session-pill .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:5px;vertical-align:middle;}
 .session-pill.active .dot{animation:blink 1.4s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* ─── PULL TO REFRESH ─── */
+#ptr-indicator{
+  position:fixed;top:0;left:0;right:0;height:0;
+  display:flex;align-items:flex-end;justify-content:center;
+  overflow:hidden;z-index:500;transition:height .15s;pointer-events:none;
+}
+#ptr-text{font-size:12px;color:var(--muted);padding-bottom:6px;letter-spacing:.04em;}
 
 /* ─── PAGE CONTENT ─── */
 .page-content{
@@ -97,19 +105,19 @@ header{
 }
 
 /* ─── TRADINGVIEW WIDGET ─── */
-.tv-widget-wrap{border-radius:8px;overflow:hidden;border:1px solid var(--border2);}
+.tv-widget-wrap{border-radius:8px;overflow:hidden;border:1.5px solid var(--border2);}
 .tradingview-widget-copyright{padding:2px 8px 4px;background:transparent;font-size:11px;line-height:1.4;text-align:right;}
 .tradingview-widget-copyright .blue-text{color:var(--muted)!important;text-decoration:underline;}
 
 /* ─── CHART GRID ─── */
 .chart-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
 .chart-slot{
-  background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
+  background:var(--bg3);border:1.5px solid var(--border2);border-radius:8px;
   padding:12px;min-height:80px;display:flex;flex-direction:column;
   align-items:center;justify-content:center;cursor:pointer;
   transition:all .15s;text-align:center;user-select:none;
 }
-.chart-slot.empty{border-style:dashed;border-color:var(--border2);}
+.chart-slot.empty{border-style:dashed;}
 .chart-slot.empty:active,.chart-slot.filled:active{opacity:.7;}
 .slot-symbol{font-size:13px;font-weight:700;color:var(--text);}
 .slot-price{font-size:13px;font-weight:700;color:var(--cyan);margin-top:4px;}
@@ -118,23 +126,31 @@ header{
 .slot-change.negative{color:var(--red);}
 .slot-change.neutral{color:var(--muted);}
 .slot-add-icon{font-size:22px;color:var(--muted);}
-.slot-add-label{font-size:10px;color:var(--muted);margin-top:4px;}
+.slot-add-label{font-size:10px;color:#8a8aaa;font-weight:700;margin-top:4px;}
 
-/* ─── APP GRID ─── */
-.app-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
-.app-slot{
-  background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
-  padding:14px 10px;min-height:60px;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;cursor:pointer;
-  transition:all .15s;text-align:center;user-select:none;
+/* ─── LAUNCH GRID ─── */
+.launch-grid{display:flex;flex-direction:column;gap:8px;}
+.launch-tv{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:16px;background:var(--bg3);border:1.5px solid var(--border2);
+  border-radius:8px;font-size:15px;font-weight:700;color:var(--text);
+  transition:border-color .15s,opacity .15s;
 }
-.app-slot.empty{border-style:dashed;}
-.app-slot.empty:active,.app-slot.filled:active{opacity:.7;}
-.app-name{font-size:13px;font-weight:700;color:var(--text);}
+.launch-tv:active{opacity:.7;}
+.tv-icon{font-size:20px;}
+.launch-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.launch-btn{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:14px 8px;background:var(--bg3);border:1.5px solid var(--border2);
+  border-radius:8px;font-size:14px;font-weight:700;color:var(--text);
+  text-align:center;transition:border-color .15s,opacity .15s;
+}
+.launch-btn:active{opacity:.7;}
+.launch-sub{font-size:10px;color:var(--muted);font-weight:400;margin-top:3px;}
 
 /* ─── FEAR & GREED ─── */
 .fng-wrap{
-  background:var(--bg3);border:1px solid var(--border2);border-radius:8px;
+  background:var(--bg3);border:1.5px solid var(--border2);border-radius:8px;
   padding:16px;display:flex;align-items:center;gap:16px;
 }
 .fng-value{font-size:40px;font-weight:700;line-height:1;min-width:56px;text-align:center;}
@@ -150,7 +166,7 @@ header{
 .news-links{display:flex;flex-direction:column;gap:6px;}
 .news-link-btn{
   display:block;padding:12px 14px;background:var(--bg3);
-  border:1px solid var(--border2);border-radius:6px;
+  border:1.5px solid var(--border2);border-radius:6px;
   color:var(--text);font-size:13px;font-weight:700;
   transition:border-color .15s,color .15s;
 }
@@ -166,7 +182,7 @@ header{
 /* ─── MODAL SHEET ─── */
 .modal-sheet{
   width:100%;max-height:85vh;background:var(--bg2);
-  border-radius:12px 12px 0 0;border-top:1px solid var(--border2);
+  border-radius:12px 12px 0 0;border-top:1.5px solid var(--border2);
   padding:16px 14px 24px;overflow-y:auto;-webkit-overflow-scrolling:touch;
 }
 .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
@@ -177,7 +193,7 @@ header{
 /* search input */
 .modal-search-wrap{margin-bottom:12px;}
 .modal-search-input{
-  width:100%;background:var(--bg3);border:1px solid var(--border2);
+  width:100%;background:var(--bg3);border:1.5px solid var(--border2);
   border-radius:6px;padding:10px 12px;color:var(--text);
   font-size:14px;font-family:'Noto Sans JP',sans-serif;
   outline:none;transition:border-color .15s;-webkit-appearance:none;
@@ -186,15 +202,9 @@ header{
 .modal-search-input::placeholder{color:var(--muted);}
 .modal-search-input::-webkit-search-cancel-button{display:none;}
 
-/* section label */
-.modal-section-label{
-  font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.06em;
-  text-transform:uppercase;margin:12px 0 6px;
-}
-
 /* result items */
 .result-item{
-  padding:10px 12px;background:var(--bg3);border:1px solid var(--border2);
+  padding:10px 12px;background:var(--bg3);border:1.5px solid var(--border2);
   border-radius:6px;margin-bottom:4px;cursor:pointer;
   display:flex;gap:10px;align-items:center;transition:border-color .15s;
 }
@@ -204,39 +214,11 @@ header{
 .result-name{font-size:12px;color:var(--muted);}
 .results-empty{padding:24px 0;text-align:center;color:var(--muted);font-size:13px;}
 
-/* app catalog */
-.app-catalog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:4px;}
-.catalog-item{
-  padding:11px 8px;background:var(--bg3);border:1px solid var(--border2);
-  border-radius:6px;cursor:pointer;text-align:center;
-  font-size:13px;font-weight:700;color:var(--text);
-  transition:border-color .15s;
-}
-.catalog-item:hover{border-color:var(--cyan-dim);color:var(--cyan);}
-.catalog-item:active{opacity:.7;}
-
-/* manual input */
-.manual-input{
-  width:100%;background:var(--bg3);border:1px solid var(--border2);
-  border-radius:6px;padding:10px 12px;color:var(--text);
-  font-size:14px;font-family:'Noto Sans JP',sans-serif;
-  outline:none;transition:border-color .15s;margin-top:6px;
-  -webkit-appearance:none;
-}
-.manual-input:focus{border-color:var(--cyan);}
-.manual-input::placeholder{color:var(--muted);}
-#app-manual-add{
-  width:100%;margin-top:10px;padding:12px;
-  background:var(--cyan);color:#fff;border:none;border-radius:6px;
-  font-size:14px;font-weight:700;cursor:pointer;transition:opacity .15s;
-}
-#app-manual-add:active{opacity:.8;}
-
 /* ─── LONGPRESS MENU ─── */
 #overlay-lp .modal-sheet{padding:16px 14px 32px;}
 .longpress-menu{display:flex;flex-direction:column;gap:8px;}
 .longpress-menu button{
-  padding:14px;border-radius:8px;border:1px solid var(--border2);
+  padding:14px;border-radius:8px;border:1.5px solid var(--border2);
   background:var(--bg3);color:var(--text);font-size:14px;font-weight:700;cursor:pointer;
   transition:opacity .15s;
 }
@@ -253,6 +235,8 @@ header{
 </style>
 </head>
 <body>
+
+<div id="ptr-indicator"><span id="ptr-text"></span></div>
 
 <header>
   <div class="logo">FX COCKPIT 2 <span>CRYPTO by azteca</span></div>
@@ -280,8 +264,23 @@ header{
   <div class="sec-heading">マイチャート</div>
   <div class="chart-grid" id="chart-grid"></div>
 
-  <div class="sec-heading">マイアプリ・リンク</div>
-  <div class="app-grid" id="app-grid"></div>
+  <div class="sec-heading">アプリ起動</div>
+  <div class="launch-grid">
+    <a class="launch-tv" href="https://jp.tradingview.com" target="_blank" rel="noopener">
+      <span class="tv-icon">📈</span>
+      TradingView
+    </a>
+    <div class="launch-row">
+      <a class="launch-btn" href="metatrader5://">
+        MT5
+        <span class="launch-sub">MetaTrader 5</span>
+      </a>
+      <a class="launch-btn" href="metatrader4://">
+        MT4
+        <span class="launch-sub">MetaTrader 4</span>
+      </a>
+    </div>
+  </div>
 
   <div class="sec-heading">恐怖強欲指数</div>
   <div class="fng-wrap">
@@ -296,10 +295,10 @@ header{
   <div class="sec-heading">クリプトニュース</div>
   <div class="news-links">
     <a class="news-link-btn" href="https://coinpost.jp" target="_blank" rel="noopener">CoinPost</a>
-    <a class="news-link-btn" href="https://jp.cointelegraph.com" target="_blank" rel="noopener">Cointelegraph JP</a>
-    <a class="news-link-btn" href="https://www.coindeskjapan.com" target="_blank" rel="noopener">CoinDesk Japan</a>
+    <a class="news-link-btn" href="https://cointelegraph.jp/" target="_blank" rel="noopener">Cointelegraph Japan</a>
+    <a class="news-link-btn" href="https://www.nadanews.com" target="_blank" rel="noopener">NADA NEWS</a>
     <a class="news-link-btn" href="https://cryptonews.com/jp/" target="_blank" rel="noopener">CryptoNews Japan</a>
-    <a class="news-link-btn" href="https://www.neweconomy.jp" target="_blank" rel="noopener">新しい経済</a>
+    <a class="news-link-btn" href="https://www.neweconomy.jp" target="_blank" rel="noopener">あたらしい経済</a>
   </div>
 
 </div>
@@ -319,61 +318,6 @@ header{
   </div>
 </div>
 
-<!-- ─── APP CATALOG MODAL ─── -->
-<div id="overlay-app" class="modal-overlay hidden">
-  <div class="modal-sheet" id="modal-app">
-    <div class="modal-header">
-      <span class="modal-title">アプリ・リンクを追加</span>
-      <button class="modal-close" id="close-app">✕</button>
-    </div>
-
-    <div class="modal-section-label">取引所（国内）</div>
-    <div class="app-catalog-grid">
-      <div class="catalog-item" data-name="coincheck"    data-url="https://coincheck.com/ja/">coincheck</div>
-      <div class="catalog-item" data-name="bitFlyer"     data-url="https://bitflyer.com/ja-jp/">bitFlyer</div>
-      <div class="catalog-item" data-name="GMOコイン"    data-url="https://coin.z.com/jp/">GMOコイン</div>
-      <div class="catalog-item" data-name="bitbank"      data-url="https://bitbank.cc/">bitbank</div>
-      <div class="catalog-item" data-name="SBI VC Trade" data-url="https://vctrade.sbisec.co.jp/">SBI VC Trade</div>
-      <div class="catalog-item" data-name="楽天ウォレット" data-url="https://wallet.rakuten.co.jp/">楽天ウォレット</div>
-      <div class="catalog-item" data-name="BITPOINT"     data-url="https://www.bitpoint.co.jp/">BITPOINT</div>
-      <div class="catalog-item" data-name="DMM Bitcoin"  data-url="https://bitcoin.dmm.com/">DMM Bitcoin</div>
-      <div class="catalog-item" data-name="BitTrade"     data-url="https://bittrade.co.jp/">BitTrade</div>
-    </div>
-
-    <div class="modal-section-label">取引所（海外）</div>
-    <div class="app-catalog-grid">
-      <div class="catalog-item" data-name="Binance"      data-url="https://www.binance.com/ja">Binance</div>
-      <div class="catalog-item" data-name="Bybit"        data-url="https://www.bybit.com/ja-JP/">Bybit</div>
-      <div class="catalog-item" data-name="Bitget"       data-url="https://www.bitget.com/ja/">Bitget</div>
-      <div class="catalog-item" data-name="OKX"          data-url="https://www.okx.com/ja">OKX</div>
-      <div class="catalog-item" data-name="Kraken"       data-url="https://www.kraken.com/ja-jp">Kraken</div>
-      <div class="catalog-item" data-name="MEXC"         data-url="https://www.mexc.com/ja-JP">MEXC</div>
-      <div class="catalog-item" data-name="BingX"        data-url="https://bingx.com/ja-jp/">BingX</div>
-      <div class="catalog-item" data-name="CoinW"        data-url="https://www.coinw.com/">CoinW</div>
-      <div class="catalog-item" data-name="KuCoin"       data-url="https://www.kucoin.com/ja">KuCoin</div>
-      <div class="catalog-item" data-name="Gate.io"      data-url="https://www.gate.io/ja">Gate.io</div>
-      <div class="catalog-item" data-name="Hyperliquid"  data-url="https://app.hyperliquid.xyz/">Hyperliquid</div>
-    </div>
-
-    <div class="modal-section-label">ウォレット</div>
-    <div class="app-catalog-grid">
-      <div class="catalog-item" data-name="MetaMask"     data-url="https://metamask.io/">MetaMask</div>
-      <div class="catalog-item" data-name="Trust Wallet" data-url="https://trustwallet.com/ja">Trust Wallet</div>
-      <div class="catalog-item" data-name="Phantom"      data-url="https://phantom.app/">Phantom</div>
-      <div class="catalog-item" data-name="Rabby Wallet" data-url="https://rabby.io/">Rabby Wallet</div>
-      <div class="catalog-item" data-name="Backpack"     data-url="https://backpack.app/">Backpack</div>
-      <div class="catalog-item" data-name="Ledger"       data-url="https://www.ledger.com/ja">Ledger</div>
-      <div class="catalog-item" data-name="Trezor"       data-url="https://trezor.io/">Trezor</div>
-      <div class="catalog-item" data-name="Exodus"       data-url="https://www.exodus.com/">Exodus</div>
-    </div>
-
-    <div class="modal-section-label">直接入力</div>
-    <input id="app-name-input" class="manual-input" type="text" placeholder="名前（例: MyApp）" autocomplete="off">
-    <input id="app-url-input"  class="manual-input" type="url"  placeholder="URL（例: https://example.com）" autocomplete="off">
-    <button id="app-manual-add">追加</button>
-  </div>
-</div>
-
 <!-- ─── LONGPRESS MENU ─── -->
 <div id="overlay-lp" class="modal-overlay hidden">
   <div class="modal-sheet">
@@ -387,9 +331,8 @@ header{
 
 <script>
 // ─── CONSTANTS ───────────────────────────────────────
-const STORAGE_KEY   = 'fxc2-crypto-data';
-const MAX_CHARTS    = 10;
-const MAX_APPS      = 4;
+const STORAGE_KEY    = 'fxc2-crypto-data';
+const MAX_CHARTS     = 8;
 const PRICE_INTERVAL = 30000;
 
 const CRYPTO_ALIAS = {
@@ -403,11 +346,10 @@ const CRYPTO_ALIAS = {
 // ─── STATE ───────────────────────────────────────────
 let _data = {
   charts: Array(MAX_CHARTS).fill(null),
-  apps: [{ slot:0, name:'Bitget', url:'https://www.bitget.com/ja/' }, null, null, null],
 };
 let _coins       = [];
 let _prices      = {};
-let _pendingSlot = null; // { type:'chart'|'app', index }
+let _pendingSlot = null;
 let _searchTimer = null;
 
 // ─── STORAGE ─────────────────────────────────────────
@@ -420,11 +362,6 @@ function loadData() {
         _data.charts = p.charts;
         while (_data.charts.length < MAX_CHARTS) _data.charts.push(null);
         _data.charts = _data.charts.slice(0, MAX_CHARTS);
-      }
-      if (Array.isArray(p.apps)) {
-        _data.apps = p.apps;
-        while (_data.apps.length < MAX_APPS) _data.apps.push(null);
-        _data.apps = _data.apps.slice(0, MAX_APPS);
       }
     } else {
       saveData();
@@ -454,13 +391,13 @@ function searchCoins(raw) {
   function score(c) {
     const sym  = (c.symbol || '').toLowerCase();
     const name = (c.name   || '').toLowerCase();
-    if (mapped && sym === mapped)       return 100;
-    if (sym === qLow)                   return 95;
-    if (sym.startsWith(qLow))          return 88;
-    if (name === qLow)                  return 80;
-    if (name.startsWith(qLow))         return 72;
-    if (name.includes(qLow))           return 60;
-    if (mapped && name.includes(mapped))return 50;
+    if (mapped && sym === mapped)        return 100;
+    if (sym === qLow)                    return 95;
+    if (sym.startsWith(qLow))           return 88;
+    if (name === qLow)                   return 80;
+    if (name.startsWith(qLow))          return 72;
+    if (name.includes(qLow))            return 60;
+    if (mapped && name.includes(mapped)) return 50;
     return 0;
   }
 
@@ -513,32 +450,13 @@ function renderChartSlots() {
       el.innerHTML = '<div class="slot-add-icon">＋</div><div class="slot-add-label">銘柄を追加</div>';
     }
     el.dataset.slot = i;
-    attachSlotHandlers(el, 'chart', i);
-    grid.appendChild(el);
-  });
-}
-
-// ─── RENDER APP SLOTS ────────────────────────────────
-function renderAppSlots() {
-  const grid = document.getElementById('app-grid');
-  grid.innerHTML = '';
-  _data.apps.forEach((app, i) => {
-    const el = document.createElement('div');
-    if (app) {
-      el.className = 'app-slot filled';
-      el.innerHTML = `<div class="app-name">${escHtml(app.name)}</div>`;
-    } else {
-      el.className = 'app-slot empty';
-      el.innerHTML = '<div class="slot-add-icon">＋</div><div class="slot-add-label">マイ取引所・アプリ・リンクを追加</div>';
-    }
-    el.dataset.slot = i;
-    attachSlotHandlers(el, 'app', i);
+    attachSlotHandlers(el, i);
     grid.appendChild(el);
   });
 }
 
 // ─── SLOT HANDLERS (TAP + LONG PRESS) ────────────────
-function attachSlotHandlers(el, type, index) {
+function attachSlotHandlers(el, index) {
   let lpTimer = null;
   let lpFired = false;
   let startX  = 0;
@@ -550,7 +468,7 @@ function attachSlotHandlers(el, type, index) {
     startY  = e.touches[0].clientY;
     lpTimer = setTimeout(() => {
       lpFired = true;
-      showLpMenu(type, index);
+      showLpMenu(index);
     }, 600);
   }, { passive: true });
 
@@ -567,31 +485,18 @@ function attachSlotHandlers(el, type, index) {
 
   el.addEventListener('click', () => {
     if (lpFired) { lpFired = false; return; }
-    onSlotTap(type, index);
-  });
-}
-
-function onSlotTap(type, index) {
-  if (type === 'chart') {
     const coin = _data.charts[index];
     if (coin) {
-      window.open(`https://jp.tradingview.com/chart/?symbol=${coin.symbol}USDT`, '_blank', 'noopener');
+      window.open(`https://www.coingecko.com/ja/coins/${coin.id}`, '_blank', 'noopener');
     } else {
       openChartModal(index);
     }
-  } else {
-    const app = _data.apps[index];
-    if (app) {
-      openApp(app.url);
-    } else {
-      openAppModal(index);
-    }
-  }
+  });
 }
 
 // ─── LONG PRESS MENU ─────────────────────────────────
-function showLpMenu(type, index) {
-  _pendingSlot = { type, index };
+function showLpMenu(index) {
+  _pendingSlot = index;
   document.getElementById('overlay-lp').classList.remove('hidden');
 }
 
@@ -601,22 +506,15 @@ function hideLpMenu() {
 
 document.getElementById('lp-change').addEventListener('click', () => {
   hideLpMenu();
-  if (!_pendingSlot) return;
-  if (_pendingSlot.type === 'chart') openChartModal(_pendingSlot.index);
-  else openAppModal(_pendingSlot.index);
+  if (_pendingSlot == null) return;
+  openChartModal(_pendingSlot);
 });
 
 document.getElementById('lp-delete').addEventListener('click', () => {
-  if (!_pendingSlot) return;
-  if (_pendingSlot.type === 'chart') {
-    _data.charts[_pendingSlot.index] = null;
-    saveData();
-    renderChartSlots();
-  } else {
-    _data.apps[_pendingSlot.index] = null;
-    saveData();
-    renderAppSlots();
-  }
+  if (_pendingSlot == null) return;
+  _data.charts[_pendingSlot] = null;
+  saveData();
+  renderChartSlots();
   hideLpMenu();
 });
 
@@ -625,27 +523,9 @@ document.getElementById('overlay-lp').addEventListener('click', e => {
   if (e.target === document.getElementById('overlay-lp')) hideLpMenu();
 });
 
-// ─── APP LAUNCH ──────────────────────────────────────
-function openApp(url) {
-  // window.openを使うことでiOSのUniversal Linksが発火しアプリが起動する
-  // window.location.hrefだとPWAコンテナ内での遷移とみなされアプリが起動しない
-  try {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  } catch(e) {
-    // フォールバック: ダミーアンカーで再試行
-    const a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
-}
-
 // ─── CHART MODAL ─────────────────────────────────────
 function openChartModal(index) {
-  _pendingSlot = { type: 'chart', index };
+  _pendingSlot = index;
   document.getElementById('chart-search').value = '';
   document.getElementById('chart-results').innerHTML = '';
   document.getElementById('overlay-chart').classList.remove('hidden');
@@ -683,8 +563,8 @@ document.getElementById('chart-search').addEventListener('input', e => {
 
 document.getElementById('chart-results').addEventListener('click', e => {
   const item = e.target.closest('.result-item');
-  if (!item || !_pendingSlot) return;
-  const idx = _pendingSlot.index;
+  if (!item || _pendingSlot == null) return;
+  const idx = _pendingSlot;
   _data.charts[idx] = {
     slot:   idx,
     id:     item.dataset.id,
@@ -696,46 +576,6 @@ document.getElementById('chart-results').addEventListener('click', e => {
   renderChartSlots();
   fetchPricesNow();
 });
-
-// ─── APP MODAL ───────────────────────────────────────
-function openAppModal(index) {
-  _pendingSlot = { type: 'app', index };
-  document.getElementById('app-name-input').value = '';
-  document.getElementById('app-url-input').value  = '';
-  document.getElementById('overlay-app').classList.remove('hidden');
-}
-
-function closeAppModal() {
-  document.getElementById('overlay-app').classList.add('hidden');
-}
-
-document.getElementById('close-app').addEventListener('click', closeAppModal);
-document.getElementById('overlay-app').addEventListener('click', e => {
-  if (e.target === document.getElementById('overlay-app')) closeAppModal();
-});
-
-document.getElementById('modal-app').addEventListener('click', e => {
-  const item = e.target.closest('.catalog-item');
-  if (!item || !_pendingSlot) return;
-  addApp(item.dataset.name, item.dataset.url);
-});
-
-document.getElementById('app-manual-add').addEventListener('click', () => {
-  const name = document.getElementById('app-name-input').value.trim();
-  let   url  = document.getElementById('app-url-input').value.trim();
-  if (!name || !url) return;
-  if (!url.startsWith('http://') && !url.startsWith('https://')) url = 'https://' + url;
-  addApp(name, url);
-});
-
-function addApp(name, url) {
-  if (!_pendingSlot) return;
-  const idx = _pendingSlot.index;
-  _data.apps[idx] = { slot: idx, name, url };
-  saveData();
-  closeAppModal();
-  renderAppSlots();
-}
 
 // ─── PRICES ──────────────────────────────────────────
 function getRegisteredIds() {
@@ -880,6 +720,54 @@ function updateSessions() {
 setInterval(updateSessions, 10000);
 updateSessions();
 
+// ─── PULL TO REFRESH ─────────────────────────────────
+(function() {
+  const content   = document.querySelector('.page-content');
+  const indicator = document.getElementById('ptr-indicator');
+  const ptrText   = document.getElementById('ptr-text');
+  const THRESHOLD = 70;
+  let startY  = 0;
+  let pulling = false;
+  let ready   = false;
+
+  content.addEventListener('touchstart', e => {
+    if (content.scrollTop === 0) {
+      startY  = e.touches[0].clientY;
+      pulling = true;
+      ready   = false;
+    }
+  }, { passive: true });
+
+  content.addEventListener('touchmove', e => {
+    if (!pulling) return;
+    const dy = e.touches[0].clientY - startY;
+    if (dy <= 0) { indicator.style.height = '0'; return; }
+    const h = Math.min(dy * 0.5, 52);
+    indicator.style.height = h + 'px';
+    ready = dy >= THRESHOLD;
+    ptrText.textContent = ready ? '離して更新' : '↓ 引っ張って更新';
+  }, { passive: true });
+
+  content.addEventListener('touchend', () => {
+    if (!pulling) return;
+    pulling = false;
+    if (ready) {
+      ptrText.textContent = '更新中...';
+      Promise.all([updatePrices(), loadFng()]).finally(() => {
+        indicator.style.height = '0';
+        ready = false;
+      });
+    } else {
+      indicator.style.height = '0';
+    }
+  }, { passive: true });
+
+  content.addEventListener('touchcancel', () => {
+    pulling = false;
+    indicator.style.height = '0';
+  }, { passive: true });
+})();
+
 // ─── SERVICE WORKER ───────────────────────────────────
 if ('serviceWorker' in navigator) {
   let refreshing = false;
@@ -897,7 +785,6 @@ window.addEventListener('pageshow', e => { if (e.persisted) initTVWidget(); });
 function init() {
   loadData();
   renderChartSlots();
-  renderAppSlots();
   initTVWidget();
   loadCoins();
   updatePrices();
