@@ -205,6 +205,7 @@ header{
 .result-item:active{opacity:.7;}
 .result-symbol{font-size:13px;font-weight:700;color:var(--text);min-width:52px;}
 .result-name{font-size:12px;color:var(--muted);}
+.result-rank{font-size:11px;color:var(--cyan);margin-left:auto;flex-shrink:0;}
 .results-empty{padding:24px 0;text-align:center;color:var(--muted);font-size:13px;}
 
 /* ─── LONGPRESS MENU ─── */
@@ -395,20 +396,25 @@ function searchCoins(raw) {
   function score(c) {
     const sym  = (c.symbol || '').toLowerCase();
     const name = (c.name   || '').toLowerCase();
-    if (mapped && sym === mapped)        return 100;
-    if (sym === qLow)                    return 95;
-    if (sym.startsWith(qLow))           return 88;
-    if (name === qLow)                   return 80;
-    if (name.startsWith(qLow))          return 72;
-    if (name.includes(qLow))            return 60;
-    if (mapped && name.includes(mapped)) return 50;
+    // 完全一致を最優先
+    if (sym === qLow)                    return 200;
+    if (mapped && sym === mapped)        return 190;
+    if (sym.startsWith(qLow))           return 150;
+    if (name === qLow)                   return 120;
+    if (name.startsWith(qLow))          return 100;
+    if (name.includes(qLow))            return 80;
+    if (mapped && name.includes(mapped)) return 60;
     return 0;
   }
 
   return _coins
     .map(c => ({ c, s: score(c) }))
     .filter(x => x.s > 0)
-    .sort((a, b) => b.s - a.s)
+    .sort((a, b) => {
+      // まずスコア順、同スコアならrank順（時価総額優先）
+      if (b.s !== a.s) return b.s - a.s;
+      return (a.c.rank || 9999) - (b.c.rank || 9999);
+    })
     .slice(0, 15)
     .map(x => x.c);
 }
@@ -560,6 +566,7 @@ document.getElementById('chart-search').addEventListener('input', e => {
       `<div class="result-item" data-id="${escHtml(c.id)}" data-symbol="${escHtml((c.symbol||'').toUpperCase())}" data-name="${escHtml(c.name||'')}">` +
         `<span class="result-symbol">${escHtml((c.symbol||'').toUpperCase())}</span>` +
         `<span class="result-name">${escHtml(c.name||'')}</span>` +
+        (c.rank && c.rank < 9999 ? `<span class="result-rank">#${c.rank}</span>` : '') +
       `</div>`
     ).join('');
   }, 200);

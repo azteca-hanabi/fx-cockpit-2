@@ -21,39 +21,51 @@ jobs:
           import urllib.request, json, os
           from datetime import datetime, timezone
 
-          url = "https://api.coingecko.com/api/v3/coins/list"
-          req = urllib.request.Request(
-              url,
-              headers={"User-Agent": "fx-cockpit/1.0", "Accept": "application/json"}
-          )
-
-          print(f"Fetching: {url}")
+          # Step1: /coins/list で全コインのid/symbol/nameを取得
+          url_list = "https://api.coingecko.com/api/v3/coins/list"
+          req = urllib.request.Request(url_list, headers={"User-Agent": "fx-cockpit/1.0", "Accept": "application/json"})
           with urllib.request.urlopen(req, timeout=30) as r:
-              raw = json.loads(r.read())
+              all_coins = json.loads(r.read())
+          print(f"Total coins: {len(all_coins)}")
 
-          print(f"Total coins fetched: {len(raw)}")
+          # id→コイン情報のマップを作成
+          coin_map = {c["id"]: {"symbol": (c.get("symbol") or "").upper(), "name": c.get("name") or "", "id": c["id"]} for c in all_coins if c.get("id")}
 
+          # Step2: /coins/markets で上位1000件のランキングを取得（2ページ）
+          ranked = {}
+          for page in [1, 2]:
+              url_markets = f"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=500&page={page}&sparkline=false"
+              req2 = urllib.request.Request(url_markets, headers={"User-Agent": "fx-cockpit/1.0", "Accept": "application/json"})
+              import time
+              time.sleep(2)  # レート制限対策
+              with urllib.request.urlopen(req2, timeout=30) as r:
+                  markets = json.loads(r.read())
+              for item in markets:
+                  ranked[item["id"]] = item.get("market_cap_rank") or 9999
+          print(f"Ranked coins: {len(ranked)}")
+
+          # Step3: 全コインにrankを付与してcoins.jsonを生成
           coins = []
-          for c in raw:
-              symbol = (c.get("symbol") or "").upper()
-              name   = c.get("name") or ""
-              if not symbol or not name:
+          for coin_id, info in coin_map.items():
+              if not info["symbol"] or not info["name"]:
                   continue
               coins.append({
-                  "symbol": symbol,
-                  "name":   name,
-                  "id":     c.get("id") or ""
+                  "id":     coin_id,
+                  "symbol": info["symbol"],
+                  "name":   info["name"],
+                  "rank":   ranked.get(coin_id, 9999)
               })
+
+          # rank順にソート（9999=ランク外は末尾）
+          coins.sort(key=lambda x: x["rank"])
 
           out = {
               "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
               "coins":   coins
           }
-
           os.makedirs("public/data", exist_ok=True)
           with open("public/data/coins.json", "w", encoding="utf-8") as f:
               json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
-
           print(f"Saved {len(coins)} coins. updated={out['updated']}")
           PYEOF
 
