@@ -371,6 +371,16 @@ function loadData() {
         _data.charts = p.charts;
         while (_data.charts.length < MAX_CHARTS) _data.charts.push(null);
         _data.charts = _data.charts.slice(0, MAX_CHARTS);
+        // 全部nullの場合はデフォルト値を使う
+        const hasAny = _data.charts.some(Boolean);
+        if (!hasAny) {
+          _data.charts = [
+            { slot:0, id:'ethereum', symbol:'ETH', name:'Ethereum' },
+            { slot:1, id:'ripple', symbol:'XRP', name:'XRP' },
+            null, null, null, null, null, null
+          ];
+          saveData();
+        }
       }
     } else {
       saveData();
