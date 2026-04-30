@@ -789,15 +789,22 @@ document.querySelector('.fng-wrap').addEventListener('click', function() {
     }
   }, { passive: true });
 
-  content.addEventListener('touchend', e => {
+  content.addEventListener('touchend', async e => {
     if (!pulling) return;
     pulling = false;
     const dy = e.changedTouches[0].clientY - startY;
-    indicator.style.height = '0';
-    indicator.textContent = '↓ 引っ張って更新';
     if (dy >= THRESHOLD && content.scrollTop === 0) {
-      updatePrices();
-      loadFng();
+      indicator.style.height = '44px';
+      indicator.textContent = '更新中...';
+      await Promise.all([updatePrices(), loadFng()]);
+      indicator.textContent = '✓ 更新しました';
+      setTimeout(() => {
+        indicator.style.height = '0';
+        indicator.textContent = '↓ 引っ張って更新';
+      }, 1000);
+    } else {
+      indicator.style.height = '0';
+      indicator.textContent = '↓ 引っ張って更新';
     }
   }, { passive: true });
 })();
@@ -816,11 +823,11 @@ if ('serviceWorker' in navigator) {
 window.addEventListener('pageshow', e => { if (e.persisted) initTVWidget(); });
 
 // ─── INIT ────────────────────────────────────────────
-function init() {
+async function init() {
   loadData();
   renderChartSlots();
   initTVWidget();
-  loadCoins();
+  await loadCoins();
   updatePrices();
   setInterval(updatePrices, PRICE_INTERVAL);
   loadFng();
