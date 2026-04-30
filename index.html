@@ -350,7 +350,11 @@ const CRYPTO_ALIAS = {
 
 // ─── STATE ───────────────────────────────────────────
 let _data = {
-  charts: Array(MAX_CHARTS).fill(null),
+  charts: [
+    { slot:0, id:'ethereum', symbol:'ETH', name:'Ethereum' },
+    { slot:1, id:'ripple', symbol:'XRP', name:'XRP' },
+    null, null, null, null, null, null
+  ],
 };
 let _coins       = [];
 let _prices      = {};
