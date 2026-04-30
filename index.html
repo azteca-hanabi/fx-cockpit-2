@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" data-theme="dark">
+<html lang="ja" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0a0a0f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<script>(function(){var t=localStorage.getItem('fx-theme')||'dark';document.documentElement.dataset.theme=t;})()</script>
+<script>(function(){var t=localStorage.getItem('fx-theme')||'light';document.documentElement.dataset.theme=t;})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -712,7 +712,7 @@ function initTVWidget() {
 
 // ─── THEME ────────────────────────────────────────────
 document.querySelectorAll('.theme-btn').forEach(btn => {
-  btn.classList.toggle('active', btn.dataset.theme === (localStorage.getItem('fx-theme') || 'dark'));
+  btn.classList.toggle('active', btn.dataset.theme === (localStorage.getItem('fx-theme') || 'light'));
   btn.addEventListener('click', () => {
     const t = btn.dataset.theme;
     document.documentElement.dataset.theme = t;
